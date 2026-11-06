@@ -1,0 +1,6 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import app,{simulate,decimal} from './worker/index.js';
+const s={dropbacks:36,dropbackSd:6,routeParticipation:.85,roleSd:.05,routes:180,targets:45,receptions:29,priorTprr:.22,priorCatch:.65,adot:10,yac:4.5,yardSd:8,targetSd:.035};
+test('American odds conversions',()=>{assert.equal(decimal(150),2.5);assert.equal(decimal(-200),1.5)});
+test('Probability partitions, deterministic simulation and monotonic lines',()=>{let r=simulate(s,60);assert.ok(Math.abs(r.over+r.under+r.push-1)<1e-12);assert.deepEqual(r,simulate(s,60));assert.ok(simulate(s,40).over>simulate(s,80).over);assert.ok(r.push>0);assert.equal(simulate(s,60.5).push,0)});
+test('Opportunity and zero-usage boundary',()=>{assert.equal(simulate({...s,routeParticipation:0,roleSd:0},0).push,1);assert.ok(simulate({...s,dropbacks:60},60).mean>simulate(s,60).mean)});
+test('Missing feeds fail explicitly and UI serves',async()=>{assert.equal((await app.fetch(new Request('https://test/api/odds?event=abc'),{})).status,503);assert.equal((await app.fetch(new Request('https://test/api/stats'),{})).status,503);let html=await(await app.fetch(new Request('https://test/'),{})).text();assert.ok(html.includes('No verified edges yet'));let script=html.match(/<script type="module">([\s\S]*)<\/script>/)[1];new Function(script)});
