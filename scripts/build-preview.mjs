@@ -1,6 +1,6 @@
 import {readFile,writeFile} from 'node:fs/promises';
-const template=await readFile('web/research.template.html','utf8');
-const core=(await readFile('web/market-core.mjs','utf8')).replace(/^export /gm,'');
-const html=template.replace('/* MARKET_CORE */',()=>core);
-await writeFile('site-preview.html',html);
-console.log('Built standalone site-preview.html');
+let html=await readFile('web/research.template.html','utf8');
+for(const [marker,file] of [['/* MARKET_CORE */','web/market-core.mjs'],['/* VIEW_MODEL */','web/view-model.mjs']]){
+ let source=(await readFile(file,'utf8')).replace(/^import .*;\n/gm,'').replace(/^export /gm,'');html=html.replace(marker,()=>source);
+}
+await writeFile('site-preview.html',html);console.log('Built standalone site-preview.html');

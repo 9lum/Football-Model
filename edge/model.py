@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.impute import SimpleImputer
 
+from .config import THRESHOLDS
 TARGETS=['receiving_yards','receptions']
 class DistributionForest:
     def __init__(self,trees=96,min_leaf=25,seed=71):
@@ -12,17 +13,22 @@ class DistributionForest:
     def fit(self,x,y):
         x=self.imputer.fit_transform(x.replace([np.inf,-np.inf],np.nan))
         self.y=np.asarray(y,dtype=float)
-        self.forest.fit(x,self.y)
+        self.target_count=self.y.shape[1]
+        scale=np.std(self.y,axis=0)
+        self.forest.fit(x,self.y/np.where(scale>0,scale,1))
         leaves=self.forest.apply(x)
         self.pools=[]
         for i in range(leaves.shape[1]):
-            self.pools.append({leaf:np.flatnonzero(leaves[:,i]==leaf) for leaf in np.unique(leaves[:,i])})
+            order=np.argsort(leaves[:,i],kind='stable')
+            keys,starts=np.unique(leaves[order,i],return_index=True)
+            groups=np.split(order,starts[1:])
+            self.pools.append(dict(zip(keys,groups)))
         return self
     def sample(self,x,draws=512):
         x=self.imputer.transform(x.replace([np.inf,-np.inf],np.nan))
         leaves=self.forest.apply(x)
         rng=np.random.default_rng(self.seed)
-        result=np.empty((len(x),draws,len(TARGETS)))
+        result=np.empty((len(x),draws,self.target_count))
         # Each tree leaf supplies observed joint yards/receptions, preserving their dependence.
         for row in range(len(x)):
             for j,tree in enumerate(rng.integers(0,len(self.pools),size=draws)):
@@ -35,12 +41,13 @@ def crps(draws,actual):
     a=np.sort(draws,axis=1);n=a.shape[1]
     return np.mean(np.mean(np.abs(a-actual[:,None]),axis=1)-np.sum(a*(2*np.arange(1,n+1)-n-1),axis=1)/(n*n))
 
-def scores(samples,y,baseline):
+def scores(samples,y,baseline,targets=None):
+    targets=targets or TARGETS
     result={}
-    for i,key in enumerate(TARGETS):
+    for i,key in enumerate(targets):
         a=samples[:,:,i];actual=np.asarray(y[key]);mean=a.mean(axis=1)
         low,high=np.quantile(a,[.1,.9],axis=1)
-        thresholds=[19.5,39.5,59.5,79.5] if key=='receiving_yards' else [1.5,3.5,5.5,7.5]
+        thresholds=THRESHOLDS[key]
         reliability=[];briers=[]
         for line in thresholds:
             p=(a>line).mean(axis=1);outcome=(actual>line).astype(float)
@@ -56,9 +63,11 @@ def scores(samples,y,baseline):
                      'reliability':reliability}
     return result
 
-def walk_forward(frame,features,season,trees=96,min_train=500,complete_weeks=None):
+def walk_forward(frame,features,season,trees=96,min_train=500,complete_weeks=None,targets=None,positions=None):
+    targets=targets or TARGETS
     """Expanding training window, held out by complete NFL week."""
-    eligible=frame[(~frame.forecast)&(frame.prior_games>=3)].dropna(subset=TARGETS)
+    eligible=frame[(~frame.forecast)&(frame.prior_games>=3)].dropna(subset=targets)
+    if positions is not None: eligible=eligible[eligible.position.isin(positions)]
     weeks=sorted(eligible.loc[eligible.season.eq(season),'week'].unique())
     if not weeks:
         raise ValueError('No completed current-season weeks available')
@@ -69,21 +78,21 @@ def walk_forward(frame,features,season,trees=96,min_train=500,complete_weeks=Non
         test=eligible[(eligible.season==season)&(eligible.week==week)]
         if len(train)<min_train or len(test)==0:
             continue
-        fitted=DistributionForest(trees=trees).fit(train[features],train[TARGETS])
+        fitted=DistributionForest(trees=trees).fit(train[features],train[targets])
         samples=fitted.sample(test[features])
-        base={key:test[key+'_last6'].fillna(train[key].median()).to_numpy() for key in TARGETS}
-        metric=scores(samples,test[TARGETS],base)
+        base={key:test[key+'_last6'].fillna(train[key].median()).to_numpy() for key in targets}
+        metric=scores(samples,test[targets],base,targets)
         folds.append({'week':int(week),'trainRows':len(train),'testRows':len(test),'metrics':metric})
-        all_samples.append(samples);all_y.append(test[TARGETS]);all_base.append(base)
+        all_samples.append(samples);all_y.append(test[targets]);all_base.append(base)
         details.extend({'game_id':row.game_id,'player_id':row.player_id,'week':int(week),
-                        **{key:{'actual':float(getattr(row,key)),'mean':float(samples[j,:,i].mean())} for i,key in enumerate(TARGETS)}}
+                        **{key:{'actual':float(getattr(row,key)),'mean':float(samples[j,:,i].mean())} for i,key in enumerate(targets)}}
                        for j,row in enumerate(test.itertuples()))
     if not folds:
         raise ValueError('Insufficient historical games for chronological evaluation')
     import pandas as pd
     y=pd.concat(all_y,ignore_index=True)
-    baseline={key:np.concatenate([v[key] for v in all_base]) for key in TARGETS}
-    aggregate=scores(np.concatenate(all_samples),y,baseline)
+    baseline={key:np.concatenate([v[key] for v in all_base]) for key in targets}
+    aggregate=scores(np.concatenate(all_samples),y,baseline,targets)
     # Latest week is reported separately and never used for configuration selection.
     complete_folds=[f for f in folds if complete_weeks is None or f['week'] in complete_weeks]
     if not complete_folds:

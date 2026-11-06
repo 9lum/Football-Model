@@ -37,11 +37,11 @@ def csv_asset(tag, name, cache, manifest):
         raw = gzip.decompress(raw)
     return pd.read_csv(io.BytesIO(raw), low_memory=False)
 
-def normalize_stats(frame):
+def normalize_stats(frame,positions=None):
     d = frame.copy()
     for canonical, aliases in {'player_id':['gsis_id'], 'player_display_name':['player_name','display_name'],
                                'team':['recent_team'], 'opponent_team':['opponent'],
-                               'season_type':['game_type']}.items():
+                               'season_type':['game_type'],'passing_interceptions':['interceptions'],'sacks_suffered':['sacks']}.items():
         if canonical not in d:
             for alias in aliases:
                 if alias in d:
@@ -51,10 +51,11 @@ def normalize_stats(frame):
     missing = set(required)-set(d)
     if missing:
         raise ValueError('Player-stat schema missing '+str(sorted(missing)))
-    d = d[d.position.isin(['WR','TE','RB'])].copy()
+    d = d[d.position.isin(positions or ['WR','TE','RB'])].copy()
     if 'season_type' in d:
         d = d[d.season_type.eq('REG')]
-    for key in ['targets','receptions','receiving_yards','receiving_air_yards','receiving_yards_after_catch','attempts']:
+    from .profiles import COUNTERS
+    for key in COUNTERS:
         if key not in d:
             d[key] = float('nan')
         d[key] = pd.to_numeric(d[key], errors='coerce')
@@ -92,7 +93,7 @@ def add_snap_zeros(stats, snaps, players):
     # Ambiguous crosswalks fail closed instead of matching abbreviated names.
     mapping = mapping[~mapping[pfr].duplicated(keep=False)]
     s = s.merge(mapping, left_on='pfr_player_id', right_on=pfr, how='left')
-    eligible = s.position.isin(['WR','TE','RB']) & (s.offense_snaps > 0)
+    eligible = s.position.isin(['QB','WR','TE','RB']) & (s.offense_snaps > 0)
     unmapped = int((eligible & s[gsis].isna()).sum())
     s = s[eligible & s[gsis].notna()].copy()
     if 'game_type' in s:
@@ -113,7 +114,8 @@ def add_snap_zeros(stats, snaps, players):
         missing = merged[field].isna()
         merged.loc[missing,field] = [lookup.get(tuple(v)) for v in merged.loc[missing,keys].to_numpy()]
     new = merged['_merge'].eq('right_only')
-    for field in ['targets','receptions','receiving_yards','receiving_air_yards','receiving_yards_after_catch']:
+    from .profiles import COUNTERS
+    for field in [k for k in COUNTERS if k in merged]:
         merged.loc[new,field] = 0
     return merged.drop(columns='_merge'), {'addedZeroTargetGames':int(new.sum()),'unmappedSkillPositionSnapRows':unmapped,'snapRowsWaitingForGameStats':skipped_unpublished}
 
@@ -160,7 +162,7 @@ def collect(start, season, directory, include_sumer=True):
     players=csv_asset('players','players.csv',cache,manifest)
     stats=[]; snaps=[]
     for year in range(start,season+1):
-        stats.append(normalize_stats(csv_asset('stats_player',f'stats_player_week_{year}.csv.gz',cache,manifest)))
+        stats.append(normalize_stats(csv_asset('stats_player',f'stats_player_week_{year}.csv.gz',cache,manifest),positions=['QB','WR','TE','RB']))
         snaps.append(csv_asset('snap_counts',f'snap_counts_{year}.csv.gz',cache,manifest))
     stats, quality=add_snap_zeros(pd.concat(stats,ignore_index=True),pd.concat(snaps,ignore_index=True),players)
     optional={}

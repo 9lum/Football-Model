@@ -28,7 +28,7 @@ def collect(db):
         start = dt.datetime.fromisoformat(event['commence_time'].replace('Z', '+00:00'))
         if not 0 < (start-now).total_seconds() < hours*3600:
             continue
-        query = {**params, 'regions': 'us,us2,eu', 'markets': 'player_receptions,player_receiving_yards', 'oddsFormat': 'american'}
+        query = {**params, 'regions': 'us,us2,eu', 'markets': 'player_receptions,player_reception_yds,player_rush_yds,player_rush_attempts,player_rush_tds,player_pass_yds,player_pass_attempts,player_pass_completions,player_pass_tds,player_pass_interceptions,player_reception_tds', 'oddsFormat': 'american'}
         odds = fetch(BASE+'events/'+event['id']+'/odds?'+urlencode(query))
         db.execute('INSERT INTO snapshots VALUES (?,?,?,?)', (now.isoformat(), 'odds', event['id'], json.dumps(odds)))
         db.commit()

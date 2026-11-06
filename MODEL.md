@@ -76,3 +76,19 @@ Download `site-preview.html` and open it in your browser. It loads the latest su
 ## First verified run
 
 [Run 42154889123](https://github.com/9lum/Football-Model/actions/runs/42154889123) completed successfully and published real current-season results. See [RESULTS.md](RESULTS.md). This verifies data retrieval, model fitting, evaluation and output publication; it does not establish profitable sportsbook edges or browser visual QA.
+
+## v0.3: position models, statistics and history
+
+The redesigned UI loads schema v3. `players` contains QB/RB/WR/TE basic season, per-game, last-five and last-game statistics plus actual current-season game histories. `forecasts` contains eligible upcoming players with `marketSamples` keyed by supported sportsbook identifiers. Legacy v2 bundles remain readable in the page, with fewer statistics.
+
+Separate receiving (WR/TE/RB), rushing (RB/QB), and passing (QB) forests cover the 11 market types described in README. Each family includes position-relevant lagged opportunity and efficiency, offensive snap trends, and opponent/team context. EPA and CPOE are lagged when published. Targets are standardized for fitting so yardage does not overwhelm count outcomes in multi-output tree splits. Sampled outcomes remain in their original units.
+
+Cohort rules are based entirely on prior usage: at least three previous observed games and a last-three-game average of at least one target for receiving, two carries for rushing, or ten attempts for passing. The rules and tested positions appear in each family report. Bench-player and DNP outcomes are not mislabeled as starting-player forecasts. Basic profiles still include players without eligible projections.
+
+Each family is refitted and evaluated chronologically in the current season. Each market has an independent gate: at least 500 test observations (200 for passing markets), lower MAE than the six-game baseline, nominal 80% interval coverage between 70% and 95%, and complete current-season game coverage. Gates are heuristics, and some count markets can fail because discrete intervals overcover. A failing market remains visible as research and cannot qualify as a bet candidate.
+
+The route-scenario agreement requirement applies to receiving yards and receptions. Other markets use their own learned distributions, calibration sensitivity checks and gates. No unsupported route-based touchdown distribution is invented. The official receiving-yards API key is `player_reception_yds`; the previous `player_receiving_yards` import alias is accepted for compatibility.
+
+Historical charts show actual player results. Any current book line is explicitly a reference overlay, not an archived historical quote. The reasoning panel explains opportunity, efficiency, matchup context and the win probability needed at a specific price. It states when value is negative, disappears under sensitivity checks, or conflicts with the route scenario. These contextual signals are not a causal decomposition of a forest prediction.
+
+Basic ratios are calculated from aggregate denominators (for example, season completions divided by season attempts), rather than averaging weekly percentages. Missing source fields remain null. Recorded stat games are not asserted to be the official games-played total. Weather, real-time injuries, coverage assignments and future game state are not fabricated. No claim of a globally optimal or profit-proven model is made.
