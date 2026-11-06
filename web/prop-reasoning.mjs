@@ -1,0 +1,32 @@
+import {marketDefinitions} from './market-core.mjs';
+const finite=x=>typeof x==='number'&&Number.isFinite(x);
+const fmt=x=>finite(x)?Number(x).toLocaleString('en-US',{maximumFractionDigits:1}):'—';
+const pct=x=>fmt(100*x)+'%';
+const price=x=>finite(x)?(x>0?'+':'')+x:'—';
+export function propReasoning({player,forecast,market,summary,quotes=[]}){
+ const spec=marketDefinitions[market];
+ if(!spec||!forecast||forecast.unavailable||!finite(summary?.mean))return {status:'Unavailable',tone:'neutral',sentences:['No active model projection is available for this player and market.','A betting recommendation requires an available forecast and a matched, current sportsbook price.']};
+ const f=forecast.features||{},passed=forecast.marketSamples?.[market]?.validationPassed===true;
+ const relevant=quotes.filter(q=>q.playerId===forecast.playerId&&q.gameId===forecast.gameId&&q.market===market&&finite(q.ev)&&finite(q.probability)&&finite(q.line)&&finite(q.price));
+ const ranked=[...relevant].sort((a,b)=>Number(b.candidate)-Number(a.candidate)||Number(!(b.flags||[]).includes('stale odds'))-Number(!(a.flags||[]).includes('stale odds'))||b.ev-a.ev),q=ranked[0];
+ let status='Projection only',tone='neutral',first;
+ if(q){const qualified=q.candidate===true&&passed&&!(q.flags||[]).length&&q.probability>=.7&&q.ev>0,positive=q.ev>0;
+  status=qualified?'Potential value':positive?'Research only':'No demonstrated value';tone=qualified?'good':'neutral';
+  const offer=q.side+' '+fmt(q.line)+' at '+price(q.price)+' with '+q.book;
+  first='The model projects '+fmt(summary.mean)+' '+spec.label.toLowerCase()+'; '+offer+' has an estimated '+pct(q.probability)+' win probability and '+pct(q.ev)+' return per unit risked'+(qualified?', making it a potential value candidate.':positive?', but it does not pass every qualification check.':', so this price does not show positive model value.');
+ }else first='The model projects '+fmt(summary.mean)+' '+spec.label.toLowerCase()+' (80% range '+fmt(summary.low)+'–'+fmt(summary.high)+'); no matched sportsbook line is available, so betting value is not yet established.';
+ const volume=spec.family==='passing'?['attempts_last3','pass attempts']:spec.family==='rushing'?['carries_last3','carries']:['targets_last3','targets'];
+ const context=[];
+ if(finite(f[volume[0]]))context.push('recent usage is '+fmt(f[volume[0]])+' '+volume[1]+' per game over the last three recorded games');
+ const allowed=f['opp_position_'+spec.target+'_last6'],games=f.opp_position_games_last6;
+ if(finite(allowed)&&finite(games)&&games>0)context.push((forecast.opponent||'the opponent')+' allowed '+fmt(allowed)+' '+spec.label.toLowerCase()+' per game to the entire '+(player?.position||forecast.position)+' group across '+fmt(games)+' prior games');
+ const blockers=q?[...new Set(q.flags||[])]:[];
+ if(q&&finite(q.conservative)&&q.conservative<.03)blockers.push('sensitivity-adjusted value below the qualification threshold');
+ if(!passed&&!blockers.includes('validation gate failed'))blockers.push('validation gate failed');
+ if((forecast.availabilityReviewRequired||player?.health?.reviewRequired)&&!blockers.some(s=>/injury|availability/.test(s)))blockers.push('availability needs review');
+ let second=context.length?'Relevant context: '+context.join(', while '):'Published usage or opponent-position context is incomplete';
+ if(blockers.length)second+='; unresolved checks: '+blockers.join(', ');
+ else second+='; these are model inputs, not proof that any single factor causes the projected result';
+ second+='.';
+ return {status,tone,sentences:[first,second],quote:q?{book:q.book,line:q.line,side:q.side}:null};
+}
