@@ -5,7 +5,7 @@ from pathlib import Path
 from urllib.parse import quote
 from scripts.refresh_odds import fetch,read,number,ProviderError
 from scripts.odds_quota import routine_budget,kickoff_reserve
-MARKETS=['player_anytime_td','player_first_td','player_last_td']
+MARKETS=['player_anytime_td','player_1st_td','player_last_td']
 
 def collect(output=Path('data'),key=None,now=None):
  now=now or dt.datetime.now(dt.timezone.utc);output.mkdir(exist_ok=True,parents=True);previous=read(output/'attd-odds.json',{});prior={e['id']:e for e in previous.get('data',[]) if e.get('id')};report={'generatedAt':now.isoformat(),'source':'The Odds API','market':'player_anytime_td','markets':MARKETS,'status':'unavailable','errors':[],'data':[],'cadence':'Routine coverage every six hours, with final pregame collection prioritized by the kickoff worker. First/last TD are sportsbook prices only, not ATTD model probabilities.'}
@@ -24,7 +24,7 @@ def collect(output=Path('data'),key=None,now=None):
     value['collectedAt']=now.isoformat();prior[event['id']]=value;fresh+=1
    except ProviderError as error:
     spent+=3;report['errors'].append({'eventId':event['id'],'code':error.status})
-    if error.status in [401,403,429]:break
+    if error.status in [401,403,422,429]:break
   valid={e['id'] for e in eligible};report.update(data=[e for k,e in prior.items() if k in valid],status='ok' if fresh else 'quota_wait',freshEvents=fresh,eligibleEvents=len(eligible),creditBudget=budget,estimatedCreditsUsed=spent)
  except ProviderError as error:report['errors'].append({'code':error.status});report['data']=list(prior.values())
  report['pricedEvents']=sum(any(m.get('key')=='player_anytime_td' and m.get('outcomes') for b in e.get('bookmakers',[]) for m in b.get('markets',[])) for e in report['data'])

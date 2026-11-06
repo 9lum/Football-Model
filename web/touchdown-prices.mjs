@@ -1,6 +1,6 @@
 import {teamNames} from './market-core.mjs';
 const clean=x=>String(x||'').toLowerCase().replace(/[^a-z0-9]/g,'');
-export const touchdownMarkets=[['player_anytime_td','Anytime TD'],['player_first_td','First TD'],['player_last_td','Last TD']];
+export const touchdownMarkets=[['player_anytime_td','Anytime TD'],['player_1st_td','First TD'],['player_last_td','Last TD']];
 export function touchdownPrices(player,snapshot,now=Date.now()){
  const result=Object.fromEntries(touchdownMarkets.map(([key])=>[key,[]])),name=clean(player?.name||player?.player),kickoff=Date.parse(player?.kickoff),clubs=[teamNames[player?.team],teamNames[player?.opponent]].filter(Boolean);
  if(!name||!Number.isFinite(kickoff)||clubs.length!==2)return result;
