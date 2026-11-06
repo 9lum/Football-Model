@@ -1,32 +1,32 @@
-# Route Edge — NFL receiving research baseline
+# Route Edge — public-data NFL receiving research
 
-Implemented: a private-dashboard Worker, receiving yards / receptions simulation, exact-line over/under comparisons, no-vig probabilities, pushes, estimated EV, snapshot imports, and configured feed polling every 60 seconds while the tab is open. Integer yards and receptions retain push probability. No current player statistics or odds are fabricated.
+A receiving-yards and receptions model with public weekly statistics, chronological current-season testing, current route scenarios, and sportsbook price comparison. No profitable edge or backtest return is assumed.
 
-## Connect data
-Set server runtime secrets ODDS_API_KEY (The Odds API), STATS_FEED_URL (a licensed normalized statistics endpoint) and optional STATS_FEED_TOKEN. Redeploy after configuration. Do not put credentials into HTML or source. The Data connections page downloads the required JSON format. Bookmaker coverage depends on the subscription, event, market and jurisdiction; the API cannot guarantee all major books.
+## View your dashboard
 
-https://the-odds-api.com/liveapi/guides/v4/
-https://the-odds-api.com/sports-odds-data/update-intervals.html
-https://nflreadr.nflverse.com/articles/nflverse_data_schedule.html
-https://sumersports.com/football-analytics-definitions/
+**Download [site-preview.html](site-preview.html) using GitHub's Download raw file button, then open it in your browser.** It loads the latest successful model results from this repository. You can also import `latest.json` from a workflow artifact. It shows no fabricated predictions if results are unavailable.
 
-nflverse participation from 2023 onward is provided after the postseason, so it is unsuitable for live route counts. License an in-season route provider and normalize it to the documented contract. Real-time means provider-limited polling here, not a tick-by-tick streaming guarantee.
+## Automatic weekly statistics
 
-## Continuous collection
-Run `python collector.py` on an always-on host with the same environment variables. Python standard library only. It polls upcoming events within LOOKAHEAD_HOURS (default 48), stores timestamped raw odds and normalized statistics in SQLite, and backs off on errors. POLL_SECONDS defaults to 60; EDGE_DB sets the local database path. It consumes API quota per event, market and region; choose the cadence and window for your subscription. This process has not been started and does not run merely because the dashboard is deployed. Use a process manager with restart and disk monitoring for production. SQLite is local, so use durable disk and backups. Respect feed licenses.
+The model uses **nflverse weekly player-game statistics**, normally refreshed nightly after game days. GitHub Actions checks every six hours, trains the model and evaluates the current season using earlier weeks only. The workflow also attempts optional public SumerSports WR/TE route tables; missing route data does not silently become zero.
 
-The collector archives movement; the dashboard currently shows changes seen within the current tab. Connecting historical movement charts to that archive is future work. No automated bets, alerts, or background service have been activated.
+Open **Actions → Public-data model and current-season tests → Run workflow** to request a fresh run. Select an NFL season or leave it blank for the current season. Successful runs publish `data/latest.json`, `data/validation.json` and `data/oos-predictions.json`. Source manifests and dated route snapshots are available in workflow artifacts.
 
-## Model limits
-This is an untrained, pregame research baseline, not a validated profitable model. Priors, variance and shrinkage strengths are heuristic. aDOT + YAC is an approximation for completion yards, which requires fitted completion-depth distributions for production. No opponent, weather, injury, coverage, rushing, passing, touchdown or game-level model is implemented. Use the method tab's walk-forward validation plan before relying on projected EV. No verified unseen edges or backtest returns are claimed.
+## Run locally
 
-## Verify and deploy
-`node --test tests.mjs` checks odds conversion, probabilities, pushes, opportunity monotonicity and API failure behavior. `python -m py_compile collector.py` checks collector syntax. Feed integration tests require real credentials. Browser QA was unavailable in the authoring environment.
+```sh
+pip install -r requirements.txt
+python -m unittest discover -s tests -v
+node --test tests.mjs tests/market.test.mjs
+python -m edge.pipeline --season 2026 --start-season 2021 --output data
+```
 
-Worker entry: worker/index.js. Build artifact: dist/server/index.js and dist/.openai/hosting.json. The private Sites identity is excluded from this public repository. Configure a fresh hosting manifest when deploying to Sites, or point your Worker hosting platform at worker/index.js. Source push/publication was blocked by an unreachable configured proxy during authoring; no successful deployment is claimed.
+See [MODEL.md](MODEL.md) for sources, model design, feature timing, quality gates and limitations. See [NFL_DATA.md](NFL_DATA.md) for the separate NFL.com raw-table exporter.
 
-## Open the site
-Download `site-preview.html` and open it in your browser for a standalone preview with a working simulator. Viewing GitHub's file page displays source code; download the raw file first. Live odds and feed refresh require running/deploying `worker/index.js` on a Worker-compatible host and configuring secrets.
+## Scope and verification
 
-## NFL.com statistics
-See [NFL_DATA.md](NFL_DATA.md) for the full-category, paginated CSV/JSON exporter and hourly GitHub Actions workflow. A complete live pull is not yet verified. Download exports from successful workflow run artifacts.
+The engine tests receiving yards and receptions; rushing, passing and touchdown models are not implemented. Current-season evaluation reports forecast error and distribution calibration. It does not establish ROI or unseen betting edges without point-in-time odds. Current route totals are excluded from historical folds.
+
+Software checks passed on local fixtures. Full public-data retrieval and current-season numerical results remain unverified in the authoring environment because its configured network proxy was unreachable. Check the latest workflow status and generated report before relying on any projection. A workflow configuration is not evidence of a completed run.
+
+The legacy `worker/index.js` is the earlier server-based model lab and odds adapter. It requires deployment and server secrets for live odds. No credentials, private hosting identifiers or raw bulk datasets are included in this public repository.

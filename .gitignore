@@ -7,3 +7,6 @@ __pycache__/
 *.sqlite-*
 dist/
 .openai/
+data/snapshots/raw/
+*.joblib
+*.pkl

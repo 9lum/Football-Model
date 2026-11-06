@@ -1,0 +1,65 @@
+name: Public-data model and current-season tests
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: NFL season (blank selects current NFL season)
+        type: string
+        required: false
+  push:
+    paths: ['edge/**', 'tests/**', 'requirements.txt', '.github/workflows/public-model.yml']
+  schedule:
+    - cron: '43 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: public-model-refresh
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Test chronology, identity, distributions and pricing
+        run: |
+          python -m unittest discover -s tests -v
+          python -m unittest test_nfl_stats.py
+          node --test tests.mjs tests/market.test.mjs
+      - name: Retrieve public data, fit models, evaluate current season
+        env:
+          INPUT_SEASON: ${{ inputs.season }}
+        run: |
+          season="$(python -c 'import datetime; d=datetime.date.today(); print(d.year if d.month>=3 else d.year-1)')"
+          python -m edge.pipeline --season "${INPUT_SEASON:-$season}" --start-season 2021 --output data
+      - name: Publish successful research outputs to repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/latest.json data/validation.json data/oos-predictions.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh public model and current-season evaluation [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Preserve source manifests and dated route snapshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-model-${{ github.run_id }}
+          path: |
+            data/latest.json
+            data/validation.json
+            data/oos-predictions.json
+            data/snapshots/sources.json
+            data/snapshots/sumer-*.json
+          if-no-files-found: warn
+          retention-days: 90
