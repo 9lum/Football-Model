@@ -2,7 +2,7 @@ name: Weekly Anytime Touchdown research
 on:
   workflow_dispatch:
   push:
-    paths: ['edge/touchdowns.py','scripts/refresh_attd_odds.py','tests/test_touchdowns.py','.github/workflows/touchdowns.yml']
+    paths: ['edge/touchdowns.py','edge/td_order.py','scripts/refresh_attd_odds.py','tests/test_touchdowns.py','.github/workflows/touchdowns.yml']
   schedule:
     - cron: '21 */6 * * *'
   workflow_run:
@@ -37,7 +37,7 @@ jobs:
           key: attd-pbp-${{ runner.os }}-${{ github.run_id }}
           restore-keys: attd-pbp-${{ runner.os }}-
       - name: Test scoring, chronology and pricing semantics
-        run: python -m unittest tests.test_touchdowns -v
+        run: python -m unittest tests.test_touchdowns tests.test_td_order scripts.test_attd_odds -v
       - name: Retrieve actual ATTD sportsbook prices within quota
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}

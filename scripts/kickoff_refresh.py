@@ -93,9 +93,14 @@ def reprice(batch,checks):
   game=SimpleNamespace(home_team=g['homeTeam'],away_team=g['awayTeam'],kickoff=pd.Timestamp(g['kickoff']));players=[]
   for p in g.get('players',[]):
    h=health.get(p['playerId'],{});
-   if h.get('ruledOut'):continue
+   if h.get('ruledOut'):
+    if p['playerId'] in report.get('allPlayerOdds',{}):report['allPlayerOdds'][p['playerId']].update(markets={},status='unavailable',reason='Ruled out; no participation-conditional odds offered')
+    continue
    p['health']={'label':h.get('label','Availability unconfirmed'),'confirmed':h.get('confirmed',False),'reviewRequired':h.get('reviewRequired',False)};p['quotes']=matched_quotes(p,game,td,now,p['probability'],report['validation'],h)
    if not checks.get('statisticsUnchanged'):
+    entry=report.get('allPlayerOdds',{}).get(p['playerId'],{})
+    entry['reason']='Statistics revision or source check requires refreshed analysis'
+    for estimate in entry.get('markets',{}).values():estimate.update(validationPassed=False,status='requires refreshed analysis')
     for q in p['quotes']:q['qualified']=False;q['flags'].append('statistics revision or source check requires analysis refresh')
    players.append(p)
   ranked=sorted(players,key=lambda p:p['probability'],reverse=True);chosen=[{**ranked[0],'risk':'Core research · highest estimated probability'}] if ranked else [];value=sorted([p for p in ranked if p['probability']>=.1 and p['recent'].get('rzOpportunities',0)>=2 and p.get('quotes') and p['quotes'][0]['estimatedReturn']>0 and (not chosen or p['playerId']!=chosen[0]['playerId'])],key=lambda p:p['quotes'][0]['estimatedReturn'],reverse=True)

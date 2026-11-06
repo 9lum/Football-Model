@@ -196,3 +196,22 @@ can exhaust quota. The UI marks late, partial or unconfirmed refreshes and polls
 the small audit snapshot every 15 seconds around kickoff, loading larger odds
 files after publication changes. An always-on externally hosted scheduler with
 adequate API allowance would be required for tighter timing guarantees.
+
+### First/last touchdown model fair odds
+`edge.td_order` trains separate regularized scorer-order classifiers on the actual
+first and last touchdown scorer in each game. Defensive and return scores are
+included when identifying scoring order, so the next offensive scorer is never
+misclassified as first. Lagged opportunity features and prior first/last rates
+are shifted before kickoff. Each market is evaluated using complete-week
+current-season holdouts against a position-frequency baseline. First/last player
+probabilities are capped by ATTD probability and a training-derived game mass
+budget, retaining residual mass for unmodeled scorers and no-touchdown games.
+These are distinct estimated probabilities, not a reuse of the ATTD probability.
+
+`allPlayerOdds` indexes every database/depth-chart player. Upcoming, eligible
+players receive model fair odds for all three TD markets. Missing current games,
+sparse histories and ruled-out players are labeled unavailable; probabilities
+are never fabricated to fill the grid. The UI matches the exact player/game,
+uses the same font and size for each model/book pair, and distinguishes them
+by weight. First/last remain visually secondary to ATTD and are research-only
+until separate pricing, availability and qualification requirements are met.
