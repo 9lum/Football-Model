@@ -94,6 +94,8 @@ def run(start,season,out,trees=96,as_of=None):
         'sumerStatus':{k:{field:v for field,v in value.items() if field!='players'} for k,value in sumer.items()}}
     out.mkdir(parents=True,exist_ok=True)
     bundle=clean(bundle)
+    from .audit import write_audit
+    audit=write_audit(out,frame,season,now)
     temporary=out/'latest.json.tmp'
     temporary.write_text(json.dumps(bundle,separators=(',',':'),allow_nan=False),encoding='utf-8')
     temporary.replace(out/'latest.json')
@@ -101,7 +103,7 @@ def run(start,season,out,trees=96,as_of=None):
     report['families']={family:{k:v for k,v in value.items() if k!='predictions'} for family,value in validations.items()}
     (out/'validation.json').write_text(json.dumps(clean(report),indent=2,allow_nan=False))
     (out/'oos-predictions.json').write_text(json.dumps(clean([dict(item,family=family) for family,report in validations.items() for item in report['predictions']]),indent=2))
-    return {'forecasts':len(bundle['forecasts']),'testedWeeks':len(validation['folds']),'validationGates':market_gates,'latestWeekHoldout':validation['latestWeekHoldout']['week']}
+    return {'audit':audit,'forecasts':len(bundle['forecasts']),'testedWeeks':len(validation['folds']),'validationGates':market_gates,'latestWeekHoldout':validation['latestWeekHoldout']['week']}
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)

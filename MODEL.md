@@ -92,3 +92,11 @@ The route-scenario agreement requirement applies to receiving yards and receptio
 Historical charts show actual player results. Any current book line is explicitly a reference overlay, not an archived historical quote. The reasoning panel explains opportunity, efficiency, matchup context and the win probability needed at a specific price. It states when value is negative, disappears under sensitivity checks, or conflicts with the route scenario. These contextual signals are not a causal decomposition of a forest prediction.
 
 Basic ratios are calculated from aggregate denominators (for example, season completions divided by season attempts), rather than averaging weekly percentages. Missing source fields remain null. Recorded stat games are not asserted to be the official games-played total. Weather, real-time injuries, coverage assignments and future game state are not fabricated. No claim of a globally optimal or profit-proven model is made.
+
+## Auditable weekly forecast outcomes
+
+`edge.audit` reads a clean, tracked previous model bundle before it is replaced. The publication time is derived from `git log` for that exact file, rather than the model run-start time. A source commit must exist and precede kickoff. For each game/player/market, the first archived projected mean and range are retained unchanged in a per-season ledger. All archived projections are retained, including research markets, to avoid selecting only favorable results.
+
+Outcome joins use game ID, GSIS player ID and the market’s stat target. Published numeric zeroes are valid results; absent player outcomes are not converted into zero. DNP and sportsbook settlement rules require separate review. Current public stat corrections can update actuals, while original projected values and provenance stay fixed.
+
+The Results page separates these committed pregame forecasts from reconstructed historical walk-forward tests. It reports projected values, actuals, actual-minus-projected errors and mean absolute error by selected market/week. It does not reinterpret closeness to a continuous point estimate as a betting win rate.

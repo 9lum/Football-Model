@@ -39,3 +39,13 @@ The first receiving-only v0.2 run succeeded and is documented in [RESULTS.md](RE
 Expected value uses win, loss and push probabilities. Reasoning describes observed signals and model-price differences, not causal feature attribution. It explicitly reports negative value or disagreement. Manual prices are unverified. Historical price backtesting, verified profit, optimality and guaranteed edges are not claimed. Forecasts assume participation; check current availability, trades and sportsbook rules.
 
 No new hosted deployment is implied. `site-preview.html` is the redesigned interface. The legacy `worker/index.js` remains a separate server-backed scenario lab/odds adapter. No credentials or private Site identity are included here. Browser visual QA was unavailable in the authoring environment; software and end-to-end fixture checks are provided.
+
+## Weekly shortlist and projections vs. actuals
+
+The front page now shows one primary yardage projection per position in a concise weekly shortlist. It requires at least four current-season out-of-sample tests for each player, a passed market gate, fresh forecasts and a future game in the nearest forecast week. Ranking combines player-level past error and relative forecast uncertainty within each position. It is not a guaranteed pick or a claimed win probability, and it does not require sportsbook prices.
+
+Open **Results** for per-player projected values, actual statistics and signed errors. The dataset selector separates **Published before kickoff** from **Historical walk-forward tests**. Latest results are selected by default; position, team, opponent and week filters also apply.
+
+The refresh workflow freezes the first archived forecast from the previous committed model bundle, using the file’s Git publication timestamp and commit SHA. A projection published after kickoff is never retroactively recorded as a pregame call. Archived values are never overwritten by later model updates. Once public actual statistics arrive, results update automatically. Missing player outcomes remain pending rather than being assumed zero.
+
+The first archived forecasts may still be awaiting their games. The existing historical tests are available immediately in the other dataset. Forecast ledgers are saved by season in `data/forecast-ledger-<season>.json`; `data/projection-results.json` contains their current outcome status. The 80% range is an uncertainty interval, not a claim of 80% accuracy. No new accuracy target was imposed.

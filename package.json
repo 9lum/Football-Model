@@ -1,1 +1,1 @@
-{"type":"module","scripts":{"test":"node --test tests.mjs"}}
+{"type":"module","scripts":{"test":"node --test tests.mjs tests/*.test.mjs web/*.test.mjs"}}

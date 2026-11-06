@@ -15,3 +15,28 @@ export function explanation(player,market,quote=null,bundle=null){const key=norm
  if(quote){const conditional=quote.probability/Math.max(1-quote.push,1e-10),required=1/decimal(quote.price);add('Probability versus the price','The '+quote.side.toLowerCase()+' needs '+(required*100).toFixed(1)+'% wins among settled bets at this price. The model estimates '+(conditional*100).toFixed(1)+'%, with '+(quote.push*100).toFixed(1)+'% push probability.');conclusion=quote.ev>0?'The model estimates positive value at this price.':'At this price, the model does not estimate an advantage.';if(quote.ev>0&&quote.conservative<=0)conclusion+=' That advantage disappears under the calibration sensitivity check.';if(quote.routeEv!=null&&quote.routeEv<=0)conclusion+=' The route scenario disagrees.';}
  const report=bundle?((bundle.familyValidation?.[family]||bundle.validation)?.aggregate?.[spec?.target]):null;if(report)add('Measured model accuracy','Current-season error is '+report.mae.toFixed(2)+' versus '+report.rollingBaselineMae.toFixed(2)+' for the rolling baseline.'+(report.mae>=report.rollingBaselineMae?' This market has not beaten that baseline.':' The measured improvement does not prove profitable bets.'));
  return{conclusion,points,note:'These are observed inputs and consistency checks, not a causal decomposition of the prediction.'};}
+
+export function buildAccuracyIndex(records){const index={},seen=new Set();for(const row of records){if(!row?.player_id||!row.game_id)continue;const season=Number(String(row.game_id).split('_')[0]);for(const [target,value]of Object.entries(row)){if(!value||typeof value!=='object'||!Number.isFinite(value.actual)||!Number.isFinite(value.mean))continue;const unique=[row.game_id,row.player_id,target].join('|');if(seen.has(unique))continue;seen.add(unique);const key=row.player_id+'|'+target;(index[key]??=[]).push({season,week:Number(row.week),error:Math.abs(value.actual-value.mean)});}}return index}
+export function weeklyTopProjections(bundle,accuracyIndex,now=Date.now(),filters={}){
+ const primary={QB:'player_pass_yds',RB:'player_rush_yds',WR:'player_reception_yds',TE:'player_reception_yds'};
+ const age=now-Date.parse(bundle?.generatedAt);if(!bundle||!Number.isFinite(age)||age<0||age>172800000)return{week:null,picks:[],reason:'The forecast bundle needs a fresh update.'};
+ const future=(bundle.forecasts||[]).filter(f=>{const parts=String(f.gameId).split('_');return Number(parts[0])===bundle.season&&Date.parse(f.kickoff)>now&&Date.parse(f.kickoff)<=now+8*86400000&&Number.isFinite(Number(parts[1]))}).sort((a,b)=>Date.parse(a.kickoff)-Date.parse(b.kickoff));
+ const week=future.length?Number(future[0].gameId.split('_')[1]):null;if(week===null)return{week,picks:[],reason:'No upcoming weekly projections are available.'};
+ const candidates=[];for(const f of future){if(Number(f.gameId.split('_')[1])!==week||!matchesPlayer(f,filters))continue;const market=primary[f.position],values=marketValues(f,market);if(!market||!values.length)continue;
+ const passed=f.marketSamples?.[market]?.validationPassed??bundle.validationPassed;if(!passed)continue;
+ const target=marketDefinitions[market].target;const tested=(accuracyIndex[f.playerId+'|'+target]||[]).filter(r=>r.season===bundle.season&&r.week<week).sort((a,b)=>a.week-b.week).slice(-8);if(tested.length<4)continue;
+ const stats=statsSummary(values),mae=tested.reduce((a,b)=>a+b.error,0)/tested.length,scale=Math.max(Math.abs(stats.mean),10);
+ // Experimental ordering within a position, not a calibrated hit probability.
+ const score=.65*mae/scale+.35*(stats.high-stats.low)/(2*scale);
+ candidates.push({...f,market,summary:stats,pastMae:mae,testGames:tested.length,score});}
+ const picks=[];for(const position of ['QB','RB','WR','TE']){const best=candidates.filter(f=>f.position===position).sort((a,b)=>a.score-b.score||b.testGames-a.testGames||a.name.localeCompare(b.name))[0];if(best)picks.push(best)}
+ return{week,picks,reason:picks.length?'':'No projections match the filters and minimum testing requirements.'};
+}
+
+export function projectionComparisonRows(bundle,published,testRows,market,mode='published',filters={},week=''){
+ const key=normalizeMarket(market),definition=marketDefinitions[key];if(!definition)return[];
+ const profiles=new Map((bundle.players||bundle.forecasts||[]).map(p=>[p.playerId,p]));let rows=[];
+ if(mode==='published')rows=(published?.rows||[]).filter(r=>r.market===key).map(r=>({...r,name:r.player}));
+ else for(const record of testRows||[]){const value=record[definition.target];if(!value||!Number.isFinite(value.actual)||!Number.isFinite(value.mean)||Number(String(record.game_id).split('_')[0])!==bundle.season)continue;const p=profiles.get(record.player_id),game=p?.history?.find(h=>h.gameId===record.game_id);rows.push({playerId:record.player_id,name:p?.name||record.player_id,player:p?.name||record.player_id,position:p?.position||'—',team:game?.team||p?.team,opponent:game?.opponent||null,week:Number(record.week),gameId:record.game_id,market:key,projected:value.mean,actual:value.actual,error:value.actual-value.mean,status:'backtest',issuedAt:null})}
+ const seen=new Set();return rows.filter(r=>{const id=[r.playerId,r.gameId,r.market].join('|');if(seen.has(id))return false;seen.add(id);return(!week||String(r.week)===String(week))&&matchesPlayer(r,filters)}).sort((a,b)=>b.week-a.week||a.name.localeCompare(b.name));
+}
