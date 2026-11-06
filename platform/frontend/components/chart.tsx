@@ -1,0 +1,3 @@
+'use client';
+import {useEffect,useRef} from 'react';
+export default function Chart({option,label,height=300}:{option:any,label:string,height?:number}){const ref=useRef<HTMLDivElement>(null);useEffect(()=>{let chart:any,disposed=false;let observer:ResizeObserver;import('echarts').then(echarts=>{if(disposed||!ref.current)return;chart=echarts.init(ref.current,'dark',{renderer:'canvas'});chart.setOption({backgroundColor:'transparent',textStyle:{fontFamily:'Inter,system-ui'},...option});observer=new ResizeObserver(()=>chart?.resize());observer.observe(ref.current)});return()=>{disposed=true;observer?.disconnect();chart?.dispose()}},[option]);return <div ref={ref} role="img" aria-label={label} style={{height,width:'100%'}}/>}

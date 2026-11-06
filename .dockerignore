@@ -1,0 +1,11 @@
+.git
+.env
+.env.*
+node_modules
+**/node_modules
+**/.next
+**/out
+work
+__pycache__
+**/__pycache__
+.openai

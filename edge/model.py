@@ -55,19 +55,23 @@ def scores(samples,y,baseline,targets=None):
         a=samples[:,:,i];actual=np.asarray(y[key]);mean=a.mean(axis=1)
         low,high=np.quantile(a,[.1,.9],axis=1)
         thresholds=THRESHOLDS[key]
-        reliability=[];briers=[]
+        reliability=[];briers=[];log_losses=[];high_prob=[];high_actual=[]
         for line in thresholds:
             p=(a>line).mean(axis=1);outcome=(actual>line).astype(float)
             briers.extend((p-outcome)**2)
+            for estimated,observed in [(p,outcome),(1-p,1-outcome)]:
+                chosen=estimated>=.70
+                high_prob.extend(estimated[chosen]);high_actual.extend(observed[chosen])
+            clipped=np.clip(p,1e-6,1-1e-6);log_losses.extend(-(outcome*np.log(clipped)+(1-outcome)*np.log(1-clipped)))
             for lower in np.arange(0,1,.1):
                 select=(p>=lower)&(p<lower+.1 if lower<.9 else p<=1)
                 if select.any():
                     reliability.append({'line':line,'bin':round(float(lower),1),'n':int(select.sum()),'predicted':float(p[select].mean()),'observed':float(outcome[select].mean())})
-        result[key]={'n':len(actual),'mae':float(np.mean(np.abs(mean-actual))),
+        result[key]={'n':len(actual),'mae':float(np.mean(np.abs(mean-actual))),'rmse':float(np.sqrt(np.mean((mean-actual)**2))),
                      'rollingBaselineMae':float(np.mean(np.abs(np.asarray(baseline[key])-actual))),
                      'crps':float(crps(a,actual)), 'coverage80':float(((actual>=low)&(actual<=high)).mean()),
-                     'meanWidth80':float((high-low).mean()),'fixedThresholdBrier':float(np.mean(briers)),
-                     'reliability':reliability}
+                     'meanWidth80':float((high-low).mean()),'fixedThresholdBrier':float(np.mean(briers)),'fixedThresholdLogLoss':float(np.mean(log_losses)),
+                     'probability70Cohort':{'n':len(high_actual),'meanEstimated':float(np.mean(high_prob)) if high_prob else None,'observedWinRate':float(np.mean(high_actual)) if high_actual else None,'scope':'Pooled fixed thresholds, both sides; not actual historical sportsbook wagers.'},'reliability':reliability}
     return result
 
 def walk_forward(frame,features,season,trees=96,min_train=500,complete_weeks=None,targets=None,positions=None):

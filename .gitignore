@@ -11,3 +11,8 @@ data/snapshots/raw/
 *.joblib
 *.pkl
 work/
+
+node_modules/
+.next/
+platform/frontend/out/
+*.tsbuildinfo

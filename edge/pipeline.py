@@ -23,6 +23,9 @@ def run(start,season,out,trees=96,as_of=None,enrich=True):
     schedules=schedules[schedules.season.between(start,season)]
     current_teams={};current_positions={};trade_notes={};depth=[];enrichment={};defense_games=pd.DataFrame();receiver_priors=pd.DataFrame();coverage={}
     if enrich:
+        from .advanced import attach as attach_ngs
+        stats,ngs_sources=attach_ngs(stats,start,season)
+        enrichment['nextGenStats']=ngs_sources
         from .availability import latest_depth,public_csv
         from .context import current_team_map,collect_defense,parse_coverage
         from .data import get

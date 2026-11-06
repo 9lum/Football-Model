@@ -1,0 +1,39 @@
+name: Evaluate LightGBM and XGBoost challengers
+on:
+  workflow_dispatch:
+  push:
+    paths: ['intelligence/challengers.py', '.github/workflows/challengers.yml']
+permissions:
+  contents: write
+concurrency:
+  group: challenger-research
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r intelligence/requirements.txt
+      - name: Retrieve public modeling tables
+        run: |
+          python - <<'PY'
+          import nflreadpy as n
+          from pathlib import Path
+          import datetime
+          d=Path('work/lake');d.mkdir(parents=True,exist_ok=True);season=datetime.date.today().year
+          for name,fn in [('player_stats',lambda:n.load_player_stats(list(range(2021,season+1)))),('schedules',lambda:n.load_schedules(list(range(2021,season+1)))),('snaps',lambda:n.load_snap_counts(list(range(2021,season+1)))),('players',n.load_players)]:fn().write_parquet(d/(name+'.parquet'))
+          PY
+      - run: python -m intelligence.challengers
+      - name: Publish challenger evaluation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/challengers.json
+          git commit -m 'Evaluate research model challengers [skip ci]' || true
+          git pull --rebase origin main
+          git push origin HEAD:main

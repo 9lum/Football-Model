@@ -1,0 +1,46 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: research
+      POSTGRES_DB: research
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-research-only}
+    volumes: [postgres-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U research]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+  api:
+    build:
+      context: .
+      dockerfile: intelligence/Dockerfile
+    ports: ['127.0.0.1:8000:8000']
+    environment:
+      DATABASE_URL: postgresql://research:${POSTGRES_PASSWORD:-local-research-only}@postgres:5432/research
+      CORS_ORIGINS: http://localhost:3000
+    volumes: ['./data:/app/data:ro','./work/lake:/app/work/lake:ro']
+    depends_on:
+      postgres: {condition: service_healthy}
+  frontend:
+    build:
+      context: .
+      dockerfile: platform/frontend/Dockerfile
+    ports: ['127.0.0.1:3000:80']
+    depends_on: [api]
+  worker:
+    build:
+      context: .
+      dockerfile: intelligence/Dockerfile
+    command: [python, -m, intelligence.worker]
+    profiles: [workers]
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql://research:${POSTGRES_PASSWORD:-local-research-only}@postgres:5432/research
+    volumes: ['./data:/app/data','./work:/app/work']
+    depends_on:
+      postgres: {condition: service_healthy}
+volumes:
+  postgres-data:

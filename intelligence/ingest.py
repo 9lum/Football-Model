@@ -51,11 +51,15 @@ def run(season=None,output=None,lake=None):
     bdl=collect_bdl(season,week);dump(output/'balldontlie.json',safe(bdl));weather=collect_weather(future,now);dump(output/'weather.json',safe(weather))
     # Small public subsets complement the full versioned Parquet lake.
     supplement={}
+    people=frames.get('players');crosswalk={r['pfr_id']:r['gsis_id'] for r in people.select(['pfr_id','gsis_id']).to_dicts() if r.get('pfr_id') and r.get('gsis_id')} if people is not None else {}
     for name in ['ngs_passing','ngs_rushing','ngs_receiving','pfr_pass','pfr_rush','pfr_rec','pfr_def','team_stats']:
         frame=frames.get(name)
         if frame is not None:
             if 'season' in frame.columns:frame=frame.filter(pl.col('season')==season)
-            supplement[name]=safe(frame.to_dicts())
+            records=frame.to_dicts()
+            if name.startswith('pfr_'):
+                for record in records:record['player_gsis_id']=crosswalk.get(record.get('pfr_player_id'))
+            supplement[name]=safe(records)
     dump(output/'advanced-stats.json',{'generatedAt':now.isoformat(),'season':season,'datasets':supplement,'scope':'Current published descriptive statistics. They are not inserted retrospectively into historical model tests.'})
     games_public=safe(future);dump(output/'upcoming-games.json',{'generatedAt':now.isoformat(),'games':games_public})
     if 'pbp' in frames:

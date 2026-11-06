@@ -42,14 +42,14 @@ def collect_bdl(season,week):
     key=os.environ.get('BALLDLIE_API_KEY') or os.environ.get('BALLDONTLIE_API_KEY')
     state={'provider':'BALLDONTLIE','observedAt':dt.datetime.now(UTC).isoformat(),'datasets':{},'errors':[]}
     if not key:return {**state,'status':'missing_secret','requiredSecret':'BALLDLIE_API_KEY (or BALLDONTLIE_API_KEY)'}
-    specs={'teams':({},1),'players/active':({},8),'games':({'seasons[]':season,'weeks[]':week},2),'player_injuries':({},6),
+    specs={'teams':({},1),'players':({},6),'games':({'seasons[]':season,'weeks[]':week},2),'player_injuries':({},6),
            'stats':({'seasons[]':season},4),**{'advanced_stats/'+kind:({'season':season,'week':0},4) for kind in ['passing','rushing','receiving']}}
     for endpoint,(params,pages) in specs.items():
         try:
             rows,complete=bdl_pages(endpoint,key,params,pages);state['datasets'][endpoint]={'status':'ok','rows':rows,'count':len(rows),'paginationComplete':complete}
         except ProviderError as error:
             state['datasets'][endpoint]={'status':'unavailable','code':error.code,'rows':[],'count':0};state['errors'].append({'endpoint':endpoint,'code':error.code})
-            if error.code in [401,429]:break
+            if error.code==429:break
         time.sleep(1)
     ok=sum(d['status']=='ok' for d in state['datasets'].values());state['status']='ok' if ok==len(specs) else 'partial' if ok else 'unavailable'
     return state
@@ -63,10 +63,10 @@ def venue(game):
     for word,coords in INTERNATIONAL.items():
         if word in stadium:return coords
     if neutral:return None
-    return LOCATIONS.get(game.get('home_team'))
+    return LOCATIONS.get({'LA':'LAR','WSH':'WAS','JAC':'JAX'}.get(game.get('home_team'),game.get('home_team')))
 
 def xweather_credentials():
-    key=os.environ.get('XWEATHER_API_KEY','');client=os.environ.get('XWEATHER_CLIENT_ID','')
+    key=os.environ.get('XWEATHER_API_KEY','').strip();client=os.environ.get('XWEATHER_CLIENT_ID','').strip()
     if key.startswith('{'):
         try:
             obj=json.loads(key);client=client or obj.get('client_id','');key=obj.get('client_secret','')
@@ -74,7 +74,7 @@ def xweather_credentials():
     return client,key
 
 def collect_weather(games,now=None):
-    now=now or dt.datetime.now(UTC);client,key=xweather_credentials();rows=[];errors=[];used=set()
+    now=now or dt.datetime.now(UTC);client,key=xweather_credentials();rows=[];errors=[];used=set();xweather_rejected=False
     for game in games:
         if game['game_id'] in used:continue
         used.add(game['game_id']);kickoff=dt.datetime.fromisoformat(game['kickoff'].replace('Z','+00:00'))
@@ -82,7 +82,7 @@ def collect_weather(games,now=None):
         coords=venue(game);entry={'gameId':game['game_id'],'kickoff':game['kickoff'],'stadium':game.get('stadium'),'roof':game.get('roof'),'observedAt':now.isoformat(),'status':'unavailable','appliedToModel':False}
         if not coords:entry['reason']='Unresolved neutral venue';rows.append(entry);continue
         entry['latitude'],entry['longitude']=coords
-        if client and key:
+        if client and key and not xweather_rejected:
             try:
                 payload=request_json(f'https://data.api.xweather.com/forecasts/{coords[0]},{coords[1]}',{'client_id':client,'client_secret':key,'filter':'1hr','from':kickoff.isoformat(),'to':(kickoff+dt.timedelta(hours=3)).isoformat(),'limit':4})
                 if not payload.get('success'):raise ProviderError('provider_rejected')
@@ -90,7 +90,9 @@ def collect_weather(games,now=None):
                 if not periods:raise ProviderError('forecast_unavailable')
                 period=min(periods,key=lambda p:abs(dt.datetime.fromisoformat(p['dateTimeISO'].replace('Z','+00:00')).timestamp()-kickoff.timestamp()))
                 entry.update(provider='Xweather',status='ok',forecastTime=period.get('dateTimeISO'),temperatureC=period.get('avgTempC',period.get('tempC',period.get('maxTempC'))),windKph=period.get('windSpeedKPH',period.get('windSpeedAvgKPH',period.get('windSpeedMaxKPH'))),precipitationMm=period.get('precipMM'),precipitationProbability=period.get('pop'))
-            except ProviderError as error:errors.append({'provider':'Xweather','gameId':entry['gameId'],'code':error.code})
+            except ProviderError as error:
+                errors.append({'provider':'Xweather','gameId':entry['gameId'],'code':error.code})
+                if error.code in [401,403]:xweather_rejected=True
         if entry['status']!='ok':
             try:
                 payload=request_json('https://api.open-meteo.com/v1/forecast',{'latitude':coords[0],'longitude':coords[1],'hourly':'temperature_2m,precipitation,precipitation_probability,wind_speed_10m','forecast_days':8,'timezone':'UTC'})
@@ -101,4 +103,4 @@ def collect_weather(games,now=None):
         # Weather is context until an out-of-sample weather model is fitted; never fabricate yardage penalties.
         entry['exposure']='indoor' if str(entry.get('roof','')).lower() in ['dome','closed'] else 'roof_pending' if str(entry.get('roof','')).lower() in ['retractable','retractable roof'] else 'outdoor_or_unknown'
         rows.append(entry)
-    return {'generatedAt':now.isoformat(),'xweatherStatus':'configured' if client and key else 'missing_client_id' if key else 'missing_secret','errors':errors,'games':rows,'scope':'Kickoff forecasts; contextual only, not a validated causal yardage adjustment. Open-Meteo public API fallback is for noncommercial use subject to its terms.'}
+    return {'generatedAt':now.isoformat(),'xweatherStatus':'authentication_rejected' if xweather_rejected else 'configured' if client and key else 'missing_client_id' if key else 'missing_secret','errors':errors,'games':rows,'scope':'Kickoff forecasts; contextual only, not a validated causal yardage adjustment. Open-Meteo public API fallback is for noncommercial use subject to its terms.'}

@@ -30,7 +30,7 @@ async def auth(request:Request,call_next):
 @app.get('/api/health')
 def health():return {'status':'ok','availableDatasets':[p.stem for p in DATA.glob('*.json') if p.stem in FILES],'minimumEstimatedWinProbability':.70,'databaseConfigured':bool(os.environ.get('DATABASE_URL'))}
 @app.get('/api/snapshots/{name}')
-def read_snapshot(name:str):return snapshot(name)
+def read_snapshot(name:str):return snapshot(name.removesuffix('.json'))
 @app.get('/api/players')
 def players(position:str|None=None,team:str|None=None,q:str=''):
     return [p for p in snapshot('latest').get('players',[]) if (not position or p['position']==position.upper()) and (not team or p['team']==team.upper()) and q.lower() in p['name'].lower()]

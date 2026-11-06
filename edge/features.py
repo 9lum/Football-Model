@@ -2,8 +2,12 @@
 import numpy as np
 import pandas as pd
 
+from .advanced import METRICS as NGS_METRICS
+
 KEYS=['player_id','season','week','team']
 METRICS=['targets','receptions','receiving_yards','receiving_air_yards','receiving_yards_after_catch','offense_snaps','offense_pct','receiving_tds','receiving_first_downs','carries','rushing_yards','rushing_tds','rushing_first_downs','attempts','completions','passing_yards','passing_tds','passing_interceptions','passing_first_downs','sack_fumbles','rushing_fumbles','receiving_fumbles','sacks_suffered','passing_air_yards','passing_epa','passing_cpoe','rushing_epa','receiving_epa']
+
+METRICS+=NGS_METRICS
 
 def prepare(stats,schedules,now=None,current_teams=None,current_positions=None):
     now=pd.Timestamp.now(tz='UTC') if now is None else pd.Timestamp(now)
@@ -39,7 +43,7 @@ def prepare(stats,schedules,now=None,current_teams=None,current_positions=None):
     for key in METRICS:
         if key not in d:
             d[key]=np.nan
-        for window in [3,6,12]:
+        for window in [3,5,6,8,12]:
             name=f'{key}_last{window}'
             lagged[name]=d.groupby('player_id',sort=False)[key].transform(lambda s:s.shift(1).rolling(window,min_periods=1).mean())
             features.append(name)

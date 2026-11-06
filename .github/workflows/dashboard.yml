@@ -1,0 +1,52 @@
+name: Build professional NFL dashboard
+on:
+  workflow_dispatch:
+  push:
+    paths: ['platform/frontend/**', 'web/**', '.github/workflows/dashboard.yml']
+permissions:
+  contents: write
+concurrency:
+  group: dashboard-build
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: platform/frontend/package-lock.json
+      - run: npm ci
+        working-directory: platform/frontend
+      - name: Test market matching, navigation and probability policy
+        run: node --test tests/*.test.mjs web/*.test.mjs scripts/navigation.test.mjs
+      - run: npm run build -- --webpack
+        working-directory: platform/frontend
+      - name: Package static dashboard without replacing the original research desk
+        run: |
+          python - <<'PY'
+          import shutil
+          from pathlib import Path
+          source=Path('platform/frontend/out');target=Path('platform')
+          for p in source.iterdir():
+              dest=target/p.name
+              if dest.is_dir():shutil.rmtree(dest)
+              if p.is_dir():shutil.copytree(p,dest)
+              else:shutil.copy2(p,dest)
+          Path('.nojekyll').touch()
+          PY
+      - name: Publish exported dashboard
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add platform .nojekyll
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish professional NFL dashboard [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
