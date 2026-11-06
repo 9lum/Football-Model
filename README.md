@@ -24,3 +24,9 @@ This is an untrained, pregame research baseline, not a validated profitable mode
 `node --test tests.mjs` checks odds conversion, probabilities, pushes, opportunity monotonicity and API failure behavior. `python -m py_compile collector.py` checks collector syntax. Feed integration tests require real credentials. Browser QA was unavailable in the authoring environment.
 
 Worker entry: worker/index.js. Build artifact: dist/server/index.js and dist/.openai/hosting.json. The private Sites identity is excluded from this public repository. Configure a fresh hosting manifest when deploying to Sites, or point your Worker hosting platform at worker/index.js. Source push/publication was blocked by an unreachable configured proxy during authoring; no successful deployment is claimed.
+
+## Open the site
+Download `site-preview.html` and open it in your browser for a standalone preview with a working simulator. Viewing GitHub's file page displays source code; download the raw file first. Live odds and feed refresh require running/deploying `worker/index.js` on a Worker-compatible host and configuring secrets.
+
+## NFL.com statistics
+See [NFL_DATA.md](NFL_DATA.md) for the full-category, paginated CSV/JSON exporter and hourly GitHub Actions workflow. A complete live pull is not yet verified. Download exports from successful workflow run artifacts.
