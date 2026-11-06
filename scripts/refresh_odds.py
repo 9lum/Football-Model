@@ -8,6 +8,11 @@ from urllib.parse import urlencode, quote
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 
+try:
+    from scripts.odds_quota import routine_budget,kickoff_reserve
+except ModuleNotFoundError:
+    from odds_quota import routine_budget,kickoff_reserve
+
 BASE='https://api.the-odds-api.com/v4/sports/americanfootball_nfl/'
 MARKETS=['player_pass_yds','player_rush_yds','player_reception_yds','player_receptions','player_rush_attempts','player_pass_attempts','player_pass_completions','player_pass_tds','player_pass_interceptions','player_rush_tds','player_reception_tds']
 class ProviderError(Exception):
@@ -48,7 +53,6 @@ def collect(output=Path('data'),key=None,now=None):
         events,quota=fetch('events',key)
         remaining=number(quota.get('remaining'),0)
         budget,markets,regions,cost=request_plan(remaining,os.environ.get('ODDS_REFRESH_CREDIT_BUDGET'),int(now.timestamp()//21600))
-        from scripts.odds_quota import routine_budget,kickoff_reserve
         budget=routine_budget(remaining,budget,now)
         status.update(quota=quota,creditBudget=budget,kickoffReservedCredits=kickoff_reserve(now),requestedMarkets=markets,requestedRegions=regions)
         if budget<cost:raise ProviderError('quota_budget')
