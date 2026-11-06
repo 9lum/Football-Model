@@ -25,13 +25,13 @@ export function weeklyTopProjections(bundle,accuracyIndex,now=Date.now(),filters
  const future=(bundle.forecasts||[]).filter(f=>{const parts=String(f.gameId).split('_');return Number(parts[0])===bundle.season&&Date.parse(f.kickoff)>now&&Date.parse(f.kickoff)<=now+8*86400000&&Number.isFinite(Number(parts[1]))}).sort((a,b)=>Date.parse(a.kickoff)-Date.parse(b.kickoff));
  const week=future.length?Number(future[0].gameId.split('_')[1]):null;if(week===null)return{week,picks:[],reason:'No upcoming weekly projections are available.'};
  const candidates=[];for(const f of future){if(Number(f.gameId.split('_')[1])!==week||!matchesPlayer(f,filters)||f.unavailable||f.availabilityReviewRequired||f.likelyToPlay===false)continue;const market=primary[f.position],values=marketValues(f,market);if(!market||!values.length)continue;
- const passed=f.marketSamples?.[market]?.validationPassed??bundle.validationPassed;if(!passed)continue;
+ const passed=f.marketSamples?.[market]?.validationPassed??bundle.validationPassed;if(!passed&&!filters.includeResearch)continue;
  const target=marketDefinitions[market].target;const tested=(accuracyIndex[f.playerId+'|'+target]||[]).filter(r=>r.season===bundle.season&&r.week<week).sort((a,b)=>a.week-b.week).slice(-8);if(tested.length<4)continue;
  const stats=statsSummary(values),mae=tested.reduce((a,b)=>a+b.error,0)/tested.length,scale=Math.max(Math.abs(stats.mean),10);
  // Experimental ordering within a position, not a calibrated hit probability.
  const score=.65*mae/scale+.35*(stats.high-stats.low)/(2*scale);
- candidates.push({...f,market,summary:stats,pastMae:mae,testGames:tested.length,score});}
- const picks=[];for(const position of ['QB','RB','WR','TE']){const ranked=candidates.filter(f=>f.position===position).sort((a,b)=>a.score-b.score||b.testGames-a.testGames||a.name.localeCompare(b.name));picks.push(...ranked.slice(0,filters.position?8:4))}
+ candidates.push({...f,qualityPassed:!!passed,market,summary:stats,pastMae:mae,testGames:tested.length,score});}
+ const picks=[];for(const position of ['QB','RB','WR','TE']){const ranked=candidates.filter(f=>f.position===position).sort((a,b)=>Number(b.qualityPassed)-Number(a.qualityPassed)||a.score-b.score||b.testGames-a.testGames||a.name.localeCompare(b.name));picks.push(...ranked.slice(0,filters.position?8:4))}
  return{week,picks,reason:picks.length?'':'No projections match the filters and minimum testing requirements.'};
 }
 
