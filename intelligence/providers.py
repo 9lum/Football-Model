@@ -20,7 +20,9 @@ def request_json(url,params=None,headers=None):
         try:
             with urlopen(Request(url,headers={'User-Agent':'Projections-n-Shit/1.0',**(headers or {})}),timeout=30) as response:return json.load(response)
         except HTTPError as error:
-            if error.code in [429,500,502,503] and attempt<2:time.sleep(2**attempt);continue
+            if error.code in [429,500,502,503] and attempt<2:
+                wait=min(20,max(13,int(error.headers.get('Retry-After','13')))) if error.code==429 else 2**attempt
+                time.sleep(wait);continue
             raise ProviderError(error.code) from None
         except Exception:
             if attempt<2:time.sleep(2**attempt);continue
@@ -35,14 +37,14 @@ def bdl_pages(endpoint,key,params=None,max_pages=6):
         if not isinstance(payload.get('data'),list):raise ProviderError('schema')
         result.extend(payload['data']);cursor=payload.get('meta',{}).get('next_cursor')
         if not cursor:return result,True
-        time.sleep(1)
+        time.sleep(13)
     return result,False
 
 def collect_bdl(season,week):
     key=os.environ.get('BALLDLIE_API_KEY') or os.environ.get('BALLDONTLIE_API_KEY')
     state={'provider':'BALLDONTLIE','observedAt':dt.datetime.now(UTC).isoformat(),'datasets':{},'errors':[]}
     if not key:return {**state,'status':'missing_secret','requiredSecret':'BALLDLIE_API_KEY (or BALLDONTLIE_API_KEY)'}
-    specs={'teams':({},1),'players':({},6),'games':({'seasons[]':season,'weeks[]':week},2),'player_injuries':({},6),
+    specs={'teams':({},1),'players':({},1),'games':({'seasons[]':season,'weeks[]':week},2),'player_injuries':({},6),
            'stats':({'seasons[]':season},4),**{'advanced_stats/'+kind:({'season':season,'week':0},4) for kind in ['passing','rushing','receiving']}}
     for endpoint,(params,pages) in specs.items():
         try:
@@ -50,7 +52,7 @@ def collect_bdl(season,week):
         except ProviderError as error:
             state['datasets'][endpoint]={'status':'unavailable','code':error.code,'rows':[],'count':0};state['errors'].append({'endpoint':endpoint,'code':error.code})
             if error.code==429:break
-        time.sleep(1)
+        time.sleep(13)
     ok=sum(d['status']=='ok' for d in state['datasets'].values());state['status']='ok' if ok==len(specs) else 'partial' if ok else 'unavailable'
     return state
 

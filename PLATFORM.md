@@ -1,6 +1,6 @@
 # Projections n Shit — professional research platform
 
-The working standalone research desk stays at `site-preview.html`. The new Next.js/React/TypeScript dashboard is exported at `/platform/` and the root redirects there. Its nine sections use real published JSON snapshots, ECharts, TanStack Table, Tailwind CSS and Radix primitives following shadcn conventions. No paid template or stock dashboard data is included.
+The former research desk URL `site-preview.html` now redirects to the matching new view. Its redundant embedded dashboard has been removed. The Next.js/React/TypeScript dashboard is exported at `/platform/` and the root redirects there. Its nine sections use real published JSON snapshots, ECharts, TanStack Table, Tailwind CSS and Radix primitives following shadcn conventions. No paid template or stock dashboard data is included.
 
 ## Running and deployment
 

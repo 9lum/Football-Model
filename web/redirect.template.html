@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Projections n Shit</title><link rel="canonical" href="./platform/"><meta http-equiv="refresh" content="1;url=./platform/"></head><body><p><a href="./platform/">Open Projections n Shit</a></p><script>
+const routes={weeklyFeature:'dashboard',picks:'dashboard',players:'players',roster:'matchups',compare:'props',performance:'backtest',about:'sources'};
+const section=routes[location.hash.slice(1)]||'dashboard';
+location.replace('./platform/#'+section);
+</script></body></html>

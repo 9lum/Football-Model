@@ -75,3 +75,5 @@ A bounded `data/odds-history.json` retains the latest 28 successful collection b
 ## Professional platform
 
 The expanded Next.js dashboard is built from `platform/frontend` and published under `/platform/`; `site-preview.html` remains the compact original research desk. See [PLATFORM.md](PLATFORM.md) for provider secrets, nflreadpy downloads, the FastAPI service, PostgreSQL schema, Docker deployment, schedules and research limitations. Qualifying bets now require at least 70% estimated win probability plus all existing gates.
+
+The original `site-preview.html` now redirects to the new platform, mapping existing section links. Redundant old dashboard markup and duplicate navigation have been removed; shared model, pricing and research modules are retained.
