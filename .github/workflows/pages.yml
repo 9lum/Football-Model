@@ -52,8 +52,32 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _pages
+          name: website-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Recover the previously stuck Pages deployment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const deploymentId = '64076a545cb909272be840e6f579b00337e6c90a';
+            const parameters = {owner: context.repo.owner, repo: context.repo.repo, deploymentId};
+            try {
+              const {data} = await github.request('GET /repos/{owner}/{repo}/pages/deployments/{deploymentId}', parameters);
+              core.info('Earlier Pages deployment: ' + data.status);
+              if (['deployment_queued', 'deployment_in_progress', 'queued', 'in_progress'].includes(data.status)) {
+                await github.request('POST /repos/{owner}/{repo}/pages/deployments/{deploymentId}/cancel', parameters);
+                core.info('Cancelled the superseded deployment blocking publication.');
+                for (let attempt = 0; attempt < 12; attempt++) {
+                  const {data: status} = await github.request('GET /repos/{owner}/{repo}/pages/deployments/{deploymentId}', parameters);
+                  if (!['deployment_queued', 'deployment_in_progress', 'queued', 'in_progress'].includes(status.status)) break;
+                  await new Promise(resolve => setTimeout(resolve, 5000));
+                }
+              }
+            } catch (error) {
+              if (error.status === 404) core.info('Earlier deployment has expired; no recovery needed.');
+              else throw error;
+            }
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
         with:
           timeout: 600000
+          artifact_name: website-${{ github.run_id }}-${{ github.run_attempt }}
