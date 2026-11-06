@@ -4,3 +4,5 @@
 .game-price-summary{border-top:1px solid var(--line);padding-top:10px;margin-top:12px}.game-price-summary .section-title{margin-bottom:8px}.game-price-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;font-size:11px;margin-bottom:8px}.game-price-grid .muted{font-size:10px}.game-book-select{background:var(--soft);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px;max-width:210px;font-size:11px}.game-tabs{display:flex;gap:6px;overflow:auto;padding:8px 0 15px}.game-tabs button{font-size:11px;white-space:nowrap}.game-tabs button.active{border-color:var(--accent);background:#1a355d}
 
 .game-model-panel{padding:16px;background:var(--soft);border:1px solid var(--line);border-radius:10px;margin:16px 0}.game-model-panel .eyebrow{margin-bottom:8px}.model-game-summary{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);color:#a9cbff;line-height:1.8}
+
+#matchup-player-props{scroll-margin-top:90px}
