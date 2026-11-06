@@ -32977,19 +32977,37 @@
   },
   {
     "game_id": "2026_09_JAX_BAL",
+    "player_id": "00-0039893",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 19.62890625
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 1.546875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.119140625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_JAX_BAL",
     "player_id": "00-0040238",
     "week": 9,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 5.37890625
+      "mean": 6.353515625
     },
     "receptions": {
       "actual": 0.0,
-      "mean": 0.529296875
+      "mean": 0.552734375
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.01953125
+      "mean": 0.037109375
     },
     "family": "receiving"
   },
@@ -32999,15 +33017,15 @@
     "week": 9,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 20.0859375
+      "mean": 20.74609375
     },
     "receptions": {
       "actual": 0.0,
-      "mean": 2.515625
+      "mean": 2.5546875
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.158203125
+      "mean": 0.130859375
     },
     "family": "receiving"
   },
@@ -33017,15 +33035,15 @@
     "week": 9,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 26.5625
+      "mean": 27.40234375
     },
     "receptions": {
       "actual": 0.0,
-      "mean": 2.30078125
+      "mean": 2.28125
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.177734375
+      "mean": 0.201171875
     },
     "family": "receiving"
   },
@@ -33035,15 +33053,15 @@
     "week": 9,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 15.724609375
+      "mean": 16.6015625
     },
     "receptions": {
       "actual": 0.0,
-      "mean": 1.4375
+      "mean": 1.529296875
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.091796875
+      "mean": 0.083984375
     },
     "family": "receiving"
   },
@@ -33053,15 +33071,15 @@
     "week": 9,
     "receiving_yards": {
       "actual": 6.0,
-      "mean": 14.875
+      "mean": 16.75
     },
     "receptions": {
       "actual": 1.0,
-      "mean": 1.375
+      "mean": 1.470703125
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.08984375
+      "mean": 0.080078125
     },
     "family": "receiving"
   },
@@ -33071,7 +33089,7 @@
     "week": 9,
     "receiving_yards": {
       "actual": 61.0,
-      "mean": 14.498046875
+      "mean": 14.154296875
     },
     "receptions": {
       "actual": 2.0,
@@ -33079,7 +33097,7 @@
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.130859375
+      "mean": 0.095703125
     },
     "family": "receiving"
   },
