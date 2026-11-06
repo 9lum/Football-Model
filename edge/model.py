@@ -24,6 +24,13 @@ class DistributionForest:
             groups=np.split(order,starts[1:])
             self.pools.append(dict(zip(keys,groups)))
         return self
+    def predict_mean(self,x):
+        x=self.imputer.transform(x.replace([np.inf,-np.inf],np.nan))
+        leaves=self.forest.apply(x);result=np.zeros((len(x),self.target_count))
+        for tree,pools in enumerate(self.pools):
+            means={key:self.y[indices].mean(axis=0) for key,indices in pools.items()}
+            result+=np.asarray([means[leaf] for leaf in leaves[:,tree]])
+        return result/len(self.pools)
     def sample(self,x,draws=512):
         x=self.imputer.transform(x.replace([np.inf,-np.inf],np.nan))
         leaves=self.forest.apply(x)

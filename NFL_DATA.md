@@ -10,7 +10,7 @@ The importer discovers category links from the passing table and follows each Ne
 Scope: all categories linked from the player-stats page, including passing, rushing, receiving, fumbles, tackles, interceptions, field goals, kickoffs, kickoff returns, punting and punt returns. This is not a pull of every historical season, weekly split, player profile or Next Gen Stats endpoint. Run additional years and REG/PRE/POST explicitly when needed.
 
 ## Automated exports
-The GitHub Actions workflow runs on importer/workflow changes, hourly at minute 17, and manually from the repository Actions tab. Manual runs can select season and season type. Download the `nfl-player-statistics-<run_id>` artifact from a successful run. Artifacts expire after 30 days. GitHub scheduling may be delayed; disabled Actions or source access errors prevent refresh. A run's green status and manifest are required before claiming a complete pull.
+The legacy GitHub Actions exporter runs on importer/workflow changes and manually from the repository Actions tab. Scheduled modeling and availability refreshes use the newer public-data workflows. Manual runs can select season and season type. Download the `nfl-player-statistics-<run_id>` artifact from a successful run. Artifacts expire after 30 days. GitHub scheduling may be delayed; disabled Actions or source access errors prevent refresh. A run's green status and manifest are required before claiming a complete pull.
 
 The authoring environment's configured proxy could not be reached. Parser fixture tests passed, but full live retrieval has not been verified there. No downloaded player-stat dataset is bundled or claimed.
 

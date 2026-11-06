@@ -1,4 +1,4 @@
-# Route Edge — NFL player stats and price comparisons
+# Projections n Shit — NFL player stats and price comparisons
 
 A clean, standalone dashboard for QB, RB, WR and TE statistics, real game-history charts, position-specific projections and sportsbook comparisons.
 
@@ -49,3 +49,17 @@ Open **Results** for per-player projected values, actual statistics and signed e
 The refresh workflow freezes the first archived forecast from the previous committed model bundle, using the file’s Git publication timestamp and commit SHA. A projection published after kickoff is never retroactively recorded as a pregame call. Archived values are never overwritten by later model updates. Once public actual statistics arrive, results update automatically. Missing player outcomes remain pending rather than being assumed zero.
 
 The first archived forecasts may still be awaiting their games. The existing historical tests are available immediately in the other dataset. Forecast ledgers are saved by season in `data/forecast-ledger-<season>.json`; `data/projection-results.json` contains their current outcome status. The 80% range is an uncertainty interval, not a claim of 80% accuracy. No new accuracy target was imposed.
+
+## Current injuries, starters, roster moves and matchup context
+
+The site is named **Projections n Shit**. Teams are selected from an always-visible list in the Teams view. Starting and expected replacement players lead each position. Unlikely backups and inactive players are hidden by default; the + panel can reveal them for research. All shows up to 16 featured primary-yardage projections, while a position filter shows up to eight. Fewer appear if injury, roster, testing or freshness checks leave fewer eligible choices. These are model-ranked projections, not guaranteed wins or measured public betting popularity.
+
+The availability workflow reads official NFL injury reports, public club injury-report pages and ESPN’s public injury endpoint when accessible. It preserves sources and retrieval times, distinguishes practice participation from game status, displays Questionable/Doubtful, and rules players out automatically only when an applicable official designation supports it. Conflicting, stale or unconfirmed news requires review. A DNP practice report is not treated as a game absence or an automatic winning under.
+
+Depth charts come from ESPN via nflverse. Public nflverse trade records are cross-checked with depth information; draft-pick assets are not mistaken for player trades. Current roster moves affect upcoming team assignments only, never historical test rows. Old-team projections are suppressed when a fresh roster contradicts them.
+
+If a starting QB is officially out, a separate replacement scenario blends the backup’s recorded starting-game production with an experience-matched historical QB-change cohort. Questionable/Doubtful QBs offer an explicit “if backup starts” preview. Experienced former starters do not receive the same blanket assumption as inexperienced backups. These observational scenarios adjust passing/receiving yardage distributions and model fair odds at a quoted line; they are not a calibrated injury model and cannot qualify as validated picks. No arbitrary probability of playing is inferred from a designation.
+
+Availability refreshes hourly, plus every 15 minutes during the configured Sunday window. GitHub schedules can be delayed. The page checks published availability every five minutes while open. Actual sportsbook prices remain supplied by your odds feed/import and are not rewritten. `data/availability-history.json` records recent status and QB-scenario changes. Archived Results continue to track the original baseline forecasts, separately from subsequent injury scenarios.
+
+The model now evaluates defensive passing/rushing EPA and success allowed, sack/contact rates, explosive-play allowance and labeled pressure/rusher counts where available. It uses prior-season charted man/zone rates and receiver coverage splits for historical tests. Fresh public Sharp Football coverage mixes may update upcoming-game inputs only. Missing charting stays missing; QB contact is not mislabeled as full pressure. See MODEL for selection and timing limits. These details remain off the front page.

@@ -1,0 +1,51 @@
+name: Public injuries, starters and fair-odds scenarios
+on:
+  workflow_dispatch:
+  push:
+    paths: ['edge/availability.py', 'web/availability.mjs', '.github/workflows/availability.yml']
+  schedule:
+    - cron: '17 * * * *'
+    - cron: '*/15 15-23 * * 0'
+permissions:
+  contents: write
+concurrency:
+  group: public-model-refresh
+  cancel-in-progress: false
+jobs:
+  availability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: work/health-cache
+          key: health-reference-${{ runner.os }}-${{ hashFiles('edge/availability.py') }}
+      - name: Check injury resolution and projection scenarios
+        run: |
+          python -m unittest discover -s tests -p 'test_availability.py' -v
+          node --test web/availability.test.mjs
+      - name: Refresh public injury reports and depth charts
+        run: python -m edge.availability --data data
+      - name: Publish current availability and change log
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/availability.json data/availability-history.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh public injury and starter context [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: availability-${{ github.run_id }}
+          path: |
+            data/availability.json
+            data/availability-history.json
+          retention-days: 90

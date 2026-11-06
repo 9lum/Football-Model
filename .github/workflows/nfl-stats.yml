@@ -12,8 +12,6 @@ on:
         options: [REG, PRE, POST]
   push:
     paths: [nfl_stats.py, test_nfl_stats.py, .github/workflows/nfl-stats.yml]
-  schedule:
-    - cron: '17 * * * *'
 permissions:
   contents: read
 concurrency:

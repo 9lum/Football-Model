@@ -5,7 +5,7 @@ import pandas as pd
 KEYS=['player_id','season','week','team']
 METRICS=['targets','receptions','receiving_yards','receiving_air_yards','receiving_yards_after_catch','offense_snaps','offense_pct','receiving_tds','receiving_first_downs','carries','rushing_yards','rushing_tds','rushing_first_downs','attempts','completions','passing_yards','passing_tds','passing_interceptions','passing_first_downs','sack_fumbles','rushing_fumbles','receiving_fumbles','sacks_suffered','passing_air_yards','passing_epa','passing_cpoe','rushing_epa','receiving_epa']
 
-def prepare(stats,schedules,now=None):
+def prepare(stats,schedules,now=None,current_teams=None,current_positions=None):
     now=pd.Timestamp.now(tz='UTC') if now is None else pd.Timestamp(now)
     if stats.duplicated(KEYS).any():
         raise ValueError('Duplicate player-game rows')
@@ -17,7 +17,10 @@ def prepare(stats,schedules,now=None):
     future=future.sort_values('kickoff').drop_duplicates('team')
     recent=d[d.season.eq(current_season)].sort_values('kickoff').groupby('player_id').tail(1)
     recent=recent[recent.kickoff>=now-pd.Timedelta(days=35)]
-    f=recent[['player_id','player_display_name','position','team']].merge(future,on='team')
+    candidates=recent[['player_id','player_display_name','position','team']].copy()
+    if current_teams:candidates['team']=candidates.player_id.map(current_teams).fillna(candidates.team)
+    if current_positions:candidates['position']=candidates.player_id.map(current_positions).fillna(candidates.position)
+    f=candidates.merge(future,on='team')
     f['forecast']=True
     for key in METRICS:
         f[key]=np.nan

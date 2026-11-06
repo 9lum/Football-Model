@@ -13,6 +13,8 @@ export function explanation(player,market,quote=null,bundle=null){const key=norm
  if(player.routeScenario?.status==='research_scenario'&&family==='receiving')add('Independent route scenario','Public route usage suggests '+player.routeScenario.projectedTargets.toFixed(1)+' targets and '+player.routeScenario.projectedRoutes.toFixed(1)+' routes. This is a separate heuristic check, not a historically validated model contribution.');
  let conclusion='Add a sportsbook price to see whether the model estimates an advantage. A higher projected average alone is not enough.';
  if(quote){const conditional=quote.probability/Math.max(1-quote.push,1e-10),required=1/decimal(quote.price);add('Probability versus the price','The '+quote.side.toLowerCase()+' needs '+(required*100).toFixed(1)+'% wins among settled bets at this price. The model estimates '+(conditional*100).toFixed(1)+'%, with '+(quote.push*100).toFixed(1)+'% push probability.');conclusion=quote.ev>0?'The model estimates positive value at this price.':'At this price, the model does not estimate an advantage.';if(quote.ev>0&&quote.conservative<=0)conclusion+=' That advantage disappears under the calibration sensitivity check.';if(quote.routeEv!=null&&quote.routeEv<=0)conclusion+=' The route scenario disagrees.';}
+ if(player.qbScenario)add('Quarterback change',player.qbScenario.backupName+' has '+player.qbScenario.backupRecordedStarts+' recorded starts in public schedule history. The replacement scenario estimates '+player.qbScenario.backupPassingYards.toFixed(1)+' team passing yards versus '+player.qbScenario.baselinePassingYards.toFixed(1)+' in the usual-starter baseline. This is an observational scenario, not a calibrated injury model.');
+ if(player.health&&player.health.status!=='NOT_LISTED')add('Current availability',player.health.label+(player.health.practice?' · '+player.health.practice:'')+'. Source timestamps and confirmation status are available in Teams. A designation is not a numeric probability of playing.');
  const report=bundle?((bundle.familyValidation?.[family]||bundle.validation)?.aggregate?.[spec?.target]):null;if(report)add('Measured model accuracy','Current-season error is '+report.mae.toFixed(2)+' versus '+report.rollingBaselineMae.toFixed(2)+' for the rolling baseline.'+(report.mae>=report.rollingBaselineMae?' This market has not beaten that baseline.':' The measured improvement does not prove profitable bets.'));
  return{conclusion,points,note:'These are observed inputs and consistency checks, not a causal decomposition of the prediction.'};}
 
@@ -22,14 +24,14 @@ export function weeklyTopProjections(bundle,accuracyIndex,now=Date.now(),filters
  const age=now-Date.parse(bundle?.generatedAt);if(!bundle||!Number.isFinite(age)||age<0||age>172800000)return{week:null,picks:[],reason:'The forecast bundle needs a fresh update.'};
  const future=(bundle.forecasts||[]).filter(f=>{const parts=String(f.gameId).split('_');return Number(parts[0])===bundle.season&&Date.parse(f.kickoff)>now&&Date.parse(f.kickoff)<=now+8*86400000&&Number.isFinite(Number(parts[1]))}).sort((a,b)=>Date.parse(a.kickoff)-Date.parse(b.kickoff));
  const week=future.length?Number(future[0].gameId.split('_')[1]):null;if(week===null)return{week,picks:[],reason:'No upcoming weekly projections are available.'};
- const candidates=[];for(const f of future){if(Number(f.gameId.split('_')[1])!==week||!matchesPlayer(f,filters))continue;const market=primary[f.position],values=marketValues(f,market);if(!market||!values.length)continue;
+ const candidates=[];for(const f of future){if(Number(f.gameId.split('_')[1])!==week||!matchesPlayer(f,filters)||f.unavailable||f.availabilityReviewRequired||f.likelyToPlay===false)continue;const market=primary[f.position],values=marketValues(f,market);if(!market||!values.length)continue;
  const passed=f.marketSamples?.[market]?.validationPassed??bundle.validationPassed;if(!passed)continue;
  const target=marketDefinitions[market].target;const tested=(accuracyIndex[f.playerId+'|'+target]||[]).filter(r=>r.season===bundle.season&&r.week<week).sort((a,b)=>a.week-b.week).slice(-8);if(tested.length<4)continue;
  const stats=statsSummary(values),mae=tested.reduce((a,b)=>a+b.error,0)/tested.length,scale=Math.max(Math.abs(stats.mean),10);
  // Experimental ordering within a position, not a calibrated hit probability.
  const score=.65*mae/scale+.35*(stats.high-stats.low)/(2*scale);
  candidates.push({...f,market,summary:stats,pastMae:mae,testGames:tested.length,score});}
- const picks=[];for(const position of ['QB','RB','WR','TE']){const best=candidates.filter(f=>f.position===position).sort((a,b)=>a.score-b.score||b.testGames-a.testGames||a.name.localeCompare(b.name))[0];if(best)picks.push(best)}
+ const picks=[];for(const position of ['QB','RB','WR','TE']){const ranked=candidates.filter(f=>f.position===position).sort((a,b)=>a.score-b.score||b.testGames-a.testGames||a.name.localeCompare(b.name));picks.push(...ranked.slice(0,filters.position?8:4))}
  return{week,picks,reason:picks.length?'':'No projections match the filters and minimum testing requirements.'};
 }
 

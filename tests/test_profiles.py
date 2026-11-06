@@ -36,7 +36,7 @@ class ProfileTests(unittest.TestCase):
         sched=pd.concat([sched,future],ignore_index=True)
         # Only Seattle has fixture players, so absent SF is explicitly a coverage issue.
         with tempfile.TemporaryDirectory() as temp,patch('edge.pipeline.collect',return_value=(stats,sched,{},[],{})):
-            report=run(2025,2026,Path(temp),trees=2,as_of='2026-11-06T00:00:00Z')
+            report=run(2025,2026,Path(temp),trees=2,as_of='2026-11-06T00:00:00Z',enrich=False)
             bundle=json.loads((Path(temp)/'latest.json').read_text())
             self.assertEqual(bundle['schemaVersion'],3)
             self.assertEqual(set(bundle['familyValidation']),{'receiving','rushing','passing'})
