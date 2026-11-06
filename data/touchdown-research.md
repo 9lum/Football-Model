@@ -1,5 +1,5 @@
 # Week 9 Anytime Touchdown Research
-Generated 2026-11-06T23:26:46.059242+00:00
+Generated 2026-11-06T23:29:31.681364+00:00
 Current-season tests: 2247; Brier 0.1486 vs baseline 0.1621.
 
 ## JAX at BAL
@@ -20,9 +20,9 @@ No retrospective pregame recommendations generated after kickoff.
 - ATL: recent RZ pass rate 0.7428571428571429, RZ pass-over-expected 3.8123459301211615 percentage points, neutral seconds/play 33.888888888888886. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - CIN: recent RZ pass rate 0.6226415094339622, RZ pass-over-expected 11.190167341667872 percentage points, neutral seconds/play 31.378947368421052. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Chase Brown — Core research · highest estimated probability**: estimated ATTD 49.3%; fair odds 103; opponent allows 1.50 direct TDs/game to the position group. BetMGM -160; estimated return -19.9%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Joe Burrow — High-yield research · positive price estimate**: estimated ATTD 17.3%; fair odds 479; opponent allows 0.17 direct TDs/game to the position group. DraftKings 600; estimated return 20.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Tee Higgins — Additional research candidate**: estimated ATTD 42.9%; fair odds 133; opponent allows 0.67 direct TDs/game to the position group. DraftKings 115; estimated return -7.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Chase Brown — Core research · highest estimated probability**: estimated ATTD 49.3%; fair odds 103; opponent allows 1.50 direct TDs/game to the position group. BetMGM -160; estimated return -19.9%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Joe Burrow — High-yield research · positive price estimate**: estimated ATTD 17.3%; fair odds 479; opponent allows 0.17 direct TDs/game to the position group. DraftKings 600; estimated return 20.8%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Tee Higgins — Additional research candidate**: estimated ATTD 42.9%; fair odds 133; opponent allows 0.67 direct TDs/game to the position group. DraftKings 115; estimated return -7.8%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## DEN at CAR
 2026-11-08T18:00:00+00:00
@@ -38,9 +38,9 @@ No retrospective pregame recommendations generated after kickoff.
 - CAR: recent RZ pass rate 0.6, RZ pass-over-expected 9.128548701604208 percentage points, neutral seconds/play 28.464285714285715. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - DEN: recent RZ pass rate 0.45454545454545453, RZ pass-over-expected -6.43983818590641 percentage points, neutral seconds/play 32.87826086956522. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Chuba Hubbard — Core research · highest estimated probability**: estimated ATTD 62.0%; fair odds -163; opponent allows 0.67 direct TDs/game to the position group. BetMGM -110; estimated return 18.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **John Metchie III — High-yield research · positive price estimate**: estimated ATTD 15.0%; fair odds 566; opponent allows 0.50 direct TDs/game to the position group. FanDuel 800; estimated return 35.1%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Tetairoa McMillan — Additional research candidate**: estimated ATTD 40.2%; fair odds 149; opponent allows 0.50 direct TDs/game to the position group. BetMGM 188; estimated return 15.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Chuba Hubbard — Core research · highest estimated probability**: estimated ATTD 62.0%; fair odds -163; opponent allows 0.67 direct TDs/game to the position group. BetMGM -110; estimated return 18.3%; flags: estimated win probability below 70%, availability not confirmed.
+- **John Metchie III — High-yield research · positive price estimate**: estimated ATTD 15.0%; fair odds 566; opponent allows 0.50 direct TDs/game to the position group. FanDuel 800; estimated return 35.1%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Tetairoa McMillan — Additional research candidate**: estimated ATTD 40.2%; fair odds 149; opponent allows 0.50 direct TDs/game to the position group. BetMGM 188; estimated return 15.8%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## DAL at IND
 2026-11-08T18:00:00+00:00
@@ -56,9 +56,9 @@ No retrospective pregame recommendations generated after kickoff.
 - IND: recent RZ pass rate 0.4, RZ pass-over-expected -17.024026811122894 percentage points, neutral seconds/play 33.225806451612904. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - DAL: recent RZ pass rate 0.5344827586206896, RZ pass-over-expected -3.7097693979740143 percentage points, neutral seconds/play 29.04854368932039. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **CeeDee Lamb — Core research · highest estimated probability**: estimated ATTD 54.9%; fair odds -122; opponent allows 0.50 direct TDs/game to the position group. Bally Bet -108; estimated return 5.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Hunter Luepke — High-yield research · positive price estimate**: estimated ATTD 10.3%; fair odds 867; opponent allows 1.00 direct TDs/game to the position group. Bally Bet 1200; estimated return 34.4%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, availability snapshot stale or missing, sensitivity-adjusted value below 3%.
-- **Javonte Williams — Additional research candidate**: estimated ATTD 49.8%; fair odds 101; opponent allows 1.00 direct TDs/game to the position group. BetMGM -190; estimated return -24.0%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **CeeDee Lamb — Core research · highest estimated probability**: estimated ATTD 54.9%; fair odds -122; opponent allows 0.50 direct TDs/game to the position group. BetRivers -108; estimated return 5.7%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Hunter Luepke — High-yield research · positive price estimate**: estimated ATTD 10.3%; fair odds 867; opponent allows 1.00 direct TDs/game to the position group. BetRivers 1200; estimated return 34.4%; flags: estimated win probability below 70%, availability not confirmed, availability snapshot stale or missing, sensitivity-adjusted value below 3%.
+- **Javonte Williams — Additional research candidate**: estimated ATTD 49.8%; fair odds 101; opponent allows 1.00 direct TDs/game to the position group. BetMGM -190; estimated return -24.0%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## NYJ at KC
 2026-11-08T18:00:00+00:00
@@ -74,9 +74,9 @@ No retrospective pregame recommendations generated after kickoff.
 - KC: recent RZ pass rate 0.5555555555555556, RZ pass-over-expected -0.21671124867030553 percentage points, neutral seconds/play 30.35135135135135. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - NYJ: recent RZ pass rate 0.6190476190476191, RZ pass-over-expected -2.9121236103336985 percentage points, neutral seconds/play 33.10236220472441. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Kenneth Walker III — Core research · highest estimated probability**: estimated ATTD 63.8%; fair odds -176; opponent allows 1.00 direct TDs/game to the position group. BetMGM -200; estimated return -4.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Isaiah Davis — High-yield research · positive price estimate**: estimated ATTD 12.2%; fair odds 719; opponent allows 0.83 direct TDs/game to the position group. Hard Rock Bet 4000; estimated return 400.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **Braelon Allen — Additional research candidate**: estimated ATTD 50.2%; fair odds -101; opponent allows 0.83 direct TDs/game to the position group. FanDuel 250; estimated return 75.6%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
+- **Kenneth Walker III — Core research · highest estimated probability**: estimated ATTD 63.8%; fair odds -176; opponent allows 1.00 direct TDs/game to the position group. BetMGM -200; estimated return -4.3%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Isaiah Davis — High-yield research · positive price estimate**: estimated ATTD 12.2%; fair odds 719; opponent allows 0.83 direct TDs/game to the position group. FanDuel 2500; estimated return 217.6%; flags: estimated win probability below 70%, availability not confirmed.
+- **Braelon Allen — Additional research candidate**: estimated ATTD 50.2%; fair odds -101; opponent allows 0.83 direct TDs/game to the position group. FanDuel 250; estimated return 75.6%; flags: estimated win probability below 70%, availability not confirmed.
 
 ## DET at MIA
 2026-11-08T18:00:00+00:00
@@ -92,9 +92,9 @@ No retrospective pregame recommendations generated after kickoff.
 - MIA: recent RZ pass rate 0.35, RZ pass-over-expected -27.182745894319133 percentage points, neutral seconds/play 32.754901960784316. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - DET: recent RZ pass rate 0.5510204081632653, RZ pass-over-expected -2.7436361958583197 percentage points, neutral seconds/play 29.467625899280577. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Jahmyr Gibbs — Core research · highest estimated probability**: estimated ATTD 78.6%; fair odds -367; opponent allows 0.83 direct TDs/game to the position group. BetMGM -325; estimated return 2.8%; flags: stale or missing price time, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Jameson Williams — High-yield research · positive price estimate**: estimated ATTD 40.8%; fair odds 145; opponent allows 0.67 direct TDs/game to the position group. BetMGM 185; estimated return 16.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Ollie Gordon II — Additional research candidate**: estimated ATTD 42.4%; fair odds 136; opponent allows 0.67 direct TDs/game to the position group. DraftKings 105; estimated return -13.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Jahmyr Gibbs — Core research · highest estimated probability**: estimated ATTD 78.6%; fair odds -367; opponent allows 0.83 direct TDs/game to the position group. BetMGM -325; estimated return 2.8%; flags: availability not confirmed, sensitivity-adjusted value below 3%.
+- **Jameson Williams — High-yield research · positive price estimate**: estimated ATTD 40.8%; fair odds 145; opponent allows 0.67 direct TDs/game to the position group. BetMGM 185; estimated return 16.3%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Ollie Gordon II — Additional research candidate**: estimated ATTD 42.4%; fair odds 136; opponent allows 0.67 direct TDs/game to the position group. DraftKings 105; estimated return -13.2%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## CLE at NO
 2026-11-08T18:00:00+00:00
@@ -110,8 +110,8 @@ No retrospective pregame recommendations generated after kickoff.
 - NO: recent RZ pass rate 0.43243243243243246, RZ pass-over-expected -11.081754959918356 percentage points, neutral seconds/play 30.18095238095238. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - CLE: recent RZ pass rate 0.52, RZ pass-over-expected -12.672250926494598 percentage points, neutral seconds/play 30.884615384615383. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Quinshon Judkins — Core research · highest estimated probability**: estimated ATTD 45.9%; fair odds 118; opponent allows 1.67 direct TDs/game to the position group. DraftKings 115; estimated return -1.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Alvin Kamara — High-yield research · positive price estimate**: estimated ATTD 30.6%; fair odds 227; opponent allows 1.00 direct TDs/game to the position group. DraftKings 300; estimated return 22.5%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Quinshon Judkins — Core research · highest estimated probability**: estimated ATTD 45.9%; fair odds 118; opponent allows 1.67 direct TDs/game to the position group. DraftKings 115; estimated return -1.3%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Alvin Kamara — High-yield research · positive price estimate**: estimated ATTD 30.6%; fair odds 227; opponent allows 1.00 direct TDs/game to the position group. DraftKings 300; estimated return 22.5%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 - **Audric Estimé — Additional research candidate**: estimated ATTD 34.2%; fair odds 193; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## NYG at PHI
@@ -128,8 +128,8 @@ No retrospective pregame recommendations generated after kickoff.
 - PHI: recent RZ pass rate 0.30434782608695654, RZ pass-over-expected -24.84252109475758 percentage points, neutral seconds/play 32.37593984962406. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - NYG: recent RZ pass rate 0.5588235294117647, RZ pass-over-expected -9.460436701774597 percentage points, neutral seconds/play 32.716814159292035. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Malik Nabers — Core research · highest estimated probability**: estimated ATTD 49.9%; fair odds 101; opponent allows 1.50 direct TDs/game to the position group. FanDuel 185; estimated return 42.1%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **Isaiah Likely — High-yield research · positive price estimate**: estimated ATTD 38.3%; fair odds 161; opponent allows 0.33 direct TDs/game to the position group. betPARX 225; estimated return 24.4%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Malik Nabers — Core research · highest estimated probability**: estimated ATTD 49.9%; fair odds 101; opponent allows 1.50 direct TDs/game to the position group. FanDuel 185; estimated return 42.1%; flags: estimated win probability below 70%, availability not confirmed.
+- **Isaiah Likely — High-yield research · positive price estimate**: estimated ATTD 38.3%; fair odds 161; opponent allows 0.33 direct TDs/game to the position group. BetRivers 225; estimated return 24.4%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 - **DeVonta Smith — Additional research candidate**: estimated ATTD 38.7%; fair odds 158; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## LAR at WAS
@@ -146,9 +146,9 @@ No retrospective pregame recommendations generated after kickoff.
 - WAS: recent RZ pass rate 0.6071428571428571, RZ pass-over-expected -0.4367855449135487 percentage points, neutral seconds/play 30.166666666666668. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - LAR: recent RZ pass rate 0.62, RZ pass-over-expected 2.3835700936615467 percentage points, neutral seconds/play 32.34146341463415. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Puka Nacua — Core research · highest estimated probability**: estimated ATTD 62.6%; fair odds -168; opponent allows 1.00 direct TDs/game to the position group. betPARX -124; estimated return 13.1%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Kyren Williams — Additional research candidate**: estimated ATTD 54.1%; fair odds -118; opponent allows 0.83 direct TDs/game to the position group. betPARX -136; estimated return -6.0%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Blake Corum — Additional research candidate**: estimated ATTD 34.9%; fair odds 187; opponent allows 0.83 direct TDs/game to the position group. BetMGM 115; estimated return -25.0%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Puka Nacua — Core research · highest estimated probability**: estimated ATTD 62.6%; fair odds -168; opponent allows 1.00 direct TDs/game to the position group. BetRivers -124; estimated return 13.1%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Kyren Williams — Additional research candidate**: estimated ATTD 54.1%; fair odds -118; opponent allows 0.83 direct TDs/game to the position group. BetRivers -137; estimated return -6.3%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Blake Corum — Additional research candidate**: estimated ATTD 34.9%; fair odds 187; opponent allows 0.83 direct TDs/game to the position group. BetMGM 115; estimated return -25.0%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## HOU at LAC
 2026-11-08T21:05:00+00:00
@@ -164,9 +164,9 @@ No retrospective pregame recommendations generated after kickoff.
 - LAC: recent RZ pass rate 0.6190476190476191, RZ pass-over-expected -11.277922349316734 percentage points, neutral seconds/play 31.80851063829787. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - HOU: recent RZ pass rate 0.5897435897435898, RZ pass-over-expected -3.994762897491455 percentage points, neutral seconds/play 32.3125. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Woody Marks — Core research · highest estimated probability**: estimated ATTD 32.4%; fair odds 209; opponent allows 1.33 direct TDs/game to the position group. DraftKings 115; estimated return -30.4%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Kimani Vidal — High-yield research · positive price estimate**: estimated ATTD 20.9%; fair odds 378; opponent allows 1.33 direct TDs/game to the position group. DraftKings 500; estimated return 25.5%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Nico Collins — Additional research candidate**: estimated ATTD 25.5%; fair odds 292; opponent allows 1.17 direct TDs/game to the position group. DraftKings 150; estimated return -36.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Woody Marks — Core research · highest estimated probability**: estimated ATTD 32.4%; fair odds 209; opponent allows 1.33 direct TDs/game to the position group. DraftKings 115; estimated return -30.4%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Kimani Vidal — High-yield research · positive price estimate**: estimated ATTD 20.9%; fair odds 378; opponent allows 1.33 direct TDs/game to the position group. DraftKings 500; estimated return 25.5%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Nico Collins — Additional research candidate**: estimated ATTD 25.5%; fair odds 292; opponent allows 1.17 direct TDs/game to the position group. DraftKings 150; estimated return -36.2%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## LV at SF
 2026-11-08T21:05:00+00:00
@@ -182,9 +182,9 @@ No retrospective pregame recommendations generated after kickoff.
 - SF: recent RZ pass rate 0.5, RZ pass-over-expected -3.8917954231417458 percentage points, neutral seconds/play 31.234234234234233. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - LV: recent RZ pass rate 0.5849056603773585, RZ pass-over-expected -9.369202747064477 percentage points, neutral seconds/play 32.55844155844156. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Christian McCaffrey — Core research · highest estimated probability**: estimated ATTD 61.8%; fair odds -162; opponent allows 1.17 direct TDs/game to the position group. BetMGM -275; estimated return -15.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Tre Tucker — High-yield research · positive price estimate**: estimated ATTD 29.2%; fair odds 242; opponent allows 1.00 direct TDs/game to the position group. FanDuel 320; estimated return 22.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Brock Bowers — Additional research candidate**: estimated ATTD 40.3%; fair odds 148; opponent allows 0.33 direct TDs/game to the position group. DraftKings 120; estimated return -11.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Christian McCaffrey — Core research · highest estimated probability**: estimated ATTD 61.8%; fair odds -162; opponent allows 1.17 direct TDs/game to the position group. BetMGM -275; estimated return -15.7%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Tre Tucker — High-yield research · positive price estimate**: estimated ATTD 29.2%; fair odds 242; opponent allows 1.00 direct TDs/game to the position group. FanDuel 320; estimated return 22.8%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Brock Bowers — Additional research candidate**: estimated ATTD 40.3%; fair odds 148; opponent allows 0.33 direct TDs/game to the position group. DraftKings 120; estimated return -11.2%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## GB at NE
 2026-11-08T21:25:00+00:00
@@ -200,9 +200,9 @@ No retrospective pregame recommendations generated after kickoff.
 - NE: recent RZ pass rate 0.55, RZ pass-over-expected 0.19052186980843544 percentage points, neutral seconds/play 32.89090909090909. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - GB: recent RZ pass rate 0.5227272727272727, RZ pass-over-expected -6.002053549123365 percentage points, neutral seconds/play 31.756302521008404. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Matthew Golden — Core research · highest estimated probability**: estimated ATTD 51.2%; fair odds -105; opponent allows 1.33 direct TDs/game to the position group. FanDuel 185; estimated return 45.9%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **MarShawn Lloyd — High-yield research · positive price estimate**: estimated ATTD 20.6%; fair odds 386; opponent allows 0.83 direct TDs/game to the position group. DraftKings 600; estimated return 44.0%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Josh Jacobs — Additional research candidate**: estimated ATTD 47.7%; fair odds 109; opponent allows 0.83 direct TDs/game to the position group. Bally Bet -106; estimated return -7.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Matthew Golden — Core research · highest estimated probability**: estimated ATTD 51.2%; fair odds -105; opponent allows 1.33 direct TDs/game to the position group. FanDuel 185; estimated return 45.9%; flags: estimated win probability below 70%, availability not confirmed.
+- **MarShawn Lloyd — High-yield research · positive price estimate**: estimated ATTD 20.6%; fair odds 386; opponent allows 0.83 direct TDs/game to the position group. DraftKings 600; estimated return 44.0%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Josh Jacobs — Additional research candidate**: estimated ATTD 47.7%; fair odds 109; opponent allows 0.83 direct TDs/game to the position group. BetRivers -107; estimated return -7.6%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## ARI at SEA
 2026-11-08T21:25:00+00:00
@@ -218,9 +218,9 @@ No retrospective pregame recommendations generated after kickoff.
 - SEA: recent RZ pass rate 0.59375, RZ pass-over-expected -11.66194349527359 percentage points, neutral seconds/play 33.70103092783505. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - ARI: recent RZ pass rate 0.6349206349206349, RZ pass-over-expected -1.241455286268204 percentage points, neutral seconds/play 32.86725663716814. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Emanuel Wilson — Core research · highest estimated probability**: estimated ATTD 51.2%; fair odds -105; opponent allows 1.00 direct TDs/game to the position group. BetRivers 1400; estimated return 667.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **George Holani — High-yield research · positive price estimate**: estimated ATTD 17.0%; fair odds 488; opponent allows 1.00 direct TDs/game to the position group. BetRivers 1150; estimated return 112.6%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **Jaxon Smith-Njigba — Additional research candidate**: estimated ATTD 51.1%; fair odds -105; opponent allows 1.17 direct TDs/game to the position group. FanDuel -125; estimated return -8.0%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Emanuel Wilson — Core research · highest estimated probability**: estimated ATTD 51.2%; fair odds -105; opponent allows 1.00 direct TDs/game to the position group. BetRivers 1400; estimated return 667.7%; flags: estimated win probability below 70%, availability not confirmed.
+- **George Holani — High-yield research · positive price estimate**: estimated ATTD 17.0%; fair odds 488; opponent allows 1.00 direct TDs/game to the position group. BetRivers 1150; estimated return 112.6%; flags: estimated win probability below 70%, availability not confirmed.
+- **Jaxon Smith-Njigba — Additional research candidate**: estimated ATTD 51.1%; fair odds -105; opponent allows 1.17 direct TDs/game to the position group. FanDuel -120; estimated return -6.3%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## TB at CHI
 2026-11-09T01:20:00+00:00
@@ -236,9 +236,9 @@ No retrospective pregame recommendations generated after kickoff.
 - CHI: recent RZ pass rate 0.37254901960784315, RZ pass-over-expected -6.873599008894434 percentage points, neutral seconds/play 31.411214953271028. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - TB: recent RZ pass rate 0.3409090909090909, RZ pass-over-expected -14.708457819440149 percentage points, neutral seconds/play 36.75581395348837. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **D'Andre Swift — Core research · highest estimated probability**: estimated ATTD 69.3%; fair odds -226; opponent allows 0.33 direct TDs/game to the position group. Fliff -185; estimated return 6.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Bucky Irving — High-yield research · positive price estimate**: estimated ATTD 57.7%; fair odds -136; opponent allows 0.50 direct TDs/game to the position group. FanDuel 105; estimated return 18.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **Kyle Monangai — Additional research candidate**: estimated ATTD 38.9%; fair odds 157; opponent allows 0.33 direct TDs/game to the position group. BetRivers 205; estimated return 18.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **D'Andre Swift — Core research · highest estimated probability**: estimated ATTD 69.3%; fair odds -226; opponent allows 0.33 direct TDs/game to the position group. DraftKings -190; estimated return 5.8%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Bucky Irving — High-yield research · positive price estimate**: estimated ATTD 57.7%; fair odds -136; opponent allows 0.50 direct TDs/game to the position group. FanDuel 105; estimated return 18.2%; flags: estimated win probability below 70%, availability not confirmed.
+- **Kyle Monangai — Additional research candidate**: estimated ATTD 38.9%; fair odds 157; opponent allows 0.33 direct TDs/game to the position group. BetRivers 205; estimated return 18.7%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## BUF at MIN
 2026-11-10T01:15:00+00:00
@@ -254,9 +254,9 @@ No retrospective pregame recommendations generated after kickoff.
 - MIN: recent RZ pass rate 0.7096774193548387, RZ pass-over-expected 12.626661509275436 percentage points, neutral seconds/play 31.702898550724637. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - BUF: recent RZ pass rate 0.45614035087719296, RZ pass-over-expected -11.948312073946 percentage points, neutral seconds/play 31.05263157894737. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **James Cook — Core research · highest estimated probability**: estimated ATTD 60.1%; fair odds -151; opponent allows 0.67 direct TDs/game to the position group. DraftKings -110; estimated return 14.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Ty Johnson — High-yield research · positive price estimate**: estimated ATTD 16.4%; fair odds 512; opponent allows 0.67 direct TDs/game to the position group. FanDuel 850; estimated return 55.4%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Aaron Jones — Additional research candidate**: estimated ATTD 32.9%; fair odds 204; opponent allows 1.17 direct TDs/game to the position group. DraftKings 270; estimated return 21.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **James Cook — Core research · highest estimated probability**: estimated ATTD 60.1%; fair odds -151; opponent allows 0.67 direct TDs/game to the position group. DraftKings -110; estimated return 14.7%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Ty Johnson — High-yield research · positive price estimate**: estimated ATTD 16.4%; fair odds 512; opponent allows 0.67 direct TDs/game to the position group. FanDuel 850; estimated return 55.4%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Aaron Jones — Additional research candidate**: estimated ATTD 32.9%; fair odds 204; opponent allows 1.17 direct TDs/game to the position group. DraftKings 270; estimated return 21.7%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## Methodology & limitations
 - ATTD counts rushing and receiving TDs, excluding QB passing TDs, return TDs and fumble-recovery scores; check individual book rules.
