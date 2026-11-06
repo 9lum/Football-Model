@@ -100,7 +100,7 @@ def matched_quotes(player,game,odds,now,probability,validation,health):
      if conservative<.03:flags.append('sensitivity-adjusted value below 3%')
      if game.kickoff<=now:flags.append('game already started')
      result.append({'book':book['title'],'price':price,'line':'Anytime TD — Yes','impliedProbability':1/decimal,'estimatedReturn':ev,'conservativeReturn':conservative,'updatedAt':stamp,'flags':flags,'qualified':not flags})
- return sorted(result,key=lambda r:r['estimatedReturn'],reverse=True)
+ return sorted(result,key=lambda r:('stale or missing price time' not in r['flags'],r['estimatedReturn']),reverse=True)
 
 def game_context(game,odds):
  for event in odds.get('data',[]):
@@ -132,7 +132,7 @@ def report(out=ROOT/'data',now=None):
    if f.empty:continue
    probabilities=model.predict_proba(f[FEATURES])[:,1]
    for (_,r),prob in zip(f.iterrows(),probabilities):
-    pid=r.player_id;role=roles.get(pid,{});h=health.get(pid,{});profile=profiles.get(pid,{});current_team=profile.get('team',r.team)
+    pid=r.player_id;role=roles.get(pid,{});h=health.get(pid,{});profile=profiles.get(pid,{});current_team=role.get('team') if role.get('fresh') else profile.get('team',r.team)
     if current_team!=club or h.get('ruledOut') or role and not role.get('expectedStarter') and r.carries_last4+r.targets_last4<4:continue
     stats_player=o[o.player_id.eq(pid)][OPPS].sum();item={'playerId':pid,'name':r.player_display_name,'position':r.position,'team':club,'opponent':opponent,'probability':float(prob),'fairOdds':american(prob),'health':{'label':h.get('label','Availability unconfirmed'),'confirmed':h.get('confirmed',False),'reviewRequired':h.get('reviewRequired',False)},'recent':{k:float(stats_player[k]) for k in OPPS},'games':len(ids),'rzTargetShare':float(stats_player.rzTargets/team_tot.rzTargets) if team_tot.rzTargets else None,'i10RushShare':float(stats_player.i10Carries/team_tot.i10Carries) if team_tot.i10Carries else None,'xTDminusActual':float(stats_player.xTD-stats_player.td),'opponentPositionTDPerGame':float(r.oppPositionTD_last6),'opponentPositionTDRankSeason':ranks.get(r.position,{}).get(opponent),'opponentPositionTDRankTeams':len(defender_games),'coverage':next(({'manRate':v['features'].get('matchup_man_rate'),'zoneRate':v['features'].get('matchup_zone_rate'),'scope':bundle.get('enrichment',{}).get('coverageBacktestScope')} for v in bundle.get('forecasts',[]) if v.get('playerId')==pid),{})}
     item['quotes']=matched_quotes(item,game,odds,now,float(prob),validation,h);candidates.append(item)

@@ -170,3 +170,29 @@ Optional repository variable `ATTD_REFRESH_CREDIT_BUDGET` overrides each run's
 credit budget. Existing timestamps are retained and stale prices never qualify.
 The user's >=70% win rule and all quality, availability and sensitivity checks
 remain required. 'Core' is a relative research ranking, never a guarantee.
+
+### Final pregame refresh policy
+`Final pregame stats and touchdown markets` checks the schedule every five
+minutes without paid odds calls when no game is within 45 minutes. A worker
+prepares public-data analysis about 26 minutes before kickoff, rechecks scoped
+injuries/depth and current-season stat/PBP/trade source hashes at T−9, and targets
+a final six-market US-region odds request at T−6m30s. The publication deadline is
+T−5 minutes. ATTD, first TD (`player_1st_td`), last TD, moneyline, spread and total
+share this request. First/last TD are prices only, not modeled scoring-order
+probabilities. Routine collectors protect an allowance for six markets per game
+through the remaining calendar month; insufficient quota is explicitly reported.
+
+The worker records actual Git push completion, individual source update times,
+missing markets, source-change checks and deadline success in
+`data/kickoff-refresh.json`. Retained markets keep their old timestamps even if
+another market from the same book is newer. A statistics revision or failed source
+check withholds qualification rather than silently passing an old prediction as
+fresh. Public sources may not have published new stats or confirmed inactives;
+missing premium/charting data does not become available through extra polling.
+
+This is a best-effort scheduled target, not a five-minute SLA: GitHub Actions can
+start late, providers can time out or withhold timestamps, and shared API usage
+can exhaust quota. The UI marks late, partial or unconfirmed refreshes and polls
+the small audit snapshot every 15 seconds around kickoff, loading larger odds
+files after publication changes. An always-on externally hosted scheduler with
+adequate API allowance would be required for tighter timing guarantees.

@@ -5,6 +5,7 @@ import math
 import os
 from pathlib import Path
 from scripts.refresh_odds import fetch,number,read,ProviderError
+from scripts.odds_quota import routine_budget,kickoff_reserve
 MARKETS=['h2h','spreads','totals']
 UTC=dt.timezone.utc
 
@@ -27,6 +28,7 @@ def collect(output=Path('data'),key=None,now=None,force=False):
         if not key:raise ProviderError('missing_secret')
         _,quota=fetch('events',key);remaining=number(quota.get('remaining'),0);regions='us,us2' if remaining>=2000 else 'us';cost=3*len(regions.split(','));status.update(quota=quota,requestedRegions=regions)
         if remaining<cost:raise ProviderError('insufficient_quota')
+        if routine_budget(remaining,cost,now)<cost:raise ProviderError('reserved_for_kickoff')
         payload,quota=fetch('odds',key,regions=regions,markets=','.join(MARKETS),oddsFormat='american')
         if not isinstance(payload,list):raise ProviderError('schema')
         events=[]

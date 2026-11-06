@@ -13,10 +13,10 @@ MARKETS=['player_pass_yds','player_rush_yds','player_reception_yds','player_rece
 class ProviderError(Exception):
     def __init__(self,status):self.status=status
 
-def fetch(path,key,**params):
+def fetch(path,key,timeout=30,**params):
     url=BASE+path+'?'+urlencode({'apiKey':key,**params})
     try:
-        with urlopen(Request(url,headers={'User-Agent':'Projections-n-Shit/1.0'}),timeout=30) as r:
+        with urlopen(Request(url,headers={'User-Agent':'Projections-n-Shit/1.0'}),timeout=timeout) as r:
             return json.load(r),{k:r.headers.get('x-requests-'+k) for k in ['remaining','used','last']}
     except HTTPError as e:raise ProviderError(e.code) from None
     except Exception:raise ProviderError('network') from None
@@ -48,7 +48,9 @@ def collect(output=Path('data'),key=None,now=None):
         events,quota=fetch('events',key)
         remaining=number(quota.get('remaining'),0)
         budget,markets,regions,cost=request_plan(remaining,os.environ.get('ODDS_REFRESH_CREDIT_BUDGET'),int(now.timestamp()//21600))
-        status.update(quota=quota,creditBudget=budget,requestedMarkets=markets,requestedRegions=regions)
+        from scripts.odds_quota import routine_budget,kickoff_reserve
+        budget=routine_budget(remaining,budget,now)
+        status.update(quota=quota,creditBudget=budget,kickoffReservedCredits=kickoff_reserve(now),requestedMarkets=markets,requestedRegions=regions)
         if budget<cost:raise ProviderError('quota_budget')
         model=read(output/'latest.json',{});names={'ARI':'Arizona Cardinals','ATL':'Atlanta Falcons','BAL':'Baltimore Ravens','BUF':'Buffalo Bills','CAR':'Carolina Panthers','CHI':'Chicago Bears','CIN':'Cincinnati Bengals','CLE':'Cleveland Browns','DAL':'Dallas Cowboys','DEN':'Denver Broncos','DET':'Detroit Lions','GB':'Green Bay Packers','HOU':'Houston Texans','IND':'Indianapolis Colts','JAX':'Jacksonville Jaguars','KC':'Kansas City Chiefs','LAC':'Los Angeles Chargers','LAR':'Los Angeles Rams','LV':'Las Vegas Raiders','MIA':'Miami Dolphins','MIN':'Minnesota Vikings','NE':'New England Patriots','NO':'New Orleans Saints','NYG':'New York Giants','NYJ':'New York Jets','PHI':'Philadelphia Eagles','PIT':'Pittsburgh Steelers','SEA':'Seattle Seahawks','SF':'San Francisco 49ers','TB':'Tampa Bay Buccaneers','TEN':'Tennessee Titans','WAS':'Washington Commanders'}
         modeled={(names.get(f.get('homeTeam')),names.get(f.get('awayTeam'))) for f in model.get('forecasts',[])}
