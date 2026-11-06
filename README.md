@@ -27,6 +27,6 @@ See [MODEL.md](MODEL.md) for sources, model design, feature timing, quality gate
 
 The engine tests receiving yards and receptions; rushing, passing and touchdown models are not implemented. Current-season evaluation reports forecast error and distribution calibration. It does not establish ROI or unseen betting edges without point-in-time odds. Current route totals are excluded from historical folds.
 
-Software checks passed on local fixtures. Full public-data retrieval and current-season numerical results remain unverified in the authoring environment because its configured network proxy was unreachable. Check the latest workflow status and generated report before relying on any projection. A workflow configuration is not evidence of a completed run.
+The first full public-data run succeeded on GitHub on November 5, 2026 (Toronto time). It evaluated 2,513 player-game observations from 2026 weeks 1–8 and published 386 forecasts, including 221 with current route scenarios. See [RESULTS.md](RESULTS.md) for measured results and the successful run. Local software checks also passed; browser visual QA remains unverified. Check the latest workflow status and source timestamps before relying on a projection.
 
 The legacy `worker/index.js` is the earlier server-based model lab and odds adapter. It requires deployment and server secrets for live odds. No credentials, private hosting identifiers or raw bulk datasets are included in this public repository.

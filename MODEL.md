@@ -72,3 +72,7 @@ Manual prices have user-entered timestamps, not verified sportsbook provenance. 
 Download `site-preview.html` and open it in your browser. It loads the latest successful `data/latest.json` from this GitHub repository, or accepts a downloaded bundle. The same page includes current-season tests, upcoming forecasts, route scenarios and a price comparison tool. Build it after template changes with `node scripts/build-preview.mjs`.
 
 `worker/index.js` remains the earlier server-backed scenario lab and odds adapter. It does not automatically serve the new Python model. The standalone page is the interface for this v0.2 engine. Neither page has been newly deployed to hosted Sites by this change.
+
+## First verified run
+
+[Run 42154889123](https://github.com/9lum/Football-Model/actions/runs/42154889123) completed successfully and published real current-season results. See [RESULTS.md](RESULTS.md). This verifies data retrieval, model fitting, evaluation and output publication; it does not establish profitable sportsbook edges or browser visual QA.
