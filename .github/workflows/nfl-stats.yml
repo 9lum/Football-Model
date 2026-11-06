@@ -1,0 +1,45 @@
+name: Pull NFL.com player statistics
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: NFL season year (blank = current NFL season)
+        required: false
+        type: string
+      season_type:
+        type: choice
+        default: REG
+        options: [REG, PRE, POST]
+  push:
+    paths: [nfl_stats.py, test_nfl_stats.py, .github/workflows/nfl-stats.yml]
+  schedule:
+    - cron: '17 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: nfl-statistics-export
+  cancel-in-progress: false
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test parser
+        run: python -m unittest test_nfl_stats.py
+      - name: Export every category and page
+        env:
+          INPUT_SEASON: ${{ inputs.season }}
+          INPUT_TYPE: ${{ inputs.season_type }}
+        run: |
+          season="$(python -c 'import datetime; d=datetime.date.today(); print(d.year if d.month>=3 else d.year-1)')"
+          python nfl_stats.py --season "${INPUT_SEASON:-$season}" --season-type "${INPUT_TYPE:-REG}" --output data/nfl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nfl-player-statistics-${{ github.run_id }}
+          path: data/nfl/
+          retention-days: 30
+          if-no-files-found: error
