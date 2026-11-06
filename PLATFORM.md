@@ -40,3 +40,20 @@ The immutable pregame forecast ledger and weekly actuals remain separate from re
 ## Cost and operational limits
 
 No subscriptions, paid hosting or accounts are purchased. API plans determine access. Odds usage is quota-capped, data ingestion runs every six hours, and the dashboard checks prices/injuries every five minutes. GitHub schedules may be delayed. Account-level spending cannot be capped by application code; set provider billing limits to remain within the requested $0–$100/month budget. PostgreSQL and a continuously running API require a host if you choose to deploy the Docker stack.
+
+## Current game markets
+
+The homepage and Matchup Lab now use **actual The Odds API game prices**, not schedule-supplied estimates: moneylines (`h2h`), point spreads and full-game totals with both Over/Under prices. Each team/side retains its own line and American price; sportsbook source times are shown and older-than-three-minute quotes are flagged stale.
+
+`Refresh NFL moneylines spreads and totals` checks every 15 minutes, but calls the provider only when its quota-aware `nextRefreshAt` is due. It requests the entire NFL slate in one game-market call. A low-credit key uses US books and a longer interval; enough credits allow US/US2 coverage and more frequent collection. The page reloads published game snapshots every minute. This is not a streaming live feed: GitHub schedules/publication can be delayed, and a low-credit plan cannot support continuous current pricing.
+
+Set the repository Actions variable `GAME_ODDS_REFRESH_MINUTES` to an explicit interval (minimum 15 minutes) to override automatic allocation. This consumes credits faster and can exhaust a small allowance; no paid plan is purchased automatically. The workflow's manual **Run workflow** action forces a server collection. The website's **Refresh** button reloads published snapshots; it does not expose credentials or trigger provider calls. The Docker worker and FastAPI snapshot allowlist support the same game-market data. The last 96 collection batches are archived, capped at 8 MB.
+
+
+### Public observations and game-outcome model
+
+Verified public ESPN scoreboard listings supplement the quota-limited multi-book API. The workflow checks the schedule's upcoming NFL weeks approximately every 15 minutes, parses only explicitly returned moneylines/spreads/totals and labels the provider (currently DraftKings via ESPN). Public quote-update times are not supplied: `observed_at` records when the listing was read, while `last_update` stays null. A recent observation never becomes a fabricated provider-update timestamp. The pregame source field named `close` is not treated as proof of an actual historical closing price. Public endpoint availability and update latency are not guaranteed.
+
+A separate conditional-outcome forest models joint home/away game scores using earlier scores, opponent scoring, team EPA/volume and rest with rolling 3/5/8-game features. No sportsbook market or target-game outcome enters its predictors. Expanding current-season tests hold out whole weeks, report score-margin/total MAE and home-win Brier against simple baselines, and retain the latest complete week separately. Current forecasts draw 10,000 joint score pairs per game, preserving empirical dependence. A model spread is the negative expected home margin; the projected total is a mean, while a book total is a wagering threshold.
+
+Moneyline, spread-cover and over/under probabilities are evaluated directly against each returned book's actual price and handicap. Push-aware expected return and fair prices are shown under model details. Fair two-way moneylines assume a tie voids the wager; verify sportsbook rules. Game-market projections remain research: injury/weather effects are not independently calibrated, estimated ≥70% probability is not a validated hit rate, and passing one forecast gate is not approval of a bet. No game-market ROI or CLV is invented. The moneyline gate can fail independently of spread and total gates.

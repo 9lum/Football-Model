@@ -7,5 +7,5 @@ COPY intelligence/requirements.txt intelligence/requirements.txt
 RUN pip install --no-cache-dir -r intelligence/requirements.txt
 COPY edge edge
 COPY intelligence intelligence
-COPY scripts/refresh_odds.py scripts/refresh_odds.py
+COPY scripts/refresh_odds.py scripts/refresh_game_odds.py scripts/refresh_public_game_odds.py scripts/
 CMD ["uvicorn","intelligence.api:app","--host","0.0.0.0","--port","8000"]
