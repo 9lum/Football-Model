@@ -143,3 +143,30 @@ boost. Current-season walk-forward error, interval coverage and all existing
 bet-qualification gates are recomputed on refresh. Extra context does not ensure
 better accuracy or a profitable bet. Public historical files include corrections,
 so the tests still do not reconstruct archived pregame data vintages.
+
+### Weekly Anytime Touchdown Lab
+`edge.touchdowns` analyzes every game in the current regular-season week, using
+four prior published team games for opportunity and six prior games for defense.
+Rushes and targets are mapped by GSIS ID; goal-line/red-zone shares, actual RZ
+touches, expected TDs and direct positional scoring remain distinct. QB passing
+TDs never count as an Anytime TD outcome. Return and fumble-recovery scores are
+outside this offensive model; sportsbook settlement rules still matter.
+
+Distance/type/position xTD conversion is fitted on seasons before the current
+season with 30-opportunity smoothing. A regularized logistic player-game model
+uses lagged opportunity, shares, scoring and defense, evaluated on expanding
+whole weeks of the current season. Brier/log loss and calibration are published;
+this is not a historical betting ROI test. PFF grades, ESPN win rates, adjusted
+line yards and current slot/perimeter charting are explicitly unavailable rather
+than approximated or invented. Team implied points are snapshot context, not a
+points/7 touchdown projection. Potential game-script shifts are conditional.
+
+`.github/workflows/touchdowns.yml` refreshes analysis every six hours and after a
+successful main-model refresh, automatically selects the current week, and saves
+JSON plus a readable Markdown report. The Odds API collector requests the real
+`player_anytime_td` Yes/No market with repository secret `ODDS_API_KEY`; its
+initial all-game collection and later rotation respect the shared free quota.
+Optional repository variable `ATTD_REFRESH_CREDIT_BUDGET` overrides each run's
+credit budget. Existing timestamps are retained and stale prices never qualify.
+The user's >=70% win rule and all quality, availability and sensitivity checks
+remain required. 'Core' is a relative research ranking, never a guarantee.

@@ -1,0 +1,64 @@
+name: Weekly Anytime Touchdown research
+on:
+  workflow_dispatch:
+  push:
+    paths: ['edge/touchdowns.py','scripts/refresh_attd_odds.py','tests/test_touchdowns.py','.github/workflows/touchdowns.yml']
+  schedule:
+    - cron: '21 */6 * * *'
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: write
+concurrency:
+  group: weekly-touchdown-research
+  cancel-in-progress: false
+jobs:
+  research:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: work/attd-pbp
+          key: attd-pbp-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: attd-pbp-${{ runner.os }}-
+      - name: Test scoring, chronology and pricing semantics
+        run: python -m unittest tests.test_touchdowns -v
+      - name: Retrieve actual ATTD sportsbook prices within quota
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ATTD_REFRESH_CREDIT_BUDGET: ${{ vars.ATTD_REFRESH_CREDIT_BUDGET }}
+        run: python -m scripts.refresh_attd_odds
+      - name: Analyze every current-week game and test current-season probabilities
+        run: python -m edge.touchdowns
+      - name: Publish weekly report and machine-readable research
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/attd-odds.json data/touchdown-research.json data/touchdown-research.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh weekly ATTD opportunities matchups and actual sportsbook comparisons [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: touchdown-research-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            data/touchdown-research.json
+            data/touchdown-research.md
+          retention-days: 30
