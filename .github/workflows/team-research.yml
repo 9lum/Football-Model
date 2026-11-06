@@ -1,0 +1,33 @@
+name: Refresh NFL team research statistics
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/refresh_team_research.py','scripts/test_team_research.py','.github/workflows/team-research.yml']
+  schedule:
+    - cron: '34 */6 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: team-research-statistics
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s scripts -p 'test_team_research.py' -v
+      - run: python -m scripts.refresh_team_research
+      - name: Publish public team detail snapshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/team-research.json
+          git commit -m 'Refresh NFL team records and detailed statistics [skip ci]' || true
+          git pull --rebase origin main
+          git push origin HEAD:main
