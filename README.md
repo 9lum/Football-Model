@@ -34,7 +34,7 @@ python -m edge.pipeline --season 2026 --start-season 2021 --output data
 
 ## Results and limits
 
-The first receiving-only v0.2 run succeeded and is documented in [RESULTS.md](RESULTS.md). The v0.3 extension must be assessed using its own freshly generated report; its populations and feature set differ, so the earlier results cannot be presented as its performance.
+The first receiving-only v0.2 run succeeded and is documented in [RESULTS.md](RESULTS.md). The v0.3 refresh also completed successfully: it published 316 eligible upcoming player projections and evaluated all 11 market types. Nine markets passed the configured accuracy gates; rushing touchdowns and passing interceptions did not. See the v0.3 section in [RESULTS.md](RESULTS.md). Its populations differ from v0.2, so the earlier results cannot be presented as its performance.
 
 Expected value uses win, loss and push probabilities. Reasoning describes observed signals and model-price differences, not causal feature attribution. It explicitly reports negative value or disagreement. Manual prices are unverified. Historical price backtesting, verified profit, optimality and guaranteed edges are not claimed. Forecasts assume participation; check current availability, trades and sportsbook rules.
 

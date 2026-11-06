@@ -34,3 +34,37 @@ The model was slightly better for yards and slightly worse for receptions in thi
 - Availability is unconfirmed by default. A recent appearance is not proof that a player remains active or on the same roster.
 
 The outputs are now published in `data/`. Future successful refreshes replace the current reports; this document describes the first run only. There are no historical sportsbook prices in this evaluation, so ROI, CLV and profitable unseen edges remain unverified.
+
+
+# v0.3: redesigned dashboard and position-specific models
+
+[Successful v0.3 run](https://github.com/9lum/Football-Model/actions/runs/42157774815) completed on November 5, 2026 (Toronto time). It published **316 eligible upcoming player projections** and evaluated all 11 market types through week 8.
+
+| Market family | Tested player-game observations | Latest complete-week holdout |
+|---|---:|---:|
+| receiving | 1823 | 8 |
+| rushing | 716 | 8 |
+| passing | 262 | 8 |
+
+Observations overlap between families and are not independent NFL games. Each family uses its own prior-usage cohort; compare each market against its matching baseline, not against v0.2's broader player population.
+
+| Outcome | Model MAE | Rolling baseline MAE | 80% interval coverage |
+|---|---:|---:|---:|
+| receiving yards | 19.114 | 19.708 | 85.08% |
+| receptions | 1.460 | 1.493 | 89.80% |
+| receiving tds | 0.276 | 0.287 | 94.51% |
+| rushing yards | 20.160 | 21.075 | 86.17% |
+| carries | 3.453 | 3.618 | 87.01% |
+| rushing tds | 0.389 | 0.391 | 95.39% |
+| passing yards | 66.687 | 70.002 | 80.92% |
+| attempts | 7.979 | 8.746 | 81.30% |
+| completions | 5.573 | 5.892 | 85.88% |
+| passing tds | 0.875 | 0.886 | 93.13% |
+| passing interceptions | 0.631 | 0.624 | 98.09% |
+
+**Nine of eleven markets passed the configured heuristic gates.** Rushing touchdowns failed interval coverage (95.39%, above the 95% ceiling). Passing interceptions failed both the baseline-error and coverage checks. Those markets remain research estimates and cannot qualify as bet candidates.
+
+The update includes real current-season histories and basic QB/RB/WR/TE profiles. The redesigned page offers team/opponent/position filters, grouping, history charts, stat-period switches and contextual price explanations. Manual quotes remain explicitly unverified. The displayed no-vig comparison uses model probabilities conditional on a settled bet, so integer-line pushes are treated consistently.
+
+A successful run verifies data retrieval, model fitting, chronological evaluation, serialization and publication. Browser visual QA was unavailable. No optimality, profitable ROI, significance of improvements or guaranteed betting edge is claimed.
+
