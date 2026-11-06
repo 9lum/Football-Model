@@ -49,6 +49,7 @@ def run(start,season,out,trees=96,as_of=None,enrich=True):
     if not defense_games.empty:
         from .context import attach_defense
         frame,features=attach_defense(frame,features,defense_games,receiver_priors,schedules,coverage)
+    enrichment['positionMatchups']={'scope':'QB/RB/WR/TE allowed outcomes strictly before kickoff; last 3/6 games and current season; three-game league shrinkage; previous-opponent offensive-strength residuals; matched-sample efficiency; team points allowed and direct positional touchdown points.','metrics':['targets','receptions','receiving_yards','receiving_tds','carries','rushing_yards','rushing_tds','attempts','completions','passing_yards','passing_tds','passing_interceptions'],'missing':'Missing published samples are imputed by training-only model medians; no manual matchup boost or guarantee.'}
     quality['latestObservedStatsWeekBySeason']={str(int(k)):int(v) for k,v in frame[~frame.forecast].groupby('season').week.max().items()}
     published=set(frame[~frame.forecast].game_id.unique())
     completed=set(schedules[schedules.completed & (schedules.kickoff<now)].game_id.unique())
@@ -84,7 +85,7 @@ def run(start,season,out,trees=96,as_of=None,enrich=True):
                   'rushing':['carr','rush','attempts','passing_yards'],
                   'passing':['attempt','complet','passing','sack','pass_ypa','opp_allowed_receiving']}[family]
         common=['home','week','position_code','prior_games','days_since_game','changed_team']
-        selected=[key for key in features if key in common or any(v in key for v in patterns+['offense_','snap_','matchup_','coverage_'])]
+        selected=[key for key in features if key in common or any(v in key for v in patterns+['offense_','snap_','matchup_','coverage_','opp_position_'])]
         family_features[family]=selected
         volume,minimum={'receiving':('targets_last3',1.),'rushing':('carries_last3',2.),'passing':('attempts_last3',10.)}[family]
         family_frame=frame[frame[volume].ge(minimum)]
@@ -130,7 +131,7 @@ def run(start,season,out,trees=96,as_of=None,enrich=True):
     if 'receiving' not in validations:
         raise ValueError('Receiving model could not be evaluated')
     validation=validations['receiving']
-    bundle={'schemaVersion':3,'generatedAt':now.isoformat(),'season':season,'model':'Position-specific conditional outcome forests v0.3',
+    bundle={'schemaVersion':3,'generatedAt':now.isoformat(),'season':season,'model':'Position and opponent adjusted conditional outcome forests v0.4',
         'status':'research; no historical sportsbook-price backtest','validationPassed':all(market_gates.values()),
         'validationGates':market_gates,'validation':{k:v for k,v in validation.items() if k!='predictions'},'familyValidation':{family:{k:v for k,v in value.items() if k!='predictions'} for family,value in validations.items()},'modelFailures':failures,
         'dataQuality':quality,'enrichment':enrichment,'currentCoverage':coverage,'sources':sources,'featureNames':features,'featureNamesByFamily':family_features,

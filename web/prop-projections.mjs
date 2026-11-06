@@ -8,5 +8,6 @@ export function propProjectionGroups(forecasts,quotes,{market='',requireQuotes=f
    if(!group){group={first:row,markets:[]};index.set(key,group);groups.push(group)}group.markets.push({key:k,first:row,books:[]});
   }
  }
+ for(const group of groups){const f=forecasts.find(f=>f.playerId===group.first.playerId&&f.gameId===group.first.gameId);if(f)group.markets=group.markets.map(m=>({...m,first:{...m.first,matchupFeatures:f.features||{}}}));}
  return groups;
 }

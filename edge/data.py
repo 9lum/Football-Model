@@ -77,6 +77,7 @@ def schedule_rows(games):
                          'team':team(g['home_team'] if home else g['away_team']),
                          'opponent_team':team(g['away_team'] if home else g['home_team']),
                          'home':int(home), 'kickoff':kickoff,
+                         'points_allowed':g.get('away_score' if home else 'home_score',float('nan')),
                          'home_team':team(g['home_team']), 'away_team':team(g['away_team']),
                          'completed':pd.notna(g.get('home_score')) and pd.notna(g.get('away_score'))})
     return pd.DataFrame(rows)

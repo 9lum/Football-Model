@@ -78,4 +78,6 @@ def prepare(stats,schedules,now=None,current_teams=None,current_positions=None):
     for name,numerator,denominator in [('carry_share','carries_last6','team_carries_last6'),('completion_rate','completions_last6','attempts_last6'),('pass_ypa','passing_yards_last6','attempts_last6'),('rush_ypc','rushing_yards_last6','carries_last6'),('sack_rate','sacks_suffered_last6','attempts_last6')]:
         d[name]=d[numerator]/d[denominator].replace(0,np.nan)
         features.append(name)
+    from .position_matchups import attach_position_matchups
+    d,features=attach_position_matchups(d,features,schedules)
     return d.sort_values(['season','week','kickoff','player_id']).reset_index(drop=True),features

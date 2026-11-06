@@ -118,3 +118,28 @@ QB replacements use recorded regular-season starting IDs from public schedules, 
 Numeric model fair odds are recomputed from the current scenario’s win/push probabilities at a supplied line. They are estimates and never overwrite a sportsbook quote. Confirmed game absences suppress prop evaluation rather than becoming zero-stat winning unders. Injury-adjusted scenarios are excluded from validated-candidate and weekly-shortlist qualification; original baseline forecast audits remain separate.
 
 The professional platform adds a **70% estimated unconditional win-probability selection threshold** to candidate labels. Forecast accuracy and probability calibration remain separately measured; this is not a guarantee or a relaxed validation gate. Rolling windows include 3/5/6/8/12 games. Public game-week NGS is joined by GSIS ID/season/week and shifted before use; week-zero season aggregates are excluded. RMSE, fixed-threshold log loss and ≥70% pooled cohort diagnostics supplement MAE/CRPS/Brier. LightGBM/XGBoost challengers remain research until their distributions and calibration are independently validated.
+
+### Opponent and position adjustment (v0.4)
+Every player outcome family now receives opponent allowances specifically against
+that player's QB/RB/WR/TE position. Features cover targets, receptions, receiving
+yards/TDs, carries, rushing yards/TDs, pass attempts/completions, passing yards/TDs
+and interceptions. They include the preceding 3/6 games, the current season,
+three-game league shrinkage, matched-sample efficiency and an allowance residual
+relative to each previously faced offense-position group's preceding six games.
+Only games strictly before the prediction's kickoff enter these features.
+Published games with no opportunities for a position remain genuine zeroes;
+unpublished games are not filled in. Positional allowances are totals for that
+position group in a game, not a suggested projection for one player.
+
+Points allowed uses actual opponent team scores. Direct positional touchdown
+points count six times rushing plus receiving touchdowns; passing TDs remain a
+separate QB outcome and are not double-counted as points scored by the QB.
+Final/current-game scores never enter that game's predictor row. Game-score
+models also retain their existing opponent points-against and defensive EPA
+inputs. Historical descriptive statistics remain actual results.
+
+These features enter fitted outcome distributions, not a hand-picked percentage
+boost. Current-season walk-forward error, interval coverage and all existing
+bet-qualification gates are recomputed on refresh. Extra context does not ensure
+better accuracy or a profitable bet. Public historical files include corrections,
+so the tests still do not reconstruct archived pregame data vintages.
