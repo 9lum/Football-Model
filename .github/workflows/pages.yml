@@ -1,0 +1,59 @@
+name: Publish website to GitHub Pages
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pages.yml'
+      - 'index.html'
+      - 'site-preview.html'
+  workflow_run:
+    workflows: ['Build professional NFL dashboard']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: website-pages-production
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Stage only the published website
+        run: |
+          python - <<'PY'
+          import shutil
+          from pathlib import Path
+          root=Path('.');target=Path('_pages')
+          target.mkdir(exist_ok=True)
+          source=root/'platform'
+          assert (source/'index.html').is_file(), 'Exported dashboard is missing'
+          shutil.copytree(source,target/'platform',ignore=shutil.ignore_patterns('frontend'),dirs_exist_ok=True)
+          for name in ['index.html','site-preview.html']:
+              shutil.copy2(root/name,target/name)
+          (target/'.nojekyll').touch()
+          files=[p for p in target.rglob('*') if p.is_file()]
+          assert not any(p.is_symlink() for p in target.rglob('*')), 'Symlinks are not supported'
+          size=sum(p.stat().st_size for p in files)
+          assert size<500_000_000, 'Website package unexpectedly large'
+          print(f'Website package: {len(files)} files, {size:,} bytes')
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _pages
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 600000
