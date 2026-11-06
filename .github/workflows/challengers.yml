@@ -25,7 +25,7 @@ jobs:
           import nflreadpy as n
           from pathlib import Path
           import datetime
-          d=Path('work/lake');d.mkdir(parents=True,exist_ok=True);season=datetime.date.today().year
+          d=Path('work/lake');d.mkdir(parents=True,exist_ok=True);now=datetime.date.today();season=now.year if now.month>=3 else now.year-1
           for name,fn in [('player_stats',lambda:n.load_player_stats(list(range(2021,season+1)))),('schedules',lambda:n.load_schedules(list(range(2021,season+1)))),('snaps',lambda:n.load_snap_counts(list(range(2021,season+1)))),('players',n.load_players)]:fn().write_parquet(d/(name+'.parquet'))
           PY
       - run: python -m intelligence.challengers
