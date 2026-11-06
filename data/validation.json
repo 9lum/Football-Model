@@ -5338,6 +5338,15 @@
   "configurationTunedOnLatestWeek": false,
   "roi": null,
   "closingLineValue": null,
+  "featureSelection": {
+    "method": "Earlier-season development comparison; current-season holdout untouched",
+    "developmentSeason": 2025,
+    "baselineFeatureScore": 0.9718769174709744,
+    "defenseFeatureScore": 0.9767512781467804,
+    "minimumRelativeImprovement": 0.01,
+    "selected": "basic_context",
+    "developmentRows": 4100
+  },
   "cohort": {
     "positions": [
       "WR",
@@ -10688,6 +10697,15 @@
       "configurationTunedOnLatestWeek": false,
       "roi": null,
       "closingLineValue": null,
+      "featureSelection": {
+        "method": "Earlier-season development comparison; current-season holdout untouched",
+        "developmentSeason": 2025,
+        "baselineFeatureScore": 0.9718769174709744,
+        "defenseFeatureScore": 0.9767512781467804,
+        "minimumRelativeImprovement": 0.01,
+        "selected": "basic_context",
+        "developmentRows": 4100
+      },
       "cohort": {
         "positions": [
           "WR",
@@ -16311,6 +16329,15 @@
       "configurationTunedOnLatestWeek": false,
       "roi": null,
       "closingLineValue": null,
+      "featureSelection": {
+        "method": "Earlier-season development comparison; current-season holdout untouched",
+        "developmentSeason": 2025,
+        "baselineFeatureScore": 0.9791447998543322,
+        "defenseFeatureScore": 0.978326924328974,
+        "minimumRelativeImprovement": 0.01,
+        "selected": "basic_context",
+        "developmentRows": 1591
+      },
       "cohort": {
         "positions": [
           "RB",
@@ -23357,6 +23384,15 @@
       "configurationTunedOnLatestWeek": false,
       "roi": null,
       "closingLineValue": null,
+      "featureSelection": {
+        "method": "Earlier-season development comparison; current-season holdout untouched",
+        "developmentSeason": 2025,
+        "baselineFeatureScore": 0.9325895081666971,
+        "defenseFeatureScore": 0.933070536362637,
+        "minimumRelativeImprovement": 0.01,
+        "selected": "basic_context",
+        "developmentRows": 574
+      },
       "cohort": {
         "positions": [
           "QB"
