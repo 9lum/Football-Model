@@ -1,6 +1,6 @@
 # Projections n Shit — professional research platform
 
-The former research desk URL `site-preview.html` now redirects to the matching new view. Its redundant embedded dashboard has been removed. The Next.js/React/TypeScript dashboard is exported at `/platform/` and the root redirects there. Its nine sections use real published JSON snapshots, ECharts, TanStack Table, Tailwind CSS and Radix primitives following shadcn conventions. No paid template or stock dashboard data is included.
+The former research desk URL `site-preview.html` now redirects to the matching new view. Its redundant embedded dashboard has been removed. The Next.js/React/TypeScript dashboard is exported at `/platform/` and the root redirects there. Its research sections use real published JSON snapshots, ECharts, TanStack Table, Tailwind CSS and Radix primitives following shadcn conventions. No paid template or stock dashboard data is included.
 
 ## Running and deployment
 
@@ -57,3 +57,12 @@ Verified public ESPN scoreboard listings supplement the quota-limited multi-book
 A separate conditional-outcome forest models joint home/away game scores using earlier scores, opponent scoring, team EPA/volume and rest with rolling 3/5/8-game features. No sportsbook market or target-game outcome enters its predictors. Expanding current-season tests hold out whole weeks, report score-margin/total MAE and home-win Brier against simple baselines, and retain the latest complete week separately. Current forecasts draw 10,000 joint score pairs per game, preserving empirical dependence. A model spread is the negative expected home margin; the projected total is a mean, while a book total is a wagering threshold.
 
 Moneyline, spread-cover and over/under probabilities are evaluated directly against each returned book's actual price and handicap. Push-aware expected return and fair prices are shown under model details. Fair two-way moneylines assume a tie voids the wager; verify sportsbook rules. Game-market projections remain research: injury/weather effects are not independently calibrated, estimated ≥70% probability is not a validated hit rate, and passing one forecast gate is not approval of a bet. No game-market ROI or CLV is invented. The moneyline gate can fail independently of spread and total gates.
+
+
+## Detail pages, logos and model-first presentation
+
+Dashboard player names link to Player Research, matchup links open the exact Matchup Lab game, and NFL logos open Team Research. URLs carry encoded player/team/game/market parameters in the fragment so refreshes and new tabs resolve to the same detail view. Team Research includes current-season records, scoring/allowed trends, aggregated offense/defense rates, actual game results, upcoming matchups and skill-position player links. Statistics are collected from public nflreadpy schedules/team stats; current franchises take precedence over legacy relocated-team catalog entries.
+
+Team logos use ESPN's public NFL image assets with text fallbacks and accessible labels. A displayed sportsbook favorite is derived from that specific book's moneylines (or matched primary spread sides), not from which team is home. Model favorites use the score model's win probabilities and remain separately labeled research.
+
+The homepage leads with model-favorite player projections before bookmaker content. Larger model values, accent cards and clear projection headers provide visual priority; historical test error, predictive ranges, research labels and failed-gate warnings remain visible. Bookmaker lines stay available as secondary reference values, not as claimed sportsbook predicted averages.

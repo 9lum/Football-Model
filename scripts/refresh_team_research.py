@@ -20,10 +20,14 @@ def summarize_stats(records):
         rates[key]=sum(float(r[num]) for r in valid)/denom*(100 if key=='completion_percentage' else 1) if denom else None
     return {'totals':totals,'perGame':per_game,'rates':rates,'coverageByStat':counts}
 
+def current_team_catalog(catalog):
+    rows=sorted(catalog.to_dict('records'),key=lambda r:2 if str(r['team_abbr'])==team(r['team_abbr']) else 1 if str(r['team_abbr'])=='LA' else 0)
+    return {team(r['team_abbr']):r for r in rows}
+
 def build(schedule,stats,catalog,season,now=None):
     now=pd.Timestamp.now(tz='UTC') if now is None else pd.Timestamp(now);s=schedule_rows(schedule);s=s[s.season.eq(season)];raw=schedule.set_index('game_id');d=stats[stats.season.eq(season)&stats.week.gt(0)].copy()
     if 'season_type' in d:d=d[d.season_type.eq('REG')]
-    lookup={(int(r['week']),team(r['team'])):r for r in d.to_dict('records')};meta={team(r['team_abbr']):r for r in catalog.to_dict('records')};result=[]
+    lookup={(int(r['week']),team(r['team'])):r for r in d.to_dict('records')};meta=current_team_catalog(catalog);result=[]
     for club in sorted(s.team.unique()):
         rows=[];offense=[];allowed=[];upcoming=[]
         for g in s[s.team.eq(club)].sort_values('kickoff').itertuples():
@@ -37,7 +41,7 @@ def build(schedule,stats,catalog,season,now=None):
         result.append({'team':club,'name':info.get('team_name',club),'conference':info.get('team_conf'),'division':info.get('team_division'),'logo':info.get('team_logo_espn'),'gamesPlayed':n,'record':record(rows),'homeRecord':record([r for r in rows if r['isHome']]),'awayRecord':record([r for r in rows if not r['isHome']]),'pointsFor':sum(r['pointsFor'] for r in rows),'pointsAgainst':sum(r['pointsAgainst'] for r in rows),'pointsPerGame':float(np.mean([r['pointsFor'] for r in rows])) if n else None,'allowedPerGame':float(np.mean([r['pointsAgainst'] for r in rows])) if n else None,'pointDifferential':sum(r['pointsFor']-r['pointsAgainst'] for r in rows),'offense':summarize_stats(offense),'defenseAllowed':summarize_stats(allowed),'statsGames':len(offense),'games':rows,'upcoming':upcoming})
     for key,ascending in [('pointsPerGame',False),('allowedPerGame',True)]:
         ranking=sorted([r for r in result if r[key] is not None],key=lambda r:r[key],reverse=not ascending)
-        for row in result:row[key+'Rank']=next((i+1 for i,r in enumerate(ranking) if r['team']==row['team']),None)
+        for row in result:row[key+'Rank']=1+sum(r[key]<row[key] if ascending else r[key]>row[key] for r in ranking) if row[key] is not None else None
     return result
 
 def run():

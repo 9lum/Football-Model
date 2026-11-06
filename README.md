@@ -7,7 +7,7 @@ A public NFL player-prop research platform with position-specific forecasts, com
 ## What is available
 
 - Homepage and Matchup Lab: real moneylines, spreads and game totals, plus model score/market projections, cover probabilities, fair odds and source timestamps. Public game listings are checked about every 15 minutes; multi-book API updates remain quota-aware.
-- Nine views: Dashboard, Prop Explorer, Player Research, Matchup Lab, Odds Monitor, Simulation Lab, Backtesting, Model Health and Data Sources.
+- Research views: Dashboard, Prop Explorer, Player Research, Team Research, Matchup Lab, Odds Monitor, Simulation Lab, Backtesting, Model Health and Data Sources.
 - Up to 16 weekly featured yardage projections in All, or eight for QB/RB/WR/TE, subject to usable history and availability. Research estimates are labeled when quality gates fail.
 - A player's name appears once, with a model projection per market and compact sportsbook rows pairing over/under odds at the same line. Different lines are never merged.
 - Automatic The Odds API snapshots with original timestamps, manual price entry and optional JSON imports. Imports/manual prices remain unverified.
