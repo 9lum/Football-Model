@@ -1,5 +1,5 @@
 # Week 9 Anytime Touchdown Research
-Generated 2026-11-07T13:44:09.026291+00:00
+Generated 2026-11-07T19:07:55.967651+00:00
 Current-season tests: 2247; Brier 0.1486 vs baseline 0.1621.
 
 ## JAX at BAL
