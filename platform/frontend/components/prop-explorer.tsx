@@ -1,4 +1,5 @@
 'use client';
+import PlayerStatusLight from './player-status-light';
 import {useState} from 'react';
 import {groupPropMatchups} from '../../../web/prop-matchups.mjs';
 import {propProjectionGroups} from '../../../web/prop-projections.mjs';
@@ -16,7 +17,7 @@ function PlayerCard({group,tdOdds,tdModels}:{group:any;tdOdds:any;tdModels:any})
  const features=q.matchupFeatures||{},allowed=features['opp_position_'+(marketDefinitions as any)[m.key]?.target+'_last6'];
  const bookCount=new Set(selectedQuotes.map((r:any)=>r.book)).size,stale=selectedQuotes.some((r:any)=>r.flags?.includes('stale odds'));
  return <article className={'prop-tile prop-clean-card'+(qualified?' prop-tile-qualified':'')}>
- <header className="prop-player-head"><div className="prop-player-identity"><TeamMark team={p.team} label={false}/><div><a className="prop-player-name" href={researchHref('players',{player:p.playerId,team:p.team,market:m.key})}>{p.player}</a><div className="prop-player-meta">{p.position} · {p.team}{p.opponent?' vs '+p.opponent:''}</div></div></div><Badge tone={qualified?'good':'neutral'}>{qualified?'Qualified':'Research'}</Badge></header>
+ <header className="prop-player-head"><div className="prop-player-identity"><TeamMark team={p.team} label={false}/><div><a className="prop-player-name" href={researchHref('players',{player:p.playerId,team:p.team,market:m.key})}>{p.player}</a><div className="prop-player-meta"><PlayerStatusLight player={p}/>{p.position} · {p.team}{p.opponent?' vs '+p.opponent:''}</div></div></div><Badge tone={qualified?'good':'neutral'}>{qualified?'Qualified':'Research'}</Badge></header>
  <div className="prop-stat-heading"><span>Player prop</span><span>Model</span><span>Book line</span></div>
  <div className="prop-stat-list" role="group" aria-label={'Projections for '+p.player}>{group.markets.map((r:any)=>{const lines=r.books.map((b:any)=>(b.over||b.under).line).filter(Number.isFinite),low=Math.min(...lines),high=Math.max(...lines);return <button key={r.key} className={'prop-stat-row'+(r.key===m.key?' is-selected':'')} aria-pressed={r.key===m.key} onClick={()=>setChosen(r.key)} title={'Select '+((marketDefinitions as any)[r.key]?.label||r.key)+' to compare all sportsbook odds'}><span>{(marketDefinitions as any)[r.key]?.label||r.key}</span><strong>{fmt(r.first.modelMean)}</strong><span title={lines.length?'Range of collected sportsbook lines':'No collected line'}>{lines.length?fmt(low)+(high!==low?'–'+fmt(high):''):'—'}</span></button>})}</div>
  <p className="prop-stat-hint">Select a stat to compare prices · book ranges show collected lines.</p>

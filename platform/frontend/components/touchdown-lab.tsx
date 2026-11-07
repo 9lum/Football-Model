@@ -1,4 +1,5 @@
 'use client';
+import PlayerStatusLight from './player-status-light';
 
 import TouchdownPrices from './touchdown-prices';
 import {Card,Badge,Empty} from './ui';import TeamMark from './team-mark';import {researchHref} from '../../../web/research-links.mjs';
@@ -6,8 +7,8 @@ const fmt=(x:any,d=1)=>Number.isFinite(x)?Number(x).toLocaleString(undefined,{ma
 function Candidate({p,validation,tdOdds,kickoff,models}:any){
  const r=p.recent||{},q=p.quotes?.[0],age=Date.now()-Date.parse(q?.updatedAt),fresh=Number.isFinite(age)&&age>=0&&age<=180000,qualified=q?.qualified&&fresh&&validation?.validationPassed;
  const href=researchHref('players',{player:p.playerId,team:p.team});
- return <article className="card td-player-card"><header className="td-player-header"><div className="td-player-identity"><TeamMark team={p.team} label={false}/><div><a className="td-player-name" title={p.name} href={href}>{p.name}</a><span>{p.position} · {p.team} vs {p.opponent}</span></div></div><Badge tone={qualified?'good':'neutral'}>{qualified?'Qualified':'Research'}</Badge></header>
- <div className="td-player-context"><span>{p.risk||'Research candidate'}</span><span>{p.health?.label||'Availability unconfirmed'}</span></div>
+ return <article className="card td-player-card"><header className="td-player-header"><div className="td-player-identity"><TeamMark team={p.team} label={false}/><div><a className="td-player-name" title={p.name} href={href}>{p.name}</a><span className="player-name-with-status"><PlayerStatusLight player={p}/>{p.position} · {p.team} vs {p.opponent}</span></div></div><Badge tone={qualified?'good':'neutral'}>{qualified?'Qualified':'Research'}</Badge></header>
+ <div className="td-player-context"><span>{p.risk||'Research candidate'}</span></div>
  <div className="td-primary-comparison"><div className="td-main-probability"><span>Anytime TD</span><strong>{pct(p.probability)}</strong><small>Model probability</small></div><div className="td-main-prices"><div><span>Model fair odds</span><strong>{price(p.fairOdds)}</strong></div><div><span>{q?.book||'Sportsbook'}</span><strong>{price(q?.price)}</strong></div><small className={fresh?'td-source-current':'td-source-review'}>{q?(fresh?'Updated within 3 min':'Stale price · verify'):'No matched quote'}</small></div></div>
  <div className="td-derivative-summary"><TouchdownPrices player={{...p,kickoff}} snapshot={tdOdds} modelReport={models} includeAnytime={false} mode="compact"/></div>
  <section className="td-recent-opportunities"><h4>Recent opportunity</h4><dl><div><dt>Red-zone carries / targets</dt><dd>{fmt(r.rzCarries,0)} / {fmt(r.rzTargets,0)}</dd></div><div><dt>Inside-5 carries / targets</dt><dd>{fmt(r.i5Carries,0)} / {fmt(r.i5Targets,0)}</dd></div><div><dt>Expected / actual TDs</dt><dd>{fmt(r.xTD,2)} / {fmt(r.td,0)}</dd></div><div><dt>RZ target / inside-10 rush share</dt><dd>{pct(p.rzTargetShare)} / {pct(p.i10RushShare)}</dd></div></dl></section>
