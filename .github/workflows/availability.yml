@@ -1,8 +1,11 @@
 name: Public injuries, starters and fair-odds scenarios
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
   push:
-    paths: ['edge/availability.py', 'web/availability.mjs', '.github/workflows/availability.yml']
+    paths: ['edge/availability.py', 'edge/workload.py', 'edge/return_reports.py', 'web/workload.mjs', 'tests/test_workload.py', 'web/availability.mjs', '.github/workflows/availability.yml']
   schedule:
     - cron: '17 * * * *'
     - cron: '*/15 15-23 * * 0'
@@ -13,6 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   availability:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -29,7 +33,8 @@ jobs:
       - name: Check injury resolution and projection scenarios
         run: |
           python -m unittest discover -s tests -p 'test_availability.py' -v
-          node --test web/availability.test.mjs
+          python -m unittest discover -s tests -p 'test_workload.py' -v
+          node --test web/availability.test.mjs web/workload.test.mjs
       - name: Refresh public injury reports and depth charts
         run: python -m edge.availability --data data
       - name: Publish current availability and change log

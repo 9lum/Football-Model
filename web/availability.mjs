@@ -1,3 +1,4 @@
+import {workloadFresh,returningForecasts,applyWorkload} from './workload.mjs';
 import {marketDefinitions} from './market-core.mjs';
 import {statsSummary} from './view-model.mjs';
 export function healthFresh(health,season,now=Date.now()){const age=now-Date.parse(health?.generatedAt);return health?.season===season&&age>=0&&age<=7200000}
@@ -5,7 +6,7 @@ export function fairAmerican(probability){if(!(probability>0&&probability<1))ret
 function scaledYards(m,factor){const values=m.values.map(v=>Math.round(v*factor)),stats=statsSummary(values);return{...m,values,mean:stats.mean,p10:stats.low,p90:stats.high,validationPassed:false,injuryAdjusted:true}}
 export function applyAvailability(base,health,now=Date.now(),scenarioTeams=new Set()){
  const fresh=healthFresh(health,base.season,now),roles=new Map();for(const r of fresh?health.roster||[]:[]){const old=roles.get(r.playerId);if(!old||r.expectedStarter&&!old.expectedStarter||r.rank<old.rank)roles.set(r.playerId,r)}
- const forecasts=base.forecasts.map(f=>({...f,marketSamples:{...f.marketSamples},features:{...f.features}}));const fMap=new Map(forecasts.map(f=>[f.playerId,f]));
+ let forecasts=[...base.forecasts,...returningForecasts(base,health,now)].map(f=>({...f,marketSamples:{...f.marketSamples},features:{...f.features}}));const fMap=new Map(forecasts.map(f=>[f.playerId,f]));
  let players=(base.players||base.forecasts).map(p=>({...p}));for(const r of roles.values())if(!players.some(p=>p.playerId===r.playerId))players.push({playerId:r.playerId,name:r.name,position:r.position,team:r.team,basicStats:{},history:[],recordedGames:0});
  for(const p of players){let role=roles.get(p.playerId);const f=fMap.get(p.playerId),scopeMatches=!f||Number(f.gameId.split('_')[1])===health?.week;const currentTeam=fresh?health.currentTeams?.[p.playerId]:null;if(role&&currentTeam&&currentTeam!==role.team)role={...role,team:currentTeam,fresh:false,expectedStarter:false,roleLabel:'New team; depth pending'};if(role&&!scopeMatches)role={...role,expectedStarter:role.listedStarter,replacement:false,roleLabel:role.listedStarter?'Listed starter':'Backup'};p.roster=role||null;p.health=fresh?(health.injuries?.[p.playerId]||role?.health||{status:'NOT_LISTED',label:'No status reported',confirmed:false,ruledOut:false,reviewRequired:false,sources:[]}):null;
  if(!scopeMatches&&p.health)p.health={...p.health,label:'Prior report: '+p.health.label,ruledOut:false,reviewRequired:true,scopeMismatch:true};if(role){if(role.fresh)p.position=role.position;p.previousStatTeam=p.team;p.team=currentTeam||role.team}else if(currentTeam){p.previousStatTeam=p.team;p.team=currentTeam}if(fresh&&health.trades?.[p.playerId])p.trade=health.trades[p.playerId];
@@ -22,6 +23,7 @@ export function applyAvailability(base,health,now=Date.now(),scenarioTeams=new S
  const p=players.find(p=>p.playerId===s.backupId);if(p){p.likelyToPlay=true;p.expectedReplacement=true;p.conditionalStarter=!s.applyAutomatically;}if(backup)backup.likelyToPlay=true;}
  // A QB with no reliable current depth data is a usage-based fallback, not a confirmed starter.
  for(const club of new Set(players.map(p=>p.team))){const qbs=players.filter(p=>p.team===club&&p.position==='QB'&&p.likelyToPlay);if(!qbs.some(p=>p.roster?.fresh)&&qbs.length>1){qbs.sort((a,b)=>(fMap.get(b.playerId)?.features?.attempts_last3||0)-(fMap.get(a.playerId)?.features?.attempts_last3||0));for(const p of qbs.slice(1)){p.likelyToPlay=false;const f=fMap.get(p.playerId);if(f)f.likelyToPlay=false;}}}
+ if(workloadFresh(base,health,now)){forecasts=applyWorkload(forecasts,health.workloadContext);for(const p of players){const f=forecasts.find(f=>f.playerId===p.playerId);if(f?.workloadContext)p.workloadContext=f.workloadContext;}}
  return{...base,players,forecasts,healthSnapshot:fresh?health:null,healthState:fresh?(health.officialRecords>0?'current':'partial'):health?'stale':'unavailable'};
 }
 export function rosterOrder(a,b){const tier=p=>p.expectedReplacement||p.roster?.expectedStarter?0:p.roster?.listedStarter?1:p.likelyToPlay?2:3;return tier(a)-tier(b)||(a.roster?.rank??99)-(b.roster?.rank??99)||a.name.localeCompare(b.name)}

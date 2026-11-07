@@ -98,7 +98,7 @@ def parse_espn(payload,season,week,observed_at):
             if not club or not athlete.get('displayName'):continue
             details=injury.get('details',{})
             records.append({'name':athlete['displayName'],'espnId':str(athlete.get('id','')),'team':club,'position':athlete.get('position',{}).get('abbreviation'),
-                'gameStatus':game_status(status),'practice':None,'injury':details.get('type',injury.get('shortComment','')),
+                'gameStatus':game_status(status),'practice':None,'returnComment':injury.get('longComment',injury.get('shortComment','')),'injury':details.get('type',injury.get('shortComment','')),
                 'source':'https://www.espn.com/nfl/injuries','authority':'secondary','scopeVerified':False,
                 'season':season,'week':week,'observedAt':observed_at,'reportedAt':reported.isoformat() if pd.notna(reported) else None})
     return records
@@ -254,6 +254,10 @@ def run(directory,now=None):
         'currentTeams':team_mapping,'trades':trade_notes,'errors':errors,'unmatchedInjuryRecords':unmatched,'scope':'Current public injury/depth information. Not a historically calibrated injury adjustment.',
         'officialRecords':sum(r['authority']=='official' and r['scopeVerified'] for r in records),
         'limitations':['Not listed does not confirm active status.','Practice DNP/LP is not a game designation.','Questionable/Doubtful do not imply a numerical participation probability.','QB-change adjustments are separate observational scenarios.']}
+    from .return_reports import collect
+    snapshot['returnReports']=collect(bundle,snapshot,now.to_pydatetime())
+    from .workload import build_context
+    snapshot['workloadContext']=build_context(bundle,snapshot,now.to_pydatetime())
     old=json.loads((directory/'availability.json').read_text()) if (directory/'availability.json').exists() else {}
     history_path=directory/'availability-history.json';history=json.loads(history_path.read_text()) if history_path.exists() else []
     for pid,health in injuries.items():
