@@ -12,7 +12,7 @@ from .research import simulate
 ROOT=Path(__file__).resolve().parents[1];DATA=Path(os.environ.get('DATA_DIRECTORY',str(ROOT/'data')))
 app=FastAPI(title='Projections n Shit — Research API',version='1.0.0')
 app.add_middleware(CORSMiddleware,allow_origins=os.environ.get('CORS_ORIGINS','http://localhost:3000').split(','),allow_methods=['GET','POST'],allow_headers=['Authorization','Content-Type'])
-FILES={'team-research','public-game-odds','game-projections','game-odds','game-odds-history','challengers','latest','validation','projection-results','providers','weather','balldontlie','advanced-stats','upcoming-games','odds','odds-history','availability','availability-history','oos-predictions'}
+FILES={'public-td-odds','team-research','public-game-odds','game-projections','game-odds','game-odds-history','challengers','latest','validation','projection-results','providers','weather','balldontlie','advanced-stats','upcoming-games','odds','odds-history','availability','availability-history','oos-predictions'}
 @lru_cache(maxsize=20)
 def cached(path,mtime):return json.loads(Path(path).read_text())
 def snapshot(name):

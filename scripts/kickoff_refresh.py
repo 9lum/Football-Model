@@ -115,6 +115,7 @@ def reprice(batch,checks):
 def publish(message):
  if os.environ.get('PREGAME_PUBLISH')!='1':return None
  for args in [['git','config','user.name','github-actions[bot]'],['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],['git','add','data/kickoff-refresh.json','data/touchdown-research.json','data/touchdown-research.md','data/availability.json','data/attd-odds.json','data/game-odds.json']]:subprocess.run(args,cwd=ROOT,check=True,capture_output=True)
+ if (DATA/'public-td-odds.json').exists():subprocess.run(['git','add','data/public-td-odds.json'],cwd=ROOT,check=True,capture_output=True)
  if (DATA/'game-market-movement.json').exists():subprocess.run(['git','add','data/game-market-movement.json'],cwd=ROOT,check=True,capture_output=True)
  if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT).returncode==0:return stamp()
  subprocess.run(['git','commit','-m',message+' [skip ci]'],cwd=ROOT,check=True,capture_output=True);subprocess.run(['git','pull','--rebase','-X','theirs','origin','main'],cwd=ROOT,check=True,capture_output=True);subprocess.run(['git','push','origin','HEAD:main'],cwd=ROOT,check=True,capture_output=True);return stamp()
@@ -124,7 +125,10 @@ def run():
  kickoff=min(parse(g['kickoff']) for g in due);report_games={g['gameId']:g for g in games()};batch=[report_games[g['gameId']] for g in due if parse(g['kickoff'])==kickoff];season=int(batch[0]['gameId'][:4]);wait_until(kickoff-dt.timedelta(minutes=26));print('Preparing current public statistics and availability for '+str(len(batch))+' games',flush=True)
  from edge.touchdowns import report
  refresh_availability(batch);before=source_checks(season);report();baseline=source_checks(season);stable=sources_unchanged(before,baseline);prepared=stamp().isoformat()
- wait_until(kickoff-dt.timedelta(minutes=9));health=refresh_availability(batch);final_sources=source_checks(season);unchanged=stable and sources_unchanged(baseline,final_sources);wait_until(kickoff-dt.timedelta(minutes=6,seconds=30));quotes=collect_final(batch);checks={'preparedAt':prepared,'availability':health,'statisticsCheckedAt':stamp().isoformat(),'statisticsUnchanged':unchanged,'statisticsSources':final_sources};reprice(batch,checks);payload=plan()
+ wait_until(kickoff-dt.timedelta(minutes=9));health=refresh_availability(batch)
+ from scripts.refresh_public_td_odds import collect as collect_public_tds
+ collect_public_tds(DATA)
+ final_sources=source_checks(season);unchanged=stable and sources_unchanged(baseline,final_sources);wait_until(kickoff-dt.timedelta(minutes=6,seconds=30));quotes=collect_final(batch);checks={'preparedAt':prepared,'availability':health,'statisticsCheckedAt':stamp().isoformat(),'statisticsUnchanged':unchanged,'statisticsSources':final_sources};reprice(batch,checks);payload=plan()
  for row in payload['games']:
   if row['gameId'] in quotes:row.update(status='publication_pending',odds=quotes[row['gameId']],**checks,publicationStartedAt=stamp().isoformat())
  save('kickoff-refresh.json',payload);published=publish('Publish final pregame TD and game-market snapshots')

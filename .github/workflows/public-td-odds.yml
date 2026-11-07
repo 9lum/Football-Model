@@ -1,0 +1,33 @@
+name: Public touchdown scorer prices
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/refresh_public_td_odds.py', 'scripts/test_public_td_odds.py', '.github/workflows/public-td-odds.yml']
+  schedule:
+    - cron: '*/15 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: public-model-refresh
+  cancel-in-progress: false
+jobs:
+  public-tds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest scripts.test_public_td_odds -v
+      - run: python -m scripts.refresh_public_td_odds
+      - name: Publish public TD snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/public-td-odds.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh public touchdown scorer prices [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
