@@ -57,6 +57,7 @@ def merge_event(previous,event,market_keys):
 
 def collect_final(batch,key=None,now=None):
  from scripts.nfl_teams import FULL_NAMES
+ from scripts.game_market_history import append_history
  now=now or stamp();key=key or os.environ.get('ODDS_API_KEY');result={g['gameId']:{'status':'unavailable','markets':MARKETS} for g in batch}
  if not key:return {k:{**v,'error':'missing_secret'} for k,v in result.items()}
  try:events,quota=fetch('events',key)
@@ -78,6 +79,7 @@ def collect_final(batch,key=None,now=None):
   for g,event,payload,q,error in pool.map(request_one,jobs):
    if error:result[g['gameId']]['error']=error;continue
    observed=stamp().isoformat();payload['collectedAt']=observed
+   append_history(DATA,[payload],observed)
    td_events[event['id']]=merge_event(td_events.get(event['id'],{}),payload,MARKETS[:3]);gm_events[event['id']]=merge_event(gm_events.get(event['id'],{}),payload,MARKETS[3:]);seen={m['key'] for b in payload.get('bookmakers',[]) for m in b.get('markets',[]) if m.get('outcomes')};times=[m.get('last_update') or b.get('last_update') for b in payload.get('bookmakers',[]) for m in b.get('markets',[]) if m.get('outcomes')];source_current=bool(times) and all(t and 0<=(stamp()-parse(t)).total_seconds()<=180 for t in times)
    result[g['gameId']]={'status':'collected' if set(MARKETS).issubset(seen) else 'partial','fetchedAt':observed,'sourceQuotesCurrent':source_current,'markets':sorted(seen),'missingMarkets':sorted(set(MARKETS)-seen),'providerTimestamps':sorted({t for t in times if t}),'remainingCredits':number(q.get('remaining'),remaining),'regions':'us'}
  td.update(data=list(td_events.values()),lastKickoffCheckAt=stamp().isoformat(),kickoffQuota=remaining);gm.update(data=list(gm_events.values()),lastKickoffCheckAt=stamp().isoformat());
@@ -113,6 +115,7 @@ def reprice(batch,checks):
 def publish(message):
  if os.environ.get('PREGAME_PUBLISH')!='1':return None
  for args in [['git','config','user.name','github-actions[bot]'],['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],['git','add','data/kickoff-refresh.json','data/touchdown-research.json','data/touchdown-research.md','data/availability.json','data/attd-odds.json','data/game-odds.json']]:subprocess.run(args,cwd=ROOT,check=True,capture_output=True)
+ if (DATA/'game-market-movement.json').exists():subprocess.run(['git','add','data/game-market-movement.json'],cwd=ROOT,check=True,capture_output=True)
  if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT).returncode==0:return stamp()
  subprocess.run(['git','commit','-m',message+' [skip ci]'],cwd=ROOT,check=True,capture_output=True);subprocess.run(['git','pull','--rebase','-X','theirs','origin','main'],cwd=ROOT,check=True,capture_output=True);subprocess.run(['git','push','origin','HEAD:main'],cwd=ROOT,check=True,capture_output=True);return stamp()
 def run():

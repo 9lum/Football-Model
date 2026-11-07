@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request,urlopen
 from scripts.refresh_odds import read
+from scripts.game_market_history import append_history
 UTC=dt.timezone.utc
 SOURCE='https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard'
 def numeric(value,line=False):
@@ -58,5 +59,6 @@ def collect(output=Path('data'),now=None):
         except Exception as error:errors.append({'source':'ESPN public scoreboard','code':getattr(error,'code',type(error).__name__)})
     old=read(output/'public-game-odds.json',{})
     value={'generatedAt':stamp,'source':'ESPN public scoreboard','status':'ok' if events else 'unavailable' if errors else 'no_prices','data':list(events.values()) if events or not errors else old.get('data',[]),'eventCount':len(events),'errors':errors,'nextRefreshAt':(now+dt.timedelta(minutes=15)).isoformat(),'limitations':['Publicly listed game lines, checked approximately every 15 minutes subject to GitHub delays. No streaming or provider-update-time guarantee.','Source quote-update timestamps are not supplied and remain null. observed_at records when this app read the listing.','The pregame close field is not treated as a verified archived closing line for CLV.']}
+    if events:append_history(output,list(events.values()),stamp)
     output.mkdir(parents=True,exist_ok=True);(output/'public-game-odds.json').write_text(json.dumps(value,separators=(',',':')));print(json.dumps({k:v for k,v in value.items() if k!='data'}));return value
 if __name__=='__main__':collect()

@@ -5,6 +5,7 @@ import math
 import os
 from pathlib import Path
 from scripts.refresh_odds import fetch,number,read,ProviderError
+from scripts.game_market_history import append_history
 from scripts.odds_quota import routine_budget,kickoff_reserve
 MARKETS=['h2h','spreads','totals']
 UTC=dt.timezone.utc
@@ -42,6 +43,7 @@ def collect(output=Path('data'),key=None,now=None,force=False):
         count=sum(len(m.get('outcomes',[])) for e in events for b in e['bookmakers'] for m in b.get('markets',[]) if m.get('key') in MARKETS)
         status.update(status='ok' if count else 'no_prices',data=events,eventCount=len(events),quoteCount=count,books=sorted({b['title'] for e in events for b in e['bookmakers']}),quota=quota,estimatedCreditsUsed=number(quota.get('last'),cost),refreshMinutes=minutes,nextRefreshAt=(now+dt.timedelta(minutes=minutes)).isoformat(),refreshPolicy='Quota-aware by default. An explicit GAME_ODDS_REFRESH_MINUTES repository variable overrides the interval; it consumes credits faster.')
         if events:
+            append_history(output,events,now.isoformat())
             path=output/'game-odds-history.json';history=read(path,{'snapshots':[]});history['snapshots'].append({'observedAt':now.isoformat(),'data':events});history['snapshots']=history['snapshots'][-96:]
             # Bound repository growth while retaining recent original observations.
             while len(json.dumps(history))>8_000_000 and len(history['snapshots'])>1:history['snapshots'].pop(0)
