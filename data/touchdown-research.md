@@ -1,5 +1,5 @@
 # Week 9 Anytime Touchdown Research
-Generated 2026-11-07T07:56:42.050225+00:00
+Generated 2026-11-07T13:15:56.899800+00:00
 Current-season tests: 2247; Brier 0.1486 vs baseline 0.1621.
 
 ## JAX at BAL
@@ -13,12 +13,12 @@ No retrospective pregame recommendations generated after kickoff.
 - Joe Burrow (CIN QB): 6 RZ carries, 0 RZ targets, 2 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.40, actual TD 2.
 - Tee Higgins (CIN WR): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.55, actual TD 3.
 ### 2. Position matchup & leverage
-- ATL: opponent RZ EPA -0.2907678356626093; pass EPA 0.07165427581649696; rush EPA -0.0019894728357433052. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- ATL: opponent RZ EPA -0.2907678356626093; pass EPA 0.07165427581649696; rush EPA -0.0019894728357432935. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - CIN: opponent RZ EPA 0.12213279343627925; pass EPA -0.0005541396002410237; rush EPA -0.058345867738286684. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 52.5, "homeSpread": 3.0, "homeImpliedPoints": 24.75, "awayImpliedPoints": 27.75, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 52.5, "homeSpread": 3.0, "homeImpliedPoints": 24.75, "awayImpliedPoints": 27.75, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - ATL: recent RZ pass rate 0.7428571428571429, RZ pass-over-expected 3.8123459301211615 percentage points, neutral seconds/play 33.888888888888886. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- CIN: recent RZ pass rate 0.6226415094339622, RZ pass-over-expected 11.190167341667872 percentage points, neutral seconds/play 31.378947368421052. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
+- CIN: recent RZ pass rate 0.6226415094339622, RZ pass-over-expected 11.07679598319989 percentage points, neutral seconds/play 31.378947368421052. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Chase Brown — Core research · highest estimated probability**: estimated ATTD 49.3%; fair odds 103; opponent allows 1.50 direct TDs/game to the position group. BetMGM -160; estimated return -19.9%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 - **Joe Burrow — High-yield research · positive price estimate**: estimated ATTD 17.3%; fair odds 479; opponent allows 0.17 direct TDs/game to the position group. DraftKings 600; estimated return 20.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
@@ -34,7 +34,7 @@ No retrospective pregame recommendations generated after kickoff.
 - CAR: opponent RZ EPA -0.08723350283390983; pass EPA -0.017830382847716878; rush EPA -0.04862078599398956. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - DEN: opponent RZ EPA 0.3379461433104754; pass EPA -0.022742237134346158; rush EPA -0.054280388490590484. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 44.5, "homeSpread": 3.0, "homeImpliedPoints": 20.75, "awayImpliedPoints": 23.75, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 44.5, "homeSpread": 3.0, "homeImpliedPoints": 20.75, "awayImpliedPoints": 23.75, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - CAR: recent RZ pass rate 0.6, RZ pass-over-expected 9.128548701604208 percentage points, neutral seconds/play 28.464285714285715. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - DEN: recent RZ pass rate 0.45454545454545453, RZ pass-over-expected -6.43983818590641 percentage points, neutral seconds/play 32.87826086956522. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -52,7 +52,7 @@ No retrospective pregame recommendations generated after kickoff.
 - IND: opponent RZ EPA 0.1672986343957166; pass EPA 0.17210565802431524; rush EPA 0.008578004143263887. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - DAL: opponent RZ EPA 0.05421497218459075; pass EPA -0.012922018150623256; rush EPA -0.000924610258409052. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 51.5, "homeSpread": 4.5, "homeImpliedPoints": 23.5, "awayImpliedPoints": 28.0, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 51.5, "homeSpread": 4.5, "homeImpliedPoints": 23.5, "awayImpliedPoints": 28.0, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - IND: recent RZ pass rate 0.4, RZ pass-over-expected -17.024026811122894 percentage points, neutral seconds/play 33.225806451612904. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - DAL: recent RZ pass rate 0.5344827586206896, RZ pass-over-expected -3.7097693979740143 percentage points, neutral seconds/play 29.04854368932039. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -70,7 +70,7 @@ No retrospective pregame recommendations generated after kickoff.
 - KC: opponent RZ EPA 0.17517998959998246; pass EPA 0.2476453006276509; rush EPA -0.06633619534902951. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - NYJ: opponent RZ EPA -0.2086018673781591; pass EPA 0.09375620473719042; rush EPA -0.0788505862549524. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 48.5, "homeSpread": -9.5, "homeImpliedPoints": 29.0, "awayImpliedPoints": 19.5, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 48.5, "homeSpread": -9.5, "homeImpliedPoints": 29.0, "awayImpliedPoints": 19.5, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - KC: recent RZ pass rate 0.5555555555555556, RZ pass-over-expected -0.21671124867030553 percentage points, neutral seconds/play 30.35135135135135. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - NYJ: recent RZ pass rate 0.6190476190476191, RZ pass-over-expected -2.9121236103336985 percentage points, neutral seconds/play 33.10236220472441. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -88,7 +88,7 @@ No retrospective pregame recommendations generated after kickoff.
 - MIA: opponent RZ EPA 0.03444682542428564; pass EPA 0.25039651755267056; rush EPA -0.021784784915904642. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - DET: opponent RZ EPA 0.1759433466419433; pass EPA 0.35166240309898267; rush EPA -0.040491569439954175. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 49.5, "homeSpread": 6.5, "homeImpliedPoints": 21.5, "awayImpliedPoints": 28.0, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 49.5, "homeSpread": 6.5, "homeImpliedPoints": 21.5, "awayImpliedPoints": 28.0, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - MIA: recent RZ pass rate 0.35, RZ pass-over-expected -27.182745894319133 percentage points, neutral seconds/play 32.754901960784316. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - DET: recent RZ pass rate 0.5510204081632653, RZ pass-over-expected -2.7436361958583197 percentage points, neutral seconds/play 29.467625899280577. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -104,9 +104,9 @@ No retrospective pregame recommendations generated after kickoff.
 - Audric Estimé (NO RB): 0 RZ carries, 0 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.00, actual TD 0.
 ### 2. Position matchup & leverage
 - NO: opponent RZ EPA -0.06633429363636764; pass EPA -0.06214768025225718; rush EPA -0.009339048610238754. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- CLE: opponent RZ EPA -0.2836730410872361; pass EPA 0.11808019698781604; rush EPA 0.09013815472952977. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CLE: opponent RZ EPA -0.2836730410872361; pass EPA 0.11808019698781606; rush EPA 0.09013815472952977. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 42.5, "homeSpread": -3.5, "homeImpliedPoints": 23.0, "awayImpliedPoints": 19.5, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 42.5, "homeSpread": -3.5, "homeImpliedPoints": 23.0, "awayImpliedPoints": 19.5, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - NO: recent RZ pass rate 0.43243243243243246, RZ pass-over-expected -11.081754959918356 percentage points, neutral seconds/play 30.18095238095238. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - CLE: recent RZ pass rate 0.52, RZ pass-over-expected -12.672250926494598 percentage points, neutral seconds/play 30.884615384615383. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -121,10 +121,10 @@ No retrospective pregame recommendations generated after kickoff.
 - Isaiah Likely (NYG TE): 0 RZ carries, 6 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 1.95, actual TD 3.
 - DeVonta Smith (PHI WR): 0 RZ carries, 1 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.33, actual TD 1.
 ### 2. Position matchup & leverage
-- PHI: opponent RZ EPA -0.015021580625761158; pass EPA 0.01999097384681642; rush EPA 0.015553710187536575. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- PHI: opponent RZ EPA -0.015021580625761158; pass EPA 0.01999097384681643; rush EPA 0.015553710187536575. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - NYG: opponent RZ EPA 0.09733459918501336; pass EPA 0.1500532501611353; rush EPA 0.07474301368458018. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 38.5, "homeSpread": 3.0, "homeImpliedPoints": 17.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 38.5, "homeSpread": 3.0, "homeImpliedPoints": 17.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - PHI: recent RZ pass rate 0.30434782608695654, RZ pass-over-expected -24.84252109475758 percentage points, neutral seconds/play 32.37593984962406. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - NYG: recent RZ pass rate 0.5588235294117647, RZ pass-over-expected -9.460436701774597 percentage points, neutral seconds/play 32.716814159292035. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -142,7 +142,7 @@ No retrospective pregame recommendations generated after kickoff.
 - WAS: opponent RZ EPA -0.13353196922557833; pass EPA -0.03512738935240086; rush EPA -0.11792288960131987. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LAR: opponent RZ EPA 0.3747461631406003; pass EPA 0.07486605407131103; rush EPA 0.023106308498926708. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 47.5, "homeSpread": 4.5, "homeImpliedPoints": 21.5, "awayImpliedPoints": 26.0, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 47.5, "homeSpread": 4.5, "homeImpliedPoints": 21.5, "awayImpliedPoints": 26.0, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - WAS: recent RZ pass rate 0.6071428571428571, RZ pass-over-expected -0.4367855449135487 percentage points, neutral seconds/play 30.166666666666668. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - LAR: recent RZ pass rate 0.62, RZ pass-over-expected 2.3835700936615467 percentage points, neutral seconds/play 32.34146341463415. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -158,9 +158,9 @@ No retrospective pregame recommendations generated after kickoff.
 - Nico Collins (HOU WR): 1 RZ carries, 3 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.33, actual TD 2.
 ### 2. Position matchup & leverage
 - LAC: opponent RZ EPA 0.1931511898414543; pass EPA 0.008878882891629759; rush EPA -0.0025797087039861185. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- HOU: opponent RZ EPA -0.06421062904880954; pass EPA -0.09426185326175301; rush EPA -0.07824273793267231. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- HOU: opponent RZ EPA -0.06421062904880952; pass EPA -0.09426185326175301; rush EPA -0.07824273793267231. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 40.5, "homeSpread": 6.0, "homeImpliedPoints": 17.25, "awayImpliedPoints": 23.25, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 40.5, "homeSpread": 6.0, "homeImpliedPoints": 17.25, "awayImpliedPoints": 23.25, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - LAC: recent RZ pass rate 0.6190476190476191, RZ pass-over-expected -11.277922349316734 percentage points, neutral seconds/play 31.80851063829787. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - HOU: recent RZ pass rate 0.5897435897435898, RZ pass-over-expected -3.994762897491455 percentage points, neutral seconds/play 32.3125. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -178,7 +178,7 @@ No retrospective pregame recommendations generated after kickoff.
 - SF: opponent RZ EPA 0.24453110303574663; pass EPA 0.2474912739088556; rush EPA 0.08743159544031472. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LV: opponent RZ EPA 0.018426427693784043; pass EPA 0.08621707427632323; rush EPA -0.16395404806381994. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 51.5, "homeSpread": -10.0, "homeImpliedPoints": 30.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 51.5, "homeSpread": -10.0, "homeImpliedPoints": 30.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - SF: recent RZ pass rate 0.5, RZ pass-over-expected -3.8917954231417458 percentage points, neutral seconds/play 31.234234234234233. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - LV: recent RZ pass rate 0.5849056603773585, RZ pass-over-expected -9.369202747064477 percentage points, neutral seconds/play 32.55844155844156. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -196,7 +196,7 @@ No retrospective pregame recommendations generated after kickoff.
 - NE: opponent RZ EPA -0.06890189447893753; pass EPA -0.09503835868258458; rush EPA -0.02427365758638011. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - GB: opponent RZ EPA 0.09255249797451881; pass EPA 0.1670412716435726; rush EPA -0.0900323935640649. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 44.5, "homeSpread": -3.0, "homeImpliedPoints": 23.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 44.5, "homeSpread": -3.0, "homeImpliedPoints": 23.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - NE: recent RZ pass rate 0.55, RZ pass-over-expected 0.19052186980843544 percentage points, neutral seconds/play 32.89090909090909. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - GB: recent RZ pass rate 0.5227272727272727, RZ pass-over-expected -6.002053549123365 percentage points, neutral seconds/play 31.756302521008404. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -214,7 +214,7 @@ No retrospective pregame recommendations generated after kickoff.
 - SEA: opponent RZ EPA 0.12218206402375655; pass EPA 0.27497965399676466; rush EPA -0.036001774510351234. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - ARI: opponent RZ EPA 0.6541874142939837; pass EPA -0.06761918412681665; rush EPA -0.03109715951109098. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 39.5, "homeSpread": -8.5, "homeImpliedPoints": 24.0, "awayImpliedPoints": 15.5, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 39.5, "homeSpread": -8.5, "homeImpliedPoints": 24.0, "awayImpliedPoints": 15.5, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - SEA: recent RZ pass rate 0.59375, RZ pass-over-expected -11.66194349527359 percentage points, neutral seconds/play 33.70103092783505. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - ARI: recent RZ pass rate 0.6349206349206349, RZ pass-over-expected -1.241455286268204 percentage points, neutral seconds/play 32.86725663716814. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -232,7 +232,7 @@ No retrospective pregame recommendations generated after kickoff.
 - CHI: opponent RZ EPA -0.24319491103009214; pass EPA -0.25585869803005173; rush EPA -0.0649466433900493. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - TB: opponent RZ EPA 0.01707013826277884; pass EPA -0.052495689208505156; rush EPA -0.04360932689659031. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 47.5, "homeSpread": -6.0, "homeImpliedPoints": 26.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 47.5, "homeSpread": -6.0, "homeImpliedPoints": 26.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - CHI: recent RZ pass rate 0.37254901960784315, RZ pass-over-expected -6.873599008894434 percentage points, neutral seconds/play 31.411214953271028. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - TB: recent RZ pass rate 0.3409090909090909, RZ pass-over-expected -14.708457819440149 percentage points, neutral seconds/play 36.75581395348837. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
@@ -250,7 +250,7 @@ No retrospective pregame recommendations generated after kickoff.
 - MIN: opponent RZ EPA 0.1412781172627266; pass EPA 0.14763606292377826; rush EPA -0.06495463422568887. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - BUF: opponent RZ EPA -0.3558551196782636; pass EPA -0.24297444490698716; rush EPA -0.034348502137794265. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 43.5, "homeSpread": 3.0, "homeImpliedPoints": 20.25, "awayImpliedPoints": 23.25, "updatedAt": "2026-11-07T01:54:57Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 43.5, "homeSpread": 3.0, "homeImpliedPoints": 20.25, "awayImpliedPoints": 23.25, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - MIN: recent RZ pass rate 0.7096774193548387, RZ pass-over-expected 12.626661509275436 percentage points, neutral seconds/play 31.702898550724637. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - BUF: recent RZ pass rate 0.45614035087719296, RZ pass-over-expected -11.948312073946 percentage points, neutral seconds/play 31.05263157894737. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
