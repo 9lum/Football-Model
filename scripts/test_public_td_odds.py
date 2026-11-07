@@ -6,3 +6,8 @@ class PublicTdTests(unittest.TestCase):
   row='<tr><td>NY Jets @ KC Chiefs</td><td>11/8, 01:00PM</td><td>2+ TDs</td><td>Test Player</td><td><a href="https://sportsbook.draftkings.com/event/123">+220</a></td></tr>'
   result=parse(row,{'forecasts':[f]},now);m=result[0]['bookmakers'][0]['markets'][0];self.assertEqual(m['key'],'player_tds_over');self.assertEqual(m['outcomes'][0]['point'],1.5);self.assertIsNone(m['last_update']);self.assertEqual(m['sourceKind'],'public_web')
   self.assertFalse(parse(row.replace('NY Jets','NY Giants'),{'forecasts':[f]},now));self.assertFalse(parse(row.replace('11/8','11/15'),{'forecasts':[f]},now));self.assertFalse(parse(row,{'forecasts':[f,f]},now))
+
+ def test_grouped_public_view_yields_exact_milestone(self):
+  now=dt.datetime(2026,11,7,tzinfo=dt.timezone.utc);f={'gameId':'2026_09_NYJ_KC','name':'Test Player','homeTeam':'KC','awayTeam':'NYJ','kickoff':'2026-11-08T18:00:00Z'}
+  raw='<div class="tb-se card"><div class="tb-se-title"><h5>NY Jets @ KC Chiefs</h5><span>11/8, 01:00PM</span></div><h6>2+ TDs</h6><p class="tb-sodd-pp odds">Test Player<a href="https://sportsbook.draftkings.com/event/123">+500</a></p></div>'
+  result=parse(raw,{'forecasts':[f]},now);self.assertEqual(result[0]['bookmakers'][0]['markets'][0]['outcomes'][0]['price'],500)

@@ -4,10 +4,30 @@ from pathlib import Path
 from urllib.request import Request,urlopen
 from zoneinfo import ZoneInfo
 FULL_NAMES={'ARI': 'Arizona Cardinals', 'ATL': 'Atlanta Falcons', 'BAL': 'Baltimore Ravens', 'BUF': 'Buffalo Bills', 'CAR': 'Carolina Panthers', 'CHI': 'Chicago Bears', 'CIN': 'Cincinnati Bengals', 'CLE': 'Cleveland Browns', 'DAL': 'Dallas Cowboys', 'DEN': 'Denver Broncos', 'DET': 'Detroit Lions', 'GB': 'Green Bay Packers', 'HOU': 'Houston Texans', 'IND': 'Indianapolis Colts', 'JAX': 'Jacksonville Jaguars', 'KC': 'Kansas City Chiefs', 'LAC': 'Los Angeles Chargers', 'LAR': 'Los Angeles Rams', 'LV': 'Las Vegas Raiders', 'MIA': 'Miami Dolphins', 'MIN': 'Minnesota Vikings', 'NE': 'New England Patriots', 'NO': 'New Orleans Saints', 'NYG': 'New York Giants', 'NYJ': 'New York Jets', 'PHI': 'Philadelphia Eagles', 'PIT': 'Pittsburgh Steelers', 'SEA': 'Seattle Seahawks', 'SF': 'San Francisco 49ers', 'TB': 'Tampa Bay Buccaneers', 'TEN': 'Tennessee Titans', 'WAS': 'Washington Commanders'}
-URL='https://dknetwork.draftkings.com/draftkings-sportsbook-player-props/?tb_eg=88808&tb_edate=n7days&tb_view=2'
+URL='https://dknetwork.draftkings.com/draftkings-sportsbook-player-props/?tb_eg=88808&tb_edate=n7days&tb_view=1'
+SOURCES=[URL,URL.replace('tb_view=1','tb_view=2')]
 def clean(value):return re.sub('[^a-z0-9]','',value.lower())
+def sorted_rows(raw):
+    """Read the public page's grouped matchup view into the same five-column schema."""
+    rows=[]
+    for game in re.split(r'<div\b[^>]*class=["\']tb-se\s',raw)[1:]:
+        title=re.search(r'<h5\b[^>]*>(.*?)</h5>',game,re.S)
+        date=re.search(r'<span\b[^>]*>(\s*\d+/\d+,\s*\d+:\d+[AP]M\s*)</span>',game,re.S)
+        if not title or not date:continue
+        matchup=html.unescape(re.sub('<[^>]+>',' ',title[1])).strip()
+        for section in re.split(r'<h6\b[^>]*>',game)[1:]:
+            label,_,body=section.partition('</h6>');label=html.unescape(re.sub('<[^>]+>',' ',label)).strip()
+            if label not in ['Anytime TD Scorer','2+ TDs']:continue
+            for cell in re.findall(r'<p\b[^>]*class=["\']tb-sodd-pp[^>]*>(.*?)</p>',body,re.S):
+                name=html.unescape(re.sub('<[^>]+>',' ',cell.split('<a',1)[0])).strip()
+                anchor=re.search(r'<a\b[^>]*>.*?</a>',cell,re.S)
+                if not name or not anchor:continue
+                rows.append('<tr>'+''.join('<td>'+html.escape(v)+'</td>' for v in [matchup,date[1].strip(),label,name])+'<td>'+anchor[0]+'</td></tr>')
+    return ''.join(rows)
+
 def parse(raw,bundle,now):
-    matches={};profiles=bundle.get('players',[])
+    raw=raw+sorted_rows(raw)
+    matches={}
     for tr in re.findall(r'<tr\b[^>]*>(.*?)</tr>',raw,re.S):
         cells=[html.unescape(re.sub('<[^>]+>',' ',c)).strip() for c in re.findall(r'<td\b[^>]*>(.*?)</td>',tr,re.S)]
         if len(cells)!=5 or cells[2] not in ['Anytime TD Scorer','2+ TDs']:continue
@@ -38,10 +58,15 @@ def parse(raw,bundle,now):
         if not any(o['description']==outcome['description'] for o in market['outcomes']):market['outcomes'].append(outcome)
     return list(matches.values())
 def collect(output=Path('data'),now=None):
-    now=now or dt.datetime.now(dt.timezone.utc);path=output/'public-td-odds.json';report={'generatedAt':now.isoformat(),'source':URL,'status':'unavailable','data':[],'scope':'Public DraftKings TD scorer table: 1+ and 2+ TDs scored, not separate rushing/receiving TDs. Passing TDs excluded; scorer rules may include return TDs. Indicative web snapshot, not a verified executable offer. Source quote update time is not supplied.'}
+    now=now or dt.datetime.now(dt.timezone.utc);path=output/'public-td-odds.json';report={'generatedAt':now.isoformat(),'source':URL,'sources':SOURCES,'status':'unavailable','data':[],'scope':'Public DraftKings TD scorer table: 1+ and 2+ TDs scored, not separate rushing/receiving TDs. Passing TDs excluded; scorer rules may include return TDs. Indicative web snapshot, not a verified executable offer. Source quote update time is not supplied.'}
     try:
-        with urlopen(Request(URL,headers={'User-Agent':'NFLResearch/1.0'}),timeout=25) as response:raw=response.read().decode()
-        report['data']=parse(raw,json.loads((output/'latest.json').read_text()),now);report['status']='ok' if report['data'] else 'no_matched_prices'
+        pages=[];report['errors']=[]
+        for url in SOURCES:
+            try:
+                with urlopen(Request(url,headers={'User-Agent':'NFLResearch/1.0'}),timeout=25) as response:pages.append(response.read().decode())
+            except Exception as error:report['errors'].append({'source':url,'error':type(error).__name__})
+        if not pages:raise ValueError('No public tables available')
+        report['data']=parse(''.join(pages),json.loads((output/'latest.json').read_text()),now);report['status']=('partial' if report['errors'] else 'ok') if report['data'] else 'no_matched_prices'
     except Exception as e:
         report['error']=type(e).__name__
         if path.exists():report['data']=json.loads(path.read_text()).get('data',[])
