@@ -68,7 +68,7 @@ jobs:
               core.warning('Pages build-source check returned HTTP ' + error.status + '; continuing with deployment recovery.');
             }
             // GitHub identified this older deployment as the blocker in the failed deployment response.
-            const deploymentId = '65867db70ed99b1c0d9f393b3c1965628e8e0174';
+            const deploymentId = '576c5f82aef0e6b79b7170124138789426fbbb92';
             try {
               await github.request('POST /repos/{owner}/{repo}/pages/deployments/{deploymentId}/cancel', {...repository, deploymentId});
               core.info('Cancelled the known superseded deployment blocking publication.');
