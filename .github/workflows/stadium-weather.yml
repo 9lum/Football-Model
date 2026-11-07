@@ -1,0 +1,37 @@
+name: Refresh stadium weather outlooks
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/refresh_stadium_weather.py','scripts/refresh_stadium_media.py','.github/workflows/stadium-weather.yml','tests/test_stadium_weather.py']
+  schedule:
+    - cron: '12 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: stadium-weather-outlooks
+  cancel-in-progress: false
+jobs:
+  weather:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test stadium resolution and game-window sampling
+        run: python -m unittest tests.test_stadium_weather -v
+      - name: Collect public stadium forecasts
+        run: |
+          python -m scripts.refresh_stadium_weather
+          python -m scripts.refresh_stadium_media
+      - name: Publish credential-free weather snapshots
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/stadium-weather.json data/stadium-media.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh stadium weather and venue imagery [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
