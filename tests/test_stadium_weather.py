@@ -1,6 +1,6 @@
 import datetime as dt
 import unittest
-from scripts.refresh_stadium_weather import location,kickoff_of,forecast_hours,UTC
+from scripts.refresh_stadium_weather import location,kickoff_of,forecast_hours,UTC,select_season,scheduled_future
 class StadiumWeatherTests(unittest.TestCase):
     def test_neutral_madrid_uses_stadium_not_home_city(self):
         coords,roof=location({'home_team':'ATL','location':'Neutral','stadium':'Bernabeu'})
@@ -21,4 +21,11 @@ class StadiumWeatherTests(unittest.TestCase):
         rows=forecast_hours(payload,kickoff);self.assertEqual(len(rows),2);self.assertEqual(rows[0]['temperatureC'],4);self.assertIsNone(rows[0]['gustKph'])
     def test_outside_horizon_has_no_nearest_day_substitution(self):
         self.assertEqual(forecast_hours({'hourly':{'time':['2026-11-07T18:00']}},dt.datetime(2026,11,8,18,tzinfo=UTC)),[])
+    def test_future_season_rollover_and_unscheduled_kickoff(self):
+        now=dt.datetime(2027,5,1,tzinfo=UTC)
+        old={'season':'2026','gameday':'2027-02-10','gametime':'18:00'}
+        future={'season':'2027','gameday':'2027-09-12','gametime':''}
+        self.assertEqual(select_season([old,future],now),2027)
+        self.assertTrue(scheduled_future(future,now))
+        self.assertIsNone(select_season([old],now))
 if __name__=='__main__':unittest.main()
