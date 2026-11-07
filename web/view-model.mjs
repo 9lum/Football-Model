@@ -31,7 +31,7 @@ export function weeklyTopProjections(bundle,accuracyIndex,now=Date.now(),filters
  // Experimental ordering within a position, not a calibrated hit probability.
  const score=.65*mae/scale+.35*(stats.high-stats.low)/(2*scale);
  candidates.push({...f,qualityPassed:!!passed,market,summary:stats,pastMae:mae,testGames:tested.length,score});}
- const picks=[];for(const position of ['QB','RB','WR','TE']){const ranked=candidates.filter(f=>f.position===position).sort((a,b)=>Number(b.qualityPassed)-Number(a.qualityPassed)||a.score-b.score||b.testGames-a.testGames||a.name.localeCompare(b.name));picks.push(...ranked.slice(0,filters.position?8:4))}
+ const picks=[];for(const position of ['QB','RB','WR','TE']){const ranked=candidates.filter(f=>f.position===position).sort((a,b)=>Number(b.qualityPassed)-Number(a.qualityPassed)||a.score-b.score||b.testGames-a.testGames||a.name.localeCompare(b.name));picks.push(...ranked.slice(0,filters.position?8:(['RB','WR'].includes(position)?5:4)))}
  return{week,picks,reason:picks.length?'':'No projections match the filters and minimum testing requirements.'};
 }
 
