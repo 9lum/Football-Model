@@ -1,25 +1,24 @@
 1:"$Sreact.fragment"
-2:"static/chunks/app/layout-37c28b5366aa2e4e.js"
+2:"static/chunks/app/layout-7908435adab580df.js"
 3:I[92,["177","$2"],"default"]
 4:I[7121,[],""]
 5:I[4581,[],""]
-6:I[2427,["177","$2"],"default"]
-8:I[1304,[],"ClientPageRoot"]
-9:"static/chunks/977-4c09e70be7cfa82b.js"
-a:"static/chunks/app/page-a554641c2827d808.js"
-b:I[1366,["977","$9","974","$a"],"default"]
-e:I[484,[],"OutletBoundary"]
-f:"$Sreact.suspense"
-11:"ViewportBoundary"
-12:I[484,[],"$11"]
-14:"MetadataBoundary"
-15:I[484,[],"$14"]
-17:I[7123,[],"default",1]
-:HL["/Football-Model/platform/_next/static/css/eea4ec2b43d5e883.css","style"]
-7:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$L8",null,{"Component":"$b","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@c","$@d"]}}],null,["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]]}],"p":false,"v":null}}]]
-0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Football-Model/platform/_next/static/css/eea4ec2b43d5e883.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","data-appearance":"ember","data-density":"compact","data-background-motion":"on","children":["$","body",null,{"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L6",null,{}]]}]}]]}],"p":false,"v":null},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$L12",null,{"children":"$L13"}],["$","$L15",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$f",null,{"name":"Next.Metadata","children":"$L16"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$17",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"48rnBjzi8W0TO2h1fmOUi"}
-c:{}
-d:"$7:0:1:d:r:props:children:0:props:serverProvidedParams:params"
-13:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-10:null
-16:[["$","title","0",{"children":"Projections n Shit — NFL Research"}],["$","meta","1",{"name":"description","content":"NFL player projections, market comparisons, weather and transparent model validation."}]]
+7:I[1304,[],"ClientPageRoot"]
+8:"static/chunks/977-4c09e70be7cfa82b.js"
+9:"static/chunks/app/page-a554641c2827d808.js"
+a:I[1366,["977","$8","974","$9"],"default"]
+d:I[484,[],"OutletBoundary"]
+e:"$Sreact.suspense"
+10:"ViewportBoundary"
+11:I[484,[],"$10"]
+13:"MetadataBoundary"
+14:I[484,[],"$13"]
+16:I[7123,[],"default",1]
+:HL["/Football-Model/platform/_next/static/css/d8c0a14d215c2932.css","style"]
+6:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$L7",null,{"Component":"$a","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@b","$@c"]}}],null,["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]]}],"p":false,"v":null}}]]
+0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Football-Model/platform/_next/static/css/d8c0a14d215c2932.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","data-appearance":"ember","data-density":"compact","data-background-motion":"on","children":["$","body",null,{"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]]}],"p":false,"v":null},"c":"$Q6"},"h":{"r":["$","$1","h",{"children":[null,["$","$L11",null,{"children":"$L12"}],["$","$L14",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$e",null,{"name":"Next.Metadata","children":"$L15"}]}],null]}],null]}],"p":false,"v":null}},"m":"$undefined","G":["$16",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"VljRY-VhBpu4CpWDJs3BV"}
+b:{}
+c:"$6:0:1:d:r:props:children:0:props:serverProvidedParams:params"
+12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+f:null
+15:[["$","title","0",{"children":"Projections n Shit — NFL Research"}],["$","meta","1",{"name":"description","content":"NFL player projections, market comparisons, weather and transparent model validation."}]]
