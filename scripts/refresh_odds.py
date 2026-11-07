@@ -120,6 +120,8 @@ def collect(output=Path('data'),key=None,now=None):
     except ProviderError as err:
         status['errors'].append({'code':err.status})
         status['data']=[e for e in previous.get('data',[]) if dt.datetime.fromisoformat(e['commence_time'].replace('Z','+00:00'))>now]
+    if status.get('data') and status['status']=='unavailable':status['status']='cached'
+    status['books']=sorted({b.get('title',b.get('key')) for e in status.get('data',[]) for b in e.get('bookmakers',[])})
     history['snapshots']=history.get('snapshots',[])[-28:]
     (output/'odds.json').write_text(json.dumps(status,separators=(',',':')))
     (output/'odds-history.json').write_text(json.dumps(history,separators=(',',':')))

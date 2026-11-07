@@ -2,7 +2,7 @@ name: Refresh sportsbook odds
 on:
   workflow_dispatch:
   push:
-    paths: ['scripts/refresh_odds.py', '.github/workflows/odds.yml']
+    paths: ['scripts/refresh_odds.py', 'scripts/refresh_bdl_props.py', 'scripts/test_bdl_props.py', '.github/workflows/odds.yml']
   schedule:
     - cron: '11 */6 * * *'
 permissions:
@@ -20,12 +20,17 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test collection and quota handling
-        run: python -m unittest discover -s scripts -p 'test_odds.py' -v
+        run: python -m unittest scripts.test_odds scripts.test_bdl_props -v
       - name: Collect credential-free sportsbook snapshots
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           ODDS_REFRESH_CREDIT_BUDGET: ${{ vars.ODDS_REFRESH_CREDIT_BUDGET }}
         run: python -m scripts.refresh_odds
+      - name: Supplement exact player markets from BALLDONTLIE
+        env:
+          BALLDLIE_API_KEY: ${{ secrets.BALLDLIE_API_KEY }}
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: python -m scripts.refresh_bdl_props
       - name: Publish prices and bounded movement history
         run: |
           git config user.name 'github-actions[bot]'
