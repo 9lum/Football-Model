@@ -1,0 +1,9 @@
+'use client';
+import {compactOddsGroups} from '../../../web/view-model.mjs';
+import {marketDefinitions} from '../../../web/market-core.mjs';
+const fmt=(n:any)=>Number.isFinite(n)?Number(n).toLocaleString(undefined,{maximumFractionDigits:1}):'—';
+const price=(n:any)=>Number.isFinite(n)?(n>0?'+':'')+n:'—';
+export default function SportsbookLines({quotes=[],market='',compact=false}:any){
+ const markets=compactOddsGroups(quotes.filter((q:any)=>!market||q.market===market)).flatMap((p:any)=>p.markets);
+ return <section className="sportsbook-lines" aria-label="Sportsbook player prop lines"><div className="sportsbook-lines-heading"><strong>Sportsbook lines & odds</strong><small>{new Set(quotes.filter((q:any)=>!market||q.market===market).map((q:any)=>q.book)).size} books</small></div>{markets.length?markets.map((m:any)=><div key={m.key}>{!market&&<div className="small muted">{(marketDefinitions as any)[m.key]?.label||m.key}</div>}<div className="table-scroll"><table><thead><tr><th>Sportsbook</th><th>Line</th><th>Over</th><th>Under</th>{!compact&&<th>Updated</th>}</tr></thead><tbody>{m.books.map((b:any)=>{const q=b.over||b.under,stale=q.flags?.includes('stale odds');return <tr key={JSON.stringify([q.book,q.line])}><td>{q.book}{stale&&<small className="muted"> · stale</small>}</td><td>{fmt(q.line)}</td><td>{price(b.over?.price)}</td><td>{price(b.under?.price)}</td>{!compact&&<td className="small muted">{Number.isFinite(Date.parse(q.priceTimestamp))?new Date(q.priceTimestamp).toLocaleString():'Time unavailable'}</td>}</tr>})}</tbody></table></div></div>):<p className="small muted">No sportsbook line in the current feed for this player{market?' and market':''}. Model estimates are separate.</p>}<small className="muted">{compact?'Source timestamps and price status in player research.':'Lines are betting thresholds, not sportsbook predictions. Confirm current odds at the book.'}</small></section>
+}
