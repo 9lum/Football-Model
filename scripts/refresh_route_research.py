@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 import pandas as pd
-from edge.data import get,sumer_snapshot
+from edge.data import get,sumer_snapshot,team
 
 def run():
     now=pd.Timestamp.now(tz='UTC');season=now.year if now.month>=3 else now.year-1
@@ -15,7 +15,7 @@ def run():
             for row in snapshot['players']:
                 routes=row.get('Routes Run');yards=row.get('Rec. Yards')
                 if routes is None or routes<=0 or yards is None:continue
-                players.append({'slug':row['profileUrl'].rstrip('/').split('/')[-1],'team':row['label'].split()[0],'position':position,'season':season,'routes':routes,'receivingYards':yards,'yardsPerRouteRun':yards/routes,'asOf':snapshot['asOf'],'source':url})
+                players.append({'slug':row['profileUrl'].rstrip('/').split('/')[-1],'team':team(row['label'].split()[0]),'position':position,'season':season,'routes':routes,'receivingYards':yards,'yardsPerRouteRun':yards/routes,'asOf':snapshot['asOf'],'source':url})
             sources.append({'source':url,'status':'ok','asOf':snapshot['asOf']})
         except Exception as error:sources.append({'source':url,'status':'unavailable','error':type(error).__name__})
     path=Path(__file__).resolve().parents[1]/'data/route-research.json'
