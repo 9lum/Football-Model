@@ -1,4 +1,4 @@
 :HL["/Football-Model/platform/_next/static/css/b54ba16e0e4fa9ac.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"IcJlVtAKtZihk5Cj_y8pD","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"qbXA4ZeYUKLq0FaSG69HT","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
