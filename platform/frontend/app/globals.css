@@ -139,3 +139,8 @@ html[data-appearance=white] :is(.sidebar,.topbar)>*{position:relative;z-index:2}
 @keyframes chrome-surface-travel{0%{background-position:5% 8%,95% 90%,0% 15%}50%{background-position:65% 45%,40% 25%,55% 65%}100%{background-position:95% 88%,0% 10%,100% 100%}}
 html[data-appearance=white] .sidebar :is(.brand-home,nav a){color:#25464d}html[data-appearance=white] .sidebar nav a.active{color:#075f56;font-weight:600;background:rgba(236,255,249,.52);border-color:rgba(18,125,111,.3)}html[data-appearance=white] .display-toolbar-label{color:#365e65;font-weight:550}html[data-appearance=white] .sidebar nav a:hover{color:#075f56;background:rgba(255,255,255,.38)}
 html[data-background-motion=off] :is(.sidebar,.topbar)::before{content:none;animation:none!important}@media(prefers-reduced-motion:reduce){html[data-appearance=white][data-background-motion=on] :is(.sidebar,.topbar)::before{animation:chrome-surface-travel 19s ease-in-out infinite alternate!important}html[data-appearance=white][data-background-motion=on] .topbar::before{animation-duration:23s!important;animation-delay:-8s!important}}@media(forced-colors:active){html[data-appearance=white] :is(.sidebar,.topbar)::before{display:none}}
+
+/* Default 125% interface scale; keep viewport-height navigation within the screen. */
+.shell{zoom:1.25;min-height:80vh}
+.sidebar{height:80vh;overflow-y:auto}
+@media(max-width:760px){.sidebar{height:auto}}
