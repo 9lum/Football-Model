@@ -1,5 +1,5 @@
 # Week 9 Anytime Touchdown Research
-Generated 2026-11-08T02:00:39.780330+00:00
+Generated 2026-11-08T07:26:47.522066+00:00
 Current-season tests: 2247; Brier 0.1486 vs baseline 0.1621.
 
 ## JAX at BAL
@@ -56,7 +56,7 @@ No retrospective pregame recommendations generated after kickoff.
 - IND: recent RZ pass rate 0.4, RZ pass-over-expected -17.024026811122894 percentage points, neutral seconds/play 33.225806451612904. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - DAL: recent RZ pass rate 0.5344827586206896, RZ pass-over-expected -3.7097693979740143 percentage points, neutral seconds/play 29.04854368932039. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **CeeDee Lamb — Core research · highest estimated probability**: estimated ATTD 54.9%; fair odds -122; opponent allows 0.50 direct TDs/game to the position group. BetRivers -108; estimated return 5.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **CeeDee Lamb — Core research · highest estimated probability**: estimated ATTD 54.9%; fair odds -122; opponent allows 0.50 direct TDs/game to the position group. BetRivers -108; estimated return 5.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, availability snapshot stale or missing, sensitivity-adjusted value below 3%.
 - **Hunter Luepke — High-yield research · positive price estimate**: estimated ATTD 10.3%; fair odds 867; opponent allows 1.00 direct TDs/game to the position group. BetRivers 1200; estimated return 34.4%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, availability snapshot stale or missing, sensitivity-adjusted value below 3%.
 - **Javonte Williams — Additional research candidate**: estimated ATTD 49.8%; fair odds 101; opponent allows 1.00 direct TDs/game to the position group. BetMGM -190; estimated return -24.0%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
