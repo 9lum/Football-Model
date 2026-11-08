@@ -1,5 +1,5 @@
 # Week 9 Anytime Touchdown Research
-Generated 2026-11-07T19:41:51.666339+00:00
+Generated 2026-11-08T01:30:07.515836+00:00
 Current-season tests: 2247; Brier 0.1486 vs baseline 0.1621.
 
 ## JAX at BAL
@@ -110,7 +110,7 @@ No retrospective pregame recommendations generated after kickoff.
 - NO: recent RZ pass rate 0.43243243243243246, RZ pass-over-expected -11.081754959918356 percentage points, neutral seconds/play 30.18095238095238. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - CLE: recent RZ pass rate 0.52, RZ pass-over-expected -12.672250926494598 percentage points, neutral seconds/play 30.884615384615383. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Quinshon Judkins — Core research · highest estimated probability**: estimated ATTD 45.9%; fair odds 118; opponent allows 1.67 direct TDs/game to the position group. DraftKings 115; estimated return -1.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Quinshon Judkins — Core research · highest estimated probability**: estimated ATTD 45.9%; fair odds 118; opponent allows 1.67 direct TDs/game to the position group. DraftKings 115; estimated return -1.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, availability snapshot stale or missing, sensitivity-adjusted value below 3%.
 - **Alvin Kamara — High-yield research · positive price estimate**: estimated ATTD 30.6%; fair odds 227; opponent allows 1.00 direct TDs/game to the position group. DraftKings 300; estimated return 22.5%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 - **Audric Estimé — Additional research candidate**: estimated ATTD 34.2%; fair odds 193; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
@@ -129,7 +129,7 @@ No retrospective pregame recommendations generated after kickoff.
 - NYG: recent RZ pass rate 0.5588235294117647, RZ pass-over-expected -9.460436701774597 percentage points, neutral seconds/play 32.716814159292035. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Malik Nabers — Core research · highest estimated probability**: estimated ATTD 49.9%; fair odds 101; opponent allows 1.50 direct TDs/game to the position group. FanDuel 185; estimated return 42.1%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **Isaiah Likely — High-yield research · positive price estimate**: estimated ATTD 38.3%; fair odds 161; opponent allows 0.33 direct TDs/game to the position group. BetRivers 225; estimated return 24.4%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Isaiah Likely — High-yield research · positive price estimate**: estimated ATTD 38.3%; fair odds 161; opponent allows 0.33 direct TDs/game to the position group. BetRivers 225; estimated return 24.4%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, availability snapshot stale or missing, sensitivity-adjusted value below 3%.
 - **DeVonta Smith — Additional research candidate**: estimated ATTD 38.7%; fair odds 158; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## LAR at WAS
