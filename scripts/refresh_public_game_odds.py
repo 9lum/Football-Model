@@ -63,7 +63,7 @@ def parse_results(payload,observed):
                 'homeTeam':teams['home']['team']['displayName'],'awayTeam':teams['away']['team']['displayName'],
                 'homeScore':scores['home'],'awayScore':scores['away'],
                 'completed':state.get('completed') is True and valid,'state':state.get('state'),
-                'description':state.get('description'),'observedAt':observed})
+                'description':state.get('description'),'clock':event.get('status',{}).get('displayClock'),'period':event.get('status',{}).get('period'),'detail':state.get('shortDetail') or state.get('detail'),'observedAt':observed})
     return rows
 
 def collect(output=Path('data'),now=None):

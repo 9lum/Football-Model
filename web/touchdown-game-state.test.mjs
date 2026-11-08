@@ -12,3 +12,10 @@ test('scores, elapsed kickoff and other fixtures never imply a confirmed final',
  assert.equal(touchdownGameState(game,{},now).status,'upcoming');
  assert.equal(touchdownGameState(game,{},now+7200000).status,'started');
 });
+
+test('in-progress games carry scores and clock, then switch to finished on a confirmed final',()=>{
+ const live={...result,completed:false,state:'in',detail:'Q4 0:18'};
+ const state=touchdownGameState(game,{results:[live]},now);
+ assert.equal(state.status,'in-progress');assert.equal(state.detail,'Q4 0:18');assert.equal(state.awayScore,24);assert.equal(state.winner,null);
+ assert.equal(touchdownGameState(game,{results:[{...live,completed:true,state:'post'}]},now).status,'finished');
+});
