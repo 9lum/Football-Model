@@ -131,8 +131,14 @@ def report(out=ROOT/'data',now=None):
  ranks={}
  for position in ['QB','RB','WR','TE']:
   allowed=pd.Series({club:position_totals.get((club,position),0)/max(1,n) for club,n in defender_games.items()});ranks[position]=allowed.rank(ascending=False,method='min').to_dict()
+ from .td_archive import retain_pregame_game
+ try:previous=json.loads((out/'touchdown-research.json').read_text())
+ except (OSError,ValueError):previous={}
  for game in week_games.itertuples():
-  if game.kickoff<=now:games.append({'gameId':game.game_id,'homeTeam':game.home_team,'awayTeam':game.away_team,'kickoff':game.kickoff.isoformat(),'status':'started/completed','candidates':[],'note':'No retrospective pregame recommendations generated after kickoff.'});continue
+  if game.kickoff<=now:
+   archived=retain_pregame_game(previous,game.game_id,game.kickoff.isoformat())
+   games.append(archived or {'gameId':game.game_id,'homeTeam':game.home_team,'awayTeam':game.away_team,'kickoff':game.kickoff.isoformat(),'status':'started/completed','candidates':[],'note':'No archived pregame projections available; no retrospective picks generated.'})
+   continue
   context=game_context(game,game_odds);candidates=[];team_context={}
   for club,opponent in [(game.home_team,game.away_team),(game.away_team,game.home_team)]:
    recent_schedule=schedules[schedules.team.eq(club)&schedules.completed&(schedules.kickoff<game.kickoff)&schedules.game_id.isin(opportunities.game_id.unique())].sort_values('kickoff').tail(4);ids=set(recent_schedule.game_id);o=opportunities[opportunities.posteam.eq(club)&opportunities.game_id.isin(ids)];team_tot=o[OPPS].sum();team_rz=valid_plays[valid_plays.posteam.eq(club)&valid_plays.game_id.isin(ids)&valid_plays.yardline_100.le(20)];neutral=valid_plays[valid_plays.posteam.eq(club)&valid_plays.game_id.isin(ids)&valid_plays.qtr.le(3)&valid_plays.score_differential.abs().le(8)].sort_values(['game_id','play_id']);gap=neutral.groupby(['game_id','drive']).game_seconds_remaining.diff()*-1;pace=gap[gap.between(1,60)].mean();opp_games=schedules[schedules.team.eq(opponent)&schedules.completed&(schedules.kickoff<game.kickoff)].sort_values('kickoff').tail(6);opp_ids=set(opp_games.game_id);def_plays=valid_plays[valid_plays.defteam.eq(opponent)&valid_plays.game_id.isin(opp_ids)];rz_def=def_plays[def_plays.yardline_100.le(20)]

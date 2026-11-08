@@ -53,3 +53,5 @@ section.touchdown-lab .td-game-status small{font-size:10px;font-weight:500;color
 section.touchdown-lab .td-live-light{display:inline-block;flex:0 0 7px;width:7px;height:7px;border-radius:50%;background:#f04f5d;box-shadow:0 0 0 2px rgba(240,79,93,.12),0 0 7px rgba(240,79,93,.45);animation:td-live-pulse 2s ease-in-out infinite}
 @keyframes td-live-pulse{0%,100%{opacity:.7;box-shadow:0 0 0 2px rgba(240,79,93,.12),0 0 5px rgba(240,79,93,.3)}50%{opacity:1;box-shadow:0 0 0 4px rgba(240,79,93,.07),0 0 10px rgba(240,79,93,.55)}}
 section.touchdown-lab .td-score-refresh-note{font-size:10px;line-height:1.5;color:var(--muted);margin:0 0 16px}
+
+section.touchdown-lab .td-inplay-note{font-size:11px;line-height:1.6;color:var(--muted);padding:10px 12px;border:1px solid var(--line);border-radius:8px;margin:0 0 14px}section.touchdown-lab .td-inplay-note strong{color:var(--ink);font-weight:600}
