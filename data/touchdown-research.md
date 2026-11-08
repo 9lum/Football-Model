@@ -1,5 +1,5 @@
 # Week 9 Anytime Touchdown Research
-Generated 2026-11-08T13:49:04.782740+00:00
+Generated 2026-11-08T14:04:05.064462+00:00
 Current-season tests: 2247; Brier 0.1486 vs baseline 0.1621.
 
 ## JAX at BAL
@@ -16,13 +16,13 @@ No retrospective pregame recommendations generated after kickoff.
 - ATL: opponent RZ EPA -0.2907678356626093; pass EPA 0.07165427581649696; rush EPA -0.0019894728357432935. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - CIN: opponent RZ EPA 0.12213279343627925; pass EPA -0.0005541396002410237; rush EPA -0.058345867738286684. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 52.5, "homeSpread": 3.0, "homeImpliedPoints": 24.75, "awayImpliedPoints": 27.75, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 52.5, "homeSpread": 3.0, "homeImpliedPoints": 24.75, "awayImpliedPoints": 27.75, "updatedAt": "2026-11-08T14:23:05Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - ATL: recent RZ pass rate 0.7428571428571429, RZ pass-over-expected 3.8123459301211615 percentage points, neutral seconds/play 33.888888888888886. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - CIN: recent RZ pass rate 0.6226415094339622, RZ pass-over-expected 11.07679598319989 percentage points, neutral seconds/play 31.378947368421052. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Chase Brown — Core research · highest estimated probability**: estimated ATTD 49.3%; fair odds 103; opponent allows 1.50 direct TDs/game to the position group. BetMGM -160; estimated return -19.9%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Joe Burrow — High-yield research · positive price estimate**: estimated ATTD 17.3%; fair odds 479; opponent allows 0.17 direct TDs/game to the position group. DraftKings 600; estimated return 20.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Tee Higgins — Additional research candidate**: estimated ATTD 42.9%; fair odds 133; opponent allows 0.67 direct TDs/game to the position group. DraftKings 115; estimated return -7.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Chase Brown — Core research · highest estimated probability**: estimated ATTD 49.3%; fair odds 103; opponent allows 1.50 direct TDs/game to the position group. FanDuel -140; estimated return -15.5%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%, statistics revision or source check requires analysis refresh.
+- **Joe Burrow — High-yield research · positive price estimate**: estimated ATTD 17.3%; fair odds 479; opponent allows 0.17 direct TDs/game to the position group. DraftKings 650; estimated return 29.5%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%, statistics revision or source check requires analysis refresh.
+- **Tee Higgins — Additional research candidate**: estimated ATTD 42.9%; fair odds 133; opponent allows 0.67 direct TDs/game to the position group. FanDuel 105; estimated return -12.1%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%, statistics revision or source check requires analysis refresh.
 
 ## DEN at CAR
 2026-11-08T18:00:00+00:00
