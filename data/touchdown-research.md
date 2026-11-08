@@ -1,5 +1,5 @@
 # Week 9 Anytime Touchdown Research
-Generated 2026-11-08T20:45:26.321095+00:00
+Generated 2026-11-08T21:18:38.390670+00:00
 Current-season tests: 2247; Brier 0.1486 vs baseline 0.1621.
 
 ## JAX at BAL
@@ -40,57 +40,29 @@ Archived pregame projections retained during play; these are not live scoring pr
 
 ## HOU at LAC
 2026-11-08T21:05:00+00:00
-### 1. Red zone & opportunity
-- Woody Marks (HOU RB): 9 RZ carries, 1 RZ targets, 2 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.70, actual TD 1.
-- Kimani Vidal (LAC RB): 1 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.59, actual TD 2.
-- Nico Collins (HOU WR): 1 RZ carries, 3 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.33, actual TD 2.
-### 2. Position matchup & leverage
-- LAC: opponent RZ EPA 0.1931511898414543; pass EPA 0.008878882891629759; rush EPA -0.0025797087039861185. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- HOU: opponent RZ EPA -0.06421062904880952; pass EPA -0.09426185326175301; rush EPA -0.07824273793267231. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"book": "DraftKings", "total": 40.5, "homeSpread": 5.5, "homeImpliedPoints": 17.5, "awayImpliedPoints": 23.0, "updatedAt": "2026-11-08T20:58:20Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
-- LAC: recent RZ pass rate 0.6190476190476191, RZ pass-over-expected -11.277922349316734 percentage points, neutral seconds/play 31.80851063829787. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- HOU: recent RZ pass rate 0.5897435897435898, RZ pass-over-expected -3.994762897491455 percentage points, neutral seconds/play 32.3125. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Woody Marks — Core research · highest estimated probability**: estimated ATTD 32.4%; fair odds 209; opponent allows 1.33 direct TDs/game to the position group. DraftKings 105; estimated return -33.6%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Kimani Vidal — High-yield research · positive price estimate**: estimated ATTD 20.9%; fair odds 378; opponent allows 1.33 direct TDs/game to the position group. FanDuel 480; estimated return 21.4%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Nico Collins — Additional research candidate**: estimated ATTD 25.5%; fair odds 292; opponent allows 1.17 direct TDs/game to the position group. DraftKings 160; estimated return -33.6%; flags: estimated win probability below 70%, availability not confirmed, availability snapshot stale or missing, sensitivity-adjusted value below 3%.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## LV at SF
 2026-11-08T21:05:00+00:00
-### 1. Red zone & opportunity
-- Christian McCaffrey (SF RB): 12 RZ carries, 3 RZ targets, 7 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.68, actual TD 5.
-- Tre Tucker (LV WR): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.30, actual TD 3.
-- Brock Bowers (LV TE): 0 RZ carries, 8 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.42, actual TD 3.
-### 2. Position matchup & leverage
-- SF: opponent RZ EPA 0.24453110303574663; pass EPA 0.2474912739088556; rush EPA 0.08743159544031472. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- LV: opponent RZ EPA 0.018426427693784043; pass EPA 0.08621707427632323; rush EPA -0.16395404806381994. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"book": "DraftKings", "total": 51.5, "homeSpread": -8.5, "homeImpliedPoints": 30.0, "awayImpliedPoints": 21.5, "updatedAt": "2026-11-08T20:58:20Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
-- SF: recent RZ pass rate 0.5, RZ pass-over-expected -3.8917954231417458 percentage points, neutral seconds/play 31.234234234234233. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- LV: recent RZ pass rate 0.5849056603773585, RZ pass-over-expected -9.369202747064477 percentage points, neutral seconds/play 32.55844155844156. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Christian McCaffrey — Core research · highest estimated probability**: estimated ATTD 61.8%; fair odds -162; opponent allows 1.17 direct TDs/game to the position group. BetMGM -275; estimated return -15.7%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Tre Tucker — High-yield research · positive price estimate**: estimated ATTD 29.2%; fair odds 242; opponent allows 1.00 direct TDs/game to the position group. FanDuel 330; estimated return 25.7%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Brock Bowers — Additional research candidate**: estimated ATTD 40.3%; fair odds 148; opponent allows 0.33 direct TDs/game to the position group. FanDuel 120; estimated return -11.2%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## GB at NE
 2026-11-08T21:25:00+00:00
 ### 1. Red zone & opportunity
 - Matthew Golden (GB WR): 0 RZ carries, 10 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 3.28, actual TD 2.
-- MarShawn Lloyd (GB RB): 4 RZ carries, 0 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.69, actual TD 2.
 - Josh Jacobs (GB RB): 9 RZ carries, 5 RZ targets, 3 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.89, actual TD 3.
+- Rhamondre Stevenson (NE RB): 9 RZ carries, 1 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.27, actual TD 2.
 ### 2. Position matchup & leverage
 - NE: opponent RZ EPA -0.06890189447893753; pass EPA -0.09503835868258458; rush EPA -0.02427365758638011. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - GB: opponent RZ EPA 0.09255249797451881; pass EPA 0.1670412716435726; rush EPA -0.0900323935640649. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 44.5, "homeSpread": -3.0, "homeImpliedPoints": 23.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 44.5, "homeSpread": -3.0, "homeImpliedPoints": 23.75, "awayImpliedPoints": 20.75, "updatedAt": "2026-11-08T21:19:08Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - NE: recent RZ pass rate 0.55, RZ pass-over-expected 0.19052186980843544 percentage points, neutral seconds/play 32.89090909090909. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - GB: recent RZ pass rate 0.5227272727272727, RZ pass-over-expected -6.002053549123365 percentage points, neutral seconds/play 31.756302521008404. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Matthew Golden — Core research · highest estimated probability**: estimated ATTD 51.2%; fair odds -105; opponent allows 1.33 direct TDs/game to the position group. FanDuel 185; estimated return 45.9%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **MarShawn Lloyd — High-yield research · positive price estimate**: estimated ATTD 20.6%; fair odds 386; opponent allows 0.83 direct TDs/game to the position group. DraftKings 600; estimated return 44.0%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Josh Jacobs — Additional research candidate**: estimated ATTD 47.7%; fair odds 109; opponent allows 0.83 direct TDs/game to the position group. BetRivers -107; estimated return -7.6%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Matthew Golden — Core research · highest estimated probability**: estimated ATTD 51.2%; fair odds -105; opponent allows 1.33 direct TDs/game to the position group. DraftKings 190; estimated return 48.5%; flags: estimated win probability below 70%, availability not confirmed.
+- **Josh Jacobs — Additional research candidate**: estimated ATTD 47.7%; fair odds 109; opponent allows 0.83 direct TDs/game to the position group. DraftKings -110; estimated return -8.8%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Rhamondre Stevenson — Additional research candidate**: estimated ATTD 36.6%; fair odds 173; opponent allows 1.33 direct TDs/game to the position group. BetRivers -109; estimated return -29.8%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## ARI at SEA
 2026-11-08T21:25:00+00:00
@@ -102,13 +74,13 @@ Archived pregame projections retained during play; these are not live scoring pr
 - SEA: opponent RZ EPA 0.12218206402375655; pass EPA 0.27497965399676466; rush EPA -0.036001774510351234. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - ARI: opponent RZ EPA 0.6541874142939837; pass EPA -0.06761918412681665; rush EPA -0.03109715951109098. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
-{"book": "DraftKings", "total": 39.5, "homeSpread": -8.5, "homeImpliedPoints": 24.0, "awayImpliedPoints": 15.5, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
+{"book": "DraftKings", "total": 40.5, "homeSpread": -8.5, "homeImpliedPoints": 24.5, "awayImpliedPoints": 16.0, "updatedAt": "2026-11-08T21:19:08Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
 - SEA: recent RZ pass rate 0.59375, RZ pass-over-expected -11.66194349527359 percentage points, neutral seconds/play 33.70103092783505. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - ARI: recent RZ pass rate 0.6349206349206349, RZ pass-over-expected -1.241455286268204 percentage points, neutral seconds/play 32.86725663716814. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Emanuel Wilson — Core research · highest estimated probability**: estimated ATTD 51.2%; fair odds -105; opponent allows 1.00 direct TDs/game to the position group. BetRivers 1400; estimated return 667.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **George Holani — High-yield research · positive price estimate**: estimated ATTD 17.0%; fair odds 488; opponent allows 1.00 direct TDs/game to the position group. BetRivers 1150; estimated return 112.6%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed.
-- **Jaxon Smith-Njigba — Additional research candidate**: estimated ATTD 51.1%; fair odds -105; opponent allows 1.17 direct TDs/game to the position group. FanDuel -120; estimated return -6.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Emanuel Wilson — Core research · highest estimated probability**: estimated ATTD 51.2%; fair odds -105; opponent allows 1.00 direct TDs/game to the position group. FanDuel 2200; estimated return 1077.1%; flags: estimated win probability below 70%, availability not confirmed.
+- **George Holani — High-yield research · positive price estimate**: estimated ATTD 17.0%; fair odds 488; opponent allows 1.00 direct TDs/game to the position group. DraftKings 1200; estimated return 121.1%; flags: estimated win probability below 70%, availability not confirmed.
+- **Jaxon Smith-Njigba — Additional research candidate**: estimated ATTD 51.1%; fair odds -105; opponent allows 1.17 direct TDs/game to the position group. DraftKings -120; estimated return -6.3%; flags: estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## TB at CHI
 2026-11-09T01:20:00+00:00
