@@ -49,16 +49,36 @@ def parse(payload,observed,now):
             if books:events.append({'id':'espn-'+str(event['id']),'home_team':teams['home'],'away_team':teams['away'],'commence_time':event['date'],'collectedAt':observed,'source':'ESPN public scoreboard','gameStatus':state.get('description'),'bookmakers':books})
     return events
 
+def parse_results(payload,observed):
+    """Scores are final only when ESPN explicitly marks the event completed."""
+    rows=[]
+    for event in payload.get('events',[]):
+        state=event.get('status',{}).get('type',{})
+        for comp in event.get('competitions',[]):
+            teams={c.get('homeAway'):c for c in comp.get('competitors',[])}
+            if not all(teams.get(side,{}).get('team',{}).get('displayName') for side in ['home','away']):continue
+            scores={side:numeric(teams[side].get('score')) for side in ['home','away']}
+            valid=all(v is not None and v>=0 and v.is_integer() for v in scores.values())
+            rows.append({'id':'espn-'+str(event['id']),'kickoff':event.get('date'),
+                'homeTeam':teams['home']['team']['displayName'],'awayTeam':teams['away']['team']['displayName'],
+                'homeScore':scores['home'],'awayScore':scores['away'],
+                'completed':state.get('completed') is True and valid,'state':state.get('state'),
+                'description':state.get('description'),'observedAt':observed})
+    return rows
+
 def collect(output=Path('data'),now=None):
     now=now or dt.datetime.now(UTC);stamp=now.isoformat();games=read(output/'upcoming-games.json',{}).get('games',[]);weeks=sorted({(g['season'],g['week']) for g in games if g.get('game_type','REG')=='REG'})[:2]
-    queries=[{'dates':year,'seasontype':2,'week':week} for year,week in weeks] or [{}];events={};errors=[]
+    queries=[{'dates':year,'seasontype':2,'week':week} for year,week in weeks] or [{}];events={};results={};errors=[]
     for query in queries:
         try:
             with urlopen(Request(SOURCE+('?' + urlencode(query) if query else ''),headers={'User-Agent':'Projections-n-Shit/1.0'}),timeout=25) as r:payload=json.load(r)
             for event in parse(payload,stamp,now):events[event['id']]=event
+            for result in parse_results(payload,stamp):results[result['id']]=result
         except Exception as error:errors.append({'source':'ESPN public scoreboard','code':getattr(error,'code',type(error).__name__)})
     old=read(output/'public-game-odds.json',{})
-    value={'generatedAt':stamp,'source':'ESPN public scoreboard','status':'ok' if events else 'unavailable' if errors else 'no_prices','data':list(events.values()) if events or not errors else old.get('data',[]),'eventCount':len(events),'errors':errors,'nextRefreshAt':(now+dt.timedelta(minutes=15)).isoformat(),'limitations':['Publicly listed game lines, checked approximately every 15 minutes subject to GitHub delays. No streaming or provider-update-time guarantee.','Source quote-update timestamps are not supplied and remain null. observed_at records when this app read the listing.','The pregame close field is not treated as a verified archived closing line for CLV.']}
+    prior={r['id']:r for r in old.get('results',[])};prior.update(results)
+    retained=sorted(prior.values(),key=lambda r:r.get('kickoff') or '',reverse=True)[:128]
+    value={'generatedAt':stamp,'source':'ESPN public scoreboard','status':'ok' if events else 'unavailable' if errors else 'no_prices','data':list(events.values()) if events or not errors else old.get('data',[]),'results':retained,'eventCount':len(events),'errors':errors,'nextRefreshAt':(now+dt.timedelta(minutes=15)).isoformat(),'limitations':['Publicly listed game lines, checked approximately every 15 minutes subject to GitHub delays. No streaming or provider-update-time guarantee.','Source quote-update timestamps are not supplied and remain null. observed_at records when this app read the listing.','The pregame close field is not treated as a verified archived closing line for CLV.']}
     if events:append_history(output,list(events.values()),stamp)
     output.mkdir(parents=True,exist_ok=True);(output/'public-game-odds.json').write_text(json.dumps(value,separators=(',',':')));print(json.dumps({k:v for k,v in value.items() if k!='data'}));return value
 if __name__=='__main__':collect()

@@ -13,3 +13,12 @@ test('filters, exclusions and missing team data never substitute players from th
  assert.deepEqual(touchdownTeamPicks(game,{position:'WR'}).map(g=>g.players.map(p=>p.playerId)),[['wr'],[]]);
  assert.deepEqual(touchdownTeamPicks(game,{search:'rb'}).map(g=>g.players.map(p=>p.playerId)),[[],['rb']]);
 });
+test('fresh injury registry overrides older TD report and backfills the next eligible scorer',()=>{
+ const game={awayTeam:'CIN',homeTeam:'ATL',players:[player('a','CIN',.8),player('b','CIN',.7),player('c','CIN',.6),player('d','CIN',.5)]};
+ const currentPlayers=[player('a','CIN',.8,{health:{status:'OUT'}})];
+ assert.deepEqual(touchdownTeamPicks(game,{currentPlayers})[0].players.map(p=>p.playerId),['b','c','d']);
+ currentPlayers[0].health={status:'QUESTIONABLE'};
+ assert.equal(touchdownTeamPicks(game,{currentPlayers})[0].players[0].playerId,'a');
+ currentPlayers[0].health={status:'OUT',scopeMismatch:true};
+ assert.equal(touchdownTeamPicks(game,{currentPlayers})[0].players[0].playerId,'a');
+});

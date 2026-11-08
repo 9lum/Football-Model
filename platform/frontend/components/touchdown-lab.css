@@ -38,3 +38,12 @@ section.touchdown-lab .td-lab-metrics .metric{font-size:23px;margin:4px 0}
 section.touchdown-lab .td-matchup-analysis.card{padding:14px;margin-top:14px}
 @container touchdown-lab (max-width:900px){section.touchdown-lab .td-candidates-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @container touchdown-lab (max-width:570px){section.touchdown-lab .td-candidates-grid{grid-template-columns:minmax(0,1fr)}}
+
+section.touchdown-lab .td-result-team-pair{display:inline-flex;align-items:center;gap:10px}
+section.touchdown-lab .td-result-team{display:inline-flex;align-items:center;gap:9px;padding:7px 9px;border:1px solid transparent;border-radius:9px}
+section.touchdown-lab .td-result-team strong{font-size:18px;font-weight:650;font-variant-numeric:tabular-nums}
+section.touchdown-lab .td-result-team small{font-size:9px;font-weight:600;color:var(--good)}
+section.touchdown-lab .td-result-team.is-winner{border-color:var(--good);background:color-mix(in srgb,var(--good) 8%,transparent)}
+section.touchdown-lab .td-result-team.is-loser{filter:grayscale(1);opacity:.52}
+section.touchdown-lab .td-game-finished .td-game-status{font-weight:650;color:var(--ink)}
+section.touchdown-lab .td-game-finished .prop-board-note{font-size:11px;margin:10px 0;color:var(--muted)}
