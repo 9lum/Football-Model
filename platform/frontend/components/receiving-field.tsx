@@ -29,8 +29,8 @@ export default function ReceivingField({player,forecast,research,events=[]}:any)
   </header>
   {available?<>
    <div className="receiving-field-layout"><div className="receiving-field-map">
-    <FieldSurface player={player} zones={zones} selection={selection} onSelect={setSelection} depth={tilted} paths={paths} qb={qb}/>
-    <div className="receiving-depth-legend">{depths.map(depth=><button key={depth} onClick={()=>setSelection(depth+'_middle')}><i style={{background:palette[depth]}}/><span>{depth==='short'?'Short':depth==='deep'?'Deep':'Intermediate'}<small>{depth==='short'?'Under 10 yd':depth==='deep'?'20+ yd':'10–19 yd'}</small></span><strong>{pct(profile.depthShares?.[depth])}</strong></button>)}</div>
+    <FieldSurface player={player} zones={zones} selection={selection} onSelect={setSelection} depth={tilted} paths={paths} qb={qb} depthShares={profile.depthShares}/>
+
     <p className="receiving-field-hint">Select a zone to inspect · percentages of located {qb?'throws':'targets'}{paths?' · example path, not tracking':''}</p>
    </div>
    <aside className="receiving-zone-evidence"><div className="receiving-zone-title"><div><span className="eyebrow">SELECTED ZONE</span><h4>{selection.replace('_',' ')}</h4></div><strong className="receiving-zone-share" style={{color:palette[selection.split('_')[0]]}}>{pct(selected?.targetShare)}</strong></div>

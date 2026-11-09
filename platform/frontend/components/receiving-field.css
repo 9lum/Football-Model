@@ -79,3 +79,14 @@
 .field-view-caption{display:flex;justify-content:center;flex-wrap:wrap;gap:5px 12px;margin:10px 0 3px!important;color:var(--muted);font-size:10px!important;font-weight:400;line-height:1.5!important;letter-spacing:.015em}
 .field-view-caption span{opacity:.75}
 .receiving-depth-legend{margin-top:10px}
+
+/* Depth totals dock into the near end-zone apron; small fields use a fitted footer. */
+.field-scene{position:relative;container-type:inline-size;container-name:field-scene}
+.field-scene .field-depth-widgets{position:absolute;left:14%;right:14%;bottom:14%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0;z-index:1}
+.field-scene .field-depth-widgets button{display:grid;grid-template-columns:6px minmax(0,1fr) auto;align-items:center;gap:6px;padding:7px 8px;min-height:38px;border:1px solid rgba(144,188,195,.2);border-radius:6px;background:rgba(15,38,49,.94);box-shadow:inset 0 1px 0 rgba(255,255,255,.04);color:#e8f1f6;font-size:10px;line-height:1.3;text-align:left;min-width:0}
+.field-scene .field-depth-widgets button:hover,.field-scene .field-depth-widgets button[aria-pressed=true]{border-color:var(--depth-color);background:rgba(20,46,58,.98)}
+.field-scene .field-depth-widgets i{width:6px;height:6px}
+.field-scene .field-depth-widgets small{font-size:9px;color:#a9bfca;margin-top:2px;white-space:nowrap}
+.field-scene .field-depth-widgets strong{grid-column:auto;font-size:12px;font-weight:650;font-variant-numeric:tabular-nums;line-height:1.3}
+@container field-scene (max-width:520px){.field-scene .field-depth-widgets{position:static;margin:8px 0 10px;gap:6px}.field-scene .field-depth-widgets button{grid-template-columns:6px minmax(0,1fr);padding:8px;gap:4px 6px}.field-scene .field-depth-widgets strong{grid-column:2;font-size:13px}}
+.receiving-field-stage[data-view=overhead] .field-depth-widgets{position:static;margin:8px 0 10px}
