@@ -15,16 +15,16 @@ def final_result(p,results):
  matches=[r for r in results if r.get('completed') and same_game(p,r)]
  return matches[0] if len(matches)==1 else None
 
-def build_performance(previous,published,oos,latest,history,td_reports,snapshot,legacy,now):
+def build_performance(previous,published,oos,latest,history,td_reports,snapshot,legacy,now,route_results=None):
  rows={r['id']:r for r in previous.get('forecasts',[])};participation={(r.get('gameId'),r.get('playerId')) for r in published.get('rows',[]) if finite(r.get('actual'))};profiles={p['playerId']:p for p in latest.get('players',[])};results=snapshot.get('results',[])
  def put(row):
   old=rows.get(row['id'])
-  if old and row['scope']=='published':
+  if old and row['scope']!='walk_forward':
    # Preserve forecast, enrich/refresh official outcomes only.
    for key in ['projected','issuedAt','p10','p90','baseline']:row[key]=old.get(key,row.get(key))
    if finite(old.get('actual')) and not finite(row.get('actual')):row.update(actual=old['actual'],actualSource=old.get('actualSource'),status=old.get('status'))
   rows[row['id']]=row
- for r in published.get('rows',[]):
+ for r in [*published.get('rows',[]),*((route_results or {}).get('rows',[]))]:
   if r.get('market') not in MARKET_SPECS or instant(r.get('issuedAt')) is None or instant(r.get('kickoff')) is None or instant(r['issuedAt'])>=instant(r['kickoff']):continue
   actual=r.get('actual');actual_source='nflverse published player statistics' if finite(actual) else None
   fixture={'homeTeam':r['gameId'].split('_')[3],'awayTeam':r['gameId'].split('_')[2],'kickoff':r['kickoff']};result=final_result(fixture,results)
@@ -34,7 +34,8 @@ def build_performance(previous,published,oos,latest,history,td_reports,snapshot,
    matches=[p for p in result.get('playerStats',[]) if code(p.get('team'))==code(r.get('team')) and name(p.get('name'))==name(r.get('player'))]
    if len(matches)==1:
     actual=matches[0].get('stats',{}).get(r['target']);actual_source='ESPN final box score' if finite(actual) else None
-  put({**r,'id':'published:'+r['id'],'scope':'published','entity':r['player'],'type':'continuous','actual':actual if finite(actual) else None,'actualSource':actual_source,'status':'scored' if finite(actual) else r.get('status','pending')})
+  scope='route_experiment' if r.get('variant')=='route_coverage_v1' else 'published'
+  put({**r,'id':scope+':'+r['id'],'scope':scope,'entity':r['player'],'type':'continuous','actual':actual if finite(actual) else None,'actualSource':actual_source,'status':'scored' if finite(actual) else r.get('status','pending')})
  for r in oos:
   if not r.get('player_id') or not r.get('game_id'):continue
   profile=profiles.get(r['player_id'],{});historical=next((h for h in profile.get('history',[]) if h.get('gameId')==r['game_id']),{})
@@ -104,7 +105,7 @@ def update_performance(output=Path('data'),now=None):
   previous={**previous,'forecasts':[],'comparisons':[]}
   for shard in [*previous.get('forecastFiles',[]),*previous.get('comparisonFiles',[])]:
    stored=read(output/shard['path']);previous['forecasts'].extend(stored.get('forecasts',[]));previous['comparisons'].extend(stored.get('comparisons',[]))
- value=build_performance(previous,read(output/'projection-results.json'),read(output/'oos-predictions.json',[]),read(output/'latest.json'),read(output/'game-projection-history.json'),[read(output/'touchdown-pregame-archive.json'),read(output/'touchdown-research.json'),read(output/'performance-td-seed.json')],read(output/'public-game-odds.json'),read(output/'model-record.json'),stamp)
+ value=build_performance(previous,read(output/'projection-results.json'),read(output/'oos-predictions.json',[]),read(output/'latest.json'),read(output/'game-projection-history.json'),[read(output/'touchdown-pregame-archive.json'),read(output/'touchdown-research.json'),read(output/'performance-td-seed.json')],read(output/'public-game-odds.json'),read(output/'model-record.json'),stamp,read(output/'route-matchup-results.json'))
  archive=output/'performance';archive.mkdir(parents=True,exist_ok=True)
  manifest={k:v for k,v in value.items() if k not in ['forecasts','comparisons']};manifest.update(schemaVersion=3,forecastFiles=[],comparisonFiles=[])
  groups={}

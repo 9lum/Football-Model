@@ -4,9 +4,9 @@ This replaces the former three-market Model Record interface. The original sourc
 
 ## Coverage
 
-The scorecard lists 22 modeled or derived outputs:
+The scorecard lists 23 modeled or derived outputs:
 
-- Eleven player props: receiving yards, receptions, receiving touchdowns, rushing yards, rush attempts, rushing touchdowns, passing yards, pass attempts, completions, passing touchdowns and interceptions.
+- Twelve player projections: targets, receiving yards, receptions, receiving touchdowns, rushing yards, rush attempts, rushing touchdowns, passing yards, pass attempts, completions, passing touchdowns and interceptions.
 - Three combined expectations: rushing + receiving yards, rushing + receiving touchdowns, and passing + rushing yards. Components must belong to the same player/game/issue time. Means and observed values may be summed; uncertainty intervals are not added.
 - Home points, away points, game total and home winning margin.
 - Home-win moneyline probability, Anytime TD, first TD and last TD.

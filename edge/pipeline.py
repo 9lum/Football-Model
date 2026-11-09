@@ -46,9 +46,16 @@ def run(start,season,out,trees=96,as_of=None,enrich=True):
             coverage=parse_coverage(raw.decode(),now)
         except Exception as e:enrichment['currentCoverageError']=type(e).__name__
     frame,features=prepare(stats,schedules,now,current_teams,current_positions)
+    route_engine=None
     if not defense_games.empty:
         from .context import attach_defense
         frame,features=attach_defense(frame,features,defense_games,receiver_priors,schedules,coverage)
+    if enrich:
+        try:
+            from .receiving_routes import attach_route_context
+            frame,route_engine,route_sources=attach_route_context(frame,season,Path('work/defense-cache'),schedules,now)
+            enrichment['receivingRouteProfiles']={'sources':route_sources,'definition':'Historical targeted-pass depth/location proxies, not charted route concepts or route-run percentages.'}
+        except Exception as e:enrichment['receivingRouteProfiles']={'status':'unavailable','error':type(e).__name__}
     enrichment['positionMatchups']={'scope':'QB/RB/WR/TE allowed outcomes strictly before kickoff; last 3/6 games and current season; three-game league shrinkage; previous-opponent offensive-strength residuals; matched-sample efficiency; team points allowed and direct positional touchdown points.','metrics':['targets','receptions','receiving_yards','receiving_tds','carries','rushing_yards','rushing_tds','attempts','completions','passing_yards','passing_tds','passing_interceptions'],'missing':'Missing published samples are imputed by training-only model medians; no manual matchup boost or guarantee.'}
     quality['latestObservedStatsWeekBySeason']={str(int(k)):int(v) for k,v in frame[~frame.forecast].groupby('season').week.max().items()}
     published=set(frame[~frame.forecast].game_id.unique())
@@ -110,13 +117,22 @@ def run(start,season,out,trees=96,as_of=None,enrich=True):
             if not use_defense:selected=basic
             del fit_basic,fit_defense
         family_features[family]=selected
-        report=walk_forward(family_frame,selected,season,trees=trees,complete_weeks=complete_weeks,targets=targets,positions=spec['positions'])
+        from .route_policy import RoutePolicy,rationale
+        route_policy=RoutePolicy(complete_weeks) if family=='receiving' and route_engine is not None else None
+        report=walk_forward(family_frame,selected,season,trees=trees,complete_weeks=complete_weeks,targets=targets,positions=spec['positions'],adjuster=route_policy)
+        if route_policy is not None:report['routeMatchupValidation']=route_policy.validation(report['predictions'],targets)
         report['featureSelection']=selection
         report['cohort']={'positions':spec['positions'],'priorVolumeFeature':volume,'minimum':minimum}
         validations[family]=report
         fitted=DistributionForest(trees=trees).fit(eligible[selected],eligible[targets])
         future=forecast[forecast.position.isin(spec['positions']) & forecast[volume].ge(minimum)]
-        draws=fitted.sample(future[selected]) if len(future) else np.empty((0,512,len(targets)))
+        draws=fitted.sample(future[selected]) if len(future) else np.empty((0,512,len(targets)));route_original=draws.copy();route_meta=[{} for _ in range(len(future))]
+        if route_policy is not None and len(future):
+            adjusted=[];route_meta=[]
+            for _,one in future.groupby('week',sort=False):
+                values,metadata=route_policy.apply(one,draws[future.index.get_indexer(one.index)],targets,report['predictions']);adjusted.extend(zip(one.index,values,metadata))
+            lookup={index:(values,metadata) for index,values,metadata in adjusted}
+            draws=np.asarray([lookup[index][0] for index in future.index]);route_meta=[lookup[index][1] for index in future.index]
         for market,(label,group,target) in MARKET_SPECS.items():
             if group!=family: continue
             metric=report['aggregate'][target]
@@ -128,15 +144,22 @@ def run(start,season,out,trees=96,as_of=None,enrich=True):
                 rows[player.player_id]['marketSamples'][market]={'label':label,'target':target,'family':family,
                     'values':values.tolist(),'mean':float(values.mean()),'p10':float(np.quantile(values,.1)),
                     'p90':float(np.quantile(values,.9)),'validationPassed':gate}
+                if route_policy is not None:
+                    sample=rows[player.player_id]['marketSamples'][market];baseline=float(route_original[j,:,targets.index(target)].mean());changed=not np.array_equal(values,route_original[j,:,targets.index(target)])
+                    if target in ['targets','receptions','receiving_yards']:sample['routeBaselineMean']=baseline
+                    sample['routeAdjusted']=changed
+                    if changed:sample['validationPassed']=gate and report.get('routeMatchupValidation',{}).get(target,{}).get('incrementalPassed',False)
+                    meta=route_meta[j];context=getattr(player,'routeContext',{}) or {}
+                    rows[player.player_id]['routeMatchup']={**context,'policy':meta.get('routePolicy',{}),'factors':meta.get('routeFactors',{}),'rationale':rationale(player.player_display_name,player.opponent_team,context,meta.get('routePolicy',{'status':'Unavailable'}),meta.get('routeFactors',{})),'validation':report.get('routeMatchupValidation',{})}
     if 'receiving' not in validations:
         raise ValueError('Receiving model could not be evaluated')
     validation=validations['receiving']
-    bundle={'schemaVersion':3,'generatedAt':now.isoformat(),'season':season,'model':'Position and opponent adjusted conditional outcome forests v0.4',
+    bundle={'schemaVersion':3,'generatedAt':now.isoformat(),'season':season,'model':'Position and opponent adjusted conditional outcome forests v0.5 · weekly route-depth research policy',
         'status':'research; no historical sportsbook-price backtest','validationPassed':all(market_gates.values()),
         'validationGates':market_gates,'validation':{k:v for k,v in validation.items() if k!='predictions'},'familyValidation':{family:{k:v for k,v in value.items() if k!='predictions'} for family,value in validations.items()},'modelFailures':failures,
         'dataQuality':quality,'enrichment':enrichment,'currentCoverage':coverage,'sources':sources,'featureNames':features,'featureNamesByFamily':family_features,
         'forecasts':[r for r in rows.values() if r['marketSamples']],'players':profiles,
-        'marketConfig':{k:{'label':v[0],'family':v[1],'target':v[2],'positions':FAMILIES[v[1]]['positions']} for k,v in MARKET_SPECS.items()},
+        'marketConfig':{k:{'label':v[0],'family':v[1],'target':v[2],'positions':FAMILIES[v[1]]['positions'],'projectionOnly':k=='player_targets'} for k,v in MARKET_SPECS.items()},
         'limitations':['Historical feeds contain final stat corrections, not archived pregame vintages.',
             'Current route scenario is heuristic and excluded from historical validation.',
             'Injuries, trades after last appearance, availability, weather and live game state require review.',

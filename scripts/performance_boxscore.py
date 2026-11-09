@@ -1,6 +1,6 @@
 """Explicit ESPN box-score fields; absent statistics are never inferred as zero."""
 from scripts.game_market_history import finite
-MAP={'receiving':{'receivingYards':'receiving_yards','receptions':'receptions','receivingTouchdowns':'receiving_tds'},'rushing':{'rushingYards':'rushing_yards','rushingAttempts':'carries','rushingTouchdowns':'rushing_tds'},'passing':{'passingYards':'passing_yards','passingTouchdowns':'passing_tds','interceptions':'passing_interceptions'}}
+MAP={'receiving':{'receivingYards':'receiving_yards','receptions':'receptions','receivingTouchdowns':'receiving_tds','receivingTargets':'targets'},'rushing':{'rushingYards':'rushing_yards','rushingAttempts':'carries','rushingTouchdowns':'rushing_tds'},'passing':{'passingYards':'passing_yards','passingTouchdowns':'passing_tds','interceptions':'passing_interceptions'}}
 def number(v):
  try:
   value=float(v);return value if finite(value) else None

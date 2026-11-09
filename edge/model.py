@@ -74,7 +74,7 @@ def scores(samples,y,baseline,targets=None):
                      'probability70Cohort':{'n':len(high_actual),'meanEstimated':float(np.mean(high_prob)) if high_prob else None,'observedWinRate':float(np.mean(high_actual)) if high_actual else None,'scope':'Pooled fixed thresholds, both sides; not actual historical sportsbook wagers.'},'reliability':reliability}
     return result
 
-def walk_forward(frame,features,season,trees=96,min_train=500,complete_weeks=None,targets=None,positions=None):
+def walk_forward(frame,features,season,trees=96,min_train=500,complete_weeks=None,targets=None,positions=None,adjuster=None):
     targets=targets or TARGETS
     """Expanding training window, held out by complete NFL week."""
     eligible=frame[(~frame.forecast)&(frame.prior_games>=3)].dropna(subset=targets)
@@ -90,13 +90,14 @@ def walk_forward(frame,features,season,trees=96,min_train=500,complete_weeks=Non
         if len(train)<min_train or len(test)==0:
             continue
         fitted=DistributionForest(trees=trees).fit(train[features],train[targets])
-        samples=fitted.sample(test[features])
+        samples=fitted.sample(test[features]);unadjusted=samples.copy();route_metadata=[{} for _ in range(len(test))]
+        if adjuster is not None:samples,route_metadata=adjuster.apply(test,samples,targets,details)
         base={key:test[key+'_last6'].fillna(train[key].median()).to_numpy() for key in targets}
         metric=scores(samples,test[targets],base,targets)
         folds.append({'week':int(week),'trainRows':len(train),'testRows':len(test),'metrics':metric})
         all_samples.append(samples);all_y.append(test[targets]);all_base.append(base)
-        details.extend({'game_id':row.game_id,'player_id':row.player_id,'week':int(week),'team':row.team,'opponent':row.opponent_team,'position':row.position,'kickoff':row.kickoff.isoformat(),
-                        **{key:{'actual':float(getattr(row,key)),'mean':float(samples[j,:,i].mean()),'baseline':float(base[key][j]),'p10':float(np.quantile(samples[j,:,i],.1)),'p90':float(np.quantile(samples[j,:,i],.9))} for i,key in enumerate(targets)}}
+        details.extend({'game_id':row.game_id,'player_id':row.player_id,'week':int(week),'team':row.team,'opponent':row.opponent_team,'position':row.position,'kickoff':row.kickoff.isoformat(),**route_metadata[j],
+                        **{key:{'actual':float(getattr(row,key)),'mean':float(samples[j,:,i].mean()),'unadjustedMean':float(unadjusted[j,:,i].mean()),'baseline':float(base[key][j]),'p10':float(np.quantile(samples[j,:,i],.1)),'p90':float(np.quantile(samples[j,:,i],.9))} for i,key in enumerate(targets)}}
                        for j,row in enumerate(test.itertuples()))
     if not folds:
         raise ValueError('Insufficient historical games for chronological evaluation')

@@ -25,3 +25,14 @@ class AuditTests(unittest.TestCase):
         ledger,_=update_ledger([],self.fixture(),None,pd.DataFrame(columns=['game_id','player_id']),2026,pd.Timestamp('2026-11-09',tz='UTC'))
         self.assertEqual(ledger,[])
 if __name__=='__main__':unittest.main()
+
+class RouteAuditTests(unittest.TestCase):
+    def test_route_experiment_preserves_both_baseline_and_adjustment_separately(self):
+        from edge.audit import update_route_ledger
+        snapshot={'schemaVersion':3,'forecasts':[{'playerId':'p','name':'Test Receiver','position':'WR','team':'BUF','opponent':'SEA','gameId':'2026_09_SEA_BUF','kickoff':'2026-11-08T20:00:00Z','features':{'receptions_last6':3},'marketSamples':{'player_receptions':{'mean':5,'routeBaselineMean':4,'p10':1,'p90':9,'validationPassed':False}}}]}
+        publication={'issuedAt':'2026-11-06T00:00:00Z','commit':'a'*40}
+        actuals=pd.DataFrame([{'game_id':'2026_09_SEA_BUF','player_id':'p','receptions':6}])
+        ledger,result=update_route_ledger([],snapshot,publication,actuals,2026,pd.Timestamp('2026-11-09',tz='UTC'))
+        self.assertEqual(result['rows'][0]['baseline'],4);self.assertEqual(result['rows'][0]['projected'],5);self.assertEqual(result['rows'][0]['actual'],6);self.assertEqual(result['rows'][0]['variant'],'route_coverage_v1')
+        snapshot['forecasts'][0]['marketSamples']['player_receptions']['mean']=9
+        again,_=update_route_ledger(ledger,snapshot,publication,actuals,2026,pd.Timestamp('2026-11-10',tz='UTC'));self.assertEqual(again[0]['projected'],5)

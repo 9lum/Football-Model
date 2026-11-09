@@ -36,7 +36,7 @@ def update_ledger(existing,snapshot,publication,actuals,season,now):
                     'kickoff':f['kickoff'],'market':market,'target':target,'label':label,
                     'projected':m['mean'],'p10':m.get('p10'),'p90':m.get('p90'),
                     'issuedAt':publication['issuedAt'],'sourceCommit':publication['commit'],
-                    'baseline':f.get('features',{}).get(target+'_last6'),'marketPassedAtIssue':m.get('validationPassed',False)}
+                    'baseline':m.get('auditBaseline',f.get('features',{}).get(target+'_last6')),'marketPassedAtIssue':m.get('validationPassed',False)}
     lookup={(str(r.game_id),str(r.player_id)):r for r in actuals.itertuples()}
     rows=[]
     for archived in sorted(ledger.values(),key=lambda r:(r['week'],r['player'],r['market'])):
@@ -52,6 +52,17 @@ def update_ledger(existing,snapshot,publication,actuals,season,now):
         'missingOutcomePolicy':'Missing player statistics are not zero-filled; review participation and void rules.',
         'rows':rows}
 
+def update_route_ledger(existing,snapshot,publication,actuals,season,now):
+    from copy import deepcopy
+    transformed=deepcopy(snapshot) if snapshot else None
+    if transformed:
+        for f in transformed.get('forecasts',[]):
+            f['marketSamples']={k:{**m,'auditBaseline':m['routeBaselineMean']} for k,m in f.get('marketSamples',{}).items() if k in ['player_targets','player_receptions','player_reception_yds'] and m.get('routeBaselineMean') is not None}
+    ledger,results=update_ledger(existing,transformed,publication,actuals,season,now)
+    for r in [*ledger,*results['rows']]:r['variant']='route_coverage_v1'
+    results['source']='Verified pregame route-layer forecasts paired with their unadjusted core baselines.'
+    return ledger,results
+
 def write_audit(directory,frame,season,now):
     ledger_path=directory/f'forecast-ledger-{season}.json'
     existing=json.loads(ledger_path.read_text()) if ledger_path.exists() else []
@@ -66,6 +77,9 @@ def write_audit(directory,frame,season,now):
     benchmarks={r['id']:r.get('benchmark') for r in ledger}
     for row in results['rows']:
         if benchmarks.get(row['id']):row['benchmark']=benchmarks[row['id']]
-    for path,data in [(ledger_path,ledger),(directory/'projection-results.json',results)]:
+    route_path=directory/f'route-matchup-ledger-{season}.json'
+    route_existing=json.loads(route_path.read_text()) if route_path.exists() else []
+    route_ledger,route_results=update_route_ledger(route_existing,snapshot,publication,frame[~frame.forecast],season,now)
+    for path,data in [(route_path,route_ledger),(directory/'route-matchup-results.json',route_results),(ledger_path,ledger),(directory/'projection-results.json',results)]:
         temp=path.with_suffix('.json.tmp');temp.write_text(json.dumps(data,separators=(',',':'),allow_nan=False));temp.replace(path)
     return {'archived':len(ledger),'scored':sum(r['status']=='scored' for r in results['rows'])}

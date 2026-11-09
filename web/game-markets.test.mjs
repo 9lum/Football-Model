@@ -10,3 +10,8 @@ test('game-market model comparisons preserve spread signs, totals, pushes and fa
 test('pregame game model never prices an in-play market',()=>{assert.equal(gameMarketEstimate({kickoff:'2026-11-05T18:00:00Z',samples:Array(100).fill([24,17])},'h2h','home',null,-110,now),null)});
 import {sportsbookFavorite} from './game-markets.mjs';
 test('favorite is derived from the displayed book prices rather than home/away status',()=>{const [r]=gameBookRows(event,now);assert.equal(sportsbookFavorite(r,event).team,event.home_team);const swapped={...r,moneylineAway:[{price:-200}],moneylineHome:[{price:170}]};assert.equal(sportsbookFavorite(swapped,event).team,event.away_team);assert.equal(sportsbookFavorite({...r,moneylineAway:[{price:-110}],moneylineHome:[{price:-110}]},event).kind,'pickem');assert.equal(sportsbookFavorite({...r,moneylineAway:[],moneylineHome:[],spreadAway:[],spreadHome:[]},event),null)});
+test('implied points use correct home-spread sign and only actual pregame lines',async()=>{
+ const {impliedTeamPoints}=await import('./game-markets.mjs');
+ const event={home_team:'Home',away_team:'Away',commence_time:'2026-11-10T01:00Z',bookmakers:[{key:'dk',title:'DraftKings',markets:[{key:'totals',outcomes:[{name:'Over',point:47.5,price:-110}]},{key:'spreads',outcomes:[{name:'Home',point:-3,price:-110}]}]}]};
+ const now=Date.parse('2026-11-09T01:00Z');assert.equal(impliedTeamPoints(event,'Home',now).points,25.25);assert.equal(impliedTeamPoints(event,'Away',now).points,22.25);assert.equal(impliedTeamPoints(event,'Home',now+172800000),null);
+});

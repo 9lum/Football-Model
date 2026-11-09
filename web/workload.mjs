@@ -4,13 +4,13 @@ export function workloadFresh(base,health,now=Date.now()){const c=health?.worklo
 export function returningForecasts(base,health,now=Date.now()){if(!workloadFresh(base,health,now))return[];return(health.workloadContext.newForecasts||[]).filter(f=>Date.parse(f.kickoff)>now&&!health.injuries?.[f.playerId]?.ruledOut&&!base.forecasts.some(p=>p.playerId===f.playerId));}
 function random(seed){let n=2166136261;for(const c of seed)n=Math.imul(n^c.charCodeAt(0),16777619);return()=>{n+=0x6D2B79F5;let t=n;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296}}
 function count(value,factor,rng){const v=Math.max(0,Math.round(value));if(factor<=1){let n=0;for(let i=0;i<v;i++)if(rng()<factor)n++;return n}const extra=v*(factor-1),whole=Math.floor(extra);return v+whole+(rng()<extra-whole?1:0)}
-const channelFor=market=>market.startsWith('player_pass_')?'attempts':market.startsWith('player_rush_')?'carries':market.startsWith('player_reception')?'targets':null;
+const channelFor=market=>market.startsWith('player_pass_')?'attempts':market.startsWith('player_rush_')?'carries':(market.startsWith('player_reception')||market==='player_targets')?'targets':null;
 export function applyWorkload(forecasts,context){
  return forecasts.map(original=>{const role=context?.players?.[original.playerId];if(!role||role.gameId!==original.gameId||role.team!==original.team||Date.parse(role.kickoff)!==Date.parse(original.kickoff)||original.unavailable)return original;
  const source=original.workloadBaseMarketSamples||original.marketSamples;const f={...original,workloadBaseMarketSamples:source,marketSamples:{...source},features:{...original.features},workloadContext:role};
  const uncertain=role.returningPlayers.some(p=>p.uncertain);if(uncertain)f.availabilityReviewRequired=true;
  for(const [market,sample] of Object.entries(source||{})){const channel=channelFor(market),allocation=role.channels[channel];if(!allocation||allocation.scenarioOnly||!Array.isArray(sample.values)||!allocation.allocated?.length)continue;
-  const rng=random(f.playerId+'|'+f.gameId+'|'+market),values=sample.values.map((v,i)=>{const volume=allocation.allocated[i%allocation.allocated.length],factor=allocation.baseline>0?volume/allocation.baseline:0;if(market==='player_rush_attempts'||market==='player_pass_attempts')return volume;return /_yds$/.test(market)?Math.round(v*factor):count(v,factor,rng)});
+  const rng=random(f.playerId+'|'+f.gameId+'|'+market),values=sample.values.map((v,i)=>{const volume=allocation.allocated[i%allocation.allocated.length],factor=allocation.baseline>0?volume/allocation.baseline:0;if(market==='player_rush_attempts'||market==='player_pass_attempts'||market==='player_targets')return volume;return /_yds$/.test(market)?Math.round(v*factor):count(v,factor,rng)});
   f.marketSamples[market]={...sample,values,mean:values.reduce((a,b)=>a+b,0)/values.length,p10:statsSummary(values).low,p90:statsSummary(values).high,validationPassed:false,workloadAdjusted:true};
   f.features['workload_'+channel+'_expected']=allocation.expected;
  }
