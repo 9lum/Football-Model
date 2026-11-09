@@ -2,7 +2,7 @@ name: Refresh NFL moneylines spreads and totals
 on:
   workflow_dispatch:
   push:
-    paths: ['scripts/refresh_game_odds.py', 'scripts/test_game_odds.py', 'scripts/refresh_public_game_odds.py', 'scripts/test_public_game_odds.py', 'scripts/game_market_history.py', 'scripts/test_game_market_history.py', 'scripts/model_record.py', 'scripts/test_model_record.py', 'scripts/model_performance.py', 'scripts/performance_boxscore.py', 'scripts/test_model_performance.py', '.github/workflows/game-odds.yml']
+    paths: ['scripts/refresh_game_odds.py', 'scripts/test_game_odds.py', 'scripts/refresh_public_game_odds.py', 'scripts/test_public_game_odds.py', 'scripts/game_market_history.py', 'scripts/test_game_market_history.py', 'scripts/model_record.py', 'scripts/test_model_record.py', 'scripts/model_performance.py', 'data/performance-td-seed.json', 'scripts/performance_boxscore.py', 'scripts/test_model_performance.py', '.github/workflows/game-odds.yml']
   schedule:
     - cron: '7,22,37,52 * * * *'
 permissions:

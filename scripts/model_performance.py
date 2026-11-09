@@ -65,7 +65,7 @@ def build_performance(previous,published,oos,latest,history,td_reports,snapshot,
    result=final_result(g,results);entries={}
    for p in g.get('players',[]):entries[p['playerId']]={'name':p['name'],'team':p['team'],'position':p.get('position'),'markets':{'player_anytime_td':{'probability':p['probability']}}}
    for pid,e in g.get('playerTDMarkets',{}).items():
-    entry=entries.setdefault(pid,{'name':profiles.get(pid,{}).get('name',pid),'team':e.get('team'),'markets':{}});entry['markets'].update(e.get('markets',{}))
+    entry=entries.setdefault(pid,{'name':e.get('name') or profiles.get(pid,{}).get('name',pid),'team':e.get('team'),'markets':{}});entry['markets'].update(e.get('markets',{}))
    for pid,p in entries.items():
     for market,value in p['markets'].items():
      probability=value.get('probability')
@@ -79,7 +79,7 @@ def build_performance(previous,published,oos,latest,history,td_reports,snapshot,
        elif not scorer and result.get('scorersComplete') and participated:actual=0
       elif result.get('touchdownOrder',{}).get('complete') and participated:
        scorer=result['touchdownOrder'].get('first' if market=='player_1st_td' else 'last');actual=int(bool(scorer and code(scorer.get('team'))==code(p['team']) and name(scorer.get('name'))==name(p['name'])))
-     put({**game_meta(g['gameId']),'id':'published:'+g['gameId']+':'+pid+':'+market,'scope':'published','market':market,'type':'probability','entity':p['name'],'playerId':pid,'position':p.get('position') or profiles.get(pid,{}).get('position'),'team':p['team'],'kickoff':g['kickoff'],'issuedAt':issued,'projected':probability,'actual':actual,'status':'scored' if actual is not None else 'awaiting_scoring' if result else 'pending','actualSource':'ESPN final scoring summary' if actual is not None else None})
+     put({**game_meta(g['gameId']),'id':'published:'+g['gameId']+':'+pid+':'+market,'scope':'published','sourceCommit':g.get('sourceCommit'),'market':market,'type':'probability','entity':p['name'],'playerId':pid,'position':p.get('position') or profiles.get(pid,{}).get('position'),'team':p['team'],'kickoff':g['kickoff'],'issuedAt':issued,'projected':probability,'actual':actual,'status':'scored' if actual is not None else 'awaiting_scoring' if result else 'pending','actualSource':'ESPN final scoring summary' if actual is not None else None})
  # Retain historical sportsbook research cohorts, separate from all-player forecast evidence.
  bets={r['id']:r for r in previous.get('comparisons',[])}
  for r in legacy.get('rows',[]):
@@ -104,7 +104,7 @@ def update_performance(output=Path('data'),now=None):
   previous={**previous,'forecasts':[],'comparisons':[]}
   for shard in [*previous.get('forecastFiles',[]),*previous.get('comparisonFiles',[])]:
    stored=read(output/shard['path']);previous['forecasts'].extend(stored.get('forecasts',[]));previous['comparisons'].extend(stored.get('comparisons',[]))
- value=build_performance(previous,read(output/'projection-results.json'),read(output/'oos-predictions.json',[]),read(output/'latest.json'),read(output/'game-projection-history.json'),[read(output/'touchdown-pregame-archive.json'),read(output/'touchdown-research.json')],read(output/'public-game-odds.json'),read(output/'model-record.json'),stamp)
+ value=build_performance(previous,read(output/'projection-results.json'),read(output/'oos-predictions.json',[]),read(output/'latest.json'),read(output/'game-projection-history.json'),[read(output/'touchdown-pregame-archive.json'),read(output/'touchdown-research.json'),read(output/'performance-td-seed.json')],read(output/'public-game-odds.json'),read(output/'model-record.json'),stamp)
  archive=output/'performance';archive.mkdir(parents=True,exist_ok=True)
  manifest={k:v for k,v in value.items() if k not in ['forecasts','comparisons']};manifest.update(schemaVersion=3,forecastFiles=[],comparisonFiles=[])
  groups={}

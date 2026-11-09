@@ -50,3 +50,5 @@ The public index is `data/model-performance.json`. Detailed records are split by
 ## Homepage
 
 The homepage uses responsive containers, consistent spacing and distinct projection/book sections. Every matchup in the current display week remains available. When current feeds omit a game, the board can reconstruct its last genuine quotes from `game-market-movement.json`, preserving original provider/observation timestamps. Recorded prices are never relabeled as streaming live odds. Missing quotes remain unavailable; model lines do not replace them.
+
+An additional seed restores first/last TD forecasts for 14 games and 322 players from the genuine public pregame commit `8e5f2cc2804c6d2ae71929f0dc6a325de78b7c03` (November 6, 2026, 23:53:40 UTC). Its publication time, original probabilities and source commit are retained. Selection does not depend on which players later scored.
