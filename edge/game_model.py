@@ -73,5 +73,13 @@ def run(out=ROOT/'data',trees=96):
         pairs=draws[i].astype(int);h=pairs[:,0];a=pairs[:,1];p_home=float(np.mean(h>a));p_away=float(np.mean(a>h));p_tie=float(np.mean(h==a));predictions.append({'gameId':row.game_id,'homeTeam':row.home_team,'awayTeam':row.away_team,'kickoff':row.kickoff.isoformat(),'homePoints':float(h.mean()),'awayPoints':float(a.mean()),'total':float((h+a).mean()),'homeSpread':float((a-h).mean()),'awaySpread':float((h-a).mean()),'probHomeWin':p_home,'probAwayWin':p_away,'probTie':p_tie,'homeMoneylineFair':fair(p_home,p_tie),'awayMoneylineFair':fair(p_away,p_tie),'samples':pairs.tolist(),'totalInterval80':np.quantile(h+a,[.1,.9]).tolist(),'marginInterval80':np.quantile(h-a,[.1,.9]).tolist()})
     complete=frame[frame.season.eq(season)].groupby('week').completed.all();complete_weeks=set(complete[complete].index);holdouts=[f for f in folds if f['week'] in complete_weeks]
     payload={'generatedAt':now.isoformat(),'season':season,'model':'Joint home/away score conditional-outcome forest v1','status':'Research game projections; not a validated betting-return model','trainingGames':len(past),'drawsPerGame':10000,'featureNames':features,'validation':{'aggregate':aggregate,'folds':folds,'latestCompleteWeekHoldout':holdouts[-1]['week'] if holdouts else None,'partialWeeks':[f['week'] for f in folds if f['week'] not in complete_weeks]},'validationGates':gates,'projections':predictions,'limitations':['No sportsbook spreads, totals or moneylines enter the predictors.','Joint observed home/away score pairs preserve empirical margin/total dependence.','Current roster, injury and weather impacts are not independently calibrated in this game model.','Fair two-way moneylines condition on no tie; settlement rules require review.','70% estimated win probability does not establish a realized 70% win rate or profitability.','No historical odds ROI or CLV is claimed.']}
+    from .game_history import merge_history
+    try:history=json.loads((out/'game-projection-history.json').read_text())
+    except (OSError,ValueError):history={}
+    try:previous=json.loads((out/'game-projections.json').read_text())
+    except (OSError,ValueError):previous={}
+    history=merge_history(merge_history(history,previous),payload)
+    out.mkdir(parents=True,exist_ok=True)
+    (out/'game-projection-history.json').write_text(json.dumps(history,separators=(',',':'),allow_nan=False))
     out.mkdir(parents=True,exist_ok=True);(out/'game-projections.json').write_text(json.dumps(payload,separators=(',',':'),allow_nan=False));print(json.dumps({'games':len(predictions),'drawsPerGame':10000,'metrics':aggregate,'validationGates':gates,'holdout':payload['validation']['latestCompleteWeekHoldout']},indent=2));return payload
 if __name__=='__main__':run()

@@ -66,6 +66,23 @@ def parse_results(payload,observed):
                 'description':state.get('description'),'clock':event.get('status',{}).get('displayClock'),'period':event.get('status',{}).get('period'),'detail':state.get('shortDetail') or state.get('detail'),'observedAt':observed})
     return rows
 
+def parse_scorers(payload):
+    """Direct rushing/receiving scores only; never credit a passer's TDs."""
+    players={}
+    for team in payload.get('boxscore',{}).get('players',[]):
+        club=team.get('team',{}).get('displayName')
+        for group in team.get('statistics',[]):
+            name=group.get('name');key={'rushing':'rushingTouchdowns','receiving':'receivingTouchdowns'}.get(name)
+            if not key or key not in group.get('keys',[]):continue
+            index=group['keys'].index(key)
+            for line in group.get('athletes',[]):
+                athlete=line.get('athlete',{});stats=line.get('stats',[])
+                count=numeric(stats[index]) if len(stats)>index else None
+                if not athlete.get('id') or not club or count is None or count<=0 or not count.is_integer():continue
+                row=players.setdefault((club,athlete['id']),{'espnId':str(athlete['id']),'name':athlete.get('displayName'),'team':club,'rushingTDs':0,'receivingTDs':0})
+                row[name+'TDs']=int(count)
+    return [{**p,'touchdowns':p['rushingTDs']+p['receivingTDs']} for p in players.values()]
+
 def collect(output=Path('data'),now=None):
     now=now or dt.datetime.now(UTC);stamp=now.isoformat();games=read(output/'upcoming-games.json',{}).get('games',[]);weeks=sorted({(g['season'],g['week']) for g in games if g.get('game_type','REG')=='REG'})[:2]
     queries=[{'dates':year,'seasontype':2,'week':week} for year,week in weeks] or [{}];events={};results={};errors=[]
@@ -76,7 +93,19 @@ def collect(output=Path('data'),now=None):
             for result in parse_results(payload,stamp):results[result['id']]=result
         except Exception as error:errors.append({'source':'ESPN public scoreboard','code':getattr(error,'code',type(error).__name__)})
     old=read(output/'public-game-odds.json',{})
-    prior={r['id']:r for r in old.get('results',[])};prior.update(results)
+    prior={r['id']:r for r in old.get('results',[])}
+    for event_id,result in results.items():
+        if result.get('state') not in ['in','post'] and not result.get('completed'):continue
+        try:
+            summary_url='https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?'+urlencode({'event':event_id.removeprefix('espn-')})
+            with urlopen(Request(summary_url,headers={'User-Agent':'Projections-n-Shit/1.0'}),timeout=20) as response:summary=json.load(response)
+            if not summary.get('boxscore',{}).get('players'):raise ValueError('Box score unavailable')
+            result.update(scorers=parse_scorers(summary),scorersObservedAt=stamp)
+        except Exception as error:
+            if prior.get(event_id,{}).get('scorers') is not None:
+                result.update(scorers=prior[event_id]['scorers'],scorersObservedAt=prior[event_id].get('scorersObservedAt'))
+            errors.append({'source':'ESPN public scoring summary','event':event_id,'code':getattr(error,'code',type(error).__name__)})
+    prior.update(results)
     retained=sorted(prior.values(),key=lambda r:r.get('kickoff') or '',reverse=True)[:128]
     value={'generatedAt':stamp,'source':'ESPN public scoreboard','status':'ok' if events else 'unavailable' if errors else 'no_prices','data':list(events.values()) if events or not errors else old.get('data',[]),'results':retained,'eventCount':len(events),'errors':errors,'nextRefreshAt':(now+dt.timedelta(minutes=15)).isoformat(),'limitations':['Publicly listed game lines, checked approximately every 15 minutes subject to GitHub delays. No streaming or provider-update-time guarantee.','Source quote-update timestamps are not supplied and remain null. observed_at records when this app read the listing.','The pregame close field is not treated as a verified archived closing line for CLV.']}
     if events:append_history(output,list(events.values()),stamp)

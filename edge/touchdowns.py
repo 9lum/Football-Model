@@ -137,6 +137,7 @@ def report(out=ROOT/'data',now=None):
  for game in week_games.itertuples():
   if game.kickoff<=now:
    archived=retain_pregame_game(previous,game.game_id,game.kickoff.isoformat())
+   if archived is None:archived=retain_pregame_game(load_json('touchdown-pregame-archive.json'),game.game_id,game.kickoff.isoformat())
    games.append(archived or {'gameId':game.game_id,'homeTeam':game.home_team,'awayTeam':game.away_team,'kickoff':game.kickoff.isoformat(),'status':'started/completed','candidates':[],'note':'No archived pregame projections available; no retrospective picks generated.'})
    continue
   context=game_context(game,game_odds);candidates=[];team_context={}

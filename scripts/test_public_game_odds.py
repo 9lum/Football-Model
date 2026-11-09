@@ -11,3 +11,9 @@ class PublicOddsTests(unittest.TestCase):
   payload={'events':[event]};self.assertFalse(parse_results(payload,'now')[0]['completed'])
   event['status']['type']['completed']=True;row=parse_results(payload,'now')[0];self.assertTrue(row['completed']);self.assertEqual(row['homeScore'],0)
   event['competitions'][0]['competitors'][0].pop('score');self.assertFalse(parse_results(payload,'now')[0]['completed'])
+ def test_scorers_exclude_passing_and_combine_direct_touchdowns(self):
+  from scripts.refresh_public_game_odds import parse_scorers
+  athlete={'id':'one','displayName':'Player One'}
+  groups=[{'name':name,'keys':[key],'athletes':[{'athlete':athlete,'stats':[value]}]} for name,key,value in [('passing','passingTouchdowns','4'),('rushing','rushingTouchdowns','1'),('receiving','receivingTouchdowns','2')]]
+  rows=parse_scorers({'boxscore':{'players':[{'team':{'displayName':'Team A'},'statistics':groups}]}})
+  self.assertEqual(len(rows),1);self.assertEqual(rows[0]['touchdowns'],3)

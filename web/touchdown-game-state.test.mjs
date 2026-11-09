@@ -19,3 +19,13 @@ test('in-progress games carry scores and clock, then switch to finished on a con
  assert.equal(state.status,'in-progress');assert.equal(state.detail,'Q4 0:18');assert.equal(state.awayScore,24);assert.equal(state.winner,null);
  assert.equal(touchdownGameState(game,{results:[{...live,completed:true,state:'post'}]},now).status,'finished');
 });
+test('scorer glow requires a unique player on the correct team in the exact game',async()=>{
+ const {touchdownScored}=await import('./touchdown-game-state.mjs');
+ const p={name:'Player One',team:'CIN'},scorer={name:'Player One',team:'Cincinnati Bengals',touchdowns:2};
+ const snapshot={results:[{...result,scorers:[scorer]}]};
+ assert.equal(touchdownScored(p,game,snapshot),2);
+ assert.equal(touchdownScored({...p,team:'ATL'},game,snapshot),null);
+ assert.equal(touchdownScored(p,{...game,kickoff:'2026-11-15T18:00Z'},snapshot),null);
+ assert.equal(touchdownScored(p,game,{results:[{...result,scorers:[scorer,scorer]}]}),null);
+ assert.equal(touchdownScored(p,game,{results:[{...result,scorers:[]}]}),null);
+});
