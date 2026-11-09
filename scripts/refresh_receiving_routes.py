@@ -33,7 +33,9 @@ def collect(output=Path('data'),now=None):
  except Exception:schedule=nfl.load_schedules([season-1,season]).to_pandas()
  schedules=schedule_rows(schedule);records,sources=load_targets(season,cache,schedules);records=records[records.kickoff<now] if not records.empty else records;engine=RouteContext(records,season)
  latest=read(Path(output)/'latest.json');players={p['playerId']:engine.profile(p['playerId'],now) for p in latest.get('players',[]) if p['position'] in ['WR','TE','RB']}
- payload={'generatedAt':now.isoformat(),'season':season,'players':players,'sources':sources,'sourceWarnings':warnings,'scope':'Published targeted-pass air depth/location shares, not percentages of route concepts or all routes run.'}
+ from edge.passing_profiles import quarterback_profiles
+ players.update(quarterback_profiles(season,cache,schedules,now,[p['playerId'] for p in latest.get('players',[]) if p['position']=='QB']))
+ payload={'generatedAt':now.isoformat(),'season':season,'players':players,'sources':sources,'sourceWarnings':warnings,'scope':'Published receiver target and quarterback throw locations; QB scrambles and designed carries. Not route-run tracking.'}
  from edge.pipeline import clean
  Path(output).mkdir(exist_ok=True,parents=True);Path(output,'receiving-route-profiles.json').write_text(json.dumps(clean(payload),separators=(',',':'),allow_nan=False));print(json.dumps({'players':len(players),'targets':len(records),'season':season}));return payload
 if __name__=='__main__':collect()

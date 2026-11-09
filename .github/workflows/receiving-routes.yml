@@ -1,8 +1,8 @@
-name: Refresh receiving field profiles
+name: Refresh player field profiles
 on:
   workflow_dispatch:
   push:
-    paths: ['edge/receiving_routes.py', 'scripts/refresh_receiving_routes.py', '.github/workflows/receiving-routes.yml']
+    paths: ['edge/receiving_routes.py', 'edge/passing_profiles.py', 'scripts/refresh_receiving_routes.py', '.github/workflows/receiving-routes.yml']
   schedule:
     - cron: '34 */6 * * *'
 permissions:
@@ -22,6 +22,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -p 'test_receiving_routes.py' -v
+      - run: python -m unittest discover -s tests -p 'test_passing_profiles.py' -v
       - run: python -m scripts.refresh_receiving_routes
       - name: Publish public receiving profiles
         run: |

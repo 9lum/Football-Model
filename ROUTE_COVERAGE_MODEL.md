@@ -36,3 +36,17 @@ The local route adjustment disclosure shows baseline versus current Targets, Rec
 A dedicated receiving-profile workflow refreshes actual chart data every six hours independently of slower model fitting. Model fitting and coefficient selection refresh with the existing public-model pipeline. If a public source fails, available cached data may be retained with its actual through-game date; stale matchup evidence is suppressed.
 
 The layer is a testable research policy, not a guarantee of higher accuracy or a promise of automatic profitability. Team implied totals are not fabricated or silently inserted into historical tests without point-in-time price provenance. Actual route concepts remain unavailable until credible charting is provided.
+
+## Quarterback field profiles
+
+Player Research uses the same selectable nine-zone field for QB thrown passes.
+The public profile job refreshes QB samples alongside receiving profiles every six hours.
+QB samples use the current season or the last 3, 6 or 9 completed games with QB plays.
+Field shares include only throws with known air depth and left/middle/right location;
+aggregate completion rate and yards per attempt use all non-spike thrown attempts.
+Scramble rate is scrambles divided by dropbacks, including sacks. Designed carries
+are play-by-play non-scramble QB rushes, excluding kneels and no-plays. Their share
+uses non-kneel QB carries, a different denominator from scramble rate. Missing rush
+classification stays unknown. These are observed classifications, not inferred
+playbook intent, and the new display does not add an unvalidated projection multiplier.
+The field keeps SVG text flat and unfiltered; only its decorative rim has perspective.
