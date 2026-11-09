@@ -13,7 +13,12 @@ def parquet_asset(tag,name,columns,cache,immutable=False):
     import pyarrow.parquet as pq
     path=cache/name;path.parent.mkdir(parents=True,exist_ok=True)
     if immutable and path.exists():raw=path.read_bytes()
-    else:raw,_=get(BASE+tag+'/'+name);path.write_bytes(raw)
+    else:
+        url=BASE+tag+'/'+name
+        if not immutable and tag=='pbp':
+            from datetime import datetime,timezone
+            url+='?asof='+datetime.now(timezone.utc).strftime('%Y%m%d%H')
+        raw,_=get(url);path.write_bytes(raw)
     source=io.BytesIO(raw);available=pq.read_schema(source).names;source.seek(0)
     return pq.read_table(source,columns=[c for c in columns if c in available]).to_pandas()
 
