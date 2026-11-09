@@ -18,7 +18,9 @@ def team(x):
 def get(url):
     for attempt in range(3):
         try:
-            with urlopen(Request(url, headers={'User-Agent':'RouteEdgeResearch/0.2'}), timeout=60) as r:
+            request_url=url
+            if attempt and url.startswith(BASE):request_url=url+('&' if '?' in url else '?')+'refresh='+datetime.now(timezone.utc).strftime('%Y%m%d%H')+'-'+str(attempt)
+            with urlopen(Request(request_url, headers={'User-Agent':'RouteEdgeResearch/0.3','Cache-Control':'no-cache'}), timeout=60) as r:
                 return r.read(), {'url':url, 'retrievedAt':datetime.now(timezone.utc).isoformat(),
                                  'lastModified':r.headers.get('Last-Modified'), 'etag':r.headers.get('ETag')}
         except Exception:
@@ -27,7 +29,10 @@ def get(url):
             time.sleep(2 ** attempt)
 
 def csv_asset(tag, name, cache, manifest):
-    raw, meta = get(BASE+tag+'/'+name)
+    try:raw, meta = get(BASE+tag+'/'+name)
+    except Exception:
+        if tag!='schedules' or name!='games.csv':raise
+        raw,meta=get('https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv')
     meta['sha256'] = hashlib.sha256(raw).hexdigest()
     meta['bytes'] = len(raw)
     cache.mkdir(parents=True, exist_ok=True)

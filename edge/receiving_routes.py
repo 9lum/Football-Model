@@ -59,11 +59,13 @@ class RouteContext:
   return g
  def profile(self,pid,cutoff):
   season=self.history(pid,cutoff,None);season=season[season.season.eq(self.season)] if not season.empty else season
-  return {'season':summarize(season,'Current season'),**{f'last{n}':summarize(self.history(pid,cutoff,n),f'Last {n} recorded games') for n in [3,6,9]}}
+  return {'season':summarize(season,'Current season'),**{f'last{n}':summarize(self.history(pid,cutoff,n),f'Last {n} games with located targets') for n in [3,6,9]}}
  def context(self,row):
   cutoff=row.kickoff;h=self.history(row.player_id,cutoff,6)
-  if not h.empty and getattr(row,'team',None):h=h[h.team.eq(row.team)]
-  profile=summarize(h,'Last six recorded games');base={'profile':profile,'basis':'Target depth/location proxy, not actual routes run','routeTypesAvailable':False}
+  if not h.empty:
+   h=h[h.season.eq(self.season)]
+   if getattr(row,'team',None):h=h[h.team.eq(row.team)]
+  profile=summarize(h,'Recent current-team targeted games');base={'profile':profile,'basis':'Target depth/location proxy, not actual routes run','routeTypesAvailable':False}
   if h.empty or len(h)<20 or h.game_id.nunique()<3 or not self.league or cutoff-h.kickoff.max()>pd.Timedelta(days=35):return {**base,'status':'unavailable','reason':'Requires 20 current-team targeted passes, three prior games, a prior-season league reference and a sample within 35 days','signal':0.}
   key=(row.opponent_team,cutoff)
   if key not in self.def_cache:

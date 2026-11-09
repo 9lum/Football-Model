@@ -10,7 +10,7 @@ from pathlib import Path
 from urllib.request import Request,urlopen
 import numpy as np
 import pandas as pd
-from .data import BASE,team,normalize_stats
+from .data import BASE,team,normalize_stats,get as download_public
 from .markets import FULL_NAMES
 
 TEAM_SITES={'ARI':'azcardinals.com','ATL':'atlantafalcons.com','BAL':'baltimoreravens.com','BUF':'buffalobills.com','CAR':'panthers.com','CHI':'chicagobears.com','CIN':'bengals.com','CLE':'clevelandbrowns.com','DAL':'dallascowboys.com','DEN':'denverbroncos.com','DET':'detroitlions.com','GB':'packers.com','HOU':'houstontexans.com','IND':'colts.com','JAX':'jaguars.com','KC':'chiefs.com','LAC':'chargers.com','LAR':'therams.com','LV':'raiders.com','MIA':'miamidolphins.com','MIN':'vikings.com','NE':'patriots.com','NO':'neworleanssaints.com','NYG':'giants.com','NYJ':'newyorkjets.com','PHI':'philadelphiaeagles.com','PIT':'steelers.com','SEA':'seahawks.com','SF':'49ers.com','TB':'buccaneers.com','TEN':'tennesseetitans.com','WAS':'commanders.com'}
@@ -26,7 +26,7 @@ def public_csv(tag,name,cache=None,immutable=False):
     path=cache/name if cache else None
     if immutable and path and path.exists():raw=path.read_bytes()
     else:
-        raw,_=fetch(BASE+tag+'/'+name,timeout=60)
+        raw,_=download_public(BASE+tag+'/'+name)
         if path:path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw)
     return pd.read_csv(io.BytesIO(gzip.decompress(raw) if name.endswith('.gz') else raw),low_memory=False,dtype={'gsis_id':str,'espn_id':str})
 

@@ -13,7 +13,7 @@ These are targeted-pass profiles, not a charted route tree. Route-run shares for
 - Core baselines use the existing position/opponent outcome forest and recent usage/scoring context. The receiving forest now jointly predicts Targets, Receptions, Receiving Yards and Receiving TDs.
 - Route context uses only targeted passes from games completed before each forecast's kickoff. Current-season validation uses a prior-season league reference. No future game or current-game outcome enters the profile.
 - Player exposure is weighted across the nine zones. Player efficiency and opponent yards/EPA allowed in each zone are shrunk toward matched prior-season league zone values (20 and 30 pseudo-targets, respectively).
-- Minimum exposure is 20 current-team player targets across three prior games and 100 opponent targets, with recent samples within 35 days. Missing or stale evidence holds the baseline.
+- Minimum exposure is 20 current-season, current-team player targets across three prior games and 100 opponent targets, with recent samples within 35 days. Missing or stale evidence holds the baseline.
 - Existing man/zone tendency and receiver-scheme inputs remain part of the core feature assessment. The new layer does not apply a duplicate man/zone boost. Historical labeled efficiency is shown with its potentially prior-season scope.
 - Eligible positive/negative signals use bounded 5%, 10% or 15% adjustments. A zero adjustment is also allowed. Targets/Receptions share a volume coefficient; Yards has a separate coefficient. Deterministic unbiased integer rounding preserves count support, and Receptions cannot exceed Targets.
 
@@ -27,7 +27,7 @@ A separate verified pregame route experiment ledger retains both the adjusted pr
 
 ## Player Research
 
-WR/TE/RB profiles receive an interactive field panel with 3/6/9-game and season samples, keyboard/tap-selectable zones, color-coded depth bands, zone EPA/target, catch rates, yards/target and average depth. All percentages describe located targets. Flat and subtle 3D-tilt views are supported; illustrative paths are off by default.
+WR/TE/RB profiles receive an interactive field panel with 3/6/9 targeted-game and season samples, keyboard/tap-selectable zones, color-coded depth bands, zone EPA/target, catch rates, yards/target and average depth. All percentages describe located targets. Flat and subtle 3D-tilt views are supported; illustrative paths are off by default.
 
 The local route adjustment disclosure shows baseline versus current Targets, Receptions and Receiving Yards and two rationale sentences. Separately applied teammate-return allocations are identified.
 
