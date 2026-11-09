@@ -29,14 +29,16 @@ def matches(event,f):
 
 def archive(output=Path('data'),limit=24):
  directory=output/'matchup-research';directory.mkdir(parents=True,exist_ok=True)
+ index_path=output/'matchup-research-index.json';previous=json.loads(index_path.read_text()) if index_path.exists() else {};seen=set(previous.get('inspectedCommits',[]));processed=[]
  commits=fetch(f'https://api.github.com/repos/{REPO}/commits?path=data/latest.json&per_page={limit}')
- publications=[{'commit':c['sha'],'issuedAt':c['commit']['committer']['date']} for c in commits]
+ publications=[{'commit':c['sha'],'issuedAt':c['commit']['committer']['date']} for c in commits if c['sha'] not in seen]
  def load(p):
   try:return p,raw(p['commit'],'latest')
   except Exception as e:print('Snapshot unavailable:',p['commit'],type(e).__name__);return p,{}
  winners={}
  with futures.ThreadPoolExecutor(max_workers=4) as pool:
   for p,snapshot in pool.map(load,publications):
+   if snapshot.get('schemaVersion'):processed.append(p['commit'])
    for gid,forecasts in eligible(snapshot,p).items():
     old=winners.get(gid)
     if not old or stamp(p['issuedAt'])>stamp(old[0]['issuedAt']):winners[gid]=(p,snapshot,forecasts)
@@ -60,6 +62,6 @@ def archive(output=Path('data'),limit=24):
  index=[]
  for path in sorted(directory.glob('*.json')):
   d=json.loads(path.read_text());index.append({k:d[k] for k in ['gameId','kickoff','issuedAt','sourceCommit']})
- (output/'matchup-research-index.json').write_text(json.dumps({'games':index,'scope':'Verified published pregame snapshots; retained after final.'},separators=(',',':')))
+ (output/'matchup-research-index.json').write_text(json.dumps({'games':index,'inspectedCommits':list(dict.fromkeys([*processed,*previous.get('inspectedCommits',[])]))[:200],'scope':'Verified published pregame snapshots; retained after final.'},separators=(',',':')))
  print(json.dumps({'archivedGames':len(index),'inspectedPublications':len(publications)}))
 if __name__=='__main__':archive()
