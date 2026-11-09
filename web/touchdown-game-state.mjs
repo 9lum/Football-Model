@@ -2,7 +2,7 @@ import {teamNames} from './market-core.mjs';
 const code=t=>t==='LA'?'LAR':t==='WSH'?'WAS':t==='JAC'?'JAX':Object.keys(teamNames).find(k=>teamNames[k]===t)||t;
 export function matchTouchdownResult(game,snapshot){
  const kickoff=Date.parse(game.kickoff);
- return (snapshot?.results||[]).filter(r=>code(r.homeTeam)===code(game.homeTeam)&&code(r.awayTeam)===code(game.awayTeam)&&Number.isFinite(kickoff)&&Date.parse(r.kickoff)===kickoff).sort((a,b)=>Date.parse(b.observedAt)-Date.parse(a.observedAt))[0];
+ return (snapshot?.results||[]).filter(r=>code(r.homeTeam)===code(game.homeTeam)&&code(r.awayTeam)===code(game.awayTeam)&&Number.isFinite(kickoff)&&Math.abs(Date.parse(r.kickoff)-kickoff)<=6*3600000).sort((a,b)=>Date.parse(b.observedAt)-Date.parse(a.observedAt))[0];
 }
 export function touchdownGameState(game,snapshot,now=Date.now()){
  const kickoff=Date.parse(game.kickoff),result=matchTouchdownResult(game,snapshot);
