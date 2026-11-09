@@ -22,3 +22,7 @@ class PublicOddsTests(unittest.TestCase):
   groups=[{'name':kind,'keys':[key],'athletes':[{'stats':['0']}]} for kind,key in [('rushing','rushingTouchdowns'),('receiving','receivingTouchdowns')]]
   payload={'boxscore':{'players':[{'statistics':groups},{'statistics':groups}]}}
   self.assertTrue(scorers_complete(payload));groups[0]['athletes'][0]['stats']=['-'];self.assertFalse(scorers_complete(payload))
+ def test_scoreboard_records_keep_season_and_week_for_whole_week_rollover(self):
+  from scripts.refresh_public_game_odds import parse_results
+  payload={'season':{'year':2026},'week':{'number':9},'events':[{'id':'monday','date':'2026-11-10T01:15Z','status':{'type':{'state':'pre','completed':False}},'competitions':[{'competitors':[{'homeAway':'home','team':{'displayName':'Minnesota Vikings'},'score':'0'},{'homeAway':'away','team':{'displayName':'Buffalo Bills'},'score':'0'}]}]}]}
+  row=parse_results(payload,'now')[0];self.assertEqual(row['season'],2026);self.assertEqual(row['week'],9);self.assertFalse(row['completed'])

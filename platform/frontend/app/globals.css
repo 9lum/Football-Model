@@ -199,3 +199,6 @@ html .matchup-lab .matchup-defensive-evidence .research-notes>summary{font-size:
 
 /* Separate offense rankings within each touchdown matchup. */
 .td-team-picks{display:grid;gap:22px}.td-team-picks-section{min-width:0}.td-team-picks-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 0 12px;border-bottom:1px solid var(--line);margin-bottom:14px}.td-team-picks-heading>span{font-size:10px;line-height:1.5;color:var(--muted)}@media(max-width:620px){.td-team-picks-heading{align-items:flex-start;flex-direction:column;gap:6px}}
+
+/* Shared weekly display rule; preserves the existing compact research layouts. */
+.weekly-display-note{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;margin:0 0 16px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;font-size:11px;line-height:1.6}.weekly-display-note>strong{font-weight:650;white-space:nowrap}.weekly-display-note>span{color:var(--muted)}

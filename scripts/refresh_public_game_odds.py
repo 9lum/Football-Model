@@ -61,6 +61,7 @@ def parse_results(payload,observed):
             valid=all(v is not None and v>=0 and v.is_integer() for v in scores.values())
             rows.append({'id':'espn-'+str(event['id']),'kickoff':event.get('date'),
                 'homeTeam':teams['home']['team']['displayName'],'awayTeam':teams['away']['team']['displayName'],
+                'season':event.get('season',payload.get('season',{})).get('year'),'week':event.get('week',payload.get('week',{})).get('number'),
                 'homeScore':scores['home'],'awayScore':scores['away'],
                 'completed':state.get('completed') is True and valid,'state':state.get('state'),
                 'description':state.get('description'),'clock':event.get('status',{}).get('displayClock'),'period':event.get('status',{}).get('period'),'detail':state.get('shortDetail') or state.get('detail'),'observedAt':observed})
@@ -100,12 +101,21 @@ def scorers_complete(summary):
 
 def collect(output=Path('data'),now=None):
     now=now or dt.datetime.now(UTC);stamp=now.isoformat();games=read(output/'upcoming-games.json',{}).get('games',[]);weeks=sorted({(g['season'],g['week']) for g in games if g.get('game_type','REG')=='REG'})[:2]
-    queries=[{'dates':year,'seasontype':2,'week':week} for year,week in weeks] or [{}];events={};results={};errors=[]
+    old=read(output/'public-game-odds.json',{})
+    # Continue checking an unfinished prior week even when the upcoming feed rolls forward.
+    for w in old.get('weekCoverage',[]):
+        pending=[r for r in old.get('results',[]) if r.get('id') in w.get('eventIds',[]) and not r.get('completed')]
+        if pending and any(abs((now-dt.datetime.fromisoformat(r['kickoff'].replace('Z','+00:00'))).total_seconds())<21*86400 for r in pending):weeks.append((w['season'],w['week']))
+    weeks=sorted(set(weeks))
+    queries=[{'dates':year,'seasontype':2,'week':week} for year,week in weeks] or [{}];events={};results={};errors=[];coverage={(w['season'],w['week']):w for w in old.get('weekCoverage',[])}
     for query in queries:
         try:
             with urlopen(Request(SOURCE+('?' + urlencode(query) if query else ''),headers={'User-Agent':'Projections-n-Shit/1.0'}),timeout=25) as r:payload=json.load(r)
             for event in parse(payload,stamp,now):events[event['id']]=event
-            for result in parse_results(payload,stamp):results[result['id']]=result
+            parsed=parse_results(payload,stamp)
+            for result in parsed:results[result['id']]=result
+            year=payload.get('season',{}).get('year');week=payload.get('week',{}).get('number')
+            if parsed and year and week:coverage[(year,week)]={'season':year,'week':week,'eventIds':[r['id'] for r in parsed],'observedAt':stamp}
         except Exception as error:errors.append({'source':'ESPN public scoreboard','code':getattr(error,'code',type(error).__name__)})
     old=read(output/'public-game-odds.json',{})
     prior={r['id']:r for r in old.get('results',[])}
@@ -122,7 +132,7 @@ def collect(output=Path('data'),now=None):
             errors.append({'source':'ESPN public scoring summary','event':event_id,'code':getattr(error,'code',type(error).__name__)})
     prior.update(results)
     retained=sorted(prior.values(),key=lambda r:r.get('kickoff') or '',reverse=True)[:128]
-    value={'generatedAt':stamp,'source':'ESPN public scoreboard','status':'ok' if events else 'unavailable' if errors else 'no_prices','data':list(events.values()) if events or not errors else old.get('data',[]),'results':retained,'eventCount':len(events),'errors':errors,'nextRefreshAt':(now+dt.timedelta(minutes=15)).isoformat(),'limitations':['Publicly listed game lines, checked approximately every 15 minutes subject to GitHub delays. No streaming or provider-update-time guarantee.','Source quote-update timestamps are not supplied and remain null. observed_at records when this app read the listing.','The pregame close field is not treated as a verified archived closing line for CLV.']}
+    value={'generatedAt':stamp,'source':'ESPN public scoreboard','status':'ok' if events else 'unavailable' if errors else 'no_prices','data':list(events.values()) if events or not errors else old.get('data',[]),'results':retained,'weekCoverage':sorted(coverage.values(),key=lambda w:(w['season'],w['week']))[-12:],'eventCount':len(events),'errors':errors,'nextRefreshAt':(now+dt.timedelta(minutes=15)).isoformat(),'limitations':['Publicly listed game lines, checked approximately every 15 minutes subject to GitHub delays. No streaming or provider-update-time guarantee.','Source quote-update timestamps are not supplied and remain null. observed_at records when this app read the listing.','The pregame close field is not treated as a verified archived closing line for CLV.']}
     if events:append_history(output,list(events.values()),stamp)
     output.mkdir(parents=True,exist_ok=True);(output/'public-game-odds.json').write_text(json.dumps(value,separators=(',',':')));print(json.dumps({k:v for k,v in value.items() if k!='data'}));return value
 if __name__=='__main__':
