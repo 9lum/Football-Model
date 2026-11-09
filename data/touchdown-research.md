@@ -1,6 +1,6 @@
 # Week 9 Anytime Touchdown Research
-Generated 2026-11-09T08:55:23.004715+00:00
-Current-season tests: 2454; Brier 0.1505 vs baseline 0.1636.
+Generated 2026-11-09T13:38:05.056894+00:00
+Current-season tests: 2479; Brier 0.1499 vs baseline 0.1630.
 
 ## JAX at BAL
 2026-11-06T01:15:00+00:00
@@ -72,9 +72,9 @@ Archived pregame projections retained during play; these are not live scoring pr
 - MIN: recent RZ pass rate 0.7096774193548387, RZ pass-over-expected 12.626661509275436 percentage points, neutral seconds/play 31.702898550724637. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - BUF: recent RZ pass rate 0.45614035087719296, RZ pass-over-expected -11.948312073946 percentage points, neutral seconds/play 31.05263157894737. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **James Cook — Core research · highest estimated probability**: estimated ATTD 60.1%; fair odds -151; opponent allows 0.67 direct TDs/game to the position group. DraftKings -110; estimated return 14.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Ty Johnson — High-yield research · positive price estimate**: estimated ATTD 16.5%; fair odds 508; opponent allows 0.67 direct TDs/game to the position group. FanDuel 850; estimated return 56.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Aaron Jones — Additional research candidate**: estimated ATTD 32.7%; fair odds 206; opponent allows 1.17 direct TDs/game to the position group. DraftKings 270; estimated return 21.0%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **James Cook — Core research · highest estimated probability**: estimated ATTD 60.0%; fair odds -150; opponent allows 0.67 direct TDs/game to the position group. DraftKings -110; estimated return 14.5%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Ty Johnson — High-yield research · positive price estimate**: estimated ATTD 16.4%; fair odds 508; opponent allows 0.67 direct TDs/game to the position group. FanDuel 850; estimated return 56.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Aaron Jones — Additional research candidate**: estimated ATTD 32.8%; fair odds 205; opponent allows 1.17 direct TDs/game to the position group. DraftKings 270; estimated return 21.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## Methodology & limitations
 - ATTD counts rushing and receiving TDs, excluding QB passing TDs, return TDs and fumble-recovery scores; check individual book rules.
