@@ -1,4 +1,4 @@
-:HL["/Football-Model/platform/_next/static/css/b3fd02304fd0305e.css","style"]
-:HL["/Football-Model/platform/_next/static/css/d499cbf5e651ce79.css","style"]
+:HL["/Football-Model/platform/_next/static/css/30dd4a2161ad2d88.css","style"]
+:HL["/Football-Model/platform/_next/static/css/29cadbb2e87b0c43.css","style"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"_OTxKlbBq77bbj6Q9r8IT","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"Gqgl7X59l4KuMJngNeM3N","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
