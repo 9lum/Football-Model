@@ -10,6 +10,8 @@ def retain_pregame_game(previous,game_id,kickoff):
         if datetime.fromisoformat(stamp.replace('Z','+00:00'))>=start or not old.get('players'):return None
     except (ValueError,TypeError,StopIteration):return None
     saved=deepcopy(old)
+    markets={pid:entry for pid,entry in previous.get('allPlayerOdds',{}).items() if entry.get('gameId')==game_id}
+    if markets:saved['playerTDMarkets']=deepcopy(markets)
     saved.update(status='started/completed',pregameGeneratedAt=stamp,note='Archived pregame projections retained during play; these are not live scoring probabilities.')
     for player in [*saved.get('players',[]),*saved.get('candidates',[])]:
         for quote in player.get('quotes',[]):quote['qualified']=False

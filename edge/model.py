@@ -95,8 +95,8 @@ def walk_forward(frame,features,season,trees=96,min_train=500,complete_weeks=Non
         metric=scores(samples,test[targets],base,targets)
         folds.append({'week':int(week),'trainRows':len(train),'testRows':len(test),'metrics':metric})
         all_samples.append(samples);all_y.append(test[targets]);all_base.append(base)
-        details.extend({'game_id':row.game_id,'player_id':row.player_id,'week':int(week),
-                        **{key:{'actual':float(getattr(row,key)),'mean':float(samples[j,:,i].mean())} for i,key in enumerate(targets)}}
+        details.extend({'game_id':row.game_id,'player_id':row.player_id,'week':int(week),'team':row.team,'opponent':row.opponent_team,'position':row.position,'kickoff':row.kickoff.isoformat(),
+                        **{key:{'actual':float(getattr(row,key)),'mean':float(samples[j,:,i].mean()),'baseline':float(base[key][j]),'p10':float(np.quantile(samples[j,:,i],.1)),'p90':float(np.quantile(samples[j,:,i],.9))} for i,key in enumerate(targets)}}
                        for j,row in enumerate(test.itertuples()))
     if not folds:
         raise ValueError('Insufficient historical games for chronological evaluation')

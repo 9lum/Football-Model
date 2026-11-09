@@ -2,7 +2,7 @@ name: Refresh NFL moneylines spreads and totals
 on:
   workflow_dispatch:
   push:
-    paths: ['scripts/refresh_game_odds.py', 'scripts/test_game_odds.py', 'scripts/refresh_public_game_odds.py', 'scripts/test_public_game_odds.py', 'scripts/game_market_history.py', 'scripts/test_game_market_history.py', 'scripts/model_record.py', 'scripts/test_model_record.py', '.github/workflows/game-odds.yml']
+    paths: ['scripts/refresh_game_odds.py', 'scripts/test_game_odds.py', 'scripts/refresh_public_game_odds.py', 'scripts/test_public_game_odds.py', 'scripts/game_market_history.py', 'scripts/test_game_market_history.py', 'scripts/model_record.py', 'scripts/test_model_record.py', 'scripts/model_performance.py', 'scripts/performance_boxscore.py', 'scripts/test_model_performance.py', '.github/workflows/game-odds.yml']
   schedule:
     - cron: '7,22,37,52 * * * *'
 permissions:
@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s scripts -p 'test_*game*.py' -v
-      - run: python -m unittest scripts.test_model_record -v
+      - run: python -m unittest scripts.test_model_record scripts.test_model_performance -v
       - name: Seed movement history from genuine existing snapshots
         run: python -m scripts.game_market_history
       - name: Retrieve current game markets when refresh is due
@@ -35,7 +35,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/game-odds.json data/public-game-odds.json data/game-market-movement.json data/model-record.json
+          git add data/game-odds.json data/public-game-odds.json data/game-market-movement.json data/model-record.json data/model-performance.json data/performance
           if test -f data/game-odds-history.json; then git add data/game-odds-history.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh NFL moneylines spreads and totals [skip ci]'

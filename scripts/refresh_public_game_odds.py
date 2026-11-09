@@ -7,6 +7,7 @@ from urllib.parse import urlencode
 from urllib.request import Request,urlopen
 from scripts.refresh_odds import read
 from scripts.game_market_history import append_history,finite
+from scripts.performance_boxscore import player_stats,touchdown_order
 UTC=dt.timezone.utc
 SOURCE='https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard'
 def numeric(value,line=False):
@@ -125,10 +126,10 @@ def collect(output=Path('data'),now=None):
             summary_url='https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?'+urlencode({'event':event_id.removeprefix('espn-')})
             with urlopen(Request(summary_url,headers={'User-Agent':'Projections-n-Shit/1.0'}),timeout=20) as response:summary=json.load(response)
             if not summary.get('boxscore',{}).get('players'):raise ValueError('Box score unavailable')
-            result.update(scorers=parse_scorers(summary),scorersObservedAt=stamp,scorersComplete=scorers_complete(summary))
+            result.update(scorers=parse_scorers(summary),scorersObservedAt=stamp,scorersComplete=scorers_complete(summary),playerStats=player_stats(summary),touchdownOrder=touchdown_order(summary))
         except Exception as error:
             if prior.get(event_id,{}).get('scorers') is not None:
-                result.update(scorers=prior[event_id]['scorers'],scorersObservedAt=prior[event_id].get('scorersObservedAt'),scorersComplete=prior[event_id].get('scorersComplete',False))
+                result.update(scorers=prior[event_id]['scorers'],scorersObservedAt=prior[event_id].get('scorersObservedAt'),scorersComplete=prior[event_id].get('scorersComplete',False),playerStats=prior[event_id].get('playerStats',[]),touchdownOrder=prior[event_id].get('touchdownOrder',{}))
             errors.append({'source':'ESPN public scoring summary','event':event_id,'code':getattr(error,'code',type(error).__name__)})
     prior.update(results)
     retained=sorted(prior.values(),key=lambda r:r.get('kickoff') or '',reverse=True)[:128]
@@ -139,3 +140,5 @@ if __name__=='__main__':
  collect()
  from scripts.model_record import update_record
  update_record()
+ from scripts.model_performance import update_performance
+ update_performance()

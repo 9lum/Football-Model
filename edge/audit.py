@@ -36,7 +36,7 @@ def update_ledger(existing,snapshot,publication,actuals,season,now):
                     'kickoff':f['kickoff'],'market':market,'target':target,'label':label,
                     'projected':m['mean'],'p10':m.get('p10'),'p90':m.get('p90'),
                     'issuedAt':publication['issuedAt'],'sourceCommit':publication['commit'],
-                    'marketPassedAtIssue':m.get('validationPassed',False)}
+                    'baseline':f.get('features',{}).get(target+'_last6'),'marketPassedAtIssue':m.get('validationPassed',False)}
     lookup={(str(r.game_id),str(r.player_id)):r for r in actuals.itertuples()}
     rows=[]
     for archived in sorted(ledger.values(),key=lambda r:(r['week'],r['player'],r['market'])):
@@ -59,6 +59,13 @@ def write_audit(directory,frame,season,now):
     snapshot=json.loads(snapshot_path.read_text()) if snapshot_path.exists() else None
     publication=publication_record(snapshot_path) if snapshot_path.exists() else None
     ledger,results=update_ledger(existing,snapshot,publication,frame[~frame.forecast],season,now)
+    from .benchmark import attach_benchmarks
+    odds_path=directory/'odds.json'
+    odds=json.loads(odds_path.read_text()) if odds_path.exists() else {}
+    ledger=attach_benchmarks(ledger,odds,now)
+    benchmarks={r['id']:r.get('benchmark') for r in ledger}
+    for row in results['rows']:
+        if benchmarks.get(row['id']):row['benchmark']=benchmarks[row['id']]
     for path,data in [(ledger_path,ledger),(directory/'projection-results.json',results)]:
         temp=path.with_suffix('.json.tmp');temp.write_text(json.dumps(data,separators=(',',':'),allow_nan=False));temp.replace(path)
     return {'archived':len(ledger),'scored':sum(r['status']=='scored' for r in results['rows'])}
