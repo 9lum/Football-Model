@@ -1,4 +1,4 @@
 :HL["/Football-Model/platform/_next/static/css/30dd4a2161ad2d88.css","style"]
 :HL["/Football-Model/platform/_next/static/css/164548b3905a7adb.css","style"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"Ix9Txdrl4ms1vge1v5pNU","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"odnNygmj5YNV8k1el5-i5","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
