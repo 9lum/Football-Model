@@ -1,5 +1,6 @@
 'use client';
 import {useState} from 'react';
+import './matchup-props.css';
 import PlayerStatusLight from './player-status-light';
 import {matchupPropPlayers,matchupPropSelection} from '../../../web/matchup-props.mjs';
 import {groupResearchRoster,researchPositionLabel} from '../../../web/research-roster.mjs';

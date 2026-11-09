@@ -1,0 +1,8 @@
+/* Let the desktop roster use the space alongside the full player research panel. */
+@media(min-width:761px){
+ html .matchup-lab .matchup-prop-research .matchup-player-layout{grid-template-columns:clamp(220px,21%,250px) minmax(0,1fr)}
+ html .matchup-lab .matchup-prop-research .matchup-player-directory{max-height:none;overflow:visible;overscroll-behavior:auto}
+ html .matchup-lab .matchup-prop-research .matchup-player-directory>section>h3{position:static}
+ html .matchup-lab .matchup-prop-research .matchup-player-directory section>button>span:first-child{flex:1;min-width:0}
+ html .matchup-lab .matchup-prop-research .matchup-player-directory strong{overflow-wrap:normal;word-break:normal}
+}
