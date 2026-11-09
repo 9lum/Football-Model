@@ -33102,6 +33102,2076 @@
     "family": "receiving"
   },
   {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0033526",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 10.353515625
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 1.275390625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.052734375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0034829",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 11.0,
+      "mean": 30.47265625
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 2.546875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.291015625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0035208",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 5.0,
+      "mean": 12.685546875
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.134765625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.107421875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0036410",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 32.0,
+      "mean": 80.9375
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 6.265625
+    },
+    "receiving_tds": {
+      "actual": 2.0,
+      "mean": 0.541015625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0036429",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 1.0,
+      "mean": 9.328125
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 0.904296875
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.078125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0036900",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 155.0,
+      "mean": 77.212890625
+    },
+    "receptions": {
+      "actual": 10.0,
+      "mean": 6.259765625
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.4765625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0036906",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 2.0,
+      "mean": 10.376953125
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.283203125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.044921875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0036970",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 23.0,
+      "mean": 37.453125
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 3.423828125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.3125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0037238",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 68.0,
+      "mean": 63.09765625
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 4.865234375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.451171875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0037741",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 16.0,
+      "mean": 33.779296875
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 2.71484375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.19140625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0038542",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 47.0,
+      "mean": 28.41015625
+    },
+    "receptions": {
+      "actual": 6.0,
+      "mean": 3.263671875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.130859375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0038597",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 18.0,
+      "mean": 30.2109375
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 3.55859375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.22265625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0038839",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 4.0,
+      "mean": 11.439453125
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.005859375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.07421875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0040785",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 47.0,
+      "mean": 21.662109375
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 2.07421875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.146484375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0030279",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 26.0,
+      "mean": 47.19921875
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 4.203125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.322265625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0030506",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 72.0,
+      "mean": 47.87890625
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 4.27734375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.29296875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0031588",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 51.0,
+      "mean": 50.744140625
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 4.26171875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.32421875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0031610",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 90.0,
+      "mean": 24.111328125
+    },
+    "receptions": {
+      "actual": 8.0,
+      "mean": 2.23828125
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.189453125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0032951",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 31.087890625
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 2.634765625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.197265625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0033110",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 13.0,
+      "mean": 31.79296875
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 2.921875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.169921875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0033699",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 18.0,
+      "mean": 12.76953125
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.455078125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.05859375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0033881",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 33.0,
+      "mean": 19.44140625
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 1.751953125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.103515625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0033906",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 17.0,
+      "mean": 16.724609375
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.1796875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.115234375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0034348",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 45.0,
+      "mean": 36.728515625
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 2.958984375
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.20703125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0034351",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 50.0,
+      "mean": 39.361328125
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 3.650390625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.228515625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0034844",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 8.0625
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 1.025390625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.060546875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0035021",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 55.0,
+      "mean": 9.37109375
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 0.8515625
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.064453125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0035250",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 8.0,
+      "mean": 14.494140625
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.693359375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.091796875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0035644",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 12.0,
+      "mean": 14.400390625
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.38671875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.0859375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0035662",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 16.0,
+      "mean": 20.41015625
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.794921875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.1015625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0036040",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 34.0,
+      "mean": 37.841796875
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 3.345703125
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.2421875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0036158",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 4.0,
+      "mean": 7.40234375
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 0.955078125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.021484375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0036223",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 18.0,
+      "mean": 21.31640625
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 2.697265625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.12109375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0036244",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 13.0,
+      "mean": 29.8203125
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 2.95703125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.1875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0036309",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 54.0,
+      "mean": 18.689453125
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 1.564453125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.087890625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0036358",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 195.0,
+      "mean": 77.462890625
+    },
+    "receptions": {
+      "actual": 10.0,
+      "mean": 6.09375
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.48046875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0036407",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 37.0,
+      "mean": 27.607421875
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 2.486328125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.177734375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0036415",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 58.0,
+      "mean": 13.546875
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 1.25390625
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.07421875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0036422",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 15.0,
+      "mean": 8.5
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 0.8828125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.076171875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0036555",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 17.0,
+      "mean": 18.904296875
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 2.66015625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.099609375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0036567",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 20.0,
+      "mean": 10.740234375
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 1.404296875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.037109375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0036613",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 22.0,
+      "mean": 37.068359375
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 3.431640625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.197265625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0036637",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 11.0,
+      "mean": 20.6015625
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 2.1328125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.162109375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0036849",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 16.0,
+      "mean": 17.580078125
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.4453125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.12109375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0036963",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 86.0,
+      "mean": 72.591796875
+    },
+    "receptions": {
+      "actual": 8.0,
+      "mean": 5.97265625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.486328125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0036980",
+    "week": 9,
+    "receiving_yards": {
+      "actual": -3.0,
+      "mean": 7.5703125
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 0.7109375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.0390625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0036997",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 23.0,
+      "mean": 17.564453125
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 2.14453125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0037005",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 24.0,
+      "mean": 22.859375
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 2.21484375
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.1640625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0037086",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 6.67578125
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.697265625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.052734375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0037120",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 6.8203125
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.796875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.0546875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0037239",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 98.0,
+      "mean": 78.513671875
+    },
+    "receptions": {
+      "actual": 7.0,
+      "mean": 6.19140625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.51953125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0037240",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 31.0,
+      "mean": 60.5625
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 4.580078125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.40234375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0037252",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 14.0,
+      "mean": 36.337890625
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 3.23046875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.30078125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0037256",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 41.0,
+      "mean": 18.48046875
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 2.345703125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.091796875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0037614",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 40.0,
+      "mean": 20.451171875
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.974609375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.138671875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0037809",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 56.0,
+      "mean": 38.279296875
+    },
+    "receptions": {
+      "actual": 6.0,
+      "mean": 3.6484375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.232421875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0037838",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 53.0,
+      "mean": 48.294921875
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 4.376953125
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.30078125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0037840",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 16.0,
+      "mean": 31.2890625
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 3.3046875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.1796875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0038040",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 6.78125
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.802734375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.041015625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0038041",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 21.0,
+      "mean": 15.900390625
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.62890625
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.134765625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0038120",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 26.0,
+      "mean": 21.126953125
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.609375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.138671875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0038134",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 41.0,
+      "mean": 20.345703125
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 2.66015625
+    },
+    "receiving_tds": {
+      "actual": 2.0,
+      "mean": 0.080078125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0038576",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 8.8828125
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.716796875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.068359375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0038938",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 12.078125
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 1.052734375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.064453125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0038976",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 16.8515625
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.7421875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.08984375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0038997",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 24.0,
+      "mean": 42.91796875
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 3.625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.3125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0039065",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 32.0,
+      "mean": 53.4140625
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 4.431640625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.380859375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0039067",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 49.0,
+      "mean": 58.525390625
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 4.73828125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.3359375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0039075",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 150.0,
+      "mean": 84.751953125
+    },
+    "receptions": {
+      "actual": 14.0,
+      "mean": 6.912109375
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.580078125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0039139",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 36.318359375
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 3.8515625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.2421875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0039337",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 43.0,
+      "mean": 62.15234375
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 5.203125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.2421875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0039373",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 5.0,
+      "mean": 14.439453125
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.685546875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.1015625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0039410",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 53.0,
+      "mean": 44.845703125
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 3.7578125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.287109375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0039424",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 17.0,
+      "mean": 47.986328125
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 3.96875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.349609375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0039491",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 29.0,
+      "mean": 51.650390625
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 4.203125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.31640625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0039530",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 20.0,
+      "mean": 17.84765625
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.78515625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.0859375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0039738",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 11.35546875
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 1.333984375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.05859375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0039794",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 21.0,
+      "mean": 19.03515625
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 2.408203125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.12890625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0039798",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 7.400390625
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.958984375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.048828125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0039868",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 31.0,
+      "mean": 15.76171875
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 1.37109375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.0859375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0039880",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 21.0,
+      "mean": 42.630859375
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 3.642578125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.259765625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0039890",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 43.498046875
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 3.5546875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.265625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0039894",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 48.0,
+      "mean": 37.119140625
+    },
+    "receptions": {
+      "actual": 6.0,
+      "mean": 3.51171875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.220703125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0040024",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 25.0,
+      "mean": 25.083984375
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 2.171875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.12109375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0040124",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 56.0,
+      "mean": 59.251953125
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 4.65234375
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.388671875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0040128",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 44.0,
+      "mean": 43.76953125
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 4.21875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.306640625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0040134",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 56.0,
+      "mean": 26.244140625
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 2.345703125
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.154296875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0040162",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 27.0,
+      "mean": 22.662109375
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.654296875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.146484375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0040187",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 20.0,
+      "mean": 15.181640625
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.439453125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.109375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0040198",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 9.0,
+      "mean": 11.6328125
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.36328125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.044921875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0040298",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 9.88671875
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.919921875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.060546875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0040590",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 20.0,
+      "mean": 16.35546875
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.388671875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.09375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0040646",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 18.0,
+      "mean": 14.26171875
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.34375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.060546875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0040663",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 42.0,
+      "mean": 51.716796875
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 4.58203125
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.345703125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0040669",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 9.0,
+      "mean": 18.25390625
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.669921875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.107421875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0040736",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 11.0,
+      "mean": 28.021484375
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 2.625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.15234375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0040784",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 2.0,
+      "mean": 18.900390625
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 2.462890625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.111328125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0040867",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 61.0,
+      "mean": 43.53125
+    },
+    "receptions": {
+      "actual": 6.0,
+      "mean": 3.927734375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.26171875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0040890",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 10.060546875
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.96484375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.044921875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0041013",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 19.013671875
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 2.142578125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.09375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0041032",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 49.0,
+      "mean": 18.025390625
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 1.857421875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.111328125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0041037",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 98.0,
+      "mean": 49.080078125
+    },
+    "receptions": {
+      "actual": 6.0,
+      "mean": 3.814453125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.30078125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0041040",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 25.0,
+      "mean": 32.712890625
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.75390625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.21484375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0041041",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 8.095703125
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.826171875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.0546875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0041042",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 40.0,
+      "mean": 36.228515625
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.85546875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.24609375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0041067",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 18.083984375
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 1.623046875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.125
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0041099",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 52.0,
+      "mean": 7.958984375
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 0.802734375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.046875
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0041132",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 9.306640625
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 0.7890625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.0625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0041496",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 31.0,
+      "mean": 19.990234375
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 2.52734375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.12109375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0041511",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 58.0,
+      "mean": 38.66796875
+    },
+    "receptions": {
+      "actual": 8.0,
+      "mean": 3.0703125
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.275390625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0041523",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 70.0,
+      "mean": 43.94921875
+    },
+    "receptions": {
+      "actual": 6.0,
+      "mean": 3.451171875
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.244140625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0041524",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 6.0,
+      "mean": 8.326171875
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 0.822265625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.0625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0041525",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 23.458984375
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 2.099609375
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.134765625
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0041529",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 17.826171875
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 1.478515625
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.12109375
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0041547",
+    "week": 9,
+    "receiving_yards": {
+      "actual": 85.0,
+      "mean": 42.474609375
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 3.76953125
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.27734375
+    },
+    "family": "receiving"
+  },
+  {
     "game_id": "2026_01_NE_SEA",
     "player_id": "00-0034869",
     "week": 1,
@@ -46116,6 +48186,834 @@
     "family": "rushing"
   },
   {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0033526",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 43.0,
+      "mean": 34.826171875
+    },
+    "carries": {
+      "actual": 11.0,
+      "mean": 8.056640625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.275390625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0036442",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 7.0,
+      "mean": 13.857421875
+    },
+    "carries": {
+      "actual": 3.0,
+      "mean": 3.1484375
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.20703125
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0036906",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 7.0,
+      "mean": 18.392578125
+    },
+    "carries": {
+      "actual": 1.0,
+      "mean": 4.64453125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.14453125
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0038542",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 100.0,
+      "mean": 77.671875
+    },
+    "carries": {
+      "actual": 19.0,
+      "mean": 16.998046875
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.607421875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0038597",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 57.0,
+      "mean": 56.703125
+    },
+    "carries": {
+      "actual": 9.0,
+      "mean": 12.90625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.525390625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0039917",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 50.0,
+      "mean": 6.64453125
+    },
+    "carries": {
+      "actual": 3.0,
+      "mean": 2.15234375
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.060546875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0031503",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 11.0,
+      "mean": 11.412109375
+    },
+    "carries": {
+      "actual": 2.0,
+      "mean": 3.01953125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.12109375
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0033077",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 1.0,
+      "mean": 12.0703125
+    },
+    "carries": {
+      "actual": 2.0,
+      "mean": 3.072265625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.107421875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0033106",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 5.0,
+      "mean": 4.04296875
+    },
+    "carries": {
+      "actual": 4.0,
+      "mean": 1.84765625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.06640625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0033699",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 16.0,
+      "mean": 20.130859375
+    },
+    "carries": {
+      "actual": 8.0,
+      "mean": 4.78515625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.173828125
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0033873",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 8.0,
+      "mean": 14.39453125
+    },
+    "carries": {
+      "actual": 2.0,
+      "mean": 3.29296875
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.12109375
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0033906",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 32.0,
+      "mean": 27.220703125
+    },
+    "carries": {
+      "actual": 6.0,
+      "mean": 6.578125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.201171875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0034844",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 22.0,
+      "mean": 37.56640625
+    },
+    "carries": {
+      "actual": 13.0,
+      "mean": 8.671875
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.24609375
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0035250",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 31.0,
+      "mean": 28.380859375
+    },
+    "carries": {
+      "actual": 21.0,
+      "mean": 6.736328125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.248046875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0035710",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 11.0,
+      "mean": 13.861328125
+    },
+    "carries": {
+      "actual": 3.0,
+      "mean": 3.1953125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.13671875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0036158",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 18.0,
+      "mean": 45.541015625
+    },
+    "carries": {
+      "actual": 4.0,
+      "mean": 10.724609375
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.337890625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0036223",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 46.0,
+      "mean": 67.73828125
+    },
+    "carries": {
+      "actual": 13.0,
+      "mean": 15.74609375
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.525390625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0036555",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 79.0,
+      "mean": 63.87890625
+    },
+    "carries": {
+      "actual": 16.0,
+      "mean": 14.61328125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.435546875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0036567",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 6.0,
+      "mean": 27.634765625
+    },
+    "carries": {
+      "actual": 3.0,
+      "mean": 6.59375
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.267578125
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0036945",
+    "week": 9,
+    "rushing_yards": {
+      "actual": -1.0,
+      "mean": 27.50390625
+    },
+    "carries": {
+      "actual": 2.0,
+      "mean": 5.890625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.275390625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0036997",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 101.0,
+      "mean": 66.44921875
+    },
+    "carries": {
+      "actual": 20.0,
+      "mean": 15.271484375
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.5859375
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0037120",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 77.0,
+      "mean": 15.857421875
+    },
+    "carries": {
+      "actual": 12.0,
+      "mean": 3.796875
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.064453125
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0037256",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 28.0,
+      "mean": 30.908203125
+    },
+    "carries": {
+      "actual": 7.0,
+      "mean": 7.232421875
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.216796875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0037557",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 0.0,
+      "mean": 14.83203125
+    },
+    "carries": {
+      "actual": 0.0,
+      "mean": 3.533203125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.064453125
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0037840",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 45.0,
+      "mean": 59.673828125
+    },
+    "carries": {
+      "actual": 15.0,
+      "mean": 14.1796875
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.51953125
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0038040",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 5.0,
+      "mean": 19.529296875
+    },
+    "carries": {
+      "actual": 1.0,
+      "mean": 4.55078125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.14453125
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0038120",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 61.0,
+      "mean": 54.87109375
+    },
+    "carries": {
+      "actual": 15.0,
+      "mean": 13.14453125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.400390625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0038128",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 7.0,
+      "mean": 26.7109375
+    },
+    "carries": {
+      "actual": 2.0,
+      "mean": 5.126953125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.24609375
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0038134",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 102.0,
+      "mean": 80.3203125
+    },
+    "carries": {
+      "actual": 18.0,
+      "mean": 17.142578125
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.6953125
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0039139",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 74.0,
+      "mean": 87.166015625
+    },
+    "carries": {
+      "actual": 20.0,
+      "mean": 18.427734375
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.7265625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0039364",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 14.0,
+      "mean": 16.857421875
+    },
+    "carries": {
+      "actual": 3.0,
+      "mean": 4.041015625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.1015625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0039373",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 72.0,
+      "mean": 52.798828125
+    },
+    "carries": {
+      "actual": 15.0,
+      "mean": 11.9140625
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.373046875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0039732",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 2.0,
+      "mean": 20.5703125
+    },
+    "carries": {
+      "actual": 5.0,
+      "mean": 4.3359375
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.1796875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0039738",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 58.0,
+      "mean": 50.705078125
+    },
+    "carries": {
+      "actual": 11.0,
+      "mean": 11.552734375
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.435546875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0039794",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 33.0,
+      "mean": 72.06640625
+    },
+    "carries": {
+      "actual": 8.0,
+      "mean": 15.56640625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.478515625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0039798",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 0.0,
+      "mean": 13.328125
+    },
+    "carries": {
+      "actual": 0.0,
+      "mean": 3.380859375
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.05859375
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0039910",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 16.0,
+      "mean": 30.263671875
+    },
+    "carries": {
+      "actual": 4.0,
+      "mean": 6.197265625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.30859375
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0040162",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 21.0,
+      "mean": 25.822265625
+    },
+    "carries": {
+      "actual": 8.0,
+      "mean": 5.984375
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.228515625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0040198",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 55.0,
+      "mean": 58.123046875
+    },
+    "carries": {
+      "actual": 16.0,
+      "mean": 13.41015625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.421875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0040586",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 0.0,
+      "mean": 29.169921875
+    },
+    "carries": {
+      "actual": 0.0,
+      "mean": 6.966796875
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.23046875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0040644",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 7.0,
+      "mean": 7.765625
+    },
+    "carries": {
+      "actual": 2.0,
+      "mean": 2.19140625
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.044921875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0040743",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 51.0,
+      "mean": 16.998046875
+    },
+    "carries": {
+      "actual": 10.0,
+      "mean": 3.626953125
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.16015625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0040784",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 43.0,
+      "mean": 61.09375
+    },
+    "carries": {
+      "actual": 15.0,
+      "mean": 13.96875
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.447265625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0041096",
+    "week": 9,
+    "rushing_yards": {
+      "actual": -1.0,
+      "mean": 15.20703125
+    },
+    "carries": {
+      "actual": 1.0,
+      "mean": 3.6484375
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.06640625
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0041125",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 45.0,
+      "mean": 27.9375
+    },
+    "carries": {
+      "actual": 6.0,
+      "mean": 6.423828125
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.21875
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0041496",
+    "week": 9,
+    "rushing_yards": {
+      "actual": 57.0,
+      "mean": 44.185546875
+    },
+    "carries": {
+      "actual": 17.0,
+      "mean": 9.837890625
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.33203125
+    },
+    "family": "rushing"
+  },
+  {
     "game_id": "2026_01_NE_SEA",
     "player_id": "00-0034869",
     "week": 1,
@@ -52950,6 +55848,422 @@
     "passing_interceptions": {
       "actual": 0.0,
       "mean": 0.7265625
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0036442",
+    "week": 9,
+    "passing_yards": {
+      "actual": 271.0,
+      "mean": 259.5859375
+    },
+    "attempts": {
+      "actual": 29.0,
+      "mean": 35.029296875
+    },
+    "completions": {
+      "actual": 24.0,
+      "mean": 23.484375
+    },
+    "passing_tds": {
+      "actual": 3.0,
+      "mean": 1.998046875
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.705078125
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_CIN_ATL",
+    "player_id": "00-0039917",
+    "week": 9,
+    "passing_yards": {
+      "actual": 162.0,
+      "mean": 215.05859375
+    },
+    "attempts": {
+      "actual": 31.0,
+      "mean": 29.990234375
+    },
+    "completions": {
+      "actual": 20.0,
+      "mean": 19.28515625
+    },
+    "passing_tds": {
+      "actual": 1.0,
+      "mean": 1.306640625
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.68359375
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0026498",
+    "week": 9,
+    "passing_yards": {
+      "actual": 228.0,
+      "mean": 266.734375
+    },
+    "attempts": {
+      "actual": 43.0,
+      "mean": 36.0546875
+    },
+    "completions": {
+      "actual": 26.0,
+      "mean": 24.2109375
+    },
+    "passing_tds": {
+      "actual": 1.0,
+      "mean": 1.845703125
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.736328125
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0030565",
+    "week": 9,
+    "passing_yards": {
+      "actual": 165.0,
+      "mean": 232.150390625
+    },
+    "attempts": {
+      "actual": 32.0,
+      "mean": 31.44140625
+    },
+    "completions": {
+      "actual": 18.0,
+      "mean": 20.623046875
+    },
+    "passing_tds": {
+      "actual": 0.0,
+      "mean": 1.431640625
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.669921875
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0031503",
+    "week": 9,
+    "passing_yards": {
+      "actual": 71.0,
+      "mean": 150.45703125
+    },
+    "attempts": {
+      "actual": 8.0,
+      "mean": 22.2109375
+    },
+    "completions": {
+      "actual": 6.0,
+      "mean": 13.87890625
+    },
+    "passing_tds": {
+      "actual": 1.0,
+      "mean": 0.83984375
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.55078125
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0033077",
+    "week": 9,
+    "passing_yards": {
+      "actual": 335.0,
+      "mean": 241.265625
+    },
+    "attempts": {
+      "actual": 34.0,
+      "mean": 33.015625
+    },
+    "completions": {
+      "actual": 21.0,
+      "mean": 21.771484375
+    },
+    "passing_tds": {
+      "actual": 2.0,
+      "mean": 1.701171875
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.623046875
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0033106",
+    "week": 9,
+    "passing_yards": {
+      "actual": 170.0,
+      "mean": 259.17578125
+    },
+    "attempts": {
+      "actual": 25.0,
+      "mean": 35.203125
+    },
+    "completions": {
+      "actual": 17.0,
+      "mean": 23.443359375
+    },
+    "passing_tds": {
+      "actual": 0.0,
+      "mean": 1.888671875
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.708984375
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0033873",
+    "week": 9,
+    "passing_yards": {
+      "actual": 242.0,
+      "mean": 232.41796875
+    },
+    "attempts": {
+      "actual": 31.0,
+      "mean": 31.50390625
+    },
+    "completions": {
+      "actual": 23.0,
+      "mean": 20.763671875
+    },
+    "passing_tds": {
+      "actual": 2.0,
+      "mean": 1.50390625
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.62109375
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_DAL_IND",
+    "player_id": "00-0035710",
+    "week": 9,
+    "passing_yards": {
+      "actual": 180.0,
+      "mean": 207.25
+    },
+    "attempts": {
+      "actual": 34.0,
+      "mean": 30.677734375
+    },
+    "completions": {
+      "actual": 20.0,
+      "mean": 19.755859375
+    },
+    "passing_tds": {
+      "actual": 1.0,
+      "mean": 1.185546875
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.607421875
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_NYJ_KC",
+    "player_id": "00-0036945",
+    "week": 9,
+    "passing_yards": {
+      "actual": 0.0,
+      "mean": 66.060546875
+    },
+    "attempts": {
+      "actual": 0.0,
+      "mean": 10.76171875
+    },
+    "completions": {
+      "actual": 0.0,
+      "mean": 6.400390625
+    },
+    "passing_tds": {
+      "actual": 0.0,
+      "mean": 0.30078125
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.2890625
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_DET_MIA",
+    "player_id": "00-0038128",
+    "week": 9,
+    "passing_yards": {
+      "actual": 128.0,
+      "mean": 188.80078125
+    },
+    "attempts": {
+      "actual": 25.0,
+      "mean": 27.080078125
+    },
+    "completions": {
+      "actual": 13.0,
+      "mean": 17.111328125
+    },
+    "passing_tds": {
+      "actual": 0.0,
+      "mean": 1.0859375
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.734375
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0039150",
+    "week": 9,
+    "passing_yards": {
+      "actual": 276.0,
+      "mean": 238.853515625
+    },
+    "attempts": {
+      "actual": 39.0,
+      "mean": 33.396484375
+    },
+    "completions": {
+      "actual": 28.0,
+      "mean": 21.9140625
+    },
+    "passing_tds": {
+      "actual": 3.0,
+      "mean": 1.490234375
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.6875
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_DEN_CAR",
+    "player_id": "00-0039732",
+    "week": 9,
+    "passing_yards": {
+      "actual": 237.0,
+      "mean": 200.541015625
+    },
+    "attempts": {
+      "actual": 37.0,
+      "mean": 29.779296875
+    },
+    "completions": {
+      "actual": 25.0,
+      "mean": 18.76171875
+    },
+    "passing_tds": {
+      "actual": 2.0,
+      "mean": 1.09375
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.5703125
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_LA_WAS",
+    "player_id": "00-0039910",
+    "week": 9,
+    "passing_yards": {
+      "actual": 273.0,
+      "mean": 207.59765625
+    },
+    "attempts": {
+      "actual": 35.0,
+      "mean": 29.830078125
+    },
+    "completions": {
+      "actual": 24.0,
+      "mean": 18.94921875
+    },
+    "passing_tds": {
+      "actual": 1.0,
+      "mean": 1.099609375
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.72265625
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_NYG_PHI",
+    "player_id": "00-0039923",
+    "week": 9,
+    "passing_yards": {
+      "actual": 127.0,
+      "mean": 127.1640625
+    },
+    "attempts": {
+      "actual": 19.0,
+      "mean": 18.82421875
+    },
+    "completions": {
+      "actual": 12.0,
+      "mean": 11.853515625
+    },
+    "passing_tds": {
+      "actual": 0.0,
+      "mean": 0.671875
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.4375
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_CLE_NO",
+    "player_id": "00-0040743",
+    "week": 9,
+    "passing_yards": {
+      "actual": 265.0,
+      "mean": 231.35546875
+    },
+    "attempts": {
+      "actual": 35.0,
+      "mean": 33.1171875
+    },
+    "completions": {
+      "actual": 21.0,
+      "mean": 21.853515625
+    },
+    "passing_tds": {
+      "actual": 1.0,
+      "mean": 1.51171875
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.6875
     },
     "family": "passing"
   }
