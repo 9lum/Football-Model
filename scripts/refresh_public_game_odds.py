@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request,urlopen
 from scripts.refresh_odds import read
-from scripts.game_market_history import append_history
+from scripts.game_market_history import append_history,finite
 UTC=dt.timezone.utc
 SOURCE='https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard'
 def numeric(value,line=False):
@@ -83,6 +83,21 @@ def parse_scorers(payload):
                 row[name+'TDs']=int(count)
     return [{**p,'touchdowns':p['rushingTDs']+p['receivingTDs']} for p in players.values()]
 
+def scorers_complete(summary):
+    teams=summary.get('boxscore',{}).get('players',[])
+    if len(teams)!=2:return False
+    for team in teams:
+        groups={g.get('name'):g for g in team.get('statistics',[])}
+        for kind,key in [('rushing','rushingTouchdowns'),('receiving','receivingTouchdowns')]:
+            group=groups.get(kind,{})
+            if key not in group.get('keys',[]) or not group.get('athletes'):return False
+            index=group['keys'].index(key)
+            for athlete in group['athletes']:
+                stats=athlete.get('stats',[])
+                value=numeric(stats[index]) if len(stats)>index else None
+                if not finite(value) or value<0 or not value.is_integer():return False
+    return True
+
 def collect(output=Path('data'),now=None):
     now=now or dt.datetime.now(UTC);stamp=now.isoformat();games=read(output/'upcoming-games.json',{}).get('games',[]);weeks=sorted({(g['season'],g['week']) for g in games if g.get('game_type','REG')=='REG'})[:2]
     queries=[{'dates':year,'seasontype':2,'week':week} for year,week in weeks] or [{}];events={};results={};errors=[]
@@ -100,14 +115,17 @@ def collect(output=Path('data'),now=None):
             summary_url='https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?'+urlencode({'event':event_id.removeprefix('espn-')})
             with urlopen(Request(summary_url,headers={'User-Agent':'Projections-n-Shit/1.0'}),timeout=20) as response:summary=json.load(response)
             if not summary.get('boxscore',{}).get('players'):raise ValueError('Box score unavailable')
-            result.update(scorers=parse_scorers(summary),scorersObservedAt=stamp)
+            result.update(scorers=parse_scorers(summary),scorersObservedAt=stamp,scorersComplete=scorers_complete(summary))
         except Exception as error:
             if prior.get(event_id,{}).get('scorers') is not None:
-                result.update(scorers=prior[event_id]['scorers'],scorersObservedAt=prior[event_id].get('scorersObservedAt'))
+                result.update(scorers=prior[event_id]['scorers'],scorersObservedAt=prior[event_id].get('scorersObservedAt'),scorersComplete=prior[event_id].get('scorersComplete',False))
             errors.append({'source':'ESPN public scoring summary','event':event_id,'code':getattr(error,'code',type(error).__name__)})
     prior.update(results)
     retained=sorted(prior.values(),key=lambda r:r.get('kickoff') or '',reverse=True)[:128]
     value={'generatedAt':stamp,'source':'ESPN public scoreboard','status':'ok' if events else 'unavailable' if errors else 'no_prices','data':list(events.values()) if events or not errors else old.get('data',[]),'results':retained,'eventCount':len(events),'errors':errors,'nextRefreshAt':(now+dt.timedelta(minutes=15)).isoformat(),'limitations':['Publicly listed game lines, checked approximately every 15 minutes subject to GitHub delays. No streaming or provider-update-time guarantee.','Source quote-update timestamps are not supplied and remain null. observed_at records when this app read the listing.','The pregame close field is not treated as a verified archived closing line for CLV.']}
     if events:append_history(output,list(events.values()),stamp)
     output.mkdir(parents=True,exist_ok=True);(output/'public-game-odds.json').write_text(json.dumps(value,separators=(',',':')));print(json.dumps({k:v for k,v in value.items() if k!='data'}));return value
-if __name__=='__main__':collect()
+if __name__=='__main__':
+ collect()
+ from scripts.model_record import update_record
+ update_record()

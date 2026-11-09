@@ -17,3 +17,8 @@ class PublicOddsTests(unittest.TestCase):
   groups=[{'name':name,'keys':[key],'athletes':[{'athlete':athlete,'stats':[value]}]} for name,key,value in [('passing','passingTouchdowns','4'),('rushing','rushingTouchdowns','1'),('receiving','receivingTouchdowns','2')]]
   rows=parse_scorers({'boxscore':{'players':[{'team':{'displayName':'Team A'},'statistics':groups}]}})
   self.assertEqual(len(rows),1);self.assertEqual(rows[0]['touchdowns'],3)
+ def test_complete_scoring_requires_both_teams_valid_rushing_and_receiving_boxes(self):
+  from scripts.refresh_public_game_odds import scorers_complete
+  groups=[{'name':kind,'keys':[key],'athletes':[{'stats':['0']}]} for kind,key in [('rushing','rushingTouchdowns'),('receiving','receivingTouchdowns')]]
+  payload={'boxscore':{'players':[{'statistics':groups},{'statistics':groups}]}}
+  self.assertTrue(scorers_complete(payload));groups[0]['athletes'][0]['stats']=['-'];self.assertFalse(scorers_complete(payload))

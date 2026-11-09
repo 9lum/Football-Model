@@ -1,3 +1,3 @@
-const PAGES=new Set(['dashboard','weather','props','touchdowns','players','teams','matchups','odds','simulation','backtest','health','sources']);
+const PAGES=new Set(['dashboard','weather','props','touchdowns','players','teams','matchups','odds','simulation','backtest','record','health','sources']);
 export function researchHref(page,params={}){const target=PAGES.has(page)?page:'dashboard',q=new URLSearchParams();for(const key of ['player','team','game','market'])if(typeof params[key]==='string'&&params[key])q.set(key,params[key]);return '#'+target+(q.size?'?'+q.toString():'')}
 export function parseResearchRoute(hash){const raw=String(hash||'').replace(/^#/,''),split=raw.indexOf('?'),page=split<0?raw:raw.slice(0,split),q=new URLSearchParams(split<0?'':raw.slice(split+1));return{page:PAGES.has(page)?page:'dashboard',player:q.get('player')||'',team:q.get('team')||'',game:q.get('game')||'',market:q.get('market')||''}}
