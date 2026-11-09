@@ -11,7 +11,7 @@ def collect(bundle,health,now,fetch=None):
     """Official RSS plus allowlisted indexed X mentions; cap search requests per refresh."""
     from .availability import TEAM_SITES
     fetch=fetch or (lambda url:urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'NFLResearch/1.0'}),timeout=10).read())
-    profiles=bundle.get('players',[]);clubs={r['team'] for r in health.get('roster',[])};reports=[];coverage=[]
+    profiles=bundle.get('players',[]);clubs={f['team'] for f in bundle.get('forecasts',[]) if int(f['gameId'].split('_')[1])==health['week'] and datetime.fromisoformat(f['kickoff'].replace('Z','+00:00'))>now};reports=[];coverage=[]
     jobs=[('official','https://www.'+TEAM_SITES[t]+'/rss/news',t) for t in sorted(clubs) if t in TEAM_SITES]
     # Public indexing is incomplete; no authenticated or comprehensive X-feed claim.
     query='site:x.com (from:RapSheet OR from:AdamSchefter OR from:TomPelissero) NFL return injury'

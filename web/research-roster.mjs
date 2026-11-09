@@ -4,7 +4,7 @@ export const researchPositionLabel=p=>p==='RB'||p==='HB'?'HB':p;
 const position=p=>p.position==='HB'?'RB':p.position;
 export function injuryOrder(p){const h=p.health||{};if(h.scopeMismatch)return 0;if(h.ruledOut)return 3;return ({QUESTIONABLE:1,DOUBTFUL:2,OUT:3,IR:3,INACTIVE:3,SUSPENDED:3,PUP:3})[String(h.status||'').toUpperCase()]||0}
 function usage(p){const key=position(p)==='QB'?'attempts':position(p)==='RB'?'carries':'targets',rows=(p.history||[]).filter(g=>g.team===p.team&&Number.isFinite(g[key])).slice(-4);if(rows.length)return rows.reduce((s,g)=>s+g[key]+(key==='carries'?(g.targets||0):0),0)/rows.length;if(p.previousStatTeam&&p.previousStatTeam!==p.team)return 0;return (p.basicStats?.perGame?.[key]||0)+(key==='carries'?(p.basicStats?.perGame?.targets||0):0)}
-function depth(p){const r=p.roster;if(r?.fresh!==false&&Number.isFinite(r?.rank)&&r.rank>0)return r.rank;return p.expectedReplacement||r?.fresh!==false&&(r?.expectedStarter||r?.listedStarter)?1:99}
+function depth(p){const r=p.roster;if(p.expectedReplacement||r?.fresh!==false&&r?.expectedStarter)return 0;if(r?.fresh!==false&&Number.isFinite(r?.rank)&&r.rank>0)return r.rank;return p.expectedReplacement||r?.fresh!==false&&(r?.expectedStarter||r?.listedStarter)?1:99}
 function depthOrder(a,b){return depth(a)-depth(b)||usage(b)-usage(a)||a.name.localeCompare(b.name)||String(a.playerId).localeCompare(String(b.playerId))}
 export function groupResearchRoster(players,allPlayers=players){
  const pool=new Map();for(const p of [...allPlayers,...players])pool.set(p.playerId,p);

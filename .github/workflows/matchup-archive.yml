@@ -6,7 +6,7 @@ on:
   schedule:
     - cron: '17,47 * * * *'
   workflow_run:
-    workflows: ['Public-data model and current-season tests']
+    workflows: ['Public-data model and current-season tests', 'Public injuries, starters and fair-odds scenarios']
     types: [completed]
 permissions:
   contents: write

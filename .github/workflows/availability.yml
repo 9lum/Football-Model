@@ -5,14 +5,13 @@ on:
     workflows: ['Public-data model and current-season tests']
     types: [completed]
   push:
-    paths: ['edge/availability.py', 'edge/workload.py', 'edge/return_reports.py', 'web/workload.mjs', 'tests/test_workload.py', 'web/availability.mjs', '.github/workflows/availability.yml']
+    paths: ['edge/availability.py', 'edge/replacement_forecasts.py', 'web/lineup-replacements.mjs', 'edge/workload.py', 'edge/return_reports.py', 'web/workload.mjs', 'tests/test_workload.py', 'web/availability.mjs', '.github/workflows/availability.yml']
   schedule:
-    - cron: '17 * * * *'
-    - cron: '*/15 15-23 * * 0'
+    - cron: '*/15 * * * *'
 permissions:
   contents: write
 concurrency:
-  group: public-model-refresh
+  group: availability-refresh
   cancel-in-progress: false
 jobs:
   availability:
@@ -29,10 +28,14 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: work/health-cache
-          key: health-reference-${{ runner.os }}-${{ hashFiles('edge/availability.py') }}
+          key: health-reference-${{ runner.os }}-${{ hashFiles('edge/availability.py') }}-${{ github.run_id }}
+          restore-keys: |
+            health-reference-${{ runner.os }}-${{ hashFiles('edge/availability.py') }}-
+            health-reference-${{ runner.os }}-
       - name: Check injury resolution and projection scenarios
         run: |
           python -m unittest discover -s tests -p 'test_availability.py' -v
+          python -m unittest discover -s tests -p 'test_replacement_forecasts.py' -v
           python -m unittest discover -s tests -p 'test_workload.py' -v
           node --test web/availability.test.mjs web/workload.test.mjs
       - name: Refresh public injury reports and depth charts

@@ -30,7 +30,9 @@ def matches(event,f):
 def archive(output=Path('data'),limit=24):
  directory=output/'matchup-research';directory.mkdir(parents=True,exist_ok=True)
  index_path=output/'matchup-research-index.json';previous=json.loads(index_path.read_text()) if index_path.exists() else {};seen=set(previous.get('inspectedCommits',[]));processed=[]
- commits=fetch(f'https://api.github.com/repos/{REPO}/commits?path=data/latest.json&per_page={limit}')
+ model_commits=fetch(f'https://api.github.com/repos/{REPO}/commits?path=data/latest.json&per_page={limit}')
+ lineup_commits=fetch(f'https://api.github.com/repos/{REPO}/commits?path=data/availability.json&per_page=12')
+ commits=sorted({c['sha']:c for c in [*model_commits,*lineup_commits]}.values(),key=lambda c:c['commit']['committer']['date'],reverse=True)
  publications=[{'commit':c['sha'],'issuedAt':c['commit']['committer']['date']} for c in commits if c['sha'] not in seen]
  def load(p):
   try:return p,raw(p['commit'],'latest')

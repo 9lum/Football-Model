@@ -72,3 +72,30 @@ from final outcomes. Missing historical snapshots remain unavailable. Later box 
 can update the actual-history chart without changing the frozen forecast. Historical
 quotes are ineligible as live bets. The whole-week display advances at midnight Tuesday
 America/New_York only after every known game, including delayed Monday games, is final.
+
+## Replacement starters and public designations
+
+Current-week explicit OUT/INACTIVE/IR/PUP/NFI/suspension designations from scoped
+Sleeper or recent ESPN reports exclude the player from default projections, while
+retaining source/observation dates and distinguishing provider reports from official
+confirmation. Practice DNP, Questionable, and missing reports do not mean Out.
+Doubtful can display a conditional backup, never a confirmed absence. The next
+available current depth-chart player is promoted for QB/HB/WR/TE; unavailable backups
+are skipped. Expected replacements lead the displayed depth order and remain research
+estimates until their changed role is validated.
+
+Missing QB projections use the replacement's recorded starting-game production plus
+a historical experience-matched QB-change cohort. Attempts use own starts and team
+volume; completions/TD/interception rates shrink toward prior-season QB rates. QB
+rushing uses the replacement's own starts and is omitted without support, rather than
+inheriting the injured QB's mobility. Missing skill-player forecasts require at least
+two recorded same-team games and use their own outcomes, without assigning the entire
+absent player's workload. Existing forecasts remain their own player estimates.
+Original data and sportsbook prices are not mutated; unavailable players do not
+become automatic unders. Legacy archived forecasts retain their original designation
+semantics, rather than being retrospectively replaced by new rules.
+
+Public availability refreshes every 15 minutes independently of the full model job.
+Sleeper's player dictionary is cached for an hour with original retrieval timestamps;
+ESPN is checked each refresh. Collection-time resolution runs after retrieval so valid
+reports collected a few seconds after the job began are not incorrectly rejected.
