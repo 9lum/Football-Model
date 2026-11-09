@@ -1,15 +1,15 @@
 'use client';
-import {useId,useState} from 'react';
+import {useId} from 'react';
 import {fieldPoint,fieldPolygon,fieldBands} from '../../../web/field-perspective.mjs';
 const depths=['short','intermediate','deep'],areas=['left','middle','right'];
 const palette:Record<string,string>={short:'#55cbb0',intermediate:'#7bb5ff',deep:'#c4a0f2'};
 const pct=(value:any)=>Number.isFinite(value)?Math.round(value*100)+'%':'—';
 export default function FieldSurface({player,zones,selection,onSelect,depth,paths,qb}:any){
- const id=useId().replace(/:/g,''),[yaw,setYaw]=useState(0);
- const point=(x:number,z:number)=>fieldPoint(x,z,depth,yaw),polygon=(x0:number,z0:number,x1:number,z1:number)=>fieldPolygon(x0,z0,x1,z1,depth,yaw);
+ const id=useId().replace(/:/g,'');
+ const point=(x:number,z:number)=>fieldPoint(x,z,depth),polygon=(x0:number,z0:number,x1:number,z1:number)=>fieldPolygon(x0,z0,x1,z1,depth);
  const selectedDepth=selection.split('_')[0],selectedArea=areas.indexOf(selection.split('_')[1]);
  const band=(fieldBands as any)[selectedDepth]||fieldBands.short,end=point(18+selectedArea*32,(band[0]+band[1])/2),start=point(50,7);
- return <div className={'receiving-field-stage'+(depth?' tilted':'')} data-view={depth?'end-zone':'overhead'} onPointerMove={e=>{if(depth&&e.pointerType==='mouse'){const rect=e.currentTarget.getBoundingClientRect();setYaw(Math.round(((e.clientX-rect.left)/rect.width-.5)*10))}}} onPointerLeave={()=>setYaw(0)}>
+ return <div className={'receiving-field-stage'+(depth?' tilted':'')} data-view={depth?'end-zone':'overhead'}>
   <svg viewBox="0 45 720 435" role="group" aria-label={player.name+(qb?' passing':' target')+' distribution; '+(depth?'elevated end-zone perspective':'overhead view')+'; select a zone to inspect'}>
    <defs><linearGradient id={id+'-grass'} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#1c4f50"/><stop offset="1" stopColor="#102e39"/></linearGradient><linearGradient id={id+'-edge'} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#39716e"/><stop offset="1" stopColor="#0a1b26"/></linearGradient></defs>
    {depth&&<g className="field-stadium-seating" aria-hidden="true">{[9,6,3].map((n,i)=><polygon key={n} points={polygon(-n,-n/2,100+n,64+n/2)} fill={i===0?'#152b35':'#223e47'} fillOpacity={.65} stroke="#7faaa9" strokeOpacity={.18+i*.06} strokeWidth="1.5"/>)}<polygon points={polygon(0,0,100,64).split(' ').slice(0,2).join(' ')+' '+[point(100,0),point(0,0)].map(p=>`${p.x},${p.y+10}`).join(' ')} fill={'url(#'+id+'-edge)'} stroke="#345b61" strokeWidth="1"/></g>}
