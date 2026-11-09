@@ -70,4 +70,12 @@
 .receiving-zone-evidence{align-self:start}
 .receiving-zone-evidence p{margin-top:12px}
 @container receiving-field (max-width:850px){.receiving-field-layout{grid-template-columns:1fr}.receiving-zone-evidence dl{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 16px}.receiving-zone-evidence dl>div{flex-direction:column;gap:4px}.receiving-zone-title{padding-bottom:10px}.receiving-zone-evidence p{padding-top:4px}}
-@container receiving-field (max-width:500px){.field-zone-depth{display:none}.field-zone-percentage{font-size:30px;dominant-baseline:central;transform:translateY(5px)}.receiving-depth-legend button{padding:8px}.receiving-depth-legend strong{font-size:15px}.receiving-zone-evidence dl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container receiving-field (max-width:500px){.receiving-depth-legend button{padding:8px}.receiving-depth-legend strong{font-size:15px}.receiving-zone-evidence dl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* One centered metric per zone; depth ranges live in the shared legend. */
+.receiving-field-stage .field-zone-percentage{font-size:26px;font-weight:600;letter-spacing:-.035em;font-variant-numeric:tabular-nums lining-nums;dominant-baseline:central}
+.receiving-field-stage .field-zone-percent-symbol{font-size:15px;font-weight:500;letter-spacing:0;fill:#c8dfe4}
+.field-column-labels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:0 15%;margin:3px 0 0;text-align:center;color:var(--muted);font-size:11px;font-weight:550;line-height:1.5;text-transform:capitalize;letter-spacing:.02em}
+.field-view-caption{display:flex;justify-content:center;flex-wrap:wrap;gap:5px 12px;margin:10px 0 3px!important;color:var(--muted);font-size:10px!important;font-weight:400;line-height:1.5!important;letter-spacing:.015em}
+.field-view-caption span{opacity:.75}
+.receiving-depth-legend{margin-top:10px}

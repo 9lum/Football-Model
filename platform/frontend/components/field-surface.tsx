@@ -10,7 +10,7 @@ export default function FieldSurface({player,zones,selection,onSelect,depth,path
  const selectedDepth=selection.split('_')[0],selectedArea=areas.indexOf(selection.split('_')[1]);
  const band=(fieldBands as any)[selectedDepth]||fieldBands.short,end=point(18+selectedArea*32,(band[0]+band[1])/2),start=point(50,7);
  return <div className={'receiving-field-stage'+(depth?' tilted':'')} data-view={depth?'end-zone':'overhead'}>
-  <svg viewBox="0 45 720 435" role="group" aria-label={player.name+(qb?' passing':' target')+' distribution; '+(depth?'elevated end-zone perspective':'overhead view')+'; select a zone to inspect'}>
+  <svg viewBox="0 45 720 420" role="group" aria-label={player.name+(qb?' passing':' target')+' distribution; '+(depth?'elevated end-zone perspective':'overhead view')+'; select a zone to inspect'}>
    <defs><linearGradient id={id+'-grass'} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#1c4f50"/><stop offset="1" stopColor="#102e39"/></linearGradient><linearGradient id={id+'-edge'} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#39716e"/><stop offset="1" stopColor="#0a1b26"/></linearGradient></defs>
    {depth&&<g className="field-stadium-seating" aria-hidden="true">{[9,6,3].map((n,i)=><polygon key={n} points={polygon(-n,-n/2,100+n,64+n/2)} fill={i===0?'#152b35':'#223e47'} fillOpacity={.65} stroke="#7faaa9" strokeOpacity={.18+i*.06} strokeWidth="1.5"/>)}<polygon points={polygon(0,0,100,64).split(' ').slice(0,2).join(' ')+' '+[point(100,0),point(0,0)].map(p=>`${p.x},${p.y+10}`).join(' ')} fill={'url(#'+id+'-edge)'} stroke="#345b61" strokeWidth="1"/></g>}
    <polygon points={polygon(0,0,100,64)} fill={'url(#'+id+'-grass)'} stroke="#86bcb6" strokeWidth="1.8"/>
@@ -25,16 +25,16 @@ export default function FieldSurface({player,zones,selection,onSelect,depth,path
     return <g key={key} className={'receiving-field-zone'+(active?' selected':'')} role="button" tabIndex={0} aria-pressed={active} aria-label={d+' '+area+': '+pct(zone?.targetShare)} onClick={()=>onSelect(key)} onFocus={()=>onSelect(key)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(key)}}}>
      <title>{d} {area}: {zone?.targets??0} {qb?'passes':'targets'} · {pct(zone?.targetShare)}</title>
      <polygon points={polygon(x0,nearInset,x1,farInset)} fill={palette[d]} fillOpacity={active ? .3 : .13} stroke={palette[d]} strokeWidth={active?2.2:1.2} strokeOpacity={active?1:.6}/>
-     <text className="field-zone-percentage" x={cx} y={cy-(d==='intermediate'?5:3)} textAnchor="middle" dominantBaseline="central" fill="#f2fbff" fontSize={d==='intermediate'?22:28} fontWeight="650">{pct(zone?.targetShare)}</text>
-     <text className="field-zone-depth" x={cx} y={cy+(d==='intermediate'?15:18)} textAnchor="middle" fill="#dae8ef" fontSize={d==='intermediate'?10:11}>{d==='short'?'<10':d==='intermediate'?'10–19':'20+'} yd</text>
+     <text className="field-zone-percentage" x={cx} y={cy} textAnchor="middle" dominantBaseline="central" fill="#f2fbff" fontSize="26" fontWeight="600">{Number.isFinite(zone?.targetShare)?<><tspan>{Math.round(zone.targetShare*100)}</tspan><tspan className="field-zone-percent-symbol" fontSize="15" dx="2">%</tspan></>:'—'}</text>
     </g>;
    }))}
    {paths&&<path d={`M ${start.x} ${start.y} Q ${start.x} ${end.y+35} ${end.x} ${end.y}`} fill="none" stroke={palette[selectedDepth]} strokeWidth="2.5" strokeDasharray="6 5" pointerEvents="none"/>}
    <line x1={point(2,8).x} y1={point(2,8).y} x2={point(98,8).x} y2={point(98,8).y} stroke="#f1d58c" strokeWidth="2" strokeDasharray="6 4"/>
-   <text x={point(50,3).x} y={point(50,3).y+4} textAnchor="middle" fill="#d5e6e7" fontSize="12" letterSpacing="1.5">LINE OF SCRIMMAGE ↑</text>
-   <text x={point(50,61).x} y={point(50,61).y+4} textAnchor="middle" fill="#d5e6e7" fontSize="10" letterSpacing="1.5">UPFIELD ↑</text>
-   {areas.map((area,i)=><text key={area} x={point(20+i*30,-1.5).x} y={depth?449:442} fill="currentColor" fontSize="12" fontWeight="600" textAnchor="middle">{area.toUpperCase()}</text>)}
-   <text x="360" y="472" textAnchor="middle" fill="currentColor" fontSize="10" letterSpacing="1.2">{depth?'ELEVATED END-ZONE VIEW':'OVERHEAD VIEW'} · ILLUSTRATIVE FIELD</text>
+   <text x={point(50,3).x} y={point(50,3).y+4} textAnchor="middle" fill="#d5e6e7" fontSize="11" letterSpacing=".4">Line of scrimmage ↑</text>
+   <text x={point(50,61).x} y={point(50,61).y+4} textAnchor="middle" fill="#d5e6e7" fontSize="10" letterSpacing=".8">Upfield ↑</text>
+
   </svg>
+  <div className="field-column-labels" aria-hidden="true">{areas.map(area=><span key={area}>{area}</span>)}</div>
+  <p className="field-view-caption">{depth?'Elevated end-zone view':'Overhead view'}<span>Illustrative field</span></p>
  </div>;
 }
