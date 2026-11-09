@@ -1,4 +1,4 @@
-export const recordMarkets={total:'Over / Under',moneyline:'Moneylines',touchdown:'Touchdown scorers'};
+export const recordMarkets={total:'Game over / under',moneyline:'Moneylines',touchdown:'Touchdown scorers'};
 export function filterRecord(rows=[],season='all',week='all',market='all'){
  return rows.filter(r=>(season==='all'||String(r.season)===String(season))&&(week==='all'||String(r.week)===String(week))&&(market==='all'||r.market===market));
 }
