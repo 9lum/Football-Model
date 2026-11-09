@@ -29,7 +29,7 @@ export default function ReceivingField({player,forecast,research,events=[]}:any)
   </header>
   {available?<>
    <div className="receiving-field-layout"><div className="receiving-field-map">
-    <FieldSurface player={player} zones={zones} selection={selection} onSelect={setSelection} depth={tilted} paths={paths} qb={qb} depthShares={profile.depthShares}/>
+    <FieldSurface player={player} zones={zones} selection={selection} onSelect={setSelection} depth={tilted} paths={paths} qb={qb}/>
 
     <p className="receiving-field-hint">Select a zone to inspect · percentages of located {qb?'throws':'targets'}{paths?' · example path, not tracking':''}</p>
    </div>
