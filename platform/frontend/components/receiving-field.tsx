@@ -9,7 +9,7 @@ const num=(n:any,d=1)=>Number.isFinite(n)?Number(n).toFixed(d):'—';
 const depths=['short','intermediate','deep'],areas=['left','middle','right'];
 const palette:Record<string,string>={short:'#55cbb0',intermediate:'#7bb5ff',deep:'#c4a0f2'};
 export default function ReceivingField({player,forecast,research,events=[]}:any){
- const [period,setPeriod]=useState('last6'),[zoneSelection,setSelection]=useState(''),[tilted,setTilted]=useState(true),[paths,setPaths]=useState(false);
+ const [period,setPeriod]=useState('season'),[zoneSelection,setSelection]=useState(''),[tilted,setTilted]=useState(true),[paths,setPaths]=useState(false);
  if(!['WR','TE','RB','QB'].includes(player?.position))return null;
  const qb=player.position==='QB',base=player.receivingRouteProfile;
  const source=research&&(!base||!Number.isFinite(Date.parse(base.last6?.asOf||''))||Date.parse(research.last6?.asOf||'')>=Date.parse(base.last6?.asOf||''))?research:base;
@@ -25,7 +25,7 @@ export default function ReceivingField({player,forecast,research,events=[]}:any)
  return <section className="receiving-field-panel" aria-label={qb?'Quarterback passing field and rushing profile':'Receiving field and target-depth research'}>
   <header className="receiving-field-heading">
    <div><span className="eyebrow">{qb?'QUARTERBACK PROFILE':'RECEIVING PROFILE'}</span><h3>{qb?'Where the passes go':'Where the targets go'}</h3><p>{qb?'Throwing depth, field location & rushing decisions':'Target depth & field location · measured play-by-play'}</p></div>
-   <div className="receiving-field-controls"><label>Sample<select value={period} onChange={e=>{setPeriod(e.target.value);setSelection('')}}>{[3,6,9].map(n=><option key={n} value={'last'+n}>Last {n} {qb?'games':'targeted games'}</option>)}<option value="season">Current season</option></select></label><button aria-pressed={tilted} onClick={()=>setTilted(v=>!v)}>{tilted?'Depth on':'Flat field'}</button><button aria-pressed={paths} onClick={()=>setPaths(v=>!v)}>Example path {paths?'on':'off'}</button></div>
+   <div className="receiving-field-controls"><label>Sample<select value={period} onChange={e=>{setPeriod(e.target.value);setSelection('')}}><option value="season">Full season</option>{[3,6,9].map(n=><option key={n} value={'last'+n}>Last {n} {qb?'games':'targeted games'}</option>)}</select></label><button aria-pressed={tilted} onClick={()=>setTilted(v=>!v)}>{tilted?'Depth on':'Flat field'}</button><button aria-pressed={paths} onClick={()=>setPaths(v=>!v)}>Example path {paths?'on':'off'}</button></div>
   </header>
   {available?<>
    <div className="receiving-field-layout"><div className="receiving-field-map">
