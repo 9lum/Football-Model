@@ -49,4 +49,4 @@ are play-by-play non-scramble QB rushes, excluding kneels and no-plays. Their sh
 uses non-kneel QB carries, a different denominator from scramble rate. Missing rush
 classification stays unknown. These are observed classifications, not inferred
 playbook intent, and the new display does not add an unvalidated projection multiplier.
-The field keeps SVG text flat and unfiltered; only its decorative rim has perspective.
+Depth mode projects the field, zones, yard lines and stadium tiers through an elevated end-zone camera. Flat mode uses overhead coordinates. Text stays screen-aligned and unfiltered in both views, with larger mobile percentages and depth ranges in the legend.

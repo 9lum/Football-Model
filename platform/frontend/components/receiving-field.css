@@ -9,16 +9,14 @@
 .receiving-field-controls button[aria-pressed=true]{border-color:var(--accent);color:var(--ink)}
 .receiving-field-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(190px,.42fr);align-items:stretch;gap:16px}
 .receiving-field-map{min-width:0}
-/* Keep the SVG on its native 2D plane: perspective/filter rasterization blurred text.
-   Only the decorative rim is transformed; every field label stays vector sharp. */
-.receiving-field-stage{position:relative;isolation:isolate;min-width:0;padding:0 0 8px;perspective:1000px}
-.receiving-field-stage::before{content:'';position:absolute;z-index:-1;inset:4% 2% 9%;border:1px solid rgba(92,188,178,.35);border-radius:12px;opacity:0;transition:opacity .2s,transform .15s;pointer-events:none}
-.receiving-field-stage.tilted::before{opacity:1;transform:translateY(7px) rotateX(8deg) rotateY(var(--field-yaw,0deg));background:#122d35;box-shadow:0 6px 0 #0b1e28,0 12px 18px rgba(0,0,0,.14)}
+/* Perspective is projected into vector geometry, keeping labels screen-aligned. */
+.receiving-field-stage{position:relative;min-width:0;padding:0 0 8px;border-radius:10px;background:radial-gradient(ellipse at 50% 65%,rgba(65,140,136,.09),transparent 70%)}
 .receiving-field-stage svg{display:block;width:100%;height:auto;overflow:visible;transform:none;filter:none;shape-rendering:geometricPrecision;text-rendering:geometricPrecision;color:var(--muted)}
 .receiving-field-stage svg text{font-family:inherit;font-variant-numeric:tabular-nums;pointer-events:none}
 .receiving-field-zone{cursor:pointer;outline:none}
-.receiving-field-zone:focus-visible rect{stroke:#fff;stroke-width:3}
-.receiving-field-zone:hover rect{fill-opacity:.22}
+.receiving-field-zone:focus-visible polygon{stroke:#fff;stroke-width:3}
+.receiving-field-zone:hover polygon{fill-opacity:.3}
+.receiving-field-zone polygon{transition:fill-opacity .15s,stroke-opacity .15s}
 .receiving-depth-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:4px}
 .receiving-depth-legend button{display:grid;grid-template-columns:7px minmax(0,1fr) auto;align-items:center;gap:7px;text-align:left;padding:9px 10px;border:1px solid var(--line);border-radius:7px;font-size:11px;min-width:0;line-height:1.4}
 .receiving-depth-legend i{width:7px;height:7px;border-radius:50%}
@@ -66,3 +64,10 @@
 @media(max-width:600px){.receiving-field-panel{padding:12px}.receiving-field-heading h3{font-size:18px}}
 /* Multi-row display controls must scroll away instead of covering a phone's field. */
 @media(max-width:760px){html body:has(.receiving-field-panel) .topbar{position:relative;top:auto}}
+
+.receiving-depth-legend span{line-height:1.35}
+.receiving-depth-legend small{display:block;font-size:10px;font-weight:400;color:var(--muted);margin-top:2px;white-space:nowrap}
+.receiving-zone-evidence{align-self:start}
+.receiving-zone-evidence p{margin-top:12px}
+@container receiving-field (max-width:850px){.receiving-field-layout{grid-template-columns:1fr}.receiving-zone-evidence dl{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 16px}.receiving-zone-evidence dl>div{flex-direction:column;gap:4px}.receiving-zone-title{padding-bottom:10px}.receiving-zone-evidence p{padding-top:4px}}
+@container receiving-field (max-width:500px){.field-zone-depth{display:none}.field-zone-percentage{font-size:30px;dominant-baseline:central}.receiving-depth-legend button{padding:8px}.receiving-depth-legend strong{font-size:15px}.receiving-zone-evidence dl{grid-template-columns:repeat(2,minmax(0,1fr))}}
