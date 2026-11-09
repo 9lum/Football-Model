@@ -20,13 +20,13 @@ export default function FieldSurface({player,zones,selection,onSelect,depth,path
    {Array.from({length:24},(_,i)=>[38,62].map(x=>{const a=point(x,9+i*2),b=point(x+1.2,9+i*2);return <line key={i+'-'+x} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke="#bfdbd6" strokeOpacity=".2"/>}))}
    {depths.flatMap(d=>areas.map((area,i)=>{
     const key=d+'_'+area,zone=zones.find((z:any)=>z.depth===d&&z.area===area),active=selection===key,[near,far]=(fieldBands as any)[d];
-    const x0=7+i*29.5,x1=x0+27,nearInset=near+1.2,farInset=far-1.2;
+    const x0=7+i*29.5,x1=x0+27,inset=d==='intermediate' ? .8 : 1.2,nearInset=near+inset,farInset=far-inset;
     const front=point((x0+x1)/2,nearInset),back=point((x0+x1)/2,farInset),cx=(front.x+back.x)/2,cy=(front.y+back.y)/2;
     return <g key={key} className={'receiving-field-zone'+(active?' selected':'')} role="button" tabIndex={0} aria-pressed={active} aria-label={d+' '+area+': '+pct(zone?.targetShare)} onClick={()=>onSelect(key)} onFocus={()=>onSelect(key)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(key)}}}>
      <title>{d} {area}: {zone?.targets??0} {qb?'passes':'targets'} · {pct(zone?.targetShare)}</title>
      <polygon points={polygon(x0,nearInset,x1,farInset)} fill={palette[d]} fillOpacity={active ? .3 : .13} stroke={palette[d]} strokeWidth={active?2.2:1.2} strokeOpacity={active?1:.6}/>
-     <text className="field-zone-percentage" x={cx} y={cy-2} textAnchor="middle" dominantBaseline="middle" fill="#f2fbff" fontSize={d==='intermediate'?25:28} fontWeight="650">{pct(zone?.targetShare)}</text>
-     <text className="field-zone-depth" x={cx} y={cy+18} textAnchor="middle" fill="#dae8ef" fontSize="11">{d==='short'?'<10':d==='intermediate'?'10–19':'20+'} yd</text>
+     <text className="field-zone-percentage" x={cx} y={cy-(d==='intermediate'?5:3)} textAnchor="middle" dominantBaseline="central" fill="#f2fbff" fontSize={d==='intermediate'?22:28} fontWeight="650">{pct(zone?.targetShare)}</text>
+     <text className="field-zone-depth" x={cx} y={cy+(d==='intermediate'?15:18)} textAnchor="middle" fill="#dae8ef" fontSize={d==='intermediate'?10:11}>{d==='short'?'<10':d==='intermediate'?'10–19':'20+'} yd</text>
     </g>;
    }))}
    {paths&&<path d={`M ${start.x} ${start.y} Q ${start.x} ${end.y+35} ${end.x} ${end.y}`} fill="none" stroke={palette[selectedDepth]} strokeWidth="2.5" strokeDasharray="6 5" pointerEvents="none"/>}

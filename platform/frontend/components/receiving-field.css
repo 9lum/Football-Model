@@ -70,4 +70,4 @@
 .receiving-zone-evidence{align-self:start}
 .receiving-zone-evidence p{margin-top:12px}
 @container receiving-field (max-width:850px){.receiving-field-layout{grid-template-columns:1fr}.receiving-zone-evidence dl{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 16px}.receiving-zone-evidence dl>div{flex-direction:column;gap:4px}.receiving-zone-title{padding-bottom:10px}.receiving-zone-evidence p{padding-top:4px}}
-@container receiving-field (max-width:500px){.field-zone-depth{display:none}.field-zone-percentage{font-size:30px;dominant-baseline:central}.receiving-depth-legend button{padding:8px}.receiving-depth-legend strong{font-size:15px}.receiving-zone-evidence dl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container receiving-field (max-width:500px){.field-zone-depth{display:none}.field-zone-percentage{font-size:30px;dominant-baseline:central;transform:translateY(5px)}.receiving-depth-legend button{padding:8px}.receiving-depth-legend strong{font-size:15px}.receiving-zone-evidence dl{grid-template-columns:repeat(2,minmax(0,1fr))}}
