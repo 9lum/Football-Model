@@ -1,8 +1,8 @@
 'use client';
 import {useId} from 'react';
 import {fieldPoint,fieldPolygon,fieldBands} from '../../../web/field-perspective.mjs';
-const depths=['short','intermediate','deep'],areas=['left','middle','right'];
-const palette:Record<string,string>={short:'#55cbb0',intermediate:'#7bb5ff',deep:'#c4a0f2'};
+const depths=['behind','short','intermediate','deep'],areas=['left','middle','right'];
+const palette:Record<string,string>={behind:'#f0b86e',short:'#55cbb0',intermediate:'#7bb5ff',deep:'#c4a0f2'};
 const pct=(value:any)=>Number.isFinite(value)?Math.round(value*100)+'%':'—';
 export default function FieldSurface({player,zones,selection,onSelect,depth,paths,qb}:any){
  const id=useId().replace(/:/g,'');
@@ -22,16 +22,17 @@ export default function FieldSurface({player,zones,selection,onSelect,depth,path
     const key=d+'_'+area,zone=zones.find((z:any)=>z.depth===d&&z.area===area),active=selection===key,[near,far]=(fieldBands as any)[d];
     const x0=7+i*29.5,x1=x0+27,inset=d==='intermediate' ? .8 : 1.2,nearInset=near+inset,farInset=far-inset;
     const front=point((x0+x1)/2,nearInset),back=point((x0+x1)/2,farInset),cx=(front.x+back.x)/2,cy=(front.y+back.y)/2;
+    if(d==='behind'&&!zones.some((z:any)=>z.depth==='behind'))return null;
     return <g key={key} className={'receiving-field-zone field-zone-'+d+(active?' selected':'')} role="button" tabIndex={0} aria-pressed={active} aria-label={d+' '+area+': '+pct(zone?.targetShare)} onClick={()=>onSelect(key)} onFocus={()=>onSelect(key)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(key)}}}>
      <title>{d} {area}: {zone?.targets??0} {qb?'passes':'targets'} · {pct(zone?.targetShare)}</title>
      <polygon points={polygon(x0,nearInset,x1,farInset)} fill={palette[d]} fillOpacity={active ? .3 : .13} stroke={palette[d]} strokeWidth={active?2.2:1.2} strokeOpacity={active?1:.6}/>
-     <text className="field-zone-percentage" x={cx} y={cy-(d==='intermediate'?7:8)} textAnchor="middle" dominantBaseline="central" fill="#f2fbff" fontSize="26" fontWeight="600">{Number.isFinite(zone?.targetShare)?<><tspan>{Math.round(zone.targetShare*100)}</tspan><tspan className="field-zone-percent-symbol" fontSize="15" dx="2">%</tspan></>:'—'}</text>
-     <text className="field-zone-depth" x={cx} y={cy+(d==='intermediate'?17:20)} textAnchor="middle" fill="#bfd5de" fontSize={d==='intermediate'?9:10}>{d==='short'?'Under 10 yd':d==='intermediate'?'10–19 yd':'20+ yd'}</text>
+     <text className="field-zone-percentage" x={cx} y={cy-(['intermediate','behind'].includes(d)?7:8)} textAnchor="middle" dominantBaseline="central" fill="#f2fbff" fontSize="26" fontWeight="600">{Number.isFinite(zone?.targetShare)?<><tspan>{Math.round(zone.targetShare*100)}</tspan><tspan className="field-zone-percent-symbol" fontSize="15" dx="2">%</tspan></>:'—'}</text>
+     <text className="field-zone-depth" x={cx} y={cy+(['intermediate','behind'].includes(d)?17:20)} textAnchor="middle" fill="#bfd5de" fontSize={['intermediate','behind'].includes(d)?9:10}>{d==='behind'?'Behind LOS':d==='short'?(zones.some((z:any)=>z.depth==='behind')?'0–9 yd':'Under 10 yd'):d==='intermediate'?'10–19 yd':'20+ yd'}</text>
     </g>;
    }))}
    {paths&&<path d={`M ${start.x} ${start.y} Q ${start.x} ${end.y+35} ${end.x} ${end.y}`} fill="none" stroke={palette[selectedDepth]} strokeWidth="2.5" strokeDasharray="6 5" pointerEvents="none"/>}
    <line x1={point(2,8).x} y1={point(2,8).y} x2={point(98,8).x} y2={point(98,8).y} stroke="#f1d58c" strokeWidth="2" strokeDasharray="6 4"/>
-   <text x={point(50,3).x} y={point(50,3).y+4} textAnchor="middle" fill="#d5e6e7" fontSize="11" letterSpacing=".4">Line of scrimmage ↑</text>
+   {!zones.some((z:any)=>z.depth==='behind')&&<text x={point(50,3).x} y={point(50,3).y+4} textAnchor="middle" fill="#d5e6e7" fontSize="11" letterSpacing=".4">Line of scrimmage ↑</text>}
    <text x={point(50,61).x} y={point(50,61).y+4} textAnchor="middle" fill="#d5e6e7" fontSize="10" letterSpacing=".8">Upfield ↑</text>
 
   </svg>

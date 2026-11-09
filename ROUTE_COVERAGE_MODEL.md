@@ -50,3 +50,25 @@ uses non-kneel QB carries, a different denominator from scramble rate. Missing r
 classification stays unknown. These are observed classifications, not inferred
 playbook intent, and the new display does not add an unvalidated projection multiplier.
 Depth mode projects the field, zones, yard lines and stadium tiers through an elevated end-zone camera. Flat mode uses overhead coordinates. Text stays screen-aligned and unfiltered in both views, with larger mobile percentages and depth ranges in the legend.
+
+## Behind the line of scrimmage
+
+Display profiles version 2 have twelve zones: negative air yards, 0–9, 10–19,
+and 20+, each split left/middle/right. Negative-air-yard throws are rendered on
+the near side of the yellow LOS. Zone percentages use located throws/targets;
+additional catches/completions and their share use located receptions as their
+denominator. No behind-LOS zero is inferred when locations are missing. This
+is a display split; the original core model's nine-region feature construction
+remains unchanged. Both Player Research and Matchup Lab use the same component.
+
+## Completed Matchup Lab research
+
+Per-game archives retain the latest model file actually committed before kickoff,
+including original distribution draws, defensive inputs, roster context, available
+pregame weather and recorded book/TD prices. The source commit and publication time
+are retained. A chronological Git history recovery job runs every half hour and after
+model refreshes; future archives persist by game. It does not regenerate forecasts
+from final outcomes. Missing historical snapshots remain unavailable. Later box scores
+can update the actual-history chart without changing the frozen forecast. Historical
+quotes are ineligible as live bets. The whole-week display advances at midnight Tuesday
+America/New_York only after every known game, including delayed Monday games, is final.

@@ -8,3 +8,5 @@ export function fieldPolygon(x0,z0,x1,z1,depth=true,yaw=0){
  return [[x0,z0],[x1,z0],[x1,z1],[x0,z1]].map(([x,z])=>{const p=fieldPoint(x,z,depth,yaw);return `${p.x.toFixed(2)},${p.y.toFixed(2)}`}).join(' ');
 }
 export const fieldBands={short:[8,18],intermediate:[18,28],deep:[28,58]};
+// Negative air-yard throws are shown on the near side of the yellow LOS.
+fieldBands.behind=[0,8];

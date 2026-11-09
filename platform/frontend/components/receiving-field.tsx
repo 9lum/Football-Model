@@ -6,8 +6,8 @@ import {impliedTeamPoints,matchGameMarket} from '../../../web/game-markets.mjs';
 import {teamNames} from '../../../web/market-core.mjs';
 const pct=(n:any)=>Number.isFinite(n)?Math.round(n*100)+'%':'—';
 const num=(n:any,d=1)=>Number.isFinite(n)?Number(n).toFixed(d):'—';
-const depths=['short','intermediate','deep'],areas=['left','middle','right'];
-const palette:Record<string,string>={short:'#55cbb0',intermediate:'#7bb5ff',deep:'#c4a0f2'};
+const depths=['behind','short','intermediate','deep'],areas=['left','middle','right'];
+const palette:Record<string,string>={behind:'#f0b86e',short:'#55cbb0',intermediate:'#7bb5ff',deep:'#c4a0f2'};
 export default function ReceivingField({player,forecast,research,events=[]}:any){
  const [period,setPeriod]=useState('season'),[zoneSelection,setSelection]=useState(''),[tilted,setTilted]=useState(true),[paths,setPaths]=useState(false);
  if(!['WR','TE','RB','QB'].includes(player?.position))return null;
@@ -22,6 +22,7 @@ export default function ReceivingField({player,forecast,research,events=[]}:any)
   ['Pass attempts',profile?.throwAttempts,0],['Completion rate',profile?.completionRate,'pct'],['Average air depth',profile?.adot,1],
   ['Yards / attempt',profile?.yardsPerAttempt,2],['EPA / dropback',profile?.epaPerDropback,2],['CPOE',profile?.cpoe,'points']
  ]:[['Located targets',profile?.targets,0],['Located catches',profile?.receptions,0],['Located receiving yards',profile?.receivingYards,0],['Average air depth',profile?.adot,1],['Yards / target',profile?.yardsPerTarget,2],['Catch rate',profile?.catchRate,'pct']];
+ if(profile?.depthDefinitionVersion===2)items.push([qb?'Behind-LOS completions':'Behind-LOS catches',profile.behindLineReceptions,0],[qb?'Completions behind LOS':'Catches behind LOS',profile.behindLineCatchShare,'pct'],['Behind-LOS yards',profile.behindLineYards,0]);
  return <section className="receiving-field-panel" aria-label={qb?'Quarterback passing field and rushing profile':'Receiving field and target-depth research'}>
   <header className="receiving-field-heading">
    <div><span className="eyebrow">{qb?'QUARTERBACK PROFILE':'RECEIVING PROFILE'}</span><h3>{qb?'Where the passes go':'Where the targets go'}</h3><p>{qb?'Throwing depth, field location & rushing decisions':'Target depth & field location · measured play-by-play'}</p></div>
@@ -31,10 +32,10 @@ export default function ReceivingField({player,forecast,research,events=[]}:any)
    <div className="receiving-field-layout"><div className="receiving-field-map">
     <FieldSurface player={player} zones={zones} selection={selection} onSelect={setSelection} depth={tilted} paths={paths} qb={qb}/>
 
-    <div className="receiving-depth-legend" role="group" aria-label="Depth summary">{depths.map(depth=><button key={depth} aria-pressed={selection.startsWith(depth+'_')} onClick={()=>setSelection(depth+'_middle')}><i style={{background:palette[depth]}}/><span>{depth==='short'?'Short':depth==='deep'?'Deep':'Intermediate'}<small>{depth==='short'?'Under 10 yd':depth==='deep'?'20+ yd':'10–19 yd'}</small></span><strong>{pct(profile.depthShares?.[depth])}</strong></button>)}</div>
+    <div className={'receiving-depth-legend'+(profile.depthDefinitionVersion===2?' has-behind':'')} role="group" aria-label="Depth summary">{depths.filter(depth=>depth!=='behind'||profile.depthDefinitionVersion===2).map(depth=><button key={depth} aria-pressed={selection.startsWith(depth+'_')} onClick={()=>setSelection(depth+'_middle')}><i style={{background:palette[depth]}}/><span>{depth==='behind'?'Behind LOS':depth==='short'?'Short':depth==='deep'?'Deep':'Intermediate'}<small>{depth==='behind'?'Negative air yards':depth==='short'?(profile.depthDefinitionVersion===2?'0–9 yd':'Under 10 yd'):depth==='deep'?'20+ yd':'10–19 yd'}</small></span><strong>{pct(profile.depthShares?.[depth])}</strong></button>)}</div>
     <p className="receiving-field-hint">Select a zone to inspect · percentages of located {qb?'throws':'targets'}{paths?' · example path, not tracking':''}</p>
    </div>
-   <aside className="receiving-zone-evidence"><div className="receiving-zone-title"><div><span className="eyebrow">SELECTED ZONE</span><h4>{selection.replace('_',' ')}</h4></div><strong className="receiving-zone-share" style={{color:palette[selection.split('_')[0]]}}>{pct(selected?.targetShare)}</strong></div>
+   <aside className="receiving-zone-evidence"><div className="receiving-zone-title"><div><span className="eyebrow">SELECTED ZONE</span><h4>{selection.replace('behind','behind LOS').replace('_',' ')}</h4></div><strong className="receiving-zone-share" style={{color:palette[selection.split('_')[0]]}}>{pct(selected?.targetShare)}</strong></div>
     <dl>{[[qb?'Passes':'Targets',selected?.targets??'—'],[qb?'Completion rate':'Catch rate',pct(selected?.catchRate)],[qb?'Yards / attempt':'Yards / target',num(selected?.yardsPerTarget,2)],[qb?'EPA / attempt':'EPA / target',num(selected?.epaPerTarget,2)],['Air depth',num(selected?.airYards)+' yd']].map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
     <p>{profile.games} games · {qb?profile.locatedAttempts:profile.targets} located {qb?'throws':'targets'}</p>
    </aside></div>

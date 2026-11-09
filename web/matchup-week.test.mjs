@@ -21,3 +21,8 @@ test('a partial coverage response cannot unlock next week while a known Monday f
  const partial={...snapshot,weekCoverage:[{season:2026,week:9,eventIds:[sun.game_id]}]};
  assert.equal(matchupWeek([sun,mon,next],partial,Date.parse('2026-11-10T02:00Z')).week,9);
 });
+test('a finished week remains visible Monday evening until Tuesday midnight Eastern',()=>{
+ const done={...snapshot,results:[final(sun),final(mon),{...final(next),completed:false}]};
+ assert.equal(matchupWeek([sun,mon,next],done,Date.parse('2026-11-10T04:59:00Z')).week,9);
+ assert.equal(matchupWeek([sun,mon,next],done,Date.parse('2026-11-10T05:00:00Z')).week,10);
+});

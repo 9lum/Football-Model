@@ -1,0 +1,40 @@
+name: Preserve matchup research after games finish
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/archive_matchup_research.py', '.github/workflows/matchup-archive.yml']
+  schedule:
+    - cron: '17,47 * * * *'
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
+permissions:
+  contents: write
+concurrency:
+  group: matchup-research-archive
+  cancel-in-progress: false
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_matchup_archive.py'
+      - run: python -m scripts.archive_matchup_research
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Publish retained pregame research
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/matchup-research data/matchup-research-index.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Preserve published per-game matchup research [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

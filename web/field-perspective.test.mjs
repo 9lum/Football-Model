@@ -8,7 +8,7 @@ test('end-zone camera has real perspective and flat view remains overhead',()=>{
  assert.ok(fieldPoint(50,58,true).y<fieldPoint(50,8,true).y);
  assert.notEqual(fieldPolygon(0,0,100,64,true),fieldPolygon(0,0,100,64,false));
 });
-test('all nine projected zones keep gutters, positive area, and fit the view box',()=>{
+test('all twelve projected zones keep gutters, positive area, and fit the view box',()=>{
  for(const depth of [true,false])for(const yaw of [-5,0,5])for(const [near,far] of Object.values(fieldBands)){
   for(let i=0;i<3;i++){
    const x=7+i*29.5,points=fieldPolygon(x,near+1.2,x+27,far-1.2,depth,yaw).split(' ').map(p=>p.split(',').map(Number));

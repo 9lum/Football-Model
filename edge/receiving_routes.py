@@ -3,7 +3,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from .data import team
-DEPTHS=['short','intermediate','deep'];AREAS=['left','middle','right']
+DEPTHS=['short','intermediate','deep'];DISPLAY_DEPTHS=['behind',*DEPTHS];AREAS=['left','middle','right']
 COLUMNS=['game_id','play_id','season','season_type','posteam','defteam','receiver_player_id','air_yards','pass_location','complete_pass','yards_gained','epa','pass_attempt','no_play','defense_man_zone_type']
 def target_records(pbp,participation=None):
  d=pbp.copy()
@@ -40,12 +40,13 @@ def load_targets(season,cache,schedules):
 def number(x):return float(x) if pd.notna(x) and np.isfinite(x) else None
 def summarize(g,scope):
  if g.empty:return {'status':'unavailable','reason':'No published targeted-pass depth/location sample','scope':scope,'routeTypes':[]}
+ g=g.copy();g['chartDepth']=np.where(g.air_yards.lt(0),'behind',g.depth)
  n=len(g);recs=number(g.complete_pass.sum(min_count=1));yards=number(g.yards_gained.sum(min_count=1));zones=[]
- for depth in DEPTHS:
+ for depth in DISPLAY_DEPTHS:
   for area in AREAS:
-   selected=g[(g.depth==depth)&(g.pass_location==area)];count=len(selected)
+   selected=g[(g.chartDepth==depth)&(g.pass_location==area)];count=len(selected)
    zones.append({'depth':depth,'area':area,'targets':count,'targetShare':count/n,'catchRate':number(selected.complete_pass.mean()),'yardsPerTarget':number(selected.yards_gained.mean()),'epaPerTarget':number(selected.epa.mean()),'airYards':number(selected.air_yards.mean())})
- return {'status':'available','scope':scope,'season':int(g.season.max()),'games':g.game_id.nunique(),'targets':n,'receptions':recs,'receivingYards':yards,'adot':number(g.air_yards.mean()),'catchRate':number(g.complete_pass.mean()),'yardsPerTarget':number(g.yards_gained.mean()),'depthShares':{depth:float(g.depth.eq(depth).mean()) for depth in DEPTHS},'zones':zones,'routeTypes':[],'asOf':g.kickoff.max().isoformat(),'definition':'Share of recorded targets with known air yards and left/middle/right location; not share of all routes run. Short <10 air yards, intermediate 10–19, deep ≥20. Actual route concepts are not publicly charted here.','source':'https://github.com/nflverse/nflverse-data/releases/tag/pbp'}
+ return {'status':'available','scope':scope,'season':int(g.season.max()),'games':g.game_id.nunique(),'targets':n,'receptions':recs,'receivingYards':yards,'adot':number(g.air_yards.mean()),'catchRate':number(g.complete_pass.mean()),'yardsPerTarget':number(g.yards_gained.mean()),'depthDefinitionVersion':2,'behindLineTargets':int(g.air_yards.lt(0).sum()),'behindLineReceptions':number(g.loc[g.air_yards.lt(0),'complete_pass'].sum(min_count=1)) if g.air_yards.lt(0).any() else 0,'behindLineYards':number(g.loc[g.air_yards.lt(0),'yards_gained'].sum(min_count=1)) if g.air_yards.lt(0).any() else 0,'behindLineCatchShare':number(g.loc[g.air_yards.lt(0),'complete_pass'].sum()/recs) if recs else None,'behindLineShare':float(g.air_yards.lt(0).mean()),'depthShares':{depth:float(g.chartDepth.eq(depth).mean()) for depth in DISPLAY_DEPTHS},'zones':zones,'routeTypes':[],'asOf':g.kickoff.max().isoformat(),'definition':'Share of recorded targets with known air yards and left/middle/right location; not share of all routes run. Behind LOS <0 air yards, short 0–9, intermediate 10–19, deep ≥20. Actual route concepts are not publicly charted here.','source':'https://github.com/nflverse/nflverse-data/releases/tag/pbp'}
 
 class RouteContext:
  def __init__(self,records,season):
