@@ -25,7 +25,9 @@ def aggregate(pbp,part):
    item={'kind':kind,'season':summarize(g)}
    for n in [3,6,9]:
     ids=g[['game_id','week']].drop_duplicates().sort_values('week').tail(n).game_id;item['last'+str(n)]=summarize(g[g.game_id.isin(ids)])
-   if item['season']:output[pid]=item
+   if item['season']:
+    if pid in output:output[pid]['passingProfile']=item
+    else:output[pid]=item
  return output
 
 def run():

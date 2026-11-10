@@ -13,5 +13,12 @@ class RouteExperimentTests(unittest.TestCase):
  def test_conflicting_charting_is_rejected(self):
   part=pd.DataFrame([dict(nflverse_game_id='2025_01_A_B',play_id=1,route=r) for r in ['GO','POST']])
   with self.assertRaises(ValueError):aggregate(self.sample(),part)
+ def test_trick_play_passing_never_replaces_receiving_sample(self):
+  p=self.sample();p.loc[3,'passer_player_id']='r';p.loc[3,'receiver_player_id']='q'
+  part=pd.DataFrame([dict(nflverse_game_id='2025_01_A_B',play_id=i,route='GO') for i in range(1,5)])
+  out=aggregate(p,part)
+  self.assertEqual(out['r']['season']['chartedTargets'],3)
+  self.assertEqual(out['r']['passingProfile']['season']['chartedTargets'],1)
+  self.assertEqual(out['q']['passingProfile']['season']['chartedTargets'],3)
 
 if __name__=='__main__':unittest.main()
