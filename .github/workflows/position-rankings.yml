@@ -1,0 +1,38 @@
+name: Refresh team position rankings
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/refresh_position_rankings.py', 'scripts/test_position_rankings.py', '.github/workflows/position-rankings.yml']
+  schedule:
+    - cron: '10 11 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: position-rankings
+  cancel-in-progress: false
+jobs:
+  rank:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m unittest scripts.test_position_rankings -v
+      - run: python -m scripts.refresh_position_rankings
+      - name: Publish current-season position ranks
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/position-rankings.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh current-season position-group production ranks [skip ci]'
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+            done
+            exit 1
+          fi
