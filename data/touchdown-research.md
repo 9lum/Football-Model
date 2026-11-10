@@ -1,6 +1,6 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-10T08:10:44.167874+00:00
-Current-season tests: 2496; Brier 0.1492 vs baseline 0.1624.
+Generated 2026-11-10T13:28:37.859514+00:00
+Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 
 ## WAS at NYG
 2026-11-13T01:15:00+00:00
@@ -63,7 +63,7 @@ Current-season tests: 2496; Brier 0.1492 vs baseline 0.1624.
 - Quinshon Judkins (CLE RB): 10 RZ carries, 0 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.32, actual TD 2.
 - Denzel Boston (CLE WR): 0 RZ carries, 6 RZ targets, 0 inside-5 carries, 3 inside-5 targets across 4 team games; xTD 2.11, actual TD 0.
 ### 2. Position matchup & leverage
-- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440632; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440705; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - HOU: opponent RZ EPA -0.08730845378426665; pass EPA -0.048441304130173536; rush EPA 0.037159318195270324. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
@@ -233,7 +233,7 @@ Current-season tests: 2496; Brier 0.1492 vs baseline 0.1624.
 - PIT: recent RZ pass rate 0.5853658536585366, RZ pass-over-expected 8.441946637339708 percentage points, neutral seconds/play 30.439252336448597. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Ja'Marr Chase — Core research · highest estimated probability**: estimated ATTD 55.5%; fair odds -125; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Jaylen Warren — Additional research candidate**: estimated ATTD 48.2%; fair odds 107; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Jaylen Warren — Additional research candidate**: estimated ATTD 48.3%; fair odds 107; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Chase Brown — Additional research candidate**: estimated ATTD 43.6%; fair odds 129; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## LAC at BAL
@@ -243,7 +243,7 @@ Current-season tests: 2496; Brier 0.1492 vs baseline 0.1624.
 - Zay Flowers (BAL WR): 1 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.79, actual TD 1.
 - Omarion Hampton (LAC RB): 5 RZ carries, 0 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.58, actual TD 0.
 ### 2. Position matchup & leverage
-- BAL: opponent RZ EPA 0.02930725432846432; pass EPA -0.012377849488062555; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- BAL: opponent RZ EPA 0.029307254328464337; pass EPA -0.012377849488062517; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LAC: opponent RZ EPA 0.1267243022809456; pass EPA 0.10603490819654081; rush EPA -0.11257448391336833. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
