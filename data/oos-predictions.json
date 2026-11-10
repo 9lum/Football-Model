@@ -84305,7 +84305,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.006261959879698047,
+    "routeSignal": -0.006261959879698044,
     "receiving_yards": {
       "actual": 22.0,
       "mean": 41.69921875,
@@ -84438,7 +84438,7 @@
       "receptions": 0.95,
       "receiving_yards": 0.95
     },
-    "routeSignal": -0.03376400025500045,
+    "routeSignal": -0.03376400025500044,
     "receiving_yards": {
       "actual": 66.0,
       "mean": 68.306640625,
@@ -84913,7 +84913,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.0112233168382175,
+    "routeSignal": -0.011223316838217498,
     "receiving_yards": {
       "actual": 7.0,
       "mean": 53.337890625,
@@ -85103,7 +85103,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.02344240228137465,
+    "routeSignal": 0.023442402281374657,
     "receiving_yards": {
       "actual": 59.0,
       "mean": 31.779296875,
@@ -90575,7 +90575,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.023601150872384444,
+    "routeSignal": -0.023601150872384447,
     "receiving_yards": {
       "actual": 32.0,
       "mean": 38.052734375,
@@ -90765,7 +90765,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.015109747629613448,
+    "routeSignal": -0.01510974762961345,
     "receiving_yards": {
       "actual": 27.0,
       "mean": 42.447265625,
@@ -94964,7 +94964,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.00973779489118505,
+    "routeSignal": -0.009737794891185047,
     "receiving_yards": {
       "actual": 14.0,
       "mean": 32.306640625,
@@ -95724,7 +95724,7 @@
       "receptions": 0.95,
       "receiving_yards": 0.95
     },
-    "routeSignal": -0.07113911124113649,
+    "routeSignal": -0.07113911124113648,
     "receiving_yards": {
       "actual": 4.0,
       "mean": 55.677734375,
@@ -101158,7 +101158,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.027946856512010232,
+    "routeSignal": -0.02794685651201024,
     "receiving_yards": {
       "actual": 24.0,
       "mean": 19.5234375,
@@ -101975,7 +101975,7 @@
       "receptions": 0.95,
       "receiving_yards": 0.95
     },
-    "routeSignal": -0.045235512003001514,
+    "routeSignal": -0.0452355120030015,
     "receiving_yards": {
       "actual": 30.0,
       "mean": 40.443359375,
@@ -102165,7 +102165,7 @@
       "receptions": 0.95,
       "receiving_yards": 0.95
     },
-    "routeSignal": -0.03749345777709091,
+    "routeSignal": -0.03749345777709092,
     "receiving_yards": {
       "actual": 37.0,
       "mean": 43.3671875,
@@ -111532,7 +111532,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.004604662069129812,
+    "routeSignal": -0.004604662069129817,
     "receiving_yards": {
       "actual": 16.0,
       "mean": 29.67578125,
@@ -112045,7 +112045,7 @@
       "receptions": 1.05,
       "receiving_yards": 1.05
     },
-    "routeSignal": 0.04145931165279444,
+    "routeSignal": 0.04145931165279445,
     "receiving_yards": {
       "actual": 24.0,
       "mean": 47.83984375,
@@ -118714,7 +118714,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.004316631975765519,
+    "routeSignal": -0.004316631975765518,
     "receiving_yards": {
       "actual": 25.0,
       "mean": 27.125,
@@ -119352,6 +119352,823 @@
       "mean": 1.28125,
       "unadjustedMean": 1.28125,
       "baseline": 1.3333333333333333,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0033293",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "RB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.017614492307165112,
+    "receiving_yards": {
+      "actual": 5.0,
+      "mean": 17.92578125,
+      "unadjustedMean": 17.92578125,
+      "baseline": 15.0,
+      "p10": 0.0,
+      "p90": 46.900000000000034
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 2.24609375,
+      "unadjustedMean": 2.24609375,
+      "baseline": 2.5,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.091796875,
+      "unadjustedMean": 0.091796875,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 1.0,
+      "mean": 2.984375,
+      "unadjustedMean": 2.984375,
+      "baseline": 3.3333333333333335,
+      "p10": 0.0,
+      "p90": 6.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0034827",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "WR",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        4.666015625,
+        4.42578125,
+        4.1953125,
+        3.97265625
+      ],
+      "receptions": [
+        2.923828125,
+        2.77734375,
+        2.611328125,
+        2.49609375
+      ],
+      "receiving_yards": [
+        36.08984375,
+        34.27734375,
+        32.470703125,
+        30.671875
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 0.95,
+      "receptions": 0.95,
+      "receiving_yards": 0.95
+    },
+    "routeSignal": -0.049412489625212386,
+    "receiving_yards": {
+      "actual": 25.0,
+      "mean": 34.27734375,
+      "unadjustedMean": 36.08984375,
+      "baseline": 45.166666666666664,
+      "p10": 0.0,
+      "p90": 74.0
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.77734375,
+      "unadjustedMean": 2.923828125,
+      "baseline": 2.8333333333333335,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.205078125,
+      "unadjustedMean": 0.205078125,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 5.0,
+      "mean": 4.42578125,
+      "unadjustedMean": 4.666015625,
+      "baseline": 5.0,
+      "p10": 1.0,
+      "p90": 8.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0035229",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "TE",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.016966180798096555,
+    "receiving_yards": {
+      "actual": 33.0,
+      "mean": 34.84375,
+      "unadjustedMean": 34.84375,
+      "baseline": 43.166666666666664,
+      "p10": 3.0,
+      "p90": 71.0
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 3.154296875,
+      "unadjustedMean": 3.154296875,
+      "baseline": 4.5,
+      "p10": 1.0,
+      "p90": 6.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.275390625,
+      "unadjustedMean": 0.275390625,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 7.0,
+      "mean": 4.669921875,
+      "unadjustedMean": 4.669921875,
+      "baseline": 5.333333333333333,
+      "p10": 1.0,
+      "p90": 8.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0035537",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "RB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 36.0,
+      "mean": 21.560546875,
+      "unadjustedMean": 21.560546875,
+      "baseline": 32.333333333333336,
+      "p10": 0.0,
+      "p90": 49.0
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 2.36328125,
+      "unadjustedMean": 2.36328125,
+      "baseline": 2.8333333333333335,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.119140625,
+      "unadjustedMean": 0.119140625,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 2.0,
+      "mean": 3.16796875,
+      "unadjustedMean": 3.16796875,
+      "baseline": 2.8333333333333335,
+      "p10": 1.0,
+      "p90": 6.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0035689",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "TE",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 37.0,
+      "mean": 16.162109375,
+      "unadjustedMean": 16.162109375,
+      "baseline": 5.833333333333333,
+      "p10": 0.0,
+      "p90": 42.0
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 1.65234375,
+      "unadjustedMean": 1.65234375,
+      "baseline": 1.3333333333333333,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.091796875,
+      "unadjustedMean": 0.091796875,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 5.0,
+      "mean": 2.328125,
+      "unadjustedMean": 2.328125,
+      "baseline": 1.8333333333333333,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0036322",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "WR",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.00019762095514109514,
+    "receiving_yards": {
+      "actual": 58.0,
+      "mean": 54.634765625,
+      "unadjustedMean": 54.634765625,
+      "baseline": 55.833333333333336,
+      "p10": 14.0,
+      "p90": 108.90000000000003
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 4.390625,
+      "unadjustedMean": 4.390625,
+      "baseline": 4.666666666666667,
+      "p10": 1.0,
+      "p90": 8.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.37109375,
+      "unadjustedMean": 0.37109375,
+      "baseline": 0.6666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 11.0,
+      "mean": 6.720703125,
+      "unadjustedMean": 6.720703125,
+      "baseline": 6.666666666666667,
+      "p10": 3.0,
+      "p90": 11.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0037248",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "RB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 16.638671875,
+      "unadjustedMean": 16.638671875,
+      "baseline": 16.333333333333332,
+      "p10": 0.0,
+      "p90": 38.0
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 1.87109375,
+      "unadjustedMean": 1.87109375,
+      "baseline": 1.5,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.068359375,
+      "unadjustedMean": 0.068359375,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 1.0,
+      "mean": 2.560546875,
+      "unadjustedMean": 2.560546875,
+      "baseline": 2.1666666666666665,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0037261",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "WR",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        5.568359375,
+        5.28125,
+        5.017578125,
+        4.728515625
+      ],
+      "receptions": [
+        3.84375,
+        3.630859375,
+        3.46484375,
+        3.271484375
+      ],
+      "receiving_yards": [
+        41.904296875,
+        39.787109375,
+        37.71484375,
+        35.623046875
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 0.95,
+      "receptions": 0.95,
+      "receiving_yards": 0.95
+    },
+    "routeSignal": -0.06471828475295037,
+    "receiving_yards": {
+      "actual": 58.0,
+      "mean": 39.787109375,
+      "unadjustedMean": 41.904296875,
+      "baseline": 50.666666666666664,
+      "p10": 5.0,
+      "p90": 84.90000000000003
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 3.630859375,
+      "unadjustedMean": 3.84375,
+      "baseline": 3.8333333333333335,
+      "p10": 1.0,
+      "p90": 7.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.291015625,
+      "unadjustedMean": 0.294921875,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 4.0,
+      "mean": 5.28125,
+      "unadjustedMean": 5.568359375,
+      "baseline": 5.333333333333333,
+      "p10": 2.0,
+      "p90": 9.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0038933",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "TE",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        4.6171875,
+        4.3984375,
+        4.150390625,
+        3.92578125
+      ],
+      "receptions": [
+        3.115234375,
+        2.958984375,
+        2.818359375,
+        2.646484375
+      ],
+      "receiving_yards": [
+        35.275390625,
+        33.501953125,
+        31.75,
+        29.96875
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 0.95,
+      "receptions": 0.95,
+      "receiving_yards": 0.95
+    },
+    "routeSignal": -0.04721471306335738,
+    "receiving_yards": {
+      "actual": 28.0,
+      "mean": 33.501953125,
+      "unadjustedMean": 35.275390625,
+      "baseline": 45.166666666666664,
+      "p10": 0.0,
+      "p90": 71.90000000000003
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.958984375,
+      "unadjustedMean": 3.115234375,
+      "baseline": 3.6666666666666665,
+      "p10": 0.0,
+      "p90": 6.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.177734375,
+      "unadjustedMean": 0.177734375,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 3.0,
+      "mean": 4.3984375,
+      "unadjustedMean": 4.6171875,
+      "baseline": 4.833333333333333,
+      "p10": 1.0,
+      "p90": 8.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0038994",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "WR",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.008245938479103997,
+    "receiving_yards": {
+      "actual": 28.0,
+      "mean": 40.62109375,
+      "unadjustedMean": 40.62109375,
+      "baseline": 41.5,
+      "p10": 5.0,
+      "p90": 81.90000000000003
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 3.337890625,
+      "unadjustedMean": 3.337890625,
+      "baseline": 2.6666666666666665,
+      "p10": 1.0,
+      "p90": 6.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.19921875,
+      "unadjustedMean": 0.19921875,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 3.0,
+      "mean": 5.203125,
+      "unadjustedMean": 5.203125,
+      "baseline": 5.5,
+      "p10": 2.0,
+      "p90": 9.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0039901",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "WR",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        4.138671875,
+        3.908203125,
+        3.72265625,
+        3.51953125
+      ],
+      "receptions": [
+        2.533203125,
+        2.384765625,
+        2.263671875,
+        2.16796875
+      ],
+      "receiving_yards": [
+        31.90625,
+        30.3046875,
+        28.716796875,
+        27.11328125
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 0.95,
+      "receptions": 0.95,
+      "receiving_yards": 0.95
+    },
+    "routeSignal": -0.044032438333019584,
+    "receiving_yards": {
+      "actual": 17.0,
+      "mean": 30.3046875,
+      "unadjustedMean": 31.90625,
+      "baseline": 47.666666666666664,
+      "p10": 0.0,
+      "p90": 63.0
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.384765625,
+      "unadjustedMean": 2.533203125,
+      "baseline": 3.1666666666666665,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.244140625,
+      "unadjustedMean": 0.244140625,
+      "baseline": 0.5,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 6.0,
+      "mean": 3.908203125,
+      "unadjustedMean": 4.138671875,
+      "baseline": 4.333333333333333,
+      "p10": 1.0,
+      "p90": 7.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0040506",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "WR",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 6.0,
+      "mean": 6.62109375,
+      "unadjustedMean": 6.62109375,
+      "baseline": 4.333333333333333,
+      "p10": 0.0,
+      "p90": 22.0
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 0.6640625,
+      "unadjustedMean": 0.6640625,
+      "baseline": 0.8333333333333334,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.056640625,
+      "unadjustedMean": 0.056640625,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 4.0,
+      "mean": 0.99609375,
+      "unadjustedMean": 0.99609375,
+      "baseline": 1.1666666666666667,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0040509",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "TE",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 7.95703125,
+      "unadjustedMean": 7.95703125,
+      "baseline": 7.166666666666667,
+      "p10": 0.0,
+      "p90": 24.900000000000034
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.732421875,
+      "unadjustedMean": 0.732421875,
+      "baseline": 0.5,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.044921875,
+      "unadjustedMean": 0.044921875,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 0.0,
+      "mean": 1.07421875,
+      "unadjustedMean": 1.07421875,
+      "baseline": 0.6666666666666666,
       "p10": 0.0,
       "p90": 3.0
     },
@@ -146660,6 +147477,210 @@
     "family": "rushing"
   },
   {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0032950",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "QB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 0.0,
+      "mean": 11.43359375,
+      "unadjustedMean": 11.43359375,
+      "baseline": 9.666666666666666,
+      "p10": 0.0,
+      "p90": 30.0
+    },
+    "carries": {
+      "actual": 1.0,
+      "mean": 2.90625,
+      "unadjustedMean": 2.90625,
+      "baseline": 2.8333333333333335,
+      "p10": 0.0,
+      "p90": 7.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.10546875,
+      "unadjustedMean": 0.10546875,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0033293",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "RB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 16.0,
+      "mean": 55.984375,
+      "unadjustedMean": 55.984375,
+      "baseline": 69.66666666666667,
+      "p10": 19.0,
+      "p90": 102.0
+    },
+    "carries": {
+      "actual": 5.0,
+      "mean": 13.408203125,
+      "unadjustedMean": 13.408203125,
+      "baseline": 16.333333333333332,
+      "p10": 7.0,
+      "p90": 20.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.40625,
+      "unadjustedMean": 0.40625,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0034857",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "QB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 15.0,
+      "mean": 36.091796875,
+      "unadjustedMean": 36.091796875,
+      "baseline": 41.166666666666664,
+      "p10": 6.0,
+      "p90": 72.0
+    },
+    "carries": {
+      "actual": 6.0,
+      "mean": 7.326171875,
+      "unadjustedMean": 7.326171875,
+      "baseline": 8.166666666666666,
+      "p10": 2.0,
+      "p90": 13.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.48046875,
+      "unadjustedMean": 0.48046875,
+      "baseline": 1.1666666666666667,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0037248",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "RB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 107.0,
+      "mean": 85.822265625,
+      "unadjustedMean": 85.822265625,
+      "baseline": 108.33333333333333,
+      "p10": 36.1,
+      "p90": 149.7000000000001
+    },
+    "carries": {
+      "actual": 31.0,
+      "mean": 18.33984375,
+      "unadjustedMean": 18.33984375,
+      "baseline": 20.833333333333332,
+      "p10": 11.0,
+      "p90": 26.0
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.830078125,
+      "unadjustedMean": 0.830078125,
+      "baseline": 1.1666666666666667,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0037525",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "RB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 35.0,
+      "mean": 42.890625,
+      "unadjustedMean": 42.890625,
+      "baseline": 45.833333333333336,
+      "p10": 6.0,
+      "p90": 91.60000000000014
+    },
+    "carries": {
+      "actual": 6.0,
+      "mean": 10.091796875,
+      "unadjustedMean": 10.091796875,
+      "baseline": 10.666666666666666,
+      "p10": 3.0,
+      "p90": 17.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.314453125,
+      "unadjustedMean": 0.314453125,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0039875",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "RB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 2.0,
+      "mean": 18.607421875,
+      "unadjustedMean": 18.607421875,
+      "baseline": 6.5,
+      "p10": 0.0,
+      "p90": 47.900000000000034
+    },
+    "carries": {
+      "actual": 2.0,
+      "mean": 4.17578125,
+      "unadjustedMean": 4.17578125,
+      "baseline": 1.6666666666666667,
+      "p10": 0.0,
+      "p90": 9.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.123046875,
+      "unadjustedMean": 0.123046875,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
     "game_id": "2026_01_NE_SEA",
     "player_id": "00-0034869",
     "week": 1,
@@ -161206,6 +162227,156 @@
       "baseline": 0.3333333333333333,
       "p10": 0.0,
       "p90": 2.0
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0032950",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "QB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "passing_yards": {
+      "actual": 81.0,
+      "mean": 148.146484375,
+      "unadjustedMean": 148.146484375,
+      "baseline": 219.83333333333334,
+      "p10": 0.0,
+      "p90": 289.0
+    },
+    "attempts": {
+      "actual": 25.0,
+      "mean": 21.1484375,
+      "unadjustedMean": 21.1484375,
+      "baseline": 31.333333333333332,
+      "p10": 0.0,
+      "p90": 39.0
+    },
+    "completions": {
+      "actual": 8.0,
+      "mean": 13.16015625,
+      "unadjustedMean": 13.16015625,
+      "baseline": 19.833333333333332,
+      "p10": 0.0,
+      "p90": 24.0
+    },
+    "passing_tds": {
+      "actual": 0.0,
+      "mean": 0.796875,
+      "unadjustedMean": 0.796875,
+      "baseline": 1.1666666666666667,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "passing_interceptions": {
+      "actual": 2.0,
+      "mean": 0.474609375,
+      "unadjustedMean": 0.474609375,
+      "baseline": 0.8333333333333334,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0034857",
+    "week": 9,
+    "team": "BUF",
+    "opponent": "MIN",
+    "position": "QB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "passing_yards": {
+      "actual": 234.0,
+      "mean": 213.392578125,
+      "unadjustedMean": 213.392578125,
+      "baseline": 243.16666666666666,
+      "p10": 121.1,
+      "p90": 312.90000000000003
+    },
+    "attempts": {
+      "actual": 31.0,
+      "mean": 29.291015625,
+      "unadjustedMean": 29.291015625,
+      "baseline": 29.333333333333332,
+      "p10": 20.0,
+      "p90": 40.0
+    },
+    "completions": {
+      "actual": 21.0,
+      "mean": 18.896484375,
+      "unadjustedMean": 18.896484375,
+      "baseline": 19.166666666666668,
+      "p10": 12.0,
+      "p90": 26.0
+    },
+    "passing_tds": {
+      "actual": 1.0,
+      "mean": 1.3984375,
+      "unadjustedMean": 1.3984375,
+      "baseline": 1.5,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.623046875,
+      "unadjustedMean": 0.623046875,
+      "baseline": 0.8333333333333334,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_BUF_MIN",
+    "player_id": "00-0040494",
+    "week": 9,
+    "team": "MIN",
+    "opponent": "BUF",
+    "position": "QB",
+    "kickoff": "2026-11-10T01:15:00+00:00",
+    "passing_yards": {
+      "actual": 58.0,
+      "mean": 73.6171875,
+      "unadjustedMean": 73.6171875,
+      "baseline": 49.833333333333336,
+      "p10": 0.0,
+      "p90": 220.0
+    },
+    "attempts": {
+      "actual": 7.0,
+      "mean": 11.251953125,
+      "unadjustedMean": 11.251953125,
+      "baseline": 11.166666666666666,
+      "p10": 0.0,
+      "p90": 30.0
+    },
+    "completions": {
+      "actual": 6.0,
+      "mean": 6.935546875,
+      "unadjustedMean": 6.935546875,
+      "baseline": 7.5,
+      "p10": 0.0,
+      "p90": 20.0
+    },
+    "passing_tds": {
+      "actual": 0.0,
+      "mean": 0.32421875,
+      "unadjustedMean": 0.32421875,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.328125,
+      "unadjustedMean": 0.328125,
+      "baseline": 0.6666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
     },
     "family": "passing"
   }
