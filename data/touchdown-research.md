@@ -1,5 +1,5 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-10T01:27:29.297663+00:00
+Generated 2026-11-10T02:00:44.426881+00:00
 Current-season tests: 2479; Brier 0.1499 vs baseline 0.1630.
 
 ## WAS at NYG
@@ -78,8 +78,8 @@ Current-season tests: 2479; Brier 0.1499 vs baseline 0.1630.
 2026-11-15T18:00:00+00:00
 ### 1. Red zone & opportunity
 - Matthew Golden (GB WR): 0 RZ carries, 8 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 3.06, actual TD 3.
-- Josh Jacobs (GB RB): 12 RZ carries, 5 RZ targets, 3 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 3.13, actual TD 3.
 - Aaron Jones (MIN RB): 7 RZ carries, 4 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.19, actual TD 1.
+- Christian Watson (GB WR): 0 RZ carries, 0 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.65, actual TD 1.
 ### 2. Position matchup & leverage
 - GB: opponent RZ EPA -0.3558551196782636; pass EPA -0.24297444490698716; rush EPA -0.034348502137794265. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - MIN: opponent RZ EPA -0.185729321826717; pass EPA -0.1620599527684649; rush EPA -0.09876680304172468. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -89,8 +89,8 @@ Current-season tests: 2479; Brier 0.1499 vs baseline 0.1630.
 - MIN: recent RZ pass rate 0.7096774193548387, RZ pass-over-expected 12.626661509275436 percentage points, neutral seconds/play 31.702898550724637. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Matthew Golden — Core research · highest estimated probability**: estimated ATTD 55.2%; fair odds -123; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Josh Jacobs — Additional research candidate**: estimated ATTD 41.5%; fair odds 141; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Aaron Jones — Additional research candidate**: estimated ATTD 32.4%; fair odds 208; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Christian Watson — Additional research candidate**: estimated ATTD 29.6%; fair odds 237; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## MIA at IND
 2026-11-15T18:00:00+00:00
@@ -169,7 +169,7 @@ Current-season tests: 2479; Brier 0.1499 vs baseline 0.1630.
 ### 1. Red zone & opportunity
 - Puka Nacua (LAR WR): 1 RZ carries, 8 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.32, actual TD 3.
 - Kyren Williams (LAR RB): 7 RZ carries, 3 RZ targets, 2 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.02, actual TD 2.
-- Michael Wilson (ARI WR): 0 RZ carries, 11 RZ targets, 0 inside-5 carries, 6 inside-5 targets across 4 team games; xTD 4.12, actual TD 1.
+- Tyler Allgeier (ARI RB): 9 RZ carries, 5 RZ targets, 2 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.33, actual TD 2.
 ### 2. Position matchup & leverage
 - ARI: opponent RZ EPA -0.2629170639786094; pass EPA -0.051268776834939654; rush EPA -0.152881174402825. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LAR: opponent RZ EPA 0.08176809540023253; pass EPA 0.18690007368650818; rush EPA -0.04508692867495989. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -180,7 +180,7 @@ Current-season tests: 2479; Brier 0.1499 vs baseline 0.1630.
 ### 4. Value selections · research only unless all gates pass
 - **Puka Nacua — Core research · highest estimated probability**: estimated ATTD 55.6%; fair odds -125; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Kyren Williams — Additional research candidate**: estimated ATTD 44.4%; fair odds 125; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Michael Wilson — Additional research candidate**: estimated ATTD 37.2%; fair odds 169; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Tyler Allgeier — Additional research candidate**: estimated ATTD 36.2%; fair odds 176; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## SEA at LV
 2026-11-15T21:05:00+00:00
