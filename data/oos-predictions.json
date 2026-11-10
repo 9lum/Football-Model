@@ -115216,272 +115216,6 @@
     "family": "receiving"
   },
   {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0031236",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "WR",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": null,
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.0,
-      "receptions": 1.0,
-      "receiving_yards": 1.0
-    },
-    "routeSignal": 0.0,
-    "receiving_yards": {
-      "actual": 25.0,
-      "mean": 18.650390625,
-      "unadjustedMean": 18.650390625,
-      "baseline": 22.333333333333332,
-      "p10": 0.0,
-      "p90": 48.900000000000034
-    },
-    "receptions": {
-      "actual": 2.0,
-      "mean": 1.546875,
-      "unadjustedMean": 1.546875,
-      "baseline": 1.1666666666666667,
-      "p10": 0.0,
-      "p90": 4.0
-    },
-    "receiving_tds": {
-      "actual": 0.0,
-      "mean": 0.109375,
-      "unadjustedMean": 0.109375,
-      "baseline": 0.16666666666666666,
-      "p10": 0.0,
-      "p90": 0.0
-    },
-    "targets": {
-      "actual": 2.0,
-      "mean": 2.54296875,
-      "unadjustedMean": 2.54296875,
-      "baseline": 2.5,
-      "p10": 0.0,
-      "p90": 6.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0032775",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "WR",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": null,
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.0,
-      "receptions": 1.0,
-      "receiving_yards": 1.0
-    },
-    "routeSignal": 0.0,
-    "receiving_yards": {
-      "actual": 22.0,
-      "mean": 25.642578125,
-      "unadjustedMean": 25.642578125,
-      "baseline": 32.833333333333336,
-      "p10": 0.0,
-      "p90": 59.0
-    },
-    "receptions": {
-      "actual": 3.0,
-      "mean": 2.1796875,
-      "unadjustedMean": 2.1796875,
-      "baseline": 2.3333333333333335,
-      "p10": 0.0,
-      "p90": 5.0
-    },
-    "receiving_tds": {
-      "actual": 0.0,
-      "mean": 0.15625,
-      "unadjustedMean": 0.15625,
-      "baseline": 0.3333333333333333,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "targets": {
-      "actual": 4.0,
-      "mean": 3.375,
-      "unadjustedMean": 3.375,
-      "baseline": 2.6666666666666665,
-      "p10": 0.0,
-      "p90": 7.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0033280",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "RB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": {
-      "targets": [
-        5.435546875,
-        5.6875,
-        5.990234375,
-        6.24609375
-      ],
-      "receptions": [
-        3.873046875,
-        4.0625,
-        4.232421875,
-        4.45703125
-      ],
-      "receiving_yards": [
-        36.634765625,
-        38.458984375,
-        40.291015625,
-        42.13671875
-      ]
-    },
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.05,
-      "receptions": 1.05,
-      "receiving_yards": 1.05
-    },
-    "routeSignal": 0.0787617708143252,
-    "receiving_yards": {
-      "actual": 19.0,
-      "mean": 38.458984375,
-      "unadjustedMean": 36.634765625,
-      "baseline": 38.5,
-      "p10": 5.100000000000001,
-      "p90": 79.90000000000003
-    },
-    "receptions": {
-      "actual": 2.0,
-      "mean": 4.0625,
-      "unadjustedMean": 3.873046875,
-      "baseline": 4.833333333333333,
-      "p10": 1.0,
-      "p90": 7.0
-    },
-    "receiving_tds": {
-      "actual": 1.0,
-      "mean": 0.2109375,
-      "unadjustedMean": 0.212890625,
-      "baseline": 0.0,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "targets": {
-      "actual": 3.0,
-      "mean": 5.6875,
-      "unadjustedMean": 5.435546875,
-      "baseline": 5.666666666666667,
-      "p10": 2.0,
-      "p90": 10.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0033288",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "TE",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": {
-      "targets": [
-        7.01953125,
-        7.369140625,
-        7.71484375,
-        8.07421875
-      ],
-      "receptions": [
-        4.837890625,
-        5.078125,
-        5.310546875,
-        5.560546875
-      ],
-      "receiving_yards": [
-        60.421875,
-        63.458984375,
-        66.482421875,
-        69.486328125
-      ]
-    },
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.05,
-      "receptions": 1.05,
-      "receiving_yards": 1.05
-    },
-    "routeSignal": 0.05253113250114672,
-    "receiving_yards": {
-      "actual": 58.0,
-      "mean": 63.458984375,
-      "unadjustedMean": 60.421875,
-      "baseline": 68.83333333333333,
-      "p10": 19.0,
-      "p90": 118.0
-    },
-    "receptions": {
-      "actual": 4.0,
-      "mean": 5.078125,
-      "unadjustedMean": 4.837890625,
-      "baseline": 5.333333333333333,
-      "p10": 2.0,
-      "p90": 9.0
-    },
-    "receiving_tds": {
-      "actual": 0.0,
-      "mean": 0.4296875,
-      "unadjustedMean": 0.4296875,
-      "baseline": 0.8333333333333334,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "targets": {
-      "actual": 7.0,
-      "mean": 7.369140625,
-      "unadjustedMean": 7.01953125,
-      "baseline": 6.833333333333333,
-      "p10": 3.0,
-      "p90": 12.0
-    },
-    "family": "receiving"
-  },
-  {
     "game_id": "2026_09_HOU_LAC",
     "player_id": "00-0034383",
     "week": 9,
@@ -115506,32 +115240,32 @@
     "routeSignal": 0.018850641064248243,
     "receiving_yards": {
       "actual": 42.0,
-      "mean": 35.26953125,
-      "unadjustedMean": 35.26953125,
+      "mean": 33.76171875,
+      "unadjustedMean": 33.76171875,
       "baseline": 47.833333333333336,
-      "p10": 2.0,
-      "p90": 77.90000000000003
+      "p10": 1.0,
+      "p90": 73.90000000000003
     },
     "receptions": {
       "actual": 2.0,
-      "mean": 3.3125,
-      "unadjustedMean": 3.3125,
+      "mean": 3.275390625,
+      "unadjustedMean": 3.275390625,
       "baseline": 4.833333333333333,
       "p10": 1.0,
       "p90": 6.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.216796875,
-      "unadjustedMean": 0.21875,
+      "mean": 0.21484375,
+      "unadjustedMean": 0.21484375,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 4.0,
-      "mean": 4.810546875,
-      "unadjustedMean": 4.810546875,
+      "mean": 4.77734375,
+      "unadjustedMean": 4.77734375,
       "baseline": 5.833333333333333,
       "p10": 1.0,
       "p90": 9.0
@@ -115563,32 +115297,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 10.392578125,
-      "unadjustedMean": 10.392578125,
+      "mean": 10.689453125,
+      "unadjustedMean": 10.689453125,
       "baseline": 9.5,
       "p10": 0.0,
-      "p90": 29.0
+      "p90": 30.900000000000034
     },
     "receptions": {
       "actual": 0.0,
-      "mean": 1.1171875,
-      "unadjustedMean": 1.1171875,
+      "mean": 1.173828125,
+      "unadjustedMean": 1.173828125,
       "baseline": 1.5,
       "p10": 0.0,
       "p90": 3.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.0546875,
-      "unadjustedMean": 0.0546875,
+      "mean": 0.064453125,
+      "unadjustedMean": 0.064453125,
       "baseline": 0.5,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 0.0,
-      "mean": 1.638671875,
-      "unadjustedMean": 1.638671875,
+      "mean": 1.697265625,
+      "unadjustedMean": 1.697265625,
       "baseline": 2.0,
       "p10": 0.0,
       "p90": 4.0
@@ -115620,92 +115354,35 @@
     "routeSignal": 0.02188061271364532,
     "receiving_yards": {
       "actual": 55.0,
-      "mean": 61.427734375,
-      "unadjustedMean": 61.427734375,
+      "mean": 59.912109375,
+      "unadjustedMean": 59.912109375,
       "baseline": 64.33333333333333,
-      "p10": 23.0,
-      "p90": 108.0
+      "p10": 15.0,
+      "p90": 113.0
     },
     "receptions": {
       "actual": 4.0,
-      "mean": 4.41015625,
-      "unadjustedMean": 4.41015625,
+      "mean": 4.4453125,
+      "unadjustedMean": 4.4453125,
       "baseline": 4.5,
       "p10": 2.0,
       "p90": 7.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.384765625,
-      "unadjustedMean": 0.384765625,
+      "mean": 0.390625,
+      "unadjustedMean": 0.390625,
       "baseline": 0.5,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 4.0,
-      "mean": 7.033203125,
-      "unadjustedMean": 7.033203125,
+      "mean": 6.9296875,
+      "unadjustedMean": 6.9296875,
       "baseline": 6.5,
-      "p10": 4.0,
+      "p10": 3.0,
       "p90": 11.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0037291",
-    "week": 9,
-    "team": "LV",
-    "opponent": "SF",
-    "position": "WR",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": null,
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.0,
-      "receptions": 1.0,
-      "receiving_yards": 1.0
-    },
-    "routeSignal": 0.0016048475976265114,
-    "receiving_yards": {
-      "actual": 9.0,
-      "mean": 23.986328125,
-      "unadjustedMean": 23.986328125,
-      "baseline": 14.333333333333334,
-      "p10": 0.0,
-      "p90": 60.900000000000034
-    },
-    "receptions": {
-      "actual": 2.0,
-      "mean": 2.08203125,
-      "unadjustedMean": 2.08203125,
-      "baseline": 1.5,
-      "p10": 0.0,
-      "p90": 4.900000000000034
-    },
-    "receiving_tds": {
-      "actual": 0.0,
-      "mean": 0.15625,
-      "unadjustedMean": 0.15625,
-      "baseline": 0.16666666666666666,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "targets": {
-      "actual": 4.0,
-      "mean": 3.244140625,
-      "unadjustedMean": 3.244140625,
-      "baseline": 3.1666666666666665,
-      "p10": 0.0,
-      "p90": 6.0
     },
     "family": "receiving"
   },
@@ -115734,32 +115411,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 31.0,
-      "mean": 21.2109375,
-      "unadjustedMean": 21.2109375,
+      "mean": 20.015625,
+      "unadjustedMean": 20.015625,
       "baseline": 16.333333333333332,
       "p10": 0.0,
-      "p90": 54.0
+      "p90": 49.900000000000034
     },
     "receptions": {
       "actual": 3.0,
-      "mean": 1.900390625,
-      "unadjustedMean": 1.900390625,
+      "mean": 1.86328125,
+      "unadjustedMean": 1.86328125,
       "baseline": 1.6666666666666667,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.134765625,
-      "unadjustedMean": 0.134765625,
+      "mean": 0.150390625,
+      "unadjustedMean": 0.150390625,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 3.0,
-      "mean": 2.826171875,
-      "unadjustedMean": 2.826171875,
+      "mean": 2.7421875,
+      "unadjustedMean": 2.7421875,
       "baseline": 2.8333333333333335,
       "p10": 0.0,
       "p90": 6.0
@@ -115791,32 +115468,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 34.0,
-      "mean": 13.041015625,
-      "unadjustedMean": 13.041015625,
+      "mean": 12.609375,
+      "unadjustedMean": 12.609375,
       "baseline": 11.5,
       "p10": 0.0,
-      "p90": 36.0
+      "p90": 33.0
     },
     "receptions": {
       "actual": 3.0,
-      "mean": 1.60546875,
-      "unadjustedMean": 1.60546875,
+      "mean": 1.603515625,
+      "unadjustedMean": 1.603515625,
       "baseline": 2.5,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.091796875,
-      "unadjustedMean": 0.091796875,
+      "mean": 0.076171875,
+      "unadjustedMean": 0.076171875,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 4.0,
-      "mean": 2.162109375,
-      "unadjustedMean": 2.162109375,
+      "mean": 2.166015625,
+      "unadjustedMean": 2.166015625,
       "baseline": 3.0,
       "p10": 0.0,
       "p90": 5.0
@@ -115848,90 +115525,33 @@
     "routeSignal": -0.015570342875845243,
     "receiving_yards": {
       "actual": 58.0,
-      "mean": 40.904296875,
-      "unadjustedMean": 40.904296875,
+      "mean": 41.376953125,
+      "unadjustedMean": 41.376953125,
       "baseline": 33.666666666666664,
       "p10": 4.100000000000001,
-      "p90": 80.0
+      "p90": 85.0
     },
     "receptions": {
       "actual": 1.0,
-      "mean": 3.4296875,
-      "unadjustedMean": 3.4296875,
+      "mean": 3.490234375,
+      "unadjustedMean": 3.490234375,
       "baseline": 2.0,
       "p10": 1.0,
-      "p90": 7.0
+      "p90": 6.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.28515625,
-      "unadjustedMean": 0.28515625,
+      "mean": 0.310546875,
+      "unadjustedMean": 0.310546875,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 4.0,
-      "mean": 5.283203125,
-      "unadjustedMean": 5.283203125,
+      "mean": 5.490234375,
+      "unadjustedMean": 5.490234375,
       "baseline": 4.333333333333333,
-      "p10": 2.0,
-      "p90": 9.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0038563",
-    "week": 9,
-    "team": "LV",
-    "opponent": "SF",
-    "position": "WR",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": null,
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.0,
-      "receptions": 1.0,
-      "receiving_yards": 1.0
-    },
-    "routeSignal": 0.002611482789066521,
-    "receiving_yards": {
-      "actual": 55.0,
-      "mean": 43.25,
-      "unadjustedMean": 43.25,
-      "baseline": 54.666666666666664,
-      "p10": 7.0,
-      "p90": 86.90000000000003
-    },
-    "receptions": {
-      "actual": 4.0,
-      "mean": 3.560546875,
-      "unadjustedMean": 3.560546875,
-      "baseline": 3.6666666666666665,
-      "p10": 1.0,
-      "p90": 6.0
-    },
-    "receiving_tds": {
-      "actual": 0.0,
-      "mean": 0.251953125,
-      "unadjustedMean": 0.251953125,
-      "baseline": 0.5,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "targets": {
-      "actual": 8.0,
-      "mean": 5.572265625,
-      "unadjustedMean": 5.572265625,
-      "baseline": 6.166666666666667,
       "p10": 2.0,
       "p90": 9.0
     },
@@ -115962,32 +115582,32 @@
     "routeSignal": 0.004687285938485621,
     "receiving_yards": {
       "actual": 125.0,
-      "mean": 25.619140625,
-      "unadjustedMean": 25.619140625,
+      "mean": 22.244140625,
+      "unadjustedMean": 22.244140625,
       "baseline": 28.833333333333332,
       "p10": 0.0,
-      "p90": 66.0
+      "p90": 55.900000000000034
     },
     "receptions": {
       "actual": 4.0,
-      "mean": 2.09765625,
-      "unadjustedMean": 2.09765625,
+      "mean": 1.9765625,
+      "unadjustedMean": 1.9765625,
       "baseline": 2.3333333333333335,
       "p10": 0.0,
-      "p90": 5.0
+      "p90": 4.0
     },
     "receiving_tds": {
       "actual": 2.0,
-      "mean": 0.177734375,
-      "unadjustedMean": 0.177734375,
+      "mean": 0.154296875,
+      "unadjustedMean": 0.154296875,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 5.0,
-      "mean": 3.259765625,
-      "unadjustedMean": 3.259765625,
+      "mean": 3.185546875,
+      "unadjustedMean": 3.185546875,
       "baseline": 3.5,
       "p10": 0.0,
       "p90": 7.0
@@ -116019,35 +115639,35 @@
     "routeSignal": 0.025026680771018096,
     "receiving_yards": {
       "actual": 29.0,
-      "mean": 33.373046875,
-      "unadjustedMean": 33.373046875,
+      "mean": 35.015625,
+      "unadjustedMean": 35.015625,
       "baseline": 37.666666666666664,
       "p10": 0.0,
-      "p90": 71.90000000000003
+      "p90": 79.0
     },
     "receptions": {
       "actual": 3.0,
-      "mean": 3.12109375,
-      "unadjustedMean": 3.12109375,
+      "mean": 3.0625,
+      "unadjustedMean": 3.0625,
       "baseline": 3.0,
-      "p10": 1.0,
+      "p10": 0.0,
       "p90": 6.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.203125,
-      "unadjustedMean": 0.203125,
+      "mean": 0.20703125,
+      "unadjustedMean": 0.208984375,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 5.0,
-      "mean": 4.59375,
-      "unadjustedMean": 4.59375,
+      "mean": 4.587890625,
+      "unadjustedMean": 4.587890625,
       "baseline": 5.666666666666667,
       "p10": 1.0,
-      "p90": 8.0
+      "p90": 9.0
     },
     "family": "receiving"
   },
@@ -116076,11 +115696,11 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 105.0,
-      "mean": 38.080078125,
-      "unadjustedMean": 38.080078125,
+      "mean": 37.966796875,
+      "unadjustedMean": 37.966796875,
       "baseline": 52.666666666666664,
-      "p10": 2.0,
-      "p90": 81.0
+      "p10": 0.0,
+      "p90": 80.0
     },
     "receptions": {
       "actual": 4.0,
@@ -116092,63 +115712,6 @@
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.240234375,
-      "unadjustedMean": 0.240234375,
-      "baseline": 0.16666666666666666,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "targets": {
-      "actual": 9.0,
-      "mean": 5.01171875,
-      "unadjustedMean": 5.01171875,
-      "baseline": 4.333333333333333,
-      "p10": 2.0,
-      "p90": 9.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0039066",
-    "week": 9,
-    "team": "LV",
-    "opponent": "SF",
-    "position": "TE",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": null,
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.0,
-      "receptions": 1.0,
-      "receiving_yards": 1.0
-    },
-    "routeSignal": 0.003830063778436309,
-    "receiving_yards": {
-      "actual": 37.0,
-      "mean": 39.583984375,
-      "unadjustedMean": 39.583984375,
-      "baseline": 49.333333333333336,
-      "p10": 5.0,
-      "p90": 84.0
-    },
-    "receptions": {
-      "actual": 3.0,
-      "mean": 3.763671875,
-      "unadjustedMean": 3.763671875,
-      "baseline": 4.5,
-      "p10": 1.0,
-      "p90": 7.0
-    },
-    "receiving_tds": {
-      "actual": 0.0,
       "mean": 0.26171875,
       "unadjustedMean": 0.26171875,
       "baseline": 0.16666666666666666,
@@ -116156,126 +115719,12 @@
       "p90": 1.0
     },
     "targets": {
-      "actual": 3.0,
-      "mean": 5.5546875,
-      "unadjustedMean": 5.5546875,
-      "baseline": 5.333333333333333,
-      "p10": 2.0,
+      "actual": 9.0,
+      "mean": 4.908203125,
+      "unadjustedMean": 4.908203125,
+      "baseline": 4.333333333333333,
+      "p10": 1.0,
       "p90": 9.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0039338",
-    "week": 9,
-    "team": "LV",
-    "opponent": "SF",
-    "position": "TE",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": null,
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.0,
-      "receptions": 1.0,
-      "receiving_yards": 1.0
-    },
-    "routeSignal": -0.009290173365779813,
-    "receiving_yards": {
-      "actual": 111.0,
-      "mean": 68.126953125,
-      "unadjustedMean": 68.126953125,
-      "baseline": 91.16666666666667,
-      "p10": 19.0,
-      "p90": 125.90000000000003
-    },
-    "receptions": {
-      "actual": 7.0,
-      "mean": 5.68359375,
-      "unadjustedMean": 5.68359375,
-      "baseline": 6.833333333333333,
-      "p10": 2.0,
-      "p90": 9.0
-    },
-    "receiving_tds": {
-      "actual": 1.0,
-      "mean": 0.427734375,
-      "unadjustedMean": 0.427734375,
-      "baseline": 0.8333333333333334,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "targets": {
-      "actual": 8.0,
-      "mean": 8.578125,
-      "unadjustedMean": 8.578125,
-      "baseline": 10.166666666666666,
-      "p10": 4.0,
-      "p90": 13.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0039365",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "WR",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": null,
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.0,
-      "receptions": 1.0,
-      "receiving_yards": 1.0
-    },
-    "routeSignal": 0.0,
-    "receiving_yards": {
-      "actual": 5.0,
-      "mean": 13.306640625,
-      "unadjustedMean": 13.306640625,
-      "baseline": 7.833333333333333,
-      "p10": 0.0,
-      "p90": 37.0
-    },
-    "receptions": {
-      "actual": 1.0,
-      "mean": 1.15625,
-      "unadjustedMean": 1.15625,
-      "baseline": 0.6666666666666666,
-      "p10": 0.0,
-      "p90": 3.0
-    },
-    "receiving_tds": {
-      "actual": 0.0,
-      "mean": 0.078125,
-      "unadjustedMean": 0.078125,
-      "baseline": 0.0,
-      "p10": 0.0,
-      "p90": 0.0
-    },
-    "targets": {
-      "actual": 1.0,
-      "mean": 1.794921875,
-      "unadjustedMean": 1.794921875,
-      "baseline": 1.6666666666666667,
-      "p10": 0.0,
-      "p90": 4.0
     },
     "family": "receiving"
   },
@@ -116304,32 +115753,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 6.0,
-      "mean": 15.013671875,
-      "unadjustedMean": 15.013671875,
+      "mean": 13.03515625,
+      "unadjustedMean": 13.03515625,
       "baseline": 8.333333333333334,
       "p10": 0.0,
-      "p90": 42.0
+      "p90": 37.0
     },
     "receptions": {
       "actual": 1.0,
-      "mean": 1.70703125,
-      "unadjustedMean": 1.70703125,
+      "mean": 1.56640625,
+      "unadjustedMean": 1.56640625,
       "baseline": 1.5,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.068359375,
-      "unadjustedMean": 0.068359375,
+      "mean": 0.060546875,
+      "unadjustedMean": 0.060546875,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 3.0,
-      "mean": 2.291015625,
-      "unadjustedMean": 2.291015625,
+      "mean": 2.14453125,
+      "unadjustedMean": 2.14453125,
       "baseline": 2.3333333333333335,
       "p10": 0.0,
       "p90": 5.0
@@ -116361,149 +115810,35 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 20.0,
-      "mean": 24.314453125,
-      "unadjustedMean": 24.314453125,
+      "mean": 21.388671875,
+      "unadjustedMean": 21.388671875,
       "baseline": 20.833333333333332,
       "p10": 0.0,
-      "p90": 65.0
+      "p90": 57.900000000000034
     },
     "receptions": {
       "actual": 2.0,
-      "mean": 2.01953125,
-      "unadjustedMean": 2.01953125,
+      "mean": 1.77734375,
+      "unadjustedMean": 1.77734375,
       "baseline": 1.5,
       "p10": 0.0,
-      "p90": 4.900000000000034
+      "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.134765625,
-      "unadjustedMean": 0.134765625,
+      "mean": 0.150390625,
+      "unadjustedMean": 0.150390625,
       "baseline": 0.3333333333333333,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 3.0,
-      "mean": 3.251953125,
-      "unadjustedMean": 3.251953125,
+      "mean": 2.873046875,
+      "unadjustedMean": 2.873046875,
       "baseline": 3.5,
       "p10": 0.0,
-      "p90": 7.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0040122",
-    "week": 9,
-    "team": "LV",
-    "opponent": "SF",
-    "position": "RB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": null,
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.0,
-      "receptions": 1.0,
-      "receiving_yards": 1.0
-    },
-    "routeSignal": 0.024139226040506133,
-    "receiving_yards": {
-      "actual": -5.0,
-      "mean": 38.669921875,
-      "unadjustedMean": 38.669921875,
-      "baseline": 52.666666666666664,
-      "p10": 4.100000000000001,
-      "p90": 76.90000000000003
-    },
-    "receptions": {
-      "actual": 5.0,
-      "mean": 4.12109375,
-      "unadjustedMean": 4.12109375,
-      "baseline": 4.5,
-      "p10": 1.0,
-      "p90": 8.0
-    },
-    "receiving_tds": {
-      "actual": 0.0,
-      "mean": 0.232421875,
-      "unadjustedMean": 0.232421875,
-      "baseline": 0.16666666666666666,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "targets": {
-      "actual": 7.0,
-      "mean": 5.646484375,
-      "unadjustedMean": 5.646484375,
-      "baseline": 5.833333333333333,
-      "p10": 2.0,
-      "p90": 9.0
-    },
-    "family": "receiving"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0040172",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "WR",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "routeCandidates": null,
-    "routePolicy": {
-      "volume": 0.05,
-      "yards": 0.05,
-      "n": 154,
-      "games": 53,
-      "trainedThroughWeek": 8,
-      "status": "Research warm-up; not independently validated"
-    },
-    "routeFactors": {
-      "targets": 1.0,
-      "receptions": 1.0,
-      "receiving_yards": 1.0
-    },
-    "routeSignal": 0.0,
-    "receiving_yards": {
-      "actual": 86.0,
-      "mean": 15.162109375,
-      "unadjustedMean": 15.162109375,
-      "baseline": 23.0,
-      "p10": 0.0,
-      "p90": 44.900000000000034
-    },
-    "receptions": {
-      "actual": 4.0,
-      "mean": 1.27734375,
-      "unadjustedMean": 1.27734375,
-      "baseline": 1.0,
-      "p10": 0.0,
-      "p90": 3.0
-    },
-    "receiving_tds": {
-      "actual": 1.0,
-      "mean": 0.099609375,
-      "unadjustedMean": 0.099609375,
-      "baseline": 0.0,
-      "p10": 0.0,
-      "p90": 0.0
-    },
-    "targets": {
-      "actual": 4.0,
-      "mean": 2.083984375,
-      "unadjustedMean": 2.083984375,
-      "baseline": 1.5,
-      "p10": 0.0,
-      "p90": 5.0
+      "p90": 6.0
     },
     "family": "receiving"
   },
@@ -116532,32 +115867,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 50.0,
-      "mean": 15.40234375,
-      "unadjustedMean": 15.40234375,
+      "mean": 18.302734375,
+      "unadjustedMean": 18.302734375,
       "baseline": 13.666666666666666,
       "p10": 0.0,
-      "p90": 44.900000000000034
+      "p90": 53.0
     },
     "receptions": {
       "actual": 1.0,
-      "mean": 1.359375,
-      "unadjustedMean": 1.359375,
+      "mean": 1.54296875,
+      "unadjustedMean": 1.54296875,
       "baseline": 1.5,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.08203125,
-      "unadjustedMean": 0.08203125,
+      "mean": 0.099609375,
+      "unadjustedMean": 0.099609375,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 4.0,
-      "mean": 2.228515625,
-      "unadjustedMean": 2.228515625,
+      "mean": 2.341796875,
+      "unadjustedMean": 2.341796875,
       "baseline": 2.8333333333333335,
       "p10": 0.0,
       "p90": 5.0
@@ -116574,22 +115909,22 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "routeCandidates": {
       "targets": [
-        3.185546875,
-        3.015625,
-        2.853515625,
-        2.71875
+        3.158203125,
+        2.98046875,
+        2.849609375,
+        2.69921875
       ],
       "receptions": [
-        2.095703125,
-        1.994140625,
-        1.873046875,
-        1.7734375
+        2.11328125,
+        2.005859375,
+        1.888671875,
+        1.79296875
       ],
       "receiving_yards": [
-        20.740234375,
-        19.697265625,
-        18.671875,
-        17.6328125
+        21.712890625,
+        20.638671875,
+        19.56640625,
+        18.462890625
       ]
     },
     "routePolicy": {
@@ -116608,32 +115943,32 @@
     "routeSignal": -0.031624718948298595,
     "receiving_yards": {
       "actual": 17.0,
-      "mean": 19.697265625,
-      "unadjustedMean": 20.740234375,
+      "mean": 20.638671875,
+      "unadjustedMean": 21.712890625,
       "baseline": 20.5,
       "p10": 0.0,
-      "p90": 48.900000000000034
+      "p90": 49.0
     },
     "receptions": {
       "actual": 2.0,
-      "mean": 1.994140625,
-      "unadjustedMean": 2.095703125,
+      "mean": 2.005859375,
+      "unadjustedMean": 2.11328125,
       "baseline": 2.5,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.09375,
-      "unadjustedMean": 0.09375,
+      "mean": 0.142578125,
+      "unadjustedMean": 0.14453125,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
-      "p90": 0.0
+      "p90": 1.0
     },
     "targets": {
       "actual": 3.0,
-      "mean": 3.015625,
-      "unadjustedMean": 3.185546875,
+      "mean": 2.98046875,
+      "unadjustedMean": 3.158203125,
       "baseline": 4.0,
       "p10": 0.0,
       "p90": 6.0
@@ -116665,35 +116000,35 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 4.0,
-      "mean": 16.91796875,
-      "unadjustedMean": 16.91796875,
+      "mean": 16.61328125,
+      "unadjustedMean": 16.61328125,
       "baseline": 16.0,
       "p10": 0.0,
-      "p90": 43.900000000000034
+      "p90": 43.0
     },
     "receptions": {
       "actual": 1.0,
-      "mean": 2.03515625,
-      "unadjustedMean": 2.03515625,
+      "mean": 1.923828125,
+      "unadjustedMean": 1.923828125,
       "baseline": 2.1666666666666665,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.103515625,
-      "unadjustedMean": 0.103515625,
+      "mean": 0.095703125,
+      "unadjustedMean": 0.095703125,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 4.0,
-      "mean": 2.763671875,
-      "unadjustedMean": 2.763671875,
+      "mean": 2.53515625,
+      "unadjustedMean": 2.53515625,
       "baseline": 2.6666666666666665,
       "p10": 0.0,
-      "p90": 6.0
+      "p90": 5.0
     },
     "family": "receiving"
   },
@@ -116722,32 +116057,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 12.84375,
-      "unadjustedMean": 12.84375,
+      "mean": 13.4921875,
+      "unadjustedMean": 13.4921875,
       "baseline": 10.5,
       "p10": 0.0,
-      "p90": 34.0
+      "p90": 35.900000000000034
     },
     "receptions": {
       "actual": 0.0,
-      "mean": 1.65625,
-      "unadjustedMean": 1.65625,
+      "mean": 1.603515625,
+      "unadjustedMean": 1.603515625,
       "baseline": 1.8333333333333333,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.05078125,
-      "unadjustedMean": 0.05078125,
+      "mean": 0.06640625,
+      "unadjustedMean": 0.06640625,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 0.0,
-      "mean": 2.189453125,
-      "unadjustedMean": 2.189453125,
+      "mean": 2.158203125,
+      "unadjustedMean": 2.158203125,
       "baseline": 2.1666666666666665,
       "p10": 0.0,
       "p90": 5.0
@@ -116779,32 +116114,32 @@
     "routeSignal": -0.014494971819982662,
     "receiving_yards": {
       "actual": 6.0,
-      "mean": 34.65625,
-      "unadjustedMean": 34.65625,
+      "mean": 34.06640625,
+      "unadjustedMean": 34.06640625,
       "baseline": 42.666666666666664,
       "p10": 0.0,
-      "p90": 76.0
+      "p90": 72.90000000000003
     },
     "receptions": {
       "actual": 3.0,
-      "mean": 2.79296875,
-      "unadjustedMean": 2.79296875,
+      "mean": 2.8125,
+      "unadjustedMean": 2.8125,
       "baseline": 3.0,
       "p10": 0.0,
-      "p90": 5.0
+      "p90": 6.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.234375,
-      "unadjustedMean": 0.234375,
+      "mean": 0.251953125,
+      "unadjustedMean": 0.251953125,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 7.0,
-      "mean": 4.513671875,
-      "unadjustedMean": 4.513671875,
+      "mean": 4.2265625,
+      "unadjustedMean": 4.2265625,
       "baseline": 4.666666666666667,
       "p10": 1.0,
       "p90": 8.0
@@ -116813,12 +116148,12 @@
   },
   {
     "game_id": "2026_09_LV_SF",
-    "player_id": "00-0041052",
+    "player_id": "00-0031236",
     "week": 9,
     "team": "SF",
     "opponent": "LV",
-    "position": "RB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
+    "position": "WR",
+    "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": null,
     "routePolicy": {
       "volume": 0.05,
@@ -116835,36 +116170,93 @@
     },
     "routeSignal": 0.0,
     "receiving_yards": {
-      "actual": 0.0,
-      "mean": 8.310546875,
-      "unadjustedMean": 8.310546875,
-      "baseline": -0.16666666666666666,
+      "actual": 25.0,
+      "mean": 17.87890625,
+      "unadjustedMean": 17.87890625,
+      "baseline": 22.333333333333332,
       "p10": 0.0,
-      "p90": 25.0
+      "p90": 49.0
     },
     "receptions": {
-      "actual": 0.0,
-      "mean": 0.931640625,
-      "unadjustedMean": 0.931640625,
-      "baseline": 0.3333333333333333,
+      "actual": 2.0,
+      "mean": 1.5234375,
+      "unadjustedMean": 1.5234375,
+      "baseline": 1.1666666666666667,
       "p10": 0.0,
-      "p90": 2.0
+      "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.03515625,
-      "unadjustedMean": 0.03515625,
-      "baseline": 0.0,
+      "mean": 0.09375,
+      "unadjustedMean": 0.09375,
+      "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
-      "actual": 0.0,
-      "mean": 1.2734375,
-      "unadjustedMean": 1.2734375,
-      "baseline": 0.8333333333333334,
+      "actual": 2.0,
+      "mean": 2.4375,
+      "unadjustedMean": 2.4375,
+      "baseline": 2.5,
       "p10": 0.0,
-      "p90": 3.0
+      "p90": 6.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0032775",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "WR",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 22.0,
+      "mean": 25.283203125,
+      "unadjustedMean": 25.283203125,
+      "baseline": 32.833333333333336,
+      "p10": 0.0,
+      "p90": 60.0
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.228515625,
+      "unadjustedMean": 2.228515625,
+      "baseline": 2.3333333333333335,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.171875,
+      "unadjustedMean": 0.171875,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 4.0,
+      "mean": 3.30078125,
+      "unadjustedMean": 3.30078125,
+      "baseline": 2.6666666666666665,
+      "p10": 0.0,
+      "p90": 7.0
     },
     "family": "receiving"
   },
@@ -116878,22 +116270,22 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": {
       "targets": [
-        4.423828125,
-        4.21484375,
-        3.984375,
-        3.75
+        4.138671875,
+        3.927734375,
+        3.740234375,
+        3.51953125
       ],
       "receptions": [
-        3.091796875,
-        2.94140625,
-        2.79296875,
-        2.642578125
+        2.923828125,
+        2.775390625,
+        2.62890625,
+        2.4765625
       ],
       "receiving_yards": [
-        34.599609375,
-        32.880859375,
-        31.171875,
-        29.40625
+        33.03125,
+        31.365234375,
+        29.734375,
+        28.080078125
       ]
     },
     "routePolicy": {
@@ -116912,35 +116304,187 @@
     "routeSignal": -0.03918294302110676,
     "receiving_yards": {
       "actual": 35.0,
-      "mean": 32.880859375,
-      "unadjustedMean": 34.599609375,
+      "mean": 31.365234375,
+      "unadjustedMean": 33.03125,
       "baseline": 43.333333333333336,
       "p10": 0.0,
-      "p90": 67.0
+      "p90": 65.90000000000003
     },
     "receptions": {
       "actual": 3.0,
-      "mean": 2.94140625,
-      "unadjustedMean": 3.091796875,
+      "mean": 2.775390625,
+      "unadjustedMean": 2.923828125,
       "baseline": 3.8333333333333335,
       "p10": 0.0,
       "p90": 6.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.310546875,
-      "unadjustedMean": 0.310546875,
+      "mean": 0.259765625,
+      "unadjustedMean": 0.259765625,
       "baseline": 0.3333333333333333,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 3.0,
-      "mean": 4.21484375,
-      "unadjustedMean": 4.423828125,
+      "mean": 3.927734375,
+      "unadjustedMean": 4.138671875,
       "baseline": 4.333333333333333,
       "p10": 1.0,
+      "p90": 7.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0033280",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "RB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        5.392578125,
+        5.654296875,
+        5.939453125,
+        6.216796875
+      ],
+      "receptions": [
+        3.82421875,
+        4.013671875,
+        4.208984375,
+        4.390625
+      ],
+      "receiving_yards": [
+        35.451171875,
+        37.22265625,
+        38.982421875,
+        40.791015625
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.05,
+      "receptions": 1.05,
+      "receiving_yards": 1.05
+    },
+    "routeSignal": 0.0787617708143252,
+    "receiving_yards": {
+      "actual": 19.0,
+      "mean": 37.22265625,
+      "unadjustedMean": 35.451171875,
+      "baseline": 38.5,
+      "p10": 4.0,
+      "p90": 75.0
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 4.013671875,
+      "unadjustedMean": 3.82421875,
+      "baseline": 4.833333333333333,
+      "p10": 1.0,
+      "p90": 7.0
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.21875,
+      "unadjustedMean": 0.21875,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 3.0,
+      "mean": 5.654296875,
+      "unadjustedMean": 5.392578125,
+      "baseline": 5.666666666666667,
+      "p10": 2.0,
+      "p90": 10.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0033288",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "TE",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        6.787109375,
+        7.13671875,
+        7.451171875,
+        7.814453125
+      ],
+      "receptions": [
+        4.59765625,
+        4.8203125,
+        5.056640625,
+        5.30078125
+      ],
+      "receiving_yards": [
+        57.53125,
+        60.41015625,
+        63.27734375,
+        66.181640625
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.05,
+      "receptions": 1.05,
+      "receiving_yards": 1.05
+    },
+    "routeSignal": 0.05253113250114672,
+    "receiving_yards": {
+      "actual": 58.0,
+      "mean": 60.41015625,
+      "unadjustedMean": 57.53125,
+      "baseline": 68.83333333333333,
+      "p10": 17.0,
+      "p90": 108.90000000000003
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 4.8203125,
+      "unadjustedMean": 4.59765625,
+      "baseline": 5.333333333333333,
+      "p10": 2.0,
       "p90": 8.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.40234375,
+      "unadjustedMean": 0.40234375,
+      "baseline": 0.8333333333333334,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 7.0,
+      "mean": 7.13671875,
+      "unadjustedMean": 6.787109375,
+      "baseline": 6.833333333333333,
+      "p10": 4.0,
+      "p90": 11.0
     },
     "family": "receiving"
   },
@@ -116969,32 +116513,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 36.0,
-      "mean": 47.16796875,
-      "unadjustedMean": 47.16796875,
+      "mean": 47.94140625,
+      "unadjustedMean": 47.94140625,
       "baseline": 53.166666666666664,
-      "p10": 7.0,
-      "p90": 98.90000000000003
+      "p10": 8.0,
+      "p90": 97.0
     },
     "receptions": {
       "actual": 3.0,
-      "mean": 3.662109375,
-      "unadjustedMean": 3.662109375,
+      "mean": 3.556640625,
+      "unadjustedMean": 3.556640625,
       "baseline": 4.333333333333333,
       "p10": 1.0,
       "p90": 6.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.287109375,
-      "unadjustedMean": 0.287109375,
+      "mean": 0.271484375,
+      "unadjustedMean": 0.271484375,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 6.0,
-      "mean": 5.80078125,
-      "unadjustedMean": 5.80078125,
+      "mean": 5.708984375,
+      "unadjustedMean": 5.708984375,
       "baseline": 6.166666666666667,
       "p10": 2.0,
       "p90": 10.0
@@ -117011,22 +116555,22 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": {
       "targets": [
-        3.78125,
-        3.978515625,
-        4.158203125,
-        4.33984375
+        3.826171875,
+        4.01171875,
+        4.232421875,
+        4.384765625
       ],
       "receptions": [
         2.359375,
-        2.484375,
-        2.587890625,
-        2.712890625
+        2.4765625,
+        2.609375,
+        2.72265625
       ],
       "receiving_yards": [
-        27.615234375,
-        29.00390625,
-        30.3671875,
-        31.740234375
+        27.69140625,
+        29.05859375,
+        30.46484375,
+        31.859375
       ]
     },
     "routePolicy": {
@@ -117045,15 +116589,15 @@
     "routeSignal": 0.049970290340376915,
     "receiving_yards": {
       "actual": 32.0,
-      "mean": 29.00390625,
-      "unadjustedMean": 27.615234375,
+      "mean": 29.05859375,
+      "unadjustedMean": 27.69140625,
       "baseline": 25.166666666666668,
       "p10": 0.0,
-      "p90": 66.0
+      "p90": 68.90000000000003
     },
     "receptions": {
       "actual": 3.0,
-      "mean": 2.484375,
+      "mean": 2.4765625,
       "unadjustedMean": 2.359375,
       "baseline": 2.5,
       "p10": 0.0,
@@ -117061,16 +116605,16 @@
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.2109375,
-      "unadjustedMean": 0.2109375,
+      "mean": 0.21875,
+      "unadjustedMean": 0.21875,
       "baseline": 0.3333333333333333,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 4.0,
-      "mean": 3.978515625,
-      "unadjustedMean": 3.78125,
+      "mean": 4.01171875,
+      "unadjustedMean": 3.826171875,
       "baseline": 4.166666666666667,
       "p10": 1.0,
       "p90": 8.0
@@ -117102,34 +116646,34 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 17.841796875,
-      "unadjustedMean": 17.841796875,
+      "mean": 18.193359375,
+      "unadjustedMean": 18.193359375,
       "baseline": 17.5,
       "p10": 0.0,
-      "p90": 44.900000000000034
+      "p90": 47.0
     },
     "receptions": {
       "actual": 0.0,
-      "mean": 2.150390625,
-      "unadjustedMean": 2.150390625,
+      "mean": 2.298828125,
+      "unadjustedMean": 2.298828125,
       "baseline": 3.0,
       "p10": 0.0,
       "p90": 5.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.111328125,
-      "unadjustedMean": 0.11328125,
+      "mean": 0.12109375,
+      "unadjustedMean": 0.12109375,
       "baseline": 0.5,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 0.0,
-      "mean": 2.919921875,
-      "unadjustedMean": 2.919921875,
+      "mean": 3.001953125,
+      "unadjustedMean": 3.001953125,
       "baseline": 3.5,
-      "p10": 0.0,
+      "p10": 1.0,
       "p90": 6.0
     },
     "family": "receiving"
@@ -117159,32 +116703,32 @@
     "routeSignal": 0.0019269813854557623,
     "receiving_yards": {
       "actual": 46.0,
-      "mean": 23.029296875,
-      "unadjustedMean": 23.029296875,
+      "mean": 22.529296875,
+      "unadjustedMean": 22.529296875,
       "baseline": 27.5,
       "p10": 0.0,
-      "p90": 52.0
+      "p90": 51.900000000000034
     },
     "receptions": {
       "actual": 3.0,
-      "mean": 2.634765625,
-      "unadjustedMean": 2.634765625,
+      "mean": 2.49609375,
+      "unadjustedMean": 2.49609375,
       "baseline": 2.8333333333333335,
       "p10": 0.0,
       "p90": 5.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.10546875,
-      "unadjustedMean": 0.10546875,
+      "mean": 0.134765625,
+      "unadjustedMean": 0.134765625,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 4.0,
-      "mean": 3.59375,
-      "unadjustedMean": 3.59375,
+      "mean": 3.478515625,
+      "unadjustedMean": 3.478515625,
       "baseline": 3.1666666666666665,
       "p10": 1.0,
       "p90": 6.0
@@ -117216,33 +116760,90 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 19.8828125,
-      "unadjustedMean": 19.8828125,
+      "mean": 16.921875,
+      "unadjustedMean": 16.921875,
       "baseline": 18.333333333333332,
       "p10": 0.0,
-      "p90": 49.0
+      "p90": 40.900000000000034
     },
     "receptions": {
       "actual": 2.0,
-      "mean": 2.53125,
-      "unadjustedMean": 2.53125,
+      "mean": 2.275390625,
+      "unadjustedMean": 2.275390625,
       "baseline": 2.8333333333333335,
       "p10": 0.0,
       "p90": 5.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.103515625,
-      "unadjustedMean": 0.103515625,
+      "mean": 0.080078125,
+      "unadjustedMean": 0.080078125,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 3.0,
-      "mean": 3.296875,
-      "unadjustedMean": 3.296875,
+      "mean": 3.041015625,
+      "unadjustedMean": 3.041015625,
       "baseline": 3.0,
+      "p10": 1.0,
+      "p90": 6.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0037291",
+    "week": 9,
+    "team": "LV",
+    "opponent": "SF",
+    "position": "WR",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0016048475976265114,
+    "receiving_yards": {
+      "actual": 9.0,
+      "mean": 21.51171875,
+      "unadjustedMean": 21.51171875,
+      "baseline": 14.333333333333334,
+      "p10": 0.0,
+      "p90": 51.0
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.923828125,
+      "unadjustedMean": 1.923828125,
+      "baseline": 1.5,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.140625,
+      "unadjustedMean": 0.140625,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 4.0,
+      "mean": 3.12109375,
+      "unadjustedMean": 3.12109375,
+      "baseline": 3.1666666666666665,
       "p10": 1.0,
       "p90": 6.0
     },
@@ -117258,22 +116859,22 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": {
       "targets": [
-        8.771484375,
-        8.3359375,
-        7.900390625,
-        7.46484375
+        8.765625,
+        8.333984375,
+        7.8984375,
+        7.455078125
       ],
       "receptions": [
-        5.83984375,
-        5.544921875,
-        5.267578125,
-        4.962890625
+        6.052734375,
+        5.755859375,
+        5.4296875,
+        5.123046875
       ],
       "receiving_yards": [
-        66.234375,
-        62.900390625,
-        59.587890625,
-        56.30859375
+        68.708984375,
+        65.28515625,
+        61.8515625,
+        58.41796875
       ]
     },
     "routePolicy": {
@@ -117292,34 +116893,34 @@
     "routeSignal": -0.0644661054930806,
     "receiving_yards": {
       "actual": 54.0,
-      "mean": 62.900390625,
-      "unadjustedMean": 66.234375,
+      "mean": 65.28515625,
+      "unadjustedMean": 68.708984375,
       "baseline": 68.0,
-      "p10": 24.0,
-      "p90": 109.0
+      "p10": 22.200000000000003,
+      "p90": 115.90000000000003
     },
     "receptions": {
       "actual": 7.0,
-      "mean": 5.544921875,
-      "unadjustedMean": 5.83984375,
+      "mean": 5.755859375,
+      "unadjustedMean": 6.052734375,
       "baseline": 8.166666666666666,
       "p10": 2.0,
       "p90": 9.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.384765625,
-      "unadjustedMean": 0.384765625,
+      "mean": 0.455078125,
+      "unadjustedMean": 0.455078125,
       "baseline": 0.5,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 8.0,
-      "mean": 8.3359375,
-      "unadjustedMean": 8.771484375,
+      "mean": 8.333984375,
+      "unadjustedMean": 8.765625,
       "baseline": 10.5,
-      "p10": 5.0,
+      "p10": 4.0,
       "p90": 13.0
     },
     "family": "receiving"
@@ -117349,32 +116950,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 11.0,
-      "mean": 11.3046875,
-      "unadjustedMean": 11.3046875,
+      "mean": 11.32421875,
+      "unadjustedMean": 11.32421875,
       "baseline": 11.333333333333334,
       "p10": 0.0,
-      "p90": 29.0
+      "p90": 30.0
     },
     "receptions": {
       "actual": 2.0,
-      "mean": 1.408203125,
-      "unadjustedMean": 1.408203125,
+      "mean": 1.443359375,
+      "unadjustedMean": 1.443359375,
       "baseline": 2.1666666666666665,
       "p10": 0.0,
       "p90": 3.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.056640625,
-      "unadjustedMean": 0.056640625,
+      "mean": 0.0703125,
+      "unadjustedMean": 0.0703125,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 2.0,
-      "mean": 1.873046875,
-      "unadjustedMean": 1.873046875,
+      "mean": 1.927734375,
+      "unadjustedMean": 1.927734375,
       "baseline": 2.8333333333333335,
       "p10": 0.0,
       "p90": 4.0
@@ -117391,22 +116992,22 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": {
       "targets": [
-        7.576171875,
-        7.9375,
-        8.34375,
-        8.716796875
+        7.56640625,
+        7.94921875,
+        8.30078125,
+        8.703125
       ],
       "receptions": [
-        4.88671875,
-        5.126953125,
-        5.37890625,
-        5.60546875
+        4.814453125,
+        5.064453125,
+        5.291015625,
+        5.5234375
       ],
       "receiving_yards": [
-        64.037109375,
-        67.234375,
-        70.42578125,
-        73.640625
+        64.734375,
+        67.96875,
+        71.193359375,
+        74.427734375
       ]
     },
     "routePolicy": {
@@ -117425,35 +117026,35 @@
     "routeSignal": 0.05163311477525348,
     "receiving_yards": {
       "actual": 171.0,
-      "mean": 67.234375,
-      "unadjustedMean": 64.037109375,
+      "mean": 67.96875,
+      "unadjustedMean": 64.734375,
       "baseline": 86.66666666666667,
-      "p10": 16.0,
-      "p90": 124.0
+      "p10": 17.0,
+      "p90": 127.90000000000003
     },
     "receptions": {
       "actual": 7.0,
-      "mean": 5.126953125,
-      "unadjustedMean": 4.88671875,
+      "mean": 5.064453125,
+      "unadjustedMean": 4.814453125,
       "baseline": 5.333333333333333,
       "p10": 2.0,
       "p90": 9.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.48046875,
-      "unadjustedMean": 0.48046875,
+      "mean": 0.43359375,
+      "unadjustedMean": 0.43359375,
       "baseline": 0.5,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 8.0,
-      "mean": 7.9375,
-      "unadjustedMean": 7.576171875,
+      "mean": 7.94921875,
+      "unadjustedMean": 7.56640625,
       "baseline": 7.833333333333333,
-      "p10": 3.0,
-      "p90": 12.0
+      "p10": 4.0,
+      "p90": 13.0
     },
     "family": "receiving"
   },
@@ -117467,22 +117068,22 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": {
       "targets": [
-        9.708984375,
-        10.189453125,
-        10.662109375,
-        11.18359375
+        9.556640625,
+        10.033203125,
+        10.5,
+        11.017578125
       ],
       "receptions": [
-        6.486328125,
-        6.818359375,
-        7.12890625,
-        7.44921875
+        6.4296875,
+        6.755859375,
+        7.056640625,
+        7.40234375
       ],
       "receiving_yards": [
-        80.65234375,
-        84.6953125,
-        88.720703125,
-        92.7578125
+        80.013671875,
+        83.9921875,
+        88.02734375,
+        92.0
       ]
     },
     "routePolicy": {
@@ -117501,16 +117102,16 @@
     "routeSignal": 0.04322755176823932,
     "receiving_yards": {
       "actual": 51.0,
-      "mean": 84.6953125,
-      "unadjustedMean": 80.65234375,
+      "mean": 83.9921875,
+      "unadjustedMean": 80.013671875,
       "baseline": 118.0,
-      "p10": 34.1,
+      "p10": 29.0,
       "p90": 139.0
     },
     "receptions": {
       "actual": 7.0,
-      "mean": 6.818359375,
-      "unadjustedMean": 6.486328125,
+      "mean": 6.755859375,
+      "unadjustedMean": 6.4296875,
       "baseline": 7.833333333333333,
       "p10": 3.0,
       "p90": 11.0
@@ -117521,14 +117122,14 @@
       "unadjustedMean": 0.548828125,
       "baseline": 0.8333333333333334,
       "p10": 0.0,
-      "p90": 1.0
+      "p90": 2.0
     },
     "targets": {
       "actual": 10.0,
-      "mean": 10.189453125,
-      "unadjustedMean": 9.708984375,
+      "mean": 10.033203125,
+      "unadjustedMean": 9.556640625,
       "baseline": 11.166666666666666,
-      "p10": 6.0,
+      "p10": 5.0,
       "p90": 15.0
     },
     "family": "receiving"
@@ -117543,22 +117144,22 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": {
       "targets": [
-        7.615234375,
-        7.240234375,
-        6.845703125,
-        6.458984375
+        7.607421875,
+        7.21875,
+        6.8671875,
+        6.478515625
       ],
       "receptions": [
-        4.771484375,
-        4.55078125,
-        4.310546875,
-        4.060546875
+        4.755859375,
+        4.521484375,
+        4.26953125,
+        4.015625
       ],
       "receiving_yards": [
-        60.67578125,
-        57.62890625,
-        54.6015625,
-        51.576171875
+        60.205078125,
+        57.171875,
+        54.171875,
+        51.1640625
       ]
     },
     "routePolicy": {
@@ -117577,35 +117178,92 @@
     "routeSignal": -0.07906276300336046,
     "receiving_yards": {
       "actual": 60.0,
-      "mean": 57.62890625,
-      "unadjustedMean": 60.67578125,
+      "mean": 57.171875,
+      "unadjustedMean": 60.205078125,
       "baseline": 68.66666666666667,
-      "p10": 17.0,
-      "p90": 107.0
+      "p10": 11.0,
+      "p90": 107.90000000000003
     },
     "receptions": {
       "actual": 6.0,
-      "mean": 4.55078125,
-      "unadjustedMean": 4.771484375,
+      "mean": 4.521484375,
+      "unadjustedMean": 4.755859375,
       "baseline": 6.333333333333333,
-      "p10": 2.0,
-      "p90": 7.0
+      "p10": 1.0,
+      "p90": 8.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.373046875,
-      "unadjustedMean": 0.373046875,
+      "mean": 0.380859375,
+      "unadjustedMean": 0.380859375,
       "baseline": 0.3333333333333333,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 7.0,
-      "mean": 7.240234375,
-      "unadjustedMean": 7.615234375,
+      "mean": 7.21875,
+      "unadjustedMean": 7.607421875,
       "baseline": 11.166666666666666,
       "p10": 3.0,
-      "p90": 11.0
+      "p90": 12.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0038563",
+    "week": 9,
+    "team": "LV",
+    "opponent": "SF",
+    "position": "WR",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.002611482789066521,
+    "receiving_yards": {
+      "actual": 55.0,
+      "mean": 44.369140625,
+      "unadjustedMean": 44.369140625,
+      "baseline": 54.666666666666664,
+      "p10": 8.100000000000001,
+      "p90": 91.90000000000003
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 3.666015625,
+      "unadjustedMean": 3.666015625,
+      "baseline": 3.6666666666666665,
+      "p10": 1.0,
+      "p90": 7.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.3046875,
+      "unadjustedMean": 0.3046875,
+      "baseline": 0.5,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 8.0,
+      "mean": 5.669921875,
+      "unadjustedMean": 5.669921875,
+      "baseline": 6.166666666666667,
+      "p10": 2.0,
+      "p90": 10.0
     },
     "family": "receiving"
   },
@@ -117634,32 +117292,32 @@
     "routeSignal": -0.010635934769413338,
     "receiving_yards": {
       "actual": 102.0,
-      "mean": 35.921875,
-      "unadjustedMean": 35.921875,
+      "mean": 32.89453125,
+      "unadjustedMean": 32.89453125,
       "baseline": 50.5,
       "p10": 0.0,
-      "p90": 79.0
+      "p90": 73.0
     },
     "receptions": {
       "actual": 5.0,
-      "mean": 2.830078125,
-      "unadjustedMean": 2.830078125,
+      "mean": 2.658203125,
+      "unadjustedMean": 2.658203125,
       "baseline": 3.3333333333333335,
       "p10": 0.0,
-      "p90": 6.0
+      "p90": 5.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.236328125,
-      "unadjustedMean": 0.236328125,
+      "mean": 0.21484375,
+      "unadjustedMean": 0.21484375,
       "baseline": 0.6666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 9.0,
-      "mean": 4.306640625,
-      "unadjustedMean": 4.306640625,
+      "mean": 4.263671875,
+      "unadjustedMean": 4.263671875,
       "baseline": 4.666666666666667,
       "p10": 1.0,
       "p90": 8.0
@@ -117676,22 +117334,22 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": {
       "targets": [
-        6.4140625,
-        6.75390625,
-        7.05859375,
-        7.375
+        6.5234375,
+        6.873046875,
+        7.169921875,
+        7.505859375
       ],
       "receptions": [
-        4.421875,
-        4.662109375,
-        4.876953125,
-        5.107421875
+        4.53515625,
+        4.76171875,
+        4.994140625,
+        5.248046875
       ],
       "receiving_yards": [
-        48.28125,
-        50.6953125,
-        53.1015625,
-        55.537109375
+        50.115234375,
+        52.603515625,
+        55.1171875,
+        57.630859375
       ]
     },
     "routePolicy": {
@@ -117710,35 +117368,35 @@
     "routeSignal": 0.04520402170296609,
     "receiving_yards": {
       "actual": 1.0,
-      "mean": 50.6953125,
-      "unadjustedMean": 48.28125,
+      "mean": 52.603515625,
+      "unadjustedMean": 50.115234375,
       "baseline": 45.0,
-      "p10": 12.0,
-      "p90": 99.90000000000003
+      "p10": 10.0,
+      "p90": 104.0
     },
     "receptions": {
       "actual": 1.0,
-      "mean": 4.662109375,
-      "unadjustedMean": 4.421875,
+      "mean": 4.76171875,
+      "unadjustedMean": 4.53515625,
       "baseline": 5.0,
-      "p10": 1.1000000000000014,
-      "p90": 8.0
+      "p10": 1.0,
+      "p90": 9.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.240234375,
-      "unadjustedMean": 0.240234375,
+      "mean": 0.32421875,
+      "unadjustedMean": 0.32421875,
       "baseline": 0.5,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 3.0,
-      "mean": 6.75390625,
-      "unadjustedMean": 6.4140625,
+      "mean": 6.873046875,
+      "unadjustedMean": 6.5234375,
       "baseline": 6.666666666666667,
-      "p10": 2.0,
-      "p90": 11.0
+      "p10": 3.0,
+      "p90": 12.0
     },
     "family": "receiving"
   },
@@ -117767,35 +117425,92 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 11.0,
-      "mean": 19.46875,
-      "unadjustedMean": 19.46875,
+      "mean": 18.943359375,
+      "unadjustedMean": 18.943359375,
       "baseline": 25.166666666666668,
       "p10": 0.0,
-      "p90": 48.0
+      "p90": 44.900000000000034
     },
     "receptions": {
       "actual": 2.0,
-      "mean": 2.259765625,
-      "unadjustedMean": 2.259765625,
+      "mean": 2.236328125,
+      "unadjustedMean": 2.236328125,
       "baseline": 2.6666666666666665,
       "p10": 0.0,
       "p90": 5.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.1171875,
-      "unadjustedMean": 0.119140625,
+      "mean": 0.107421875,
+      "unadjustedMean": 0.107421875,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 2.0,
+      "mean": 2.97265625,
+      "unadjustedMean": 2.97265625,
+      "baseline": 3.0,
+      "p10": 0.0,
+      "p90": 6.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0039066",
+    "week": 9,
+    "team": "LV",
+    "opponent": "SF",
+    "position": "TE",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.003830063778436309,
+    "receiving_yards": {
+      "actual": 37.0,
+      "mean": 39.2890625,
+      "unadjustedMean": 39.2890625,
+      "baseline": 49.333333333333336,
+      "p10": 9.0,
+      "p90": 76.0
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 3.8984375,
+      "unadjustedMean": 3.8984375,
+      "baseline": 4.5,
+      "p10": 1.0,
+      "p90": 7.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.28515625,
+      "unadjustedMean": 0.28515625,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
-      "actual": 2.0,
-      "mean": 2.9921875,
-      "unadjustedMean": 2.9921875,
-      "baseline": 3.0,
-      "p10": 0.0,
-      "p90": 6.0
+      "actual": 3.0,
+      "mean": 5.623046875,
+      "unadjustedMean": 5.623046875,
+      "baseline": 5.333333333333333,
+      "p10": 3.0,
+      "p90": 9.0
     },
     "family": "receiving"
   },
@@ -117824,35 +117539,35 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 9.0,
-      "mean": 16.943359375,
-      "unadjustedMean": 16.943359375,
+      "mean": 17.068359375,
+      "unadjustedMean": 17.068359375,
       "baseline": 13.833333333333334,
       "p10": 0.0,
-      "p90": 42.900000000000034
+      "p90": 45.0
     },
     "receptions": {
       "actual": 1.0,
-      "mean": 1.931640625,
-      "unadjustedMean": 1.931640625,
+      "mean": 1.896484375,
+      "unadjustedMean": 1.896484375,
       "baseline": 2.3333333333333335,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.111328125,
-      "unadjustedMean": 0.111328125,
+      "mean": 0.09375,
+      "unadjustedMean": 0.09375,
       "baseline": 0.0,
       "p10": 0.0,
-      "p90": 1.0
+      "p90": 0.0
     },
     "targets": {
       "actual": 2.0,
-      "mean": 2.70703125,
-      "unadjustedMean": 2.70703125,
+      "mean": 2.666015625,
+      "unadjustedMean": 2.666015625,
       "baseline": 3.0,
       "p10": 0.0,
-      "p90": 5.0
+      "p90": 6.0
     },
     "family": "receiving"
   },
@@ -117881,35 +117596,149 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 9.427734375,
-      "unadjustedMean": 9.427734375,
+      "mean": 9.470703125,
+      "unadjustedMean": 9.470703125,
       "baseline": 14.333333333333334,
       "p10": 0.0,
-      "p90": 28.0
+      "p90": 26.0
     },
     "receptions": {
       "actual": 0.0,
-      "mean": 1.296875,
-      "unadjustedMean": 1.296875,
+      "mean": 1.19921875,
+      "unadjustedMean": 1.19921875,
       "baseline": 1.8333333333333333,
       "p10": 0.0,
       "p90": 3.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.03515625,
-      "unadjustedMean": 0.03515625,
+      "mean": 0.0390625,
+      "unadjustedMean": 0.0390625,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 0.0,
-      "mean": 1.74609375,
-      "unadjustedMean": 1.74609375,
+      "mean": 1.669921875,
+      "unadjustedMean": 1.669921875,
       "baseline": 2.1666666666666665,
       "p10": 0.0,
       "p90": 4.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0039338",
+    "week": 9,
+    "team": "LV",
+    "opponent": "SF",
+    "position": "TE",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.009290173365779813,
+    "receiving_yards": {
+      "actual": 111.0,
+      "mean": 65.958984375,
+      "unadjustedMean": 65.958984375,
+      "baseline": 91.16666666666667,
+      "p10": 19.1,
+      "p90": 119.0
+    },
+    "receptions": {
+      "actual": 7.0,
+      "mean": 5.435546875,
+      "unadjustedMean": 5.435546875,
+      "baseline": 6.833333333333333,
+      "p10": 2.0,
+      "p90": 9.0
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.427734375,
+      "unadjustedMean": 0.427734375,
+      "baseline": 0.8333333333333334,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 8.0,
+      "mean": 8.091796875,
+      "unadjustedMean": 8.091796875,
+      "baseline": 10.166666666666666,
+      "p10": 4.0,
+      "p90": 12.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0039365",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "WR",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 5.0,
+      "mean": 12.873046875,
+      "unadjustedMean": 12.873046875,
+      "baseline": 7.833333333333333,
+      "p10": 0.0,
+      "p90": 40.900000000000034
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.0625,
+      "unadjustedMean": 1.0625,
+      "baseline": 0.6666666666666666,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.083984375,
+      "unadjustedMean": 0.083984375,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 1.0,
+      "mean": 1.841796875,
+      "unadjustedMean": 1.841796875,
+      "baseline": 1.6666666666666667,
+      "p10": 0.0,
+      "p90": 5.0
     },
     "family": "receiving"
   },
@@ -117923,22 +117752,22 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": {
       "targets": [
-        4.75390625,
-        5.009765625,
-        5.22265625,
-        5.49609375
+        4.63671875,
+        4.869140625,
+        5.08984375,
+        5.328125
       ],
       "receptions": [
-        3.36328125,
-        3.51171875,
-        3.712890625,
-        3.875
+        3.2890625,
+        3.4453125,
+        3.6171875,
+        3.78515625
       ],
       "receiving_yards": [
-        37.056640625,
-        38.923828125,
-        40.76953125,
-        42.599609375
+        35.4375,
+        37.216796875,
+        38.99609375,
+        40.767578125
       ]
     },
     "routePolicy": {
@@ -117957,34 +117786,34 @@
     "routeSignal": 0.06414248228191274,
     "receiving_yards": {
       "actual": 7.0,
-      "mean": 38.923828125,
-      "unadjustedMean": 37.056640625,
+      "mean": 37.216796875,
+      "unadjustedMean": 35.4375,
       "baseline": 30.333333333333332,
-      "p10": 5.0,
-      "p90": 85.0
+      "p10": 3.0,
+      "p90": 79.90000000000003
     },
     "receptions": {
       "actual": 2.0,
-      "mean": 3.51171875,
-      "unadjustedMean": 3.36328125,
+      "mean": 3.4453125,
+      "unadjustedMean": 3.2890625,
       "baseline": 3.0,
       "p10": 1.0,
       "p90": 7.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.248046875,
-      "unadjustedMean": 0.248046875,
+      "mean": 0.240234375,
+      "unadjustedMean": 0.240234375,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 4.0,
-      "mean": 5.009765625,
-      "unadjustedMean": 4.75390625,
+      "mean": 4.869140625,
+      "unadjustedMean": 4.63671875,
       "baseline": 5.166666666666667,
-      "p10": 2.0,
+      "p10": 1.0,
       "p90": 9.0
     },
     "family": "receiving"
@@ -118014,35 +117843,92 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 25.0,
-      "mean": 19.240234375,
-      "unadjustedMean": 19.240234375,
+      "mean": 18.138671875,
+      "unadjustedMean": 18.138671875,
       "baseline": 19.5,
       "p10": 0.0,
-      "p90": 49.900000000000034
+      "p90": 50.0
     },
     "receptions": {
       "actual": 3.0,
-      "mean": 1.55859375,
-      "unadjustedMean": 1.55859375,
+      "mean": 1.564453125,
+      "unadjustedMean": 1.564453125,
       "baseline": 1.5,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.119140625,
-      "unadjustedMean": 0.119140625,
+      "mean": 0.09765625,
+      "unadjustedMean": 0.09765625,
       "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 4.0,
+      "mean": 2.33984375,
+      "unadjustedMean": 2.33984375,
+      "baseline": 1.6666666666666667,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0040122",
+    "week": 9,
+    "team": "LV",
+    "opponent": "SF",
+    "position": "RB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.024139226040506133,
+    "receiving_yards": {
+      "actual": -5.0,
+      "mean": 40.15234375,
+      "unadjustedMean": 40.15234375,
+      "baseline": 52.666666666666664,
+      "p10": 5.0,
+      "p90": 77.90000000000003
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 4.095703125,
+      "unadjustedMean": 4.095703125,
+      "baseline": 4.5,
+      "p10": 1.0,
+      "p90": 8.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.2265625,
+      "unadjustedMean": 0.2265625,
+      "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
-      "actual": 4.0,
-      "mean": 2.412109375,
-      "unadjustedMean": 2.412109375,
-      "baseline": 1.6666666666666667,
-      "p10": 0.0,
-      "p90": 5.0
+      "actual": 7.0,
+      "mean": 5.638671875,
+      "unadjustedMean": 5.638671875,
+      "baseline": 5.833333333333333,
+      "p10": 2.0,
+      "p90": 9.0
     },
     "family": "receiving"
   },
@@ -118071,33 +117957,90 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 0.0,
-      "mean": 17.376953125,
-      "unadjustedMean": 17.376953125,
+      "mean": 18.49609375,
+      "unadjustedMean": 18.49609375,
       "baseline": 30.0,
       "p10": 0.0,
-      "p90": 45.0
+      "p90": 48.900000000000034
     },
     "receptions": {
       "actual": 0.0,
-      "mean": 1.50390625,
-      "unadjustedMean": 1.50390625,
+      "mean": 1.48828125,
+      "unadjustedMean": 1.48828125,
       "baseline": 1.0,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.08984375,
-      "unadjustedMean": 0.08984375,
+      "mean": 0.1328125,
+      "unadjustedMean": 0.1328125,
       "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 2.0,
+      "mean": 2.404296875,
+      "unadjustedMean": 2.404296875,
+      "baseline": 1.8333333333333333,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0040172",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "WR",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 86.0,
+      "mean": 15.828125,
+      "unadjustedMean": 15.828125,
+      "baseline": 23.0,
+      "p10": 0.0,
+      "p90": 43.900000000000034
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 1.322265625,
+      "unadjustedMean": 1.322265625,
+      "baseline": 1.0,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.1015625,
+      "unadjustedMean": 0.1015625,
+      "baseline": 0.0,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
-      "actual": 2.0,
-      "mean": 2.4453125,
-      "unadjustedMean": 2.4453125,
-      "baseline": 1.8333333333333333,
+      "actual": 4.0,
+      "mean": 2.146484375,
+      "unadjustedMean": 2.146484375,
+      "baseline": 1.5,
       "p10": 0.0,
       "p90": 5.0
     },
@@ -118128,34 +118071,34 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 49.0,
-      "mean": 22.185546875,
-      "unadjustedMean": 22.185546875,
+      "mean": 25.5,
+      "unadjustedMean": 25.5,
       "baseline": 25.5,
       "p10": 0.0,
-      "p90": 53.0
+      "p90": 59.0
     },
     "receptions": {
       "actual": 5.0,
-      "mean": 2.0390625,
-      "unadjustedMean": 2.0390625,
+      "mean": 2.37890625,
+      "unadjustedMean": 2.37890625,
       "baseline": 2.3333333333333335,
       "p10": 0.0,
-      "p90": 4.900000000000034
+      "p90": 5.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.123046875,
-      "unadjustedMean": 0.123046875,
+      "mean": 0.171875,
+      "unadjustedMean": 0.171875,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 5.0,
-      "mean": 3.11328125,
-      "unadjustedMean": 3.11328125,
+      "mean": 3.62890625,
+      "unadjustedMean": 3.62890625,
       "baseline": 3.1666666666666665,
-      "p10": 0.0,
+      "p10": 1.0,
       "p90": 7.0
     },
     "family": "receiving"
@@ -118185,32 +118128,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 22.0,
-      "mean": 19.51953125,
-      "unadjustedMean": 19.51953125,
+      "mean": 20.35546875,
+      "unadjustedMean": 20.35546875,
       "baseline": 15.5,
       "p10": 0.0,
-      "p90": 49.0
+      "p90": 50.900000000000034
     },
     "receptions": {
       "actual": 2.0,
-      "mean": 1.77734375,
-      "unadjustedMean": 1.77734375,
+      "mean": 1.755859375,
+      "unadjustedMean": 1.755859375,
       "baseline": 1.3333333333333333,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.109375,
-      "unadjustedMean": 0.109375,
+      "mean": 0.10546875,
+      "unadjustedMean": 0.10546875,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 3.0,
-      "mean": 2.76953125,
-      "unadjustedMean": 2.76953125,
+      "mean": 2.822265625,
+      "unadjustedMean": 2.822265625,
       "baseline": 2.6666666666666665,
       "p10": 0.0,
       "p90": 6.0
@@ -118227,22 +118170,22 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "routeCandidates": {
       "targets": [
-        7.34375,
-        7.69921875,
-        8.091796875,
-        8.439453125
+        7.318359375,
+        7.6953125,
+        8.06640625,
+        8.427734375
       ],
       "receptions": [
-        4.74609375,
-        4.984375,
-        5.23828125,
-        5.46875
+        4.630859375,
+        4.869140625,
+        5.09765625,
+        5.345703125
       ],
       "receiving_yards": [
-        60.794921875,
-        63.8359375,
-        66.869140625,
-        69.939453125
+        59.154296875,
+        62.091796875,
+        65.0625,
+        68.025390625
       ]
     },
     "routePolicy": {
@@ -118261,16 +118204,16 @@
     "routeSignal": 0.048619823575527424,
     "receiving_yards": {
       "actual": 164.0,
-      "mean": 63.8359375,
-      "unadjustedMean": 60.794921875,
+      "mean": 62.091796875,
+      "unadjustedMean": 59.154296875,
       "baseline": 77.66666666666667,
-      "p10": 17.0,
-      "p90": 115.0
+      "p10": 14.0,
+      "p90": 116.0
     },
     "receptions": {
       "actual": 10.0,
-      "mean": 4.984375,
-      "unadjustedMean": 4.74609375,
+      "mean": 4.869140625,
+      "unadjustedMean": 4.630859375,
       "baseline": 5.5,
       "p10": 2.0,
       "p90": 8.0
@@ -118285,11 +118228,68 @@
     },
     "targets": {
       "actual": 10.0,
-      "mean": 7.69921875,
-      "unadjustedMean": 7.34375,
+      "mean": 7.6953125,
+      "unadjustedMean": 7.318359375,
       "baseline": 10.666666666666666,
-      "p10": 4.0,
+      "p10": 3.0,
       "p90": 12.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0041052",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "RB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.05,
+      "yards": 0.05,
+      "n": 154,
+      "games": 53,
+      "trainedThroughWeek": 8,
+      "status": "Research warm-up; not independently validated"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 6.9609375,
+      "unadjustedMean": 6.9609375,
+      "baseline": -0.16666666666666666,
+      "p10": 0.0,
+      "p90": 24.0
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.791015625,
+      "unadjustedMean": 0.791015625,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.0390625,
+      "unadjustedMean": 0.0390625,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 0.0,
+      "mean": 1.123046875,
+      "unadjustedMean": 1.123046875,
+      "baseline": 0.8333333333333334,
+      "p10": 0.0,
+      "p90": 3.0
     },
     "family": "receiving"
   },
@@ -146435,74 +146435,6 @@
     "family": "rushing"
   },
   {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0029604",
-    "week": 9,
-    "team": "LV",
-    "opponent": "SF",
-    "position": "QB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "rushing_yards": {
-      "actual": 0.0,
-      "mean": 5.3359375,
-      "unadjustedMean": 5.3359375,
-      "baseline": 2.0,
-      "p10": -1.0,
-      "p90": 17.0
-    },
-    "carries": {
-      "actual": 2.0,
-      "mean": 2.095703125,
-      "unadjustedMean": 2.095703125,
-      "baseline": 1.8333333333333333,
-      "p10": 0.0,
-      "p90": 4.900000000000034
-    },
-    "rushing_tds": {
-      "actual": 1.0,
-      "mean": 0.0703125,
-      "unadjustedMean": 0.0703125,
-      "baseline": 0.16666666666666666,
-      "p10": 0.0,
-      "p90": 0.0
-    },
-    "family": "rushing"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0033280",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "RB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "rushing_yards": {
-      "actual": 68.0,
-      "mean": 67.921875,
-      "unadjustedMean": 67.921875,
-      "baseline": 53.5,
-      "p10": 25.0,
-      "p90": 115.0
-    },
-    "carries": {
-      "actual": 18.0,
-      "mean": 14.83984375,
-      "unadjustedMean": 14.83984375,
-      "baseline": 12.333333333333334,
-      "p10": 7.0,
-      "p90": 22.900000000000034
-    },
-    "rushing_tds": {
-      "actual": 1.0,
-      "mean": 0.662109375,
-      "unadjustedMean": 0.662109375,
-      "baseline": 1.3333333333333333,
-      "p10": 0.0,
-      "p90": 2.0
-    },
-    "family": "rushing"
-  },
-  {
     "game_id": "2026_09_HOU_LAC",
     "player_id": "00-0036355",
     "week": 9,
@@ -146512,93 +146444,25 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "rushing_yards": {
       "actual": 7.0,
-      "mean": 24.4140625,
-      "unadjustedMean": 24.4140625,
+      "mean": 23.447265625,
+      "unadjustedMean": 23.447265625,
       "baseline": 25.666666666666668,
       "p10": 1.0,
-      "p90": 50.900000000000034
+      "p90": 49.0
     },
     "carries": {
       "actual": 1.0,
-      "mean": 4.84375,
-      "unadjustedMean": 4.84375,
+      "mean": 4.810546875,
+      "unadjustedMean": 4.810546875,
       "baseline": 4.666666666666667,
       "p10": 1.0,
       "p90": 9.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.181640625,
-      "unadjustedMean": 0.181640625,
+      "mean": 0.171875,
+      "unadjustedMean": 0.171875,
       "baseline": 0.0,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "family": "rushing"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0036972",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "QB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "rushing_yards": {
-      "actual": -3.0,
-      "mean": 6.06640625,
-      "unadjustedMean": 6.06640625,
-      "baseline": 0.16666666666666666,
-      "p10": -2.0,
-      "p90": 20.0
-    },
-    "carries": {
-      "actual": 3.0,
-      "mean": 2.205078125,
-      "unadjustedMean": 2.205078125,
-      "baseline": 2.5,
-      "p10": 0.0,
-      "p90": 5.0
-    },
-    "rushing_tds": {
-      "actual": 0.0,
-      "mean": 0.06640625,
-      "unadjustedMean": 0.06640625,
-      "baseline": 0.0,
-      "p10": 0.0,
-      "p90": 0.0
-    },
-    "family": "rushing"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0037834",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "QB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "rushing_yards": {
-      "actual": 40.0,
-      "mean": 20.53125,
-      "unadjustedMean": 20.53125,
-      "baseline": 22.0,
-      "p10": 0.0,
-      "p90": 43.0
-    },
-    "carries": {
-      "actual": 7.0,
-      "mean": 4.306640625,
-      "unadjustedMean": 4.306640625,
-      "baseline": 4.5,
-      "p10": 1.0,
-      "p90": 8.0
-    },
-    "rushing_tds": {
-      "actual": 1.0,
-      "mean": 0.173828125,
-      "unadjustedMean": 0.173828125,
-      "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
@@ -146614,24 +146478,24 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "rushing_yards": {
       "actual": 33.0,
-      "mean": 23.0859375,
-      "unadjustedMean": 23.0859375,
+      "mean": 22.796875,
+      "unadjustedMean": 22.796875,
       "baseline": 22.666666666666668,
       "p10": 0.0,
-      "p90": 57.0
+      "p90": 55.0
     },
     "carries": {
       "actual": 7.0,
-      "mean": 5.68359375,
-      "unadjustedMean": 5.68359375,
+      "mean": 5.447265625,
+      "unadjustedMean": 5.447265625,
       "baseline": 5.833333333333333,
       "p10": 1.0,
-      "p90": 12.0
+      "p90": 11.900000000000034
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.18359375,
-      "unadjustedMean": 0.18359375,
+      "mean": 0.193359375,
+      "unadjustedMean": 0.193359375,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
@@ -146648,24 +146512,24 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "rushing_yards": {
       "actual": 16.0,
-      "mean": 20.10546875,
-      "unadjustedMean": 20.10546875,
+      "mean": 22.19140625,
+      "unadjustedMean": 22.19140625,
       "baseline": 14.333333333333334,
       "p10": 0.0,
-      "p90": 50.0
+      "p90": 54.900000000000034
     },
     "carries": {
       "actual": 6.0,
-      "mean": 4.513671875,
-      "unadjustedMean": 4.513671875,
+      "mean": 5.046875,
+      "unadjustedMean": 5.046875,
       "baseline": 3.0,
       "p10": 0.0,
-      "p90": 10.0
+      "p90": 11.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.130859375,
-      "unadjustedMean": 0.130859375,
+      "mean": 0.17578125,
+      "unadjustedMean": 0.17578125,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
@@ -146682,24 +146546,24 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "rushing_yards": {
       "actual": 20.0,
-      "mean": 12.232421875,
-      "unadjustedMean": 12.232421875,
+      "mean": 12.724609375,
+      "unadjustedMean": 12.724609375,
       "baseline": 10.833333333333334,
       "p10": 0.0,
-      "p90": 32.900000000000034
+      "p90": 32.0
     },
     "carries": {
       "actual": 2.0,
-      "mean": 3.056640625,
-      "unadjustedMean": 3.056640625,
+      "mean": 3.048828125,
+      "unadjustedMean": 3.048828125,
       "baseline": 2.6666666666666665,
       "p10": 0.0,
-      "p90": 7.0
+      "p90": 6.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.125,
-      "unadjustedMean": 0.125,
+      "mean": 0.130859375,
+      "unadjustedMean": 0.130859375,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
@@ -146716,58 +146580,24 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "rushing_yards": {
       "actual": 30.0,
-      "mean": 26.09765625,
-      "unadjustedMean": 26.09765625,
+      "mean": 26.638671875,
+      "unadjustedMean": 26.638671875,
       "baseline": 22.0,
       "p10": 0.0,
-      "p90": 57.0
+      "p90": 62.900000000000034
     },
     "carries": {
       "actual": 7.0,
-      "mean": 6.21484375,
-      "unadjustedMean": 6.21484375,
+      "mean": 6.025390625,
+      "unadjustedMean": 6.025390625,
       "baseline": 4.833333333333333,
       "p10": 1.0,
-      "p90": 14.0
+      "p90": 13.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.22265625,
-      "unadjustedMean": 0.22265625,
-      "baseline": 0.16666666666666666,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "family": "rushing"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0040122",
-    "week": 9,
-    "team": "LV",
-    "opponent": "SF",
-    "position": "RB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "rushing_yards": {
-      "actual": 25.0,
-      "mean": 41.548828125,
-      "unadjustedMean": 41.548828125,
-      "baseline": 31.166666666666668,
-      "p10": 5.0,
-      "p90": 86.0
-    },
-    "carries": {
-      "actual": 6.0,
-      "mean": 9.310546875,
-      "unadjustedMean": 9.310546875,
-      "baseline": 10.666666666666666,
-      "p10": 3.0,
-      "p90": 16.0
-    },
-    "rushing_tds": {
-      "actual": 0.0,
-      "mean": 0.3125,
-      "unadjustedMean": 0.3125,
+      "mean": 0.1484375,
+      "unadjustedMean": 0.1484375,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
@@ -146784,24 +146614,24 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "rushing_yards": {
       "actual": 70.0,
-      "mean": 58.98046875,
-      "unadjustedMean": 58.98046875,
+      "mean": 59.396484375,
+      "unadjustedMean": 59.396484375,
       "baseline": 38.166666666666664,
-      "p10": 16.0,
-      "p90": 110.0
+      "p10": 15.0,
+      "p90": 111.0
     },
     "carries": {
       "actual": 18.0,
-      "mean": 13.654296875,
-      "unadjustedMean": 13.654296875,
+      "mean": 13.55078125,
+      "unadjustedMean": 13.55078125,
       "baseline": 11.333333333333334,
       "p10": 6.0,
-      "p90": 22.0
+      "p90": 21.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.439453125,
-      "unadjustedMean": 0.439453125,
+      "mean": 0.42578125,
+      "unadjustedMean": 0.42578125,
       "baseline": 0.3333333333333333,
       "p10": 0.0,
       "p90": 1.0
@@ -146818,93 +146648,25 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "rushing_yards": {
       "actual": 60.0,
-      "mean": 43.09375,
-      "unadjustedMean": 43.09375,
+      "mean": 41.99609375,
+      "unadjustedMean": 41.99609375,
       "baseline": 44.333333333333336,
-      "p10": 6.0,
-      "p90": 87.0
+      "p10": 7.0,
+      "p90": 87.90000000000003
     },
     "carries": {
       "actual": 13.0,
-      "mean": 10.341796875,
-      "unadjustedMean": 10.341796875,
+      "mean": 10.154296875,
+      "unadjustedMean": 10.154296875,
       "baseline": 12.833333333333334,
       "p10": 3.0,
       "p90": 18.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.314453125,
-      "unadjustedMean": 0.314453125,
+      "mean": 0.2734375,
+      "unadjustedMean": 0.2734375,
       "baseline": 0.3333333333333333,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "family": "rushing"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0040878",
-    "week": 9,
-    "team": "LV",
-    "opponent": "SF",
-    "position": "RB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "rushing_yards": {
-      "actual": -3.0,
-      "mean": 38.3828125,
-      "unadjustedMean": 38.3828125,
-      "baseline": 38.333333333333336,
-      "p10": 4.0,
-      "p90": 78.0
-    },
-    "carries": {
-      "actual": 6.0,
-      "mean": 9.3125,
-      "unadjustedMean": 9.3125,
-      "baseline": 9.166666666666666,
-      "p10": 2.0,
-      "p90": 17.0
-    },
-    "rushing_tds": {
-      "actual": 0.0,
-      "mean": 0.283203125,
-      "unadjustedMean": 0.283203125,
-      "baseline": 0.16666666666666666,
-      "p10": 0.0,
-      "p90": 1.0
-    },
-    "family": "rushing"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0041052",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "RB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "rushing_yards": {
-      "actual": 70.0,
-      "mean": 35.349609375,
-      "unadjustedMean": 35.349609375,
-      "baseline": 28.0,
-      "p10": 3.0,
-      "p90": 75.0
-    },
-    "carries": {
-      "actual": 11.0,
-      "mean": 8.298828125,
-      "unadjustedMean": 8.298828125,
-      "baseline": 7.166666666666667,
-      "p10": 2.0,
-      "p90": 16.0
-    },
-    "rushing_tds": {
-      "actual": 0.0,
-      "mean": 0.283203125,
-      "unadjustedMean": 0.283203125,
-      "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
@@ -146920,27 +146682,95 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 0.0,
-      "mean": 15.87109375,
-      "unadjustedMean": 15.87109375,
+      "mean": 18.326171875,
+      "unadjustedMean": 18.326171875,
       "baseline": 20.0,
       "p10": 0.0,
-      "p90": 39.900000000000034
+      "p90": 45.0
     },
     "carries": {
       "actual": 0.0,
-      "mean": 3.685546875,
-      "unadjustedMean": 3.685546875,
+      "mean": 3.919921875,
+      "unadjustedMean": 3.919921875,
       "baseline": 4.333333333333333,
       "p10": 0.0,
       "p90": 8.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.12109375,
-      "unadjustedMean": 0.12109375,
+      "mean": 0.134765625,
+      "unadjustedMean": 0.134765625,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0029604",
+    "week": 9,
+    "team": "LV",
+    "opponent": "SF",
+    "position": "QB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "rushing_yards": {
+      "actual": 0.0,
+      "mean": 5.57421875,
+      "unadjustedMean": 5.57421875,
+      "baseline": 2.0,
+      "p10": -1.0,
+      "p90": 18.0
+    },
+    "carries": {
+      "actual": 2.0,
+      "mean": 2.056640625,
+      "unadjustedMean": 2.056640625,
+      "baseline": 1.8333333333333333,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.078125,
+      "unadjustedMean": 0.078125,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0033280",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "RB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "rushing_yards": {
+      "actual": 68.0,
+      "mean": 65.87109375,
+      "unadjustedMean": 65.87109375,
+      "baseline": 53.5,
+      "p10": 25.0,
+      "p90": 114.90000000000003
+    },
+    "carries": {
+      "actual": 18.0,
+      "mean": 15.005859375,
+      "unadjustedMean": 15.005859375,
+      "baseline": 12.333333333333334,
+      "p10": 8.0,
+      "p90": 22.0
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.642578125,
+      "unadjustedMean": 0.642578125,
+      "baseline": 1.3333333333333333,
+      "p10": 0.0,
+      "p90": 2.0
     },
     "family": "rushing"
   },
@@ -146954,24 +146784,24 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 5.0,
-      "mean": 44.89453125,
-      "unadjustedMean": 44.89453125,
+      "mean": 45.904296875,
+      "unadjustedMean": 45.904296875,
       "baseline": 45.5,
-      "p10": 11.0,
-      "p90": 83.0
+      "p10": 11.100000000000001,
+      "p90": 91.0
     },
     "carries": {
       "actual": 4.0,
-      "mean": 11.47265625,
-      "unadjustedMean": 11.47265625,
+      "mean": 11.330078125,
+      "unadjustedMean": 11.330078125,
       "baseline": 13.333333333333334,
-      "p10": 4.0,
+      "p10": 5.0,
       "p90": 19.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.306640625,
-      "unadjustedMean": 0.306640625,
+      "mean": 0.318359375,
+      "unadjustedMean": 0.318359375,
       "baseline": 0.5,
       "p10": 0.0,
       "p90": 1.0
@@ -146988,27 +146818,61 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 32.0,
-      "mean": 51.009765625,
-      "unadjustedMean": 51.009765625,
+      "mean": 50.2890625,
+      "unadjustedMean": 50.2890625,
       "baseline": 45.5,
-      "p10": 13.0,
-      "p90": 95.0
+      "p10": 15.0,
+      "p90": 88.0
     },
     "carries": {
       "actual": 6.0,
-      "mean": 11.64453125,
-      "unadjustedMean": 11.64453125,
+      "mean": 11.8359375,
+      "unadjustedMean": 11.8359375,
       "baseline": 12.0,
-      "p10": 5.0,
+      "p10": 5.100000000000001,
       "p90": 19.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.333984375,
-      "unadjustedMean": 0.333984375,
+      "mean": 0.365234375,
+      "unadjustedMean": 0.365234375,
       "baseline": 0.3333333333333333,
       "p10": 0.0,
       "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0036972",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "QB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "rushing_yards": {
+      "actual": -3.0,
+      "mean": 6.16796875,
+      "unadjustedMean": 6.16796875,
+      "baseline": 0.16666666666666666,
+      "p10": -1.0,
+      "p90": 20.0
+    },
+    "carries": {
+      "actual": 3.0,
+      "mean": 2.232421875,
+      "unadjustedMean": 2.232421875,
+      "baseline": 2.5,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.09765625,
+      "unadjustedMean": 0.09765625,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
     },
     "family": "rushing"
   },
@@ -147022,25 +146886,59 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 46.0,
-      "mean": 52.111328125,
-      "unadjustedMean": 52.111328125,
+      "mean": 53.9609375,
+      "unadjustedMean": 53.9609375,
       "baseline": 42.0,
-      "p10": 12.0,
-      "p90": 107.0
+      "p10": 11.0,
+      "p90": 104.0
     },
     "carries": {
       "actual": 17.0,
-      "mean": 11.607421875,
-      "unadjustedMean": 11.607421875,
+      "mean": 12.03125,
+      "unadjustedMean": 12.03125,
       "baseline": 8.333333333333334,
       "p10": 4.0,
       "p90": 20.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.375,
-      "unadjustedMean": 0.375,
+      "mean": 0.408203125,
+      "unadjustedMean": 0.408203125,
       "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0037834",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "QB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "rushing_yards": {
+      "actual": 40.0,
+      "mean": 18.328125,
+      "unadjustedMean": 18.328125,
+      "baseline": 22.0,
+      "p10": 0.0,
+      "p90": 42.0
+    },
+    "carries": {
+      "actual": 7.0,
+      "mean": 3.990234375,
+      "unadjustedMean": 3.990234375,
+      "baseline": 4.5,
+      "p10": 1.0,
+      "p90": 8.0
+    },
+    "rushing_tds": {
+      "actual": 1.0,
+      "mean": 0.140625,
+      "unadjustedMean": 0.140625,
+      "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
@@ -147056,24 +146954,24 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 22.0,
-      "mean": 17.783203125,
-      "unadjustedMean": 17.783203125,
+      "mean": 14.796875,
+      "unadjustedMean": 14.796875,
       "baseline": 12.666666666666666,
       "p10": 0.0,
-      "p90": 44.80000000000007
+      "p90": 38.0
     },
     "carries": {
       "actual": 8.0,
-      "mean": 4.302734375,
-      "unadjustedMean": 4.302734375,
+      "mean": 3.904296875,
+      "unadjustedMean": 3.904296875,
       "baseline": 4.0,
       "p10": 0.0,
-      "p90": 10.900000000000034
+      "p90": 9.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.078125,
-      "unadjustedMean": 0.078125,
+      "mean": 0.048828125,
+      "unadjustedMean": 0.048828125,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 0.0
@@ -147090,24 +146988,24 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 0.0,
-      "mean": 10.40234375,
-      "unadjustedMean": 10.40234375,
+      "mean": 12.27734375,
+      "unadjustedMean": 12.27734375,
       "baseline": 8.0,
       "p10": 0.0,
-      "p90": 32.0
+      "p90": 38.0
     },
     "carries": {
       "actual": 0.0,
-      "mean": 2.697265625,
-      "unadjustedMean": 2.697265625,
+      "mean": 3.015625,
+      "unadjustedMean": 3.015625,
       "baseline": 3.1666666666666665,
       "p10": 0.0,
-      "p90": 7.0
+      "p90": 8.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.078125,
-      "unadjustedMean": 0.078125,
+      "mean": 0.072265625,
+      "unadjustedMean": 0.072265625,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 0.0
@@ -147124,27 +147022,27 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 77.0,
-      "mean": 61.458984375,
-      "unadjustedMean": 61.458984375,
+      "mean": 61.953125,
+      "unadjustedMean": 61.953125,
       "baseline": 52.666666666666664,
-      "p10": 19.0,
-      "p90": 112.80000000000007
+      "p10": 20.0,
+      "p90": 108.90000000000003
     },
     "carries": {
       "actual": 16.0,
-      "mean": 13.404296875,
-      "unadjustedMean": 13.404296875,
+      "mean": 13.755859375,
+      "unadjustedMean": 13.755859375,
       "baseline": 10.833333333333334,
-      "p10": 6.0,
-      "p90": 20.0
+      "p10": 7.0,
+      "p90": 21.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.552734375,
-      "unadjustedMean": 0.552734375,
+      "mean": 0.521484375,
+      "unadjustedMean": 0.521484375,
       "baseline": 0.6666666666666666,
       "p10": 0.0,
-      "p90": 2.0
+      "p90": 1.0
     },
     "family": "rushing"
   },
@@ -147158,27 +147056,27 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 0.0,
-      "mean": 15.564453125,
-      "unadjustedMean": 15.564453125,
+      "mean": 18.841796875,
+      "unadjustedMean": 18.841796875,
       "baseline": 12.5,
       "p10": 0.0,
-      "p90": 40.0
+      "p90": 46.0
     },
     "carries": {
       "actual": 0.0,
-      "mean": 3.724609375,
-      "unadjustedMean": 3.724609375,
+      "mean": 4.166015625,
+      "unadjustedMean": 4.166015625,
       "baseline": 4.166666666666667,
       "p10": 0.0,
-      "p90": 8.0
+      "p90": 10.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.0703125,
-      "unadjustedMean": 0.0703125,
+      "mean": 0.1171875,
+      "unadjustedMean": 0.1171875,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
-      "p90": 0.0
+      "p90": 1.0
     },
     "family": "rushing"
   },
@@ -147192,25 +147090,59 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 3.0,
-      "mean": 27.888671875,
-      "unadjustedMean": 27.888671875,
+      "mean": 29.060546875,
+      "unadjustedMean": 29.060546875,
       "baseline": 25.333333333333332,
-      "p10": 2.0,
-      "p90": 57.0
+      "p10": 3.0,
+      "p90": 59.0
     },
     "carries": {
       "actual": 1.0,
-      "mean": 5.533203125,
-      "unadjustedMean": 5.533203125,
+      "mean": 6.03125,
+      "unadjustedMean": 6.03125,
       "baseline": 5.833333333333333,
       "p10": 2.0,
-      "p90": 10.0
+      "p90": 11.0
     },
     "rushing_tds": {
       "actual": 0.0,
-      "mean": 0.369140625,
-      "unadjustedMean": 0.369140625,
+      "mean": 0.40234375,
+      "unadjustedMean": 0.40234375,
       "baseline": 0.5,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0040122",
+    "week": 9,
+    "team": "LV",
+    "opponent": "SF",
+    "position": "RB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "rushing_yards": {
+      "actual": 25.0,
+      "mean": 40.64453125,
+      "unadjustedMean": 40.64453125,
+      "baseline": 31.166666666666668,
+      "p10": 4.0,
+      "p90": 82.0
+    },
+    "carries": {
+      "actual": 6.0,
+      "mean": 9.43359375,
+      "unadjustedMean": 9.43359375,
+      "baseline": 10.666666666666666,
+      "p10": 2.0,
+      "p90": 18.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.236328125,
+      "unadjustedMean": 0.236328125,
+      "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
@@ -147226,24 +147158,24 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 68.0,
-      "mean": 15.00390625,
-      "unadjustedMean": 15.00390625,
+      "mean": 14.76953125,
+      "unadjustedMean": 14.76953125,
       "baseline": 17.333333333333332,
       "p10": 0.0,
-      "p90": 39.900000000000034
+      "p90": 39.0
     },
     "carries": {
       "actual": 14.0,
-      "mean": 3.767578125,
-      "unadjustedMean": 3.767578125,
+      "mean": 3.66796875,
+      "unadjustedMean": 3.66796875,
       "baseline": 4.666666666666667,
       "p10": 0.0,
-      "p90": 8.900000000000034
+      "p90": 9.0
     },
     "rushing_tds": {
       "actual": 1.0,
-      "mean": 0.087890625,
-      "unadjustedMean": 0.087890625,
+      "mean": 0.041015625,
+      "unadjustedMean": 0.041015625,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 0.0
@@ -147260,25 +147192,93 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "rushing_yards": {
       "actual": 55.0,
-      "mean": 26.98046875,
-      "unadjustedMean": 26.98046875,
+      "mean": 26.068359375,
+      "unadjustedMean": 26.068359375,
       "baseline": 29.666666666666668,
       "p10": 0.0,
-      "p90": 65.0
+      "p90": 63.900000000000034
     },
     "carries": {
       "actual": 8.0,
-      "mean": 6.28515625,
-      "unadjustedMean": 6.28515625,
+      "mean": 6.099609375,
+      "unadjustedMean": 6.099609375,
       "baseline": 5.666666666666667,
-      "p10": 1.0,
-      "p90": 14.0
+      "p10": 0.0,
+      "p90": 13.0
     },
     "rushing_tds": {
       "actual": 1.0,
-      "mean": 0.1875,
-      "unadjustedMean": 0.1875,
+      "mean": 0.20703125,
+      "unadjustedMean": 0.20703125,
       "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0040878",
+    "week": 9,
+    "team": "LV",
+    "opponent": "SF",
+    "position": "RB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "rushing_yards": {
+      "actual": -3.0,
+      "mean": 39.787109375,
+      "unadjustedMean": 39.787109375,
+      "baseline": 38.333333333333336,
+      "p10": 5.0,
+      "p90": 78.0
+    },
+    "carries": {
+      "actual": 6.0,
+      "mean": 10.015625,
+      "unadjustedMean": 10.015625,
+      "baseline": 9.166666666666666,
+      "p10": 2.0,
+      "p90": 18.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.244140625,
+      "unadjustedMean": 0.244140625,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0041052",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "RB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "rushing_yards": {
+      "actual": 70.0,
+      "mean": 34.62109375,
+      "unadjustedMean": 34.62109375,
+      "baseline": 28.0,
+      "p10": 3.0,
+      "p90": 77.0
+    },
+    "carries": {
+      "actual": 11.0,
+      "mean": 8.01171875,
+      "unadjustedMean": 8.01171875,
+      "baseline": 7.166666666666667,
+      "p10": 2.0,
+      "p90": 15.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.244140625,
+      "unadjustedMean": 0.244140625,
+      "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
@@ -161745,56 +161745,6 @@
     "family": "passing"
   },
   {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0029604",
-    "week": 9,
-    "team": "LV",
-    "opponent": "SF",
-    "position": "QB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "passing_yards": {
-      "actual": 216.0,
-      "mean": 266.6484375,
-      "unadjustedMean": 266.6484375,
-      "baseline": 285.1666666666667,
-      "p10": 180.1,
-      "p90": 358.7000000000001
-    },
-    "attempts": {
-      "actual": 32.0,
-      "mean": 35.822265625,
-      "unadjustedMean": 35.822265625,
-      "baseline": 37.333333333333336,
-      "p10": 26.0,
-      "p90": 47.0
-    },
-    "completions": {
-      "actual": 22.0,
-      "mean": 23.810546875,
-      "unadjustedMean": 23.810546875,
-      "baseline": 23.333333333333332,
-      "p10": 16.0,
-      "p90": 31.0
-    },
-    "passing_tds": {
-      "actual": 1.0,
-      "mean": 1.8671875,
-      "unadjustedMean": 1.8671875,
-      "baseline": 2.1666666666666665,
-      "p10": 0.0,
-      "p90": 3.0
-    },
-    "passing_interceptions": {
-      "actual": 3.0,
-      "mean": 0.76171875,
-      "unadjustedMean": 0.76171875,
-      "baseline": 0.3333333333333333,
-      "p10": 0.0,
-      "p90": 2.0
-    },
-    "family": "passing"
-  },
-  {
     "game_id": "2026_09_HOU_LAC",
     "player_id": "00-0036355",
     "week": 9,
@@ -161804,43 +161754,43 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "passing_yards": {
       "actual": 193.0,
-      "mean": 207.744140625,
-      "unadjustedMean": 207.744140625,
+      "mean": 214.537109375,
+      "unadjustedMean": 214.537109375,
       "baseline": 198.16666666666666,
-      "p10": 110.1,
-      "p90": 299.90000000000003
+      "p10": 112.0,
+      "p90": 319.0
     },
     "attempts": {
       "actual": 23.0,
-      "mean": 30.533203125,
-      "unadjustedMean": 30.533203125,
+      "mean": 30.91796875,
+      "unadjustedMean": 30.91796875,
       "baseline": 30.833333333333332,
-      "p10": 20.0,
+      "p10": 21.0,
       "p90": 41.0
     },
     "completions": {
       "actual": 13.0,
-      "mean": 19.50390625,
-      "unadjustedMean": 19.50390625,
+      "mean": 19.96875,
+      "unadjustedMean": 19.96875,
       "baseline": 19.0,
       "p10": 12.0,
-      "p90": 27.0
+      "p90": 28.0
     },
     "passing_tds": {
       "actual": 1.0,
-      "mean": 1.185546875,
-      "unadjustedMean": 1.185546875,
+      "mean": 1.2265625,
+      "unadjustedMean": 1.2265625,
       "baseline": 0.6666666666666666,
       "p10": 0.0,
       "p90": 2.0
     },
     "passing_interceptions": {
       "actual": 1.0,
-      "mean": 0.580078125,
-      "unadjustedMean": 0.580078125,
+      "mean": 0.623046875,
+      "unadjustedMean": 0.623046875,
       "baseline": 1.5,
       "p10": 0.0,
-      "p90": 1.0
+      "p90": 2.0
     },
     "family": "passing"
   },
@@ -161854,93 +161804,43 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "passing_yards": {
       "actual": 7.0,
-      "mean": 86.30078125,
-      "unadjustedMean": 86.30078125,
+      "mean": 83.72265625,
+      "unadjustedMean": 83.72265625,
       "baseline": 152.5,
       "p10": 0.0,
-      "p90": 243.0
+      "p90": 237.90000000000003
     },
     "attempts": {
       "actual": 2.0,
-      "mean": 13.111328125,
-      "unadjustedMean": 13.111328125,
+      "mean": 12.5703125,
+      "unadjustedMean": 12.5703125,
       "baseline": 26.5,
       "p10": 0.0,
       "p90": 34.0
     },
     "completions": {
       "actual": 1.0,
-      "mean": 7.927734375,
-      "unadjustedMean": 7.927734375,
+      "mean": 7.689453125,
+      "unadjustedMean": 7.689453125,
       "baseline": 15.166666666666666,
       "p10": 0.0,
       "p90": 21.0
     },
     "passing_tds": {
       "actual": 0.0,
-      "mean": 0.435546875,
-      "unadjustedMean": 0.435546875,
+      "mean": 0.42578125,
+      "unadjustedMean": 0.42578125,
       "baseline": 0.8333333333333334,
       "p10": 0.0,
       "p90": 2.0
     },
     "passing_interceptions": {
       "actual": 0.0,
-      "mean": 0.306640625,
-      "unadjustedMean": 0.306640625,
+      "mean": 0.27734375,
+      "unadjustedMean": 0.27734375,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
-    },
-    "family": "passing"
-  },
-  {
-    "game_id": "2026_09_LV_SF",
-    "player_id": "00-0037834",
-    "week": 9,
-    "team": "SF",
-    "opponent": "LV",
-    "position": "QB",
-    "kickoff": "2026-11-08T21:05:00+00:00",
-    "passing_yards": {
-      "actual": 232.0,
-      "mean": 249.21484375,
-      "unadjustedMean": 249.21484375,
-      "baseline": 257.1666666666667,
-      "p10": 163.2,
-      "p90": 334.90000000000003
-    },
-    "attempts": {
-      "actual": 25.0,
-      "mean": 32.986328125,
-      "unadjustedMean": 32.986328125,
-      "baseline": 29.5,
-      "p10": 23.0,
-      "p90": 43.0
-    },
-    "completions": {
-      "actual": 17.0,
-      "mean": 22.0,
-      "unadjustedMean": 22.0,
-      "baseline": 20.166666666666668,
-      "p10": 16.0,
-      "p90": 29.900000000000034
-    },
-    "passing_tds": {
-      "actual": 2.0,
-      "mean": 1.826171875,
-      "unadjustedMean": 1.826171875,
-      "baseline": 2.0,
-      "p10": 0.0,
-      "p90": 3.0
-    },
-    "passing_interceptions": {
-      "actual": 1.0,
-      "mean": 0.685546875,
-      "unadjustedMean": 0.685546875,
-      "baseline": 0.5,
-      "p10": 0.0,
-      "p90": 2.0
     },
     "family": "passing"
   },
@@ -161954,40 +161854,40 @@
     "kickoff": "2026-11-08T21:05:00+00:00",
     "passing_yards": {
       "actual": 384.0,
-      "mean": 207.79296875,
-      "unadjustedMean": 207.79296875,
+      "mean": 210.044921875,
+      "unadjustedMean": 210.044921875,
       "baseline": 265.5,
-      "p10": 94.5,
-      "p90": 315.0
+      "p10": 99.0,
+      "p90": 309.0
     },
     "attempts": {
       "actual": 35.0,
-      "mean": 28.294921875,
-      "unadjustedMean": 28.294921875,
+      "mean": 28.87109375,
+      "unadjustedMean": 28.87109375,
       "baseline": 34.833333333333336,
       "p10": 15.0,
       "p90": 40.900000000000034
     },
     "completions": {
       "actual": 21.0,
-      "mean": 18.263671875,
-      "unadjustedMean": 18.263671875,
+      "mean": 18.599609375,
+      "unadjustedMean": 18.599609375,
       "baseline": 22.333333333333332,
       "p10": 10.0,
-      "p90": 26.0
+      "p90": 27.0
     },
     "passing_tds": {
       "actual": 5.0,
-      "mean": 1.40625,
-      "unadjustedMean": 1.40625,
+      "mean": 1.4140625,
+      "unadjustedMean": 1.4140625,
       "baseline": 1.5,
       "p10": 0.0,
       "p90": 3.0
     },
     "passing_interceptions": {
       "actual": 1.0,
-      "mean": 0.607421875,
-      "unadjustedMean": 0.607421875,
+      "mean": 0.671875,
+      "unadjustedMean": 0.671875,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 2.0
@@ -162004,43 +161904,93 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "passing_yards": {
       "actual": 0.0,
-      "mean": 66.630859375,
-      "unadjustedMean": 66.630859375,
+      "mean": 70.59375,
+      "unadjustedMean": 70.59375,
       "baseline": 120.5,
       "p10": 0.0,
-      "p90": 221.80000000000007
+      "p90": 229.0
     },
     "attempts": {
       "actual": 0.0,
-      "mean": 10.087890625,
-      "unadjustedMean": 10.087890625,
+      "mean": 10.52734375,
+      "unadjustedMean": 10.52734375,
       "baseline": 20.5,
       "p10": 0.0,
-      "p90": 29.0
+      "p90": 31.0
     },
     "completions": {
       "actual": 0.0,
-      "mean": 6.29296875,
-      "unadjustedMean": 6.29296875,
+      "mean": 6.599609375,
+      "unadjustedMean": 6.599609375,
       "baseline": 12.166666666666666,
       "p10": 0.0,
       "p90": 20.0
     },
     "passing_tds": {
       "actual": 0.0,
-      "mean": 0.341796875,
-      "unadjustedMean": 0.341796875,
+      "mean": 0.33984375,
+      "unadjustedMean": 0.33984375,
       "baseline": 0.6666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "passing_interceptions": {
       "actual": 0.0,
-      "mean": 0.2578125,
-      "unadjustedMean": 0.2578125,
+      "mean": 0.298828125,
+      "unadjustedMean": 0.298828125,
       "baseline": 0.8333333333333334,
       "p10": 0.0,
       "p90": 1.0
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0029604",
+    "week": 9,
+    "team": "LV",
+    "opponent": "SF",
+    "position": "QB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "passing_yards": {
+      "actual": 216.0,
+      "mean": 262.4765625,
+      "unadjustedMean": 262.4765625,
+      "baseline": 285.1666666666667,
+      "p10": 167.1,
+      "p90": 364.0
+    },
+    "attempts": {
+      "actual": 32.0,
+      "mean": 35.021484375,
+      "unadjustedMean": 35.021484375,
+      "baseline": 37.333333333333336,
+      "p10": 25.0,
+      "p90": 47.0
+    },
+    "completions": {
+      "actual": 22.0,
+      "mean": 23.416015625,
+      "unadjustedMean": 23.416015625,
+      "baseline": 23.333333333333332,
+      "p10": 16.0,
+      "p90": 32.0
+    },
+    "passing_tds": {
+      "actual": 1.0,
+      "mean": 1.935546875,
+      "unadjustedMean": 1.935546875,
+      "baseline": 2.1666666666666665,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "passing_interceptions": {
+      "actual": 3.0,
+      "mean": 0.76953125,
+      "unadjustedMean": 0.76953125,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 2.0
     },
     "family": "passing"
   },
@@ -162054,40 +162004,40 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "passing_yards": {
       "actual": 166.0,
-      "mean": 152.65625,
-      "unadjustedMean": 152.65625,
+      "mean": 150.30078125,
+      "unadjustedMean": 150.30078125,
       "baseline": 75.83333333333333,
       "p10": 0.0,
-      "p90": 279.0
+      "p90": 274.0
     },
     "attempts": {
       "actual": 30.0,
-      "mean": 23.568359375,
-      "unadjustedMean": 23.568359375,
+      "mean": 22.638671875,
+      "unadjustedMean": 22.638671875,
       "baseline": 13.0,
       "p10": 0.0,
-      "p90": 40.0
+      "p90": 39.0
     },
     "completions": {
       "actual": 21.0,
-      "mean": 14.66015625,
-      "unadjustedMean": 14.66015625,
+      "mean": 14.275390625,
+      "unadjustedMean": 14.275390625,
       "baseline": 8.0,
       "p10": 0.0,
       "p90": 26.0
     },
     "passing_tds": {
       "actual": 0.0,
-      "mean": 0.779296875,
-      "unadjustedMean": 0.779296875,
+      "mean": 0.73828125,
+      "unadjustedMean": 0.73828125,
       "baseline": 0.6666666666666666,
       "p10": 0.0,
       "p90": 2.0
     },
     "passing_interceptions": {
       "actual": 0.0,
-      "mean": 0.6484375,
-      "unadjustedMean": 0.6484375,
+      "mean": 0.662109375,
+      "unadjustedMean": 0.662109375,
       "baseline": 0.3333333333333333,
       "p10": 0.0,
       "p90": 2.0
@@ -162104,40 +162054,40 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "passing_yards": {
       "actual": 175.0,
-      "mean": 74.01171875,
-      "unadjustedMean": 74.01171875,
+      "mean": 68.248046875,
+      "unadjustedMean": 68.248046875,
       "baseline": 70.33333333333333,
       "p10": 0.0,
-      "p90": 225.0
+      "p90": 219.50000000000017
     },
     "attempts": {
       "actual": 28.0,
-      "mean": 11.4375,
-      "unadjustedMean": 11.4375,
+      "mean": 10.705078125,
+      "unadjustedMean": 10.705078125,
       "baseline": 8.0,
       "p10": 0.0,
-      "p90": 34.900000000000034
+      "p90": 31.0
     },
     "completions": {
       "actual": 19.0,
-      "mean": 7.06640625,
-      "unadjustedMean": 7.06640625,
+      "mean": 6.466796875,
+      "unadjustedMean": 6.466796875,
       "baseline": 5.833333333333333,
       "p10": 0.0,
-      "p90": 22.0
+      "p90": 18.0
     },
     "passing_tds": {
       "actual": 1.0,
-      "mean": 0.37109375,
-      "unadjustedMean": 0.37109375,
+      "mean": 0.369140625,
+      "unadjustedMean": 0.369140625,
       "baseline": 0.6666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "passing_interceptions": {
       "actual": 0.0,
-      "mean": 0.298828125,
-      "unadjustedMean": 0.298828125,
+      "mean": 0.29296875,
+      "unadjustedMean": 0.29296875,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 1.0
@@ -162154,41 +162104,91 @@
     "kickoff": "2026-11-08T21:25:00+00:00",
     "passing_yards": {
       "actual": 372.0,
-      "mean": 240.3359375,
-      "unadjustedMean": 240.3359375,
+      "mean": 234.58984375,
+      "unadjustedMean": 234.58984375,
       "baseline": 285.6666666666667,
-      "p10": 138.1,
-      "p90": 342.90000000000003
+      "p10": 141.1,
+      "p90": 325.0
     },
     "attempts": {
       "actual": 29.0,
-      "mean": 33.3046875,
-      "unadjustedMean": 33.3046875,
+      "mean": 32.28515625,
+      "unadjustedMean": 32.28515625,
       "baseline": 40.166666666666664,
-      "p10": 21.1,
-      "p90": 45.0
+      "p10": 21.0,
+      "p90": 43.0
     },
     "completions": {
       "actual": 23.0,
-      "mean": 21.716796875,
-      "unadjustedMean": 21.716796875,
+      "mean": 21.3046875,
+      "unadjustedMean": 21.3046875,
       "baseline": 25.833333333333332,
-      "p10": 13.0,
+      "p10": 14.0,
       "p90": 29.0
     },
     "passing_tds": {
       "actual": 3.0,
-      "mean": 1.55859375,
-      "unadjustedMean": 1.55859375,
+      "mean": 1.607421875,
+      "unadjustedMean": 1.607421875,
       "baseline": 2.0,
       "p10": 0.0,
       "p90": 3.0
     },
     "passing_interceptions": {
       "actual": 0.0,
-      "mean": 0.814453125,
-      "unadjustedMean": 0.814453125,
+      "mean": 0.73828125,
+      "unadjustedMean": 0.73828125,
       "baseline": 0.8333333333333334,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_09_LV_SF",
+    "player_id": "00-0037834",
+    "week": 9,
+    "team": "SF",
+    "opponent": "LV",
+    "position": "QB",
+    "kickoff": "2026-11-08T21:25:00+00:00",
+    "passing_yards": {
+      "actual": 232.0,
+      "mean": 254.103515625,
+      "unadjustedMean": 254.103515625,
+      "baseline": 257.1666666666667,
+      "p10": 173.0,
+      "p90": 336.0
+    },
+    "attempts": {
+      "actual": 25.0,
+      "mean": 33.255859375,
+      "unadjustedMean": 33.255859375,
+      "baseline": 29.5,
+      "p10": 23.0,
+      "p90": 44.0
+    },
+    "completions": {
+      "actual": 17.0,
+      "mean": 22.408203125,
+      "unadjustedMean": 22.408203125,
+      "baseline": 20.166666666666668,
+      "p10": 15.0,
+      "p90": 30.0
+    },
+    "passing_tds": {
+      "actual": 2.0,
+      "mean": 1.794921875,
+      "unadjustedMean": 1.794921875,
+      "baseline": 2.0,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.607421875,
+      "unadjustedMean": 0.607421875,
+      "baseline": 0.5,
       "p10": 0.0,
       "p90": 2.0
     },
