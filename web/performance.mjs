@@ -1,5 +1,10 @@
 export function performanceRows(rows=[],filters={}){return rows.filter(r=>(!filters.scope||r.scope===filters.scope)&&(!filters.season||String(r.season)===String(filters.season))&&(!filters.week||String(r.week)===String(filters.week))&&(!filters.market||r.market===filters.market)&&(!filters.position||r.position===filters.position)&&(!filters.team||r.team===filters.team||[r.homeTeam,r.awayTeam].includes(filters.team)));}
 const finite=v=>typeof v==='number'&&Number.isFinite(v),mean=a=>a.length?a.reduce((s,v)=>s+v,0)/a.length:null;
+/** @param {any[]} rows */
+export function sortPlayerResults(rows=[],order='team'){
+ const name=(a,b)=>String(a.team||'').localeCompare(String(b.team||''))||String(a.entity||'').localeCompare(String(b.entity||''))||Number(a.season||0)-Number(b.season||0)||String(a.id||'').localeCompare(String(b.id||''));
+ return [...rows].sort((a,b)=>{if(order==='closest'||order==='furthest'){const sa=finite(a.actual)&&finite(a.projected),sb=finite(b.actual)&&finite(b.projected);if(sa!==sb)return sa?-1:1;if(sa){const delta=Math.abs(a.projected-a.actual)-Math.abs(b.projected-b.actual);if(delta)return order==='furthest'?-delta:delta;}}return name(a,b)});
+}
 export function performanceMetrics(rows=[]){
  const scored=rows.filter(r=>finite(r.actual)&&finite(r.projected)),numeric=scored.filter(r=>r.type==='continuous'),binary=scored.filter(r=>r.type==='probability'&&[0,1].includes(r.actual)&&r.projected>=0&&r.projected<=1),paired=numeric.filter(r=>finite(r.baseline)),intervals=numeric.filter(r=>finite(r.p10)&&finite(r.p90));
  const errors=numeric.map(r=>r.projected-r.actual),pairedModel=mean(paired.map(r=>Math.abs(r.projected-r.actual))),baseline=mean(paired.map(r=>Math.abs(r.baseline-r.actual)));
