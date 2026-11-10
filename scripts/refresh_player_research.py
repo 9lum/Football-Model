@@ -19,6 +19,15 @@ def safe(value):
     except (TypeError,ValueError):pass
     return value.item() if hasattr(value,'item') else value
 
+def current_and_history(loader,years,**kwargs):
+    from nflreadpy.config import config,update_config
+    frames=[loader(years[:-1],**kwargs).to_pandas()] if years[:-1] else []
+    mode=config.cache_mode
+    try:
+        update_config(cache_mode='off');frames.append(loader([years[-1]],**kwargs).to_pandas())
+    finally:update_config(cache_mode=mode)
+    return pd.concat(frames,ignore_index=True)
+
 def run():
     os.environ.setdefault('NFLREADPY_CACHE','filesystem');os.environ.setdefault('NFLREADPY_CACHE_DIR',str(ROOT/'work/nflreadpy-cache'))
     import nflreadpy as nfl
@@ -28,12 +37,17 @@ def run():
         depth=json.loads((ROOT/'data/availability.json').read_text());ids.update(p['playerId'] for p in depth.get('roster',[]))
     except (OSError,ValueError):pass
     ids={pid for pid in ids if re.fullmatch(r'[A-Za-z0-9_-]{1,80}',pid)}
-    stats=normalize_stats(nfl.load_player_stats(years).to_pandas(),positions=['QB','RB','WR','TE']);people=nfl.load_players().to_pandas();snaps=nfl.load_snap_counts(years).to_pandas();stats,_=add_snap_zeros(stats,snaps,people);schedule=schedule_rows(nfl.load_schedules(years).to_pandas())
+    from edge.data import get,BASE
+    import gzip,io
+    raw,_=get(BASE+'stats_player/'+f'stats_player_week_{season}.csv.gz?asof='+now.strftime('%Y%m%d%H'))
+    current=pd.read_csv(io.BytesIO(gzip.decompress(raw)),low_memory=False)
+    frames=[nfl.load_player_stats(years[:-1]).to_pandas(),current] if years[:-1] else [current]
+    stats=normalize_stats(pd.concat(frames,ignore_index=True),positions=['QB','RB','FB','WR','TE']);ids.update(stats.player_id.dropna().astype(str));ids={pid for pid in ids if re.fullmatch(r'[A-Za-z0-9_-]{1,80}',pid)};people=nfl.load_players().to_pandas();snaps=nfl.load_snap_counts(years).to_pandas();stats,_=add_snap_zeros(stats,snaps,people);schedule_raw,_=get('https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv');schedule_frame=pd.read_csv(io.BytesIO(schedule_raw));schedule=schedule_rows(schedule_frame[schedule_frame.season.isin(years)])
     frame=stats.drop(columns=['game_id','opponent_team'],errors='ignore').merge(schedule,on=['season','week','team'],validate='many_to_one');frame=frame[frame.player_id.isin(ids)&frame.completed&(frame.kickoff<now)].sort_values('kickoff');crosswalk_rows=people[['pfr_id','gsis_id']].dropna().drop_duplicates();crosswalk_rows=crosswalk_rows[~crosswalk_rows.pfr_id.duplicated(keep=False)];crosswalk=dict(zip(crosswalk_rows.pfr_id,crosswalk_rows.gsis_id));maps={};sources=[]
     for category,fields in NGS_FIELDS.items():
         name='ngs_'+category
         try:
-            data=nfl.load_nextgen_stats(years,stat_type=category).to_pandas();data=data[data.week.gt(0)&data.season_type.eq('REG')];mapping={}
+            data=current_and_history(nfl.load_nextgen_stats,years,stat_type=category);data=data[data.week.gt(0)&data.season_type.eq('REG')];mapping={}
             for r in data.to_dict('records'):
                 pid=r.get('player_gsis_id')
                 if pid in ids:mapping[(pid,int(r['season']),int(r['week']))]={k:safe(r.get(k)) for k in fields}
@@ -42,7 +56,7 @@ def run():
     for category,fields in PFR_FIELDS.items():
         name='pfr_'+category
         try:
-            data=nfl.load_pfr_advstats(years,stat_type=category).to_pandas()
+            data=current_and_history(nfl.load_pfr_advstats,years,stat_type=category)
             if 'game_type' in data:data=data[data.game_type.eq('REG')]
             mapping={}
             for r in data.to_dict('records'):

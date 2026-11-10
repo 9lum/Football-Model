@@ -10,6 +10,8 @@ on:
     paths: ['edge/**', 'tests/**', 'requirements.txt', '.github/workflows/public-model.yml']
   schedule:
     - cron: '43 */6 * * *'
+    # Early-morning refreshes after Sunday and Monday games.
+    - cron: '13 5 * * 1,2'
 permissions:
   contents: write
 concurrency:

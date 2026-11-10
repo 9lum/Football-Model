@@ -8,9 +8,9 @@ export function playerStatSummary(games,position){
  const weighted=(label,source,key,weight,unit='')=>{const rows=games.map(g=>g.advanced?.[source]).filter(r=>valid(r?.[key])&&valid(r?.[weight])&&r[weight]>0);const den=rows.reduce((s,r)=>s+r[weight],0);if(den)add(label,rows.reduce((s,r)=>s+r[key]*r[weight],0)/den,unit)};
  const advsum=(label,source,key)=>add(label,total('advanced.'+source+'.'+key));
  if(position==='QB'){
-  for(const [label,key] of [['Pass yards','passing_yards'],['Pass TD','passing_tds'],['Interceptions','passing_interceptions'],['Attempts','attempts'],['Completions','completions'],['Sacks taken','sacks_suffered']])sum(label,key);
+  for(const [label,key] of [['Pass yards','passing_yards'],['Pass TD','passing_tds'],['Interceptions','passing_interceptions'],['Attempts','attempts'],['Completions','completions'],['Sacks taken','sacks_suffered'],['Carries','carries'],['Rush yards','rushing_yards'],['Rush TD','rushing_tds']])sum(label,key);
   ratio('Completion rate','completions','attempts',100,'%');ratio('Yards / attempt','passing_yards','attempts');weighted('Time to throw','ngs_passing','avg_time_to_throw','attempts','s');weighted('CPOE','ngs_passing','completion_percentage_above_expectation','attempts','pp');advsum('Pressured dropbacks','pfr_pass','times_pressured');advsum('Bad throws','pfr_pass','passing_bad_throws');
- }else if(position==='RB'){
+ }else if(['RB','HB','FB'].includes(position)){
   for(const [label,key] of [['Carries','carries'],['Rush yards','rushing_yards'],['Rush TD','rushing_tds'],['Targets','targets'],['Receptions','receptions'],['Receiving yards','receiving_yards'],['Receiving TD','receiving_tds']])sum(label,key);
   ratio('Yards / carry','rushing_yards','carries');weighted('Rush yards over expected / carry','ngs_rushing','rush_yards_over_expected_per_att','rush_attempts');advsum('Yards after contact','pfr_rush','rushing_yards_after_contact');advsum('Broken tackles','pfr_rush','rushing_broken_tackles');
  }else{

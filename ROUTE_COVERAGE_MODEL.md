@@ -99,3 +99,24 @@ Public availability refreshes every 15 minutes independently of the full model j
 Sleeper's player dictionary is cached for an hour with original retrieval timestamps;
 ESPN is checked each refresh. Collection-time resolution runs after retrieval so valid
 reports collected a few seconds after the job began are not incorrectly rejected.
+
+## Final box scores, player cards and comparison graphs
+
+The recent-actuals job checks the last three US Eastern calendar dates every thirty
+minutes, accepting only events confirmed final in both ESPN scoreboard and summary.
+Player fields are explicit box-score values, never team totals or inferred DNP zeros.
+Gross player passing yards are reconciled against net team passing yards after sack
+losses. Each publication includes matched team-total checks, source/observation dates,
+fetch errors and unresolved GSIS identities. A player without a unique GSIS crosswalk
+keeps the exact ESPN identity and a working actual-only card; no name-based guess or
+invented future projection is substituted.
+
+All cards, season statistics and game graphs merge the same final actuals with fresh
+player-specific nflverse research records. Later primary-stat corrections take
+precedence; incomplete basic/advanced fields stay missing. Research records refresh
+every three hours, bypassing local cache for current-season advanced data. Additional
+model refreshes run early Monday/Tuesday after games; historical forecasts are frozen.
+Player graphs plot Actual and authentic Published pregame projection on the same game
+axis, with a separate upcoming point. Hover/tap gives labels, values and signed error.
+Missing archives remain explicitly “Not archived.” This is reconciliation of published
+public data, not a guarantee against later official corrections or pending advanced feeds.

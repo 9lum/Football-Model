@@ -4,7 +4,7 @@ on:
   push:
     paths: ['edge/receiving_routes.py', 'edge/passing_profiles.py', 'scripts/refresh_receiving_routes.py', '.github/workflows/receiving-routes.yml']
   schedule:
-    - cron: '34 */6 * * *'
+    - cron: '34 * * * *'
 permissions:
   contents: write
 concurrency:
