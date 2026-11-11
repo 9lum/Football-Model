@@ -4,13 +4,14 @@ import {fieldPoint,fieldPolygon,fieldBands} from '../../../web/field-perspective
 const depths=['behind','short','intermediate','deep'],areas=['left','middle','right'];
 const palette:Record<string,string>={behind:'#f0b86e',short:'#55cbb0',intermediate:'#7bb5ff',deep:'#c4a0f2'};
 const pct=(value:any)=>Number.isFinite(value)?Math.round(value*100)+'%':'—';
-export default function FieldSurface({player,zones,selection,onSelect,depth,paths,qb}:any){
+export default function FieldSurface({player,zones,selection,onSelect,depth,paths,qb,shareKey="targetShare",countKey="targets",countLabel,distributionLabel}:any){
+ const noun=countLabel||(qb?'passes':'targets');
  const id=useId().replace(/:/g,'');
  const point=(x:number,z:number)=>fieldPoint(x,z,depth),polygon=(x0:number,z0:number,x1:number,z1:number)=>fieldPolygon(x0,z0,x1,z1,depth);
  const selectedDepth=selection.split('_')[0],selectedArea=areas.indexOf(selection.split('_')[1]);
  const band=(fieldBands as any)[selectedDepth]||fieldBands.short,end=point(18+selectedArea*32,(band[0]+band[1])/2),start=point(50,7);
  return <div className={'receiving-field-stage'+(depth?' tilted':'')} data-view={depth?'end-zone':'overhead'}>
-  <svg viewBox="0 45 720 420" role="group" aria-label={player.name+(qb?' passing':' target')+' distribution; '+(depth?'elevated end-zone perspective':'overhead view')+'; select a zone to inspect'}>
+  <svg viewBox="0 45 720 420" role="group" aria-label={(distributionLabel||player.name+(qb?' passing':' target')+' distribution')+'; '+(depth?'elevated end-zone perspective':'overhead view')+'; select a zone to inspect'}>
    <defs><linearGradient id={id+'-grass'} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#1c4f50"/><stop offset="1" stopColor="#102e39"/></linearGradient><linearGradient id={id+'-edge'} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#39716e"/><stop offset="1" stopColor="#0a1b26"/></linearGradient></defs>
    {depth&&<g className="field-stadium-seating" aria-hidden="true">{[9,6,3].map((n,i)=><polygon key={n} points={polygon(-n,-n/2,100+n,64+n/2)} fill={i===0?'#152b35':'#223e47'} fillOpacity={.65} stroke="#7faaa9" strokeOpacity={.18+i*.06} strokeWidth="1.5"/>)}<polygon points={polygon(0,0,100,64).split(' ').slice(0,2).join(' ')+' '+[point(100,0),point(0,0)].map(p=>`${p.x},${p.y+10}`).join(' ')} fill={'url(#'+id+'-edge)'} stroke="#345b61" strokeWidth="1"/></g>}
    <polygon points={polygon(0,0,100,64)} fill={'url(#'+id+'-grass)'} stroke="#86bcb6" strokeWidth="1.8"/>
@@ -23,10 +24,10 @@ export default function FieldSurface({player,zones,selection,onSelect,depth,path
     const x0=7+i*29.5,x1=x0+27,inset=d==='intermediate' ? .8 : 1.2,nearInset=near+inset,farInset=far-inset;
     const front=point((x0+x1)/2,nearInset),back=point((x0+x1)/2,farInset),cx=(front.x+back.x)/2,cy=(front.y+back.y)/2;
     if(d==='behind'&&!zones.some((z:any)=>z.depth==='behind'))return null;
-    return <g key={key} className={'receiving-field-zone field-zone-'+d+(active?' selected':'')} role="button" tabIndex={0} aria-pressed={active} aria-label={d+' '+area+': '+pct(zone?.targetShare)} onClick={()=>onSelect(key)} onFocus={()=>onSelect(key)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(key)}}}>
-     <title>{d} {area}: {zone?.targets??0} {qb?'passes':'targets'} · {pct(zone?.targetShare)}</title>
+    return <g key={key} className={'receiving-field-zone field-zone-'+d+(active?' selected':'')} role="button" tabIndex={0} aria-pressed={active} aria-label={d+' '+area+': '+pct(zone?.[shareKey])} onClick={()=>onSelect(key)} onFocus={()=>onSelect(key)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSelect(key)}}}>
+     <title>{d} {area}: {zone?.[countKey]??0} {noun} · {pct(zone?.[shareKey])}</title>
      <polygon points={polygon(x0,nearInset,x1,farInset)} fill={palette[d]} fillOpacity={active ? .3 : .13} stroke={palette[d]} strokeWidth={active?2.2:1.2} strokeOpacity={active?1:.6}/>
-     <text className="field-zone-percentage" x={cx} y={cy-(['intermediate','behind'].includes(d)?7:8)} textAnchor="middle" dominantBaseline="central" fill="#f2fbff" fontSize="26" fontWeight="600">{Number.isFinite(zone?.targetShare)?<><tspan>{Math.round(zone.targetShare*100)}</tspan><tspan className="field-zone-percent-symbol" fontSize="15" dx="2">%</tspan></>:'—'}</text>
+     <text className="field-zone-percentage" x={cx} y={cy-(['intermediate','behind'].includes(d)?7:8)} textAnchor="middle" dominantBaseline="central" fill="#f2fbff" fontSize="26" fontWeight="600">{Number.isFinite(zone?.[shareKey])?<><tspan>{Math.round(zone[shareKey]*100)}</tspan><tspan className="field-zone-percent-symbol" fontSize="15" dx="2">%</tspan></>:'—'}</text>
      <text className="field-zone-depth" x={cx} y={cy+(['intermediate','behind'].includes(d)?17:20)} textAnchor="middle" fill="#bfd5de" fontSize={['intermediate','behind'].includes(d)?9:10}>{d==='behind'?'Behind LOS':d==='short'?(zones.some((z:any)=>z.depth==='behind')?'0–9 yd':'Under 10 yd'):d==='intermediate'?'10–19 yd':'20+ yd'}</text>
     </g>;
    }))}

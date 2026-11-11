@@ -2,7 +2,7 @@ name: Refresh player field profiles
 on:
   workflow_dispatch:
   push:
-    paths: ['edge/receiving_routes.py', 'edge/passing_profiles.py', 'scripts/refresh_receiving_routes.py', '.github/workflows/receiving-routes.yml']
+    paths: ['edge/receiving_routes.py', 'edge/defense_field.py', 'scripts/refresh_defense_field.py', 'tests/test_defense_field.py', 'edge/passing_profiles.py', 'scripts/refresh_receiving_routes.py', '.github/workflows/receiving-routes.yml']
   schedule:
     - cron: '34 * * * *'
 permissions:
@@ -23,14 +23,22 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -p 'test_receiving_routes.py' -v
       - run: python -m unittest discover -s tests -p 'test_passing_profiles.py' -v
+      - run: python -m unittest discover -s tests -p 'test_defense_field.py' -v
       - run: python -m scripts.refresh_receiving_routes
+      - name: Refresh defensive completion field maps
+        continue-on-error: true
+        run: python -m scripts.refresh_defense_field --reuse-cache
       - name: Publish public receiving profiles
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/receiving-route-profiles.json
+          if [ -f data/defense-field-profiles.json ]; then git add data/defense-field-profiles.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh measured receiving target-depth field profiles [skip ci]'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+            done
+            exit 1
           fi
