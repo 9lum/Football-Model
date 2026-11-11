@@ -56223,7 +56223,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.006901778359260732,
+    "routeSignal": 0.006901778359260734,
     "receiving_yards": {
       "actual": 7.0,
       "mean": 38.095703125,
@@ -90575,7 +90575,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.023601150872384447,
+    "routeSignal": -0.023601150872384444,
     "receiving_yards": {
       "actual": 32.0,
       "mean": 38.78125,
@@ -110772,7 +110772,7 @@
       "receptions": 1.05,
       "receiving_yards": 1.05
     },
-    "routeSignal": 0.06988302975045325,
+    "routeSignal": 0.06988302975045327,
     "receiving_yards": {
       "actual": 86.0,
       "mean": 76.171875,
@@ -111420,7 +111420,7 @@
     },
     "routeSignal": -0.0010737327461523161,
     "receiving_yards": {
-      "actual": 56.0,
+      "actual": 57.0,
       "mean": 37.681640625,
       "unadjustedMean": 37.681640625,
       "baseline": 30.666666666666668,
@@ -112368,7 +112368,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.009656814924316007,
+    "routeSignal": -0.009656814924316005,
     "receiving_yards": {
       "actual": 0.0,
       "mean": 36.896484375,
@@ -161603,7 +161603,7 @@
     "position": "QB",
     "kickoff": "2026-11-08T18:00:00+00:00",
     "passing_yards": {
-      "actual": 273.0,
+      "actual": 274.0,
       "mean": 207.59765625,
       "unadjustedMean": 207.59765625,
       "baseline": 175.66666666666666,
