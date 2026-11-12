@@ -1,5 +1,5 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-11T19:55:25.538779+00:00
+Generated 2026-11-12T01:37:31.334031+00:00
 Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 
 ## WAS at NYG
@@ -167,9 +167,9 @@ Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 ## LAR at ARI
 2026-11-15T21:05:00+00:00
 ### 1. Red zone & opportunity
-- Puka Nacua (LAR WR): 1 RZ carries, 8 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.32, actual TD 3.
 - Kyren Williams (LAR RB): 7 RZ carries, 3 RZ targets, 2 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.02, actual TD 2.
 - Tyler Allgeier (ARI RB): 9 RZ carries, 5 RZ targets, 2 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.33, actual TD 2.
+- Blake Corum (LAR RB): 10 RZ carries, 2 RZ targets, 2 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.54, actual TD 4.
 ### 2. Position matchup & leverage
 - ARI: opponent RZ EPA -0.2629170639786094; pass EPA -0.051268776834939654; rush EPA -0.152881174402825. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LAR: opponent RZ EPA 0.08176809540023253; pass EPA 0.18690007368650818; rush EPA -0.04508692867495989. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -178,9 +178,9 @@ Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 - ARI: recent RZ pass rate 0.5932203389830508, RZ pass-over-expected -5.805784337601419 percentage points, neutral seconds/play 33.32432432432432. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - LAR: recent RZ pass rate 0.6086956521739131, RZ pass-over-expected 4.134365684456295 percentage points, neutral seconds/play 30.015873015873016. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Puka Nacua — Core research · highest estimated probability**: estimated ATTD 55.6%; fair odds -125; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Kyren Williams — Additional research candidate**: estimated ATTD 44.4%; fair odds 125; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Kyren Williams — Core research · highest estimated probability**: estimated ATTD 44.4%; fair odds 125; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Tyler Allgeier — Additional research candidate**: estimated ATTD 36.2%; fair odds 176; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Blake Corum — Additional research candidate**: estimated ATTD 35.3%; fair odds 183; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## SEA at LV
 2026-11-15T21:05:00+00:00
