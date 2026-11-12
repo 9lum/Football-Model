@@ -1,5 +1,5 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-12T14:08:08.817677+00:00
+Generated 2026-11-12T19:19:04.717510+00:00
 Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 
 ## WAS at NYG
@@ -63,7 +63,7 @@ Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 - Quinshon Judkins (CLE RB): 10 RZ carries, 0 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.32, actual TD 2.
 - Denzel Boston (CLE WR): 0 RZ carries, 6 RZ targets, 0 inside-5 carries, 3 inside-5 targets across 4 team games; xTD 2.11, actual TD 0.
 ### 2. Position matchup & leverage
-- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440632; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440705; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - HOU: opponent RZ EPA -0.08730845378426665; pass EPA -0.048441304130173536; rush EPA 0.037159318195270324. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
@@ -114,7 +114,7 @@ Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 2026-11-15T18:00:00+00:00
 ### 1. Red zone & opportunity
 - Chuba Hubbard (CAR RB): 11 RZ carries, 3 RZ targets, 3 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.35, actual TD 2.
-- Audric Estimé (NO RB): 3 RZ carries, 0 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.55, actual TD 1.
+- Audric Estime (NO RB): 3 RZ carries, 0 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.55, actual TD 1.
 - Chris Olave (NO WR): 0 RZ carries, 3 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.17, actual TD 1.
 ### 2. Position matchup & leverage
 - NO: opponent RZ EPA 0.24318442195146517; pass EPA 0.12384251781529047; rush EPA -0.04251726425926263. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -125,7 +125,7 @@ Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 - CAR: recent RZ pass rate 0.6285714285714286, RZ pass-over-expected 7.74131611441121 percentage points, neutral seconds/play 29.875. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Chuba Hubbard — Core research · highest estimated probability**: estimated ATTD 56.6%; fair odds -131; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Audric Estimé — Additional research candidate**: estimated ATTD 39.4%; fair odds 154; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Audric Estime — Additional research candidate**: estimated ATTD 39.4%; fair odds 154; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Chris Olave — Additional research candidate**: estimated ATTD 32.1%; fair odds 212; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## BUF at NYJ
@@ -243,7 +243,7 @@ Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 - Zay Flowers (BAL WR): 1 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.79, actual TD 1.
 - Omarion Hampton (LAC RB): 5 RZ carries, 0 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.58, actual TD 0.
 ### 2. Position matchup & leverage
-- BAL: opponent RZ EPA 0.02930725432846432; pass EPA -0.012377849488062555; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- BAL: opponent RZ EPA 0.029307254328464337; pass EPA -0.012377849488062517; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LAC: opponent RZ EPA 0.1267243022809456; pass EPA 0.10603490819654081; rush EPA -0.11257448391336833. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
