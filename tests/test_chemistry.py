@@ -28,3 +28,8 @@ class IdentityTests(unittest.TestCase):
   good={'playerId':'a','name':'Tyler Conklin'};bad={'playerId':'b','name':'Tyler Conklin'}
   valid,rejected=verified_depth([good,bad],people)
   self.assertEqual(valid,[good]);self.assertEqual(rejected,[bad])
+
+ def test_known_nicknames_do_not_drop_legitimate_depth_rows(self):
+  from edge.availability import verified_depth
+  people=pd.DataFrame([{'gsis_id':'a','display_name':'Marquise Brown'}]);row={'playerId':'a','name':'Hollywood Brown'}
+  self.assertEqual(verified_depth([row],people),([row],[]))

@@ -152,11 +152,13 @@ def latest_depth(frame,now):
 
 def verified_depth(depth,people):
     """Reject mislabeled depth rows rather than inventing a second player identity."""
+    aliases={'joshuapalmer':'joshpalmer','drewogletree':'andrewogletree','hollywoodbrown':'marquisebrown','irvcharles':'irvincharles'}
+    identity_name=lambda name:aliases.get(canonical(name),canonical(name))
     registry={str(r['gsis_id']):r for r in people.to_dict('records') if pd.notna(r.get('gsis_id'))};out=[];rejected=[]
     for row in depth:
         person=registry.get(row['playerId'])
-        names={canonical(person.get(k)) for k in ['display_name','football_name','short_name','player_name'] if person and pd.notna(person.get(k))}
-        if person and names and canonical(row['name']) not in names:rejected.append(row);continue
+        names={identity_name(person.get(k)) for k in ['display_name','football_name','short_name','player_name'] if person and pd.notna(person.get(k))}
+        if person and names and identity_name(row['name']) not in names:rejected.append(row);continue
         out.append(row)
     return out,rejected
 
