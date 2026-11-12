@@ -113340,32 +113340,32 @@
     "routeSignal": -0.020323834110662783,
     "receiving_yards": {
       "actual": 56.0,
-      "mean": 58.458984375,
-      "unadjustedMean": 58.458984375,
+      "mean": 58.955078125,
+      "unadjustedMean": 58.955078125,
       "baseline": 82.33333333333333,
       "p10": 16.0,
-      "p90": 105.0
+      "p90": 105.90000000000003
     },
     "receptions": {
       "actual": 4.0,
-      "mean": 4.58203125,
-      "unadjustedMean": 4.58203125,
+      "mean": 4.572265625,
+      "unadjustedMean": 4.572265625,
       "baseline": 6.166666666666667,
       "p10": 2.0,
       "p90": 8.0
     },
     "receiving_tds": {
       "actual": 1.0,
-      "mean": 0.322265625,
-      "unadjustedMean": 0.322265625,
+      "mean": 0.33203125,
+      "unadjustedMean": 0.33203125,
       "baseline": 0.3333333333333333,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 6.0,
-      "mean": 7.255859375,
-      "unadjustedMean": 7.255859375,
+      "mean": 7.228515625,
+      "unadjustedMean": 7.228515625,
       "baseline": 9.5,
       "p10": 3.0,
       "p90": 11.0
