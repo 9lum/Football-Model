@@ -56223,7 +56223,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.006901778359260734,
+    "routeSignal": 0.006901778359260732,
     "receiving_yards": {
       "actual": 7.0,
       "mean": 38.095703125,
@@ -90575,7 +90575,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.023601150872384444,
+    "routeSignal": -0.023601150872384447,
     "receiving_yards": {
       "actual": 32.0,
       "mean": 38.78125,
@@ -110772,7 +110772,7 @@
       "receptions": 1.05,
       "receiving_yards": 1.05
     },
-    "routeSignal": 0.06988302975045327,
+    "routeSignal": 0.06988302975045325,
     "receiving_yards": {
       "actual": 86.0,
       "mean": 76.171875,
@@ -112368,7 +112368,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.009656814924316005,
+    "routeSignal": -0.009656814924316007,
     "receiving_yards": {
       "actual": 0.0,
       "mean": 36.896484375,
