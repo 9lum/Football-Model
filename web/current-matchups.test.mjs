@@ -12,3 +12,5 @@ test('stale deep links and old forecast IDs fall back to a current-week game',()
  assert.equal(selectMatchup([],old.game_id,old.game_id),undefined);
  assert.deepEqual(currentMatchups({games:[old]}),[]);
 });
+import {matchupWeeks,weekMatchups} from './current-matchups.mjs';
+test('historical weeks require explicit selection and future weeks remain hidden',()=>{const view={season:2026,week:10,games:[old,thu,sun,{...sun,week:11}]};assert.deepEqual(matchupWeeks(view).map(w=>w.key),['2026-10','2026-9']);assert.deepEqual(weekMatchups(view,'2026-9'),[old]);assert.deepEqual(weekMatchups(view,'2026-11'),[thu,sun]);assert.deepEqual(weekMatchups(view),[thu,sun]);});

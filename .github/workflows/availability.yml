@@ -5,7 +5,7 @@ on:
     workflows: ['Public-data model and current-season tests']
     types: [completed]
   push:
-    paths: ['edge/availability.py', 'edge/replacement_forecasts.py', 'web/lineup-replacements.mjs', 'edge/workload.py', 'edge/return_reports.py', 'web/workload.mjs', 'tests/test_workload.py', 'web/availability.mjs', '.github/workflows/availability.yml']
+    paths: ['edge/chemistry.py', 'tests/test_chemistry.py', 'edge/availability.py', 'edge/replacement_forecasts.py', 'web/lineup-replacements.mjs', 'edge/workload.py', 'edge/return_reports.py', 'web/workload.mjs', 'tests/test_workload.py', 'web/availability.mjs', '.github/workflows/availability.yml']
   schedule:
     - cron: '*/15 * * * *'
 permissions:
@@ -34,6 +34,7 @@ jobs:
             health-reference-${{ runner.os }}-
       - name: Check injury resolution and projection scenarios
         run: |
+          python -m unittest discover -s tests -p 'test_chemistry.py' -v
           python -m unittest discover -s tests -p 'test_availability.py' -v
           python -m unittest discover -s tests -p 'test_replacement_forecasts.py' -v
           python -m unittest discover -s tests -p 'test_workload.py' -v

@@ -1,0 +1,25 @@
+import {statsSummary} from './view-model.mjs';
+import {applyWorkloadTouchdowns} from './workload.mjs';
+/** Idempotent future-only observational adjustment. Never modifies sportsbook quotes. */
+export function applyQBChemistry(forecasts,context,now=Date.now()){
+ const eligible=f=>!f.unavailable&&f.likelyToPlay!==false&&Date.parse(f.kickoff)>now&&(!context?.week||Number(f.gameId?.split('_')[1])===context.week);
+ const groups=new Map();for(const f of forecasts.filter(eligible)){const c=context?.players?.[f.playerId];if(c?.team!==f.team)continue;const key=f.gameId+'|'+f.team;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(f)}
+ const targetScales=new Map();for(const [key,rows] of groups){const before=rows.reduce((s,f)=>s+((f.chemistryBaseMarketSamples||f.marketSamples).player_targets?.mean||0),0);const after=rows.reduce((s,f)=>s+((f.chemistryBaseMarketSamples||f.marketSamples).player_targets?.mean||0)*(context.players[f.playerId].factors.player_targets||1),0);targetScales.set(key,after>0?before/after:1)}
+ const adjusted=forecasts.map(original=>{const c=context?.players?.[original.playerId];if(!eligible(original)||!c||c.team!==original.team||Object.values(c.factors||{}).every(v=>Math.abs(v-1)<.001))return original;
+ const source=original.chemistryBaseMarketSamples||original.marketSamples,f={...original,chemistryContext:c,chemistryBaseMarketSamples:source,marketSamples:{...source},availabilityReviewRequired:true};
+ const allocation=targetScales.get(f.gameId+'|'+f.team)||1;
+ for(const [key,factor] of Object.entries(c.factors)){const m=source[key];if(!m?.values?.length)continue;const ratio=Math.max(.85,Math.min(1.15,factor*allocation)),values=m.values.map((v,i)=>{const x=Math.max(0,v*ratio);return key.endsWith('_yds')?Math.round(x):Math.floor(x)+(((i*.61803398875)%1)<x-Math.floor(x)?1:0)}),s=statsSummary(values);f.marketSamples[key]={...m,values,mean:s.mean,p10:s.low,p90:s.high,validationPassed:false,chemistryAdjusted:true}}
+ const limit=(child,parent)=>{const m=f.marketSamples[child],p=f.marketSamples[parent];if(!m?.values||!p?.values)return;const values=m.values.map((v,i)=>Math.min(v,p.values[i%p.values.length])),s=statsSummary(values);f.marketSamples[child]={...m,values,mean:s.mean,p10:s.low,p90:s.high}};limit('player_receptions','player_targets');limit('player_reception_tds','player_receptions');return f;
+ });
+ // Carry receiver efficiency changes into the active QB's corresponding passing totals.
+ return adjusted.map(f=>{if(f.position!=='QB'||!eligible(f))return f;const receivers=adjusted.filter(r=>r.gameId===f.gameId&&r.team===f.team&&r.position!=='QB'&&eligible(r));if(!receivers.some(r=>r.chemistryContext))return f;
+ const source=f.chemistryBaseMarketSamples||f.marketSamples,markets={...source},factors={};
+ for(const [passing,receiving] of [['player_pass_yds','player_reception_yds'],['player_pass_completions','player_receptions'],['player_pass_tds','player_reception_tds']]){const m=source[passing];if(!m?.values?.length)continue;let before=0,after=0;for(const r of receivers){before+=(r.chemistryBaseMarketSamples||r.marketSamples)[receiving]?.mean||0;after+=r.marketSamples[receiving]?.mean||0}if(!(before>0))continue;const ratio=Math.max(.9,Math.min(1.1,after/before));factors[passing]=ratio;const values=m.values.map((v,i)=>{const x=Math.max(0,v*ratio);return passing.endsWith('_yds')?Math.round(x):Math.floor(x)+(((i*.61803398875)%1)<x-Math.floor(x)?1:0)}),summary=statsSummary(values);markets[passing]={...m,values,mean:summary.mean,p10:summary.low,p90:summary.high,validationPassed:false,chemistryAdjusted:true}}
+ for(const [child,parent] of [['player_pass_completions','player_pass_attempts'],['player_pass_tds','player_pass_completions']]){if(markets[child]?.values&&markets[parent]?.values){const values=markets[child].values.map((v,i)=>Math.min(v,markets[parent].values[i%markets[parent].values.length])),summary=statsSummary(values);markets[child]={...markets[child],values,mean:summary.mean,p10:summary.low,p90:summary.high}}}
+ return {...f,marketSamples:markets,chemistryBaseMarketSamples:source,availabilityReviewRequired:true,chemistryContext:{team:f.team,qbId:f.playerId,qbName:f.name,factors,status:'Research · QB chemistry',rationale:'Passing totals reflect the aggregate change in active receivers’ quarterback-linked receiving efficiency; the additional passing adjustment is capped at 10% and remains unvalidated research.'}};
+ });
+}
+export function applyChemistryTouchdowns(report,forecasts){
+ const proxy=forecasts.filter(f=>f.chemistryContext?.factors?.player_reception_tds).map(f=>({...f,workloadBaseMarketSamples:f.chemistryBaseMarketSamples,workloadContext:{channels:{targets:{factor:f.chemistryContext.factors.player_reception_tds}},returningPlayers:[]},marketSamples:Object.fromEntries(Object.entries(f.marketSamples).map(([k,m])=>[k,{...m,workloadAdjusted:!!m.chemistryAdjusted}]))}));
+ return applyWorkloadTouchdowns(report,proxy,'QB chemistry');
+}

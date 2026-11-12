@@ -150,6 +150,16 @@ def latest_depth(frame,now):
             'source':'https://github.com/nflverse/nflverse-data/releases/tag/depth_charts','sourceLabel':'ESPN depth charts via nflverse'})
     return out
 
+def verified_depth(depth,people):
+    """Reject mislabeled depth rows rather than inventing a second player identity."""
+    registry={str(r['gsis_id']):r for r in people.to_dict('records') if pd.notna(r.get('gsis_id'))};out=[];rejected=[]
+    for row in depth:
+        person=registry.get(row['playerId'])
+        names={canonical(person.get(k)) for k in ['display_name','football_name','short_name','player_name'] if person and pd.notna(person.get(k))}
+        if person and names and canonical(row['name']) not in names:rejected.append(row);continue
+        out.append(row)
+    return out,rejected
+
 def match_and_resolve(records,depth,profiles,season,week,now):
     by_name={};by_espn={}
     for p in [*profiles,*depth]:
@@ -283,12 +293,16 @@ def run(directory,now=None):
     try:depth=latest_depth(public_csv('depth_charts',f'depth_charts_{season}.csv.gz',cache),now)
     except Exception as e:depth=[];errors.append('Depth feed: '+type(e).__name__)
     depth=merge_sleeper_depth(depth,sleeper_depth)
+    try:
+        people=public_csv('players','players.csv.gz',cache);depth,rejected=verified_depth(depth,people)
+        if rejected:errors.append(str(len(rejected))+' depth rows rejected: name disagrees with registered GSIS identity')
+    except Exception as e:errors.append('Depth identity registry: '+type(e).__name__)
     if live:now=pd.Timestamp.now(tz='UTC')
     records=[r for r in records if r['team'] in clubs]
     injuries,unmatched=match_and_resolve(records,depth,bundle.get('players',[]),season,week,now);roles=roster_roles(depth,injuries)
     games=public_csv('schedules','games.csv',cache)
     stats=[]
-    for year in range(2021,season+1):stats.append(normalize_stats(public_csv('stats_player',f'stats_player_week_{year}.csv.gz',cache,immutable=year<season),positions=['QB']))
+    for year in range(2021,season+1):stats.append(normalize_stats(public_csv('stats_player',f'stats_player_week_{year}.csv.gz',cache,immutable=year<season),positions=['QB','RB','WR','TE']))
     params=qb_replacement_parameters(games,pd.concat(stats,ignore_index=True),season)
     scenarios=qb_scenarios(bundle,roles,injuries,params)
     from .replacement_forecasts import skill_replacements
@@ -300,11 +314,42 @@ def run(directory,now=None):
         raw,_=fetch('https://raw.githubusercontent.com/nflverse/nfldata/master/data/trades.csv')
         team_mapping,trade_notes=current_team_map(depth,pd.read_csv(io.BytesIO(raw)),people,now)
     except Exception as e:errors.append('Trade feed: '+type(e).__name__)
+    for role in roles:
+        if role['position']!='QB' or not role.get('fresh') or not role.get('expectedStarter'):continue
+        own=next((f for f in bundle['forecasts'] if f['playerId']==role['playerId'] and f.get('marketSamples',{}).get('player_pass_yds')),None)
+        reference=next((f for f in bundle['forecasts'] if f['team']==role['team'] and f.get('marketSamples',{}).get('player_pass_yds') and pd.Timestamp(f['kickoff'])>now),None)
+        if not reference:
+            fixture=next((f for f in bundle['forecasts'] if f['team']==role['team'] and pd.Timestamp(f['kickoff'])>now),None)
+            history=pd.concat(stats,ignore_index=True);history=history[history.position.eq('QB')&history.team.eq(role['team'])&history.season.eq(season)]
+            totals=history.groupby('week')[['passing_yards','attempts']].sum(min_count=1).dropna().sort_index().tail(6)
+            if fixture and len(totals)>=3:
+                from .replacement_forecasts import sample
+                yard_values=np.resize(totals.passing_yards.to_numpy(dtype=int),512);attempt_values=np.resize(totals.attempts.to_numpy(dtype=int),512)
+                reference={**fixture,'position':'QB','marketSamples':{'player_pass_yds':sample(yard_values,'player_pass_yds'),'player_pass_attempts':sample(attempt_values,'player_pass_attempts')}}
+        if not reference or own and own['gameId']==reference['gameId']:continue
+        if not own:
+            if any(f['playerId']==role['playerId'] and f['gameId']==reference['gameId'] for f in replacements):continue
+            from .replacement_forecasts import qb_forecast
+            info=params.get('players',{}).get(role['playerId'],{'recordedStarts':0,'recentStartYards':[]})
+            group='experienced' if info['recordedStarts']>=8 else 'limited';ratio=params.get('groups',{}).get(group,{}).get('ratio')
+            if ratio is None:continue
+            own_yards=info.get('recentStartYards',[]);weight=len(own_yards)/(len(own_yards)+5);baseline=reference['marketSamples']['player_pass_yds']['mean']
+            estimate=weight*float(np.mean(own_yards))+(1-weight)*baseline*ratio if own_yards else baseline*ratio
+            moved=qb_forecast(reference,role,{'backupPassingYards':estimate},info,params.get('priorRates',{}))
+            if moved:moved['sourceModelGeneratedAt']=bundle['generatedAt'];moved['forecastKind']='new_starter_research';replacements.append(moved)
+            continue
+        from .replacement_forecasts import identity
+        moved=identity(reference,role,'traded_qb_research')
+        moved['marketSamples']={key:{**sample,'validationPassed':False,'tradeAdjusted':True} for key,sample in own['marketSamples'].items() if key.startswith('player_pass_')}
+        moved['historyGames']=own.get('historyGames',0);moved['trade']=trade_notes.get(role['playerId']);moved['sourceModelGeneratedAt']=bundle['generatedAt']
+        replacements=[f for f in replacements if f['playerId']!=role['playerId']]+[moved]
     snapshot={'schemaVersion':1,'generatedAt':now.isoformat(),'season':season,'week':week,'modelGeneratedAt':bundle['generatedAt'],
         'replacementForecasts':replacements,'sources':sources,'injuryReports':records,'injuries':injuries,'roster':roles,'qbScenarios':scenarios,'qbExperienceParameters':{'groups':params['groups'],'trainingThrough':params['trainingThrough']},
         'currentTeams':team_mapping,'trades':trade_notes,'errors':errors,'unmatchedInjuryRecords':unmatched,'scope':'Current public injury/depth information. Not a historically calibrated injury adjustment.',
         'officialRecords':sum(r['authority']=='official' and r['scopeVerified'] for r in records),
         'limitations':['Not listed does not confirm active status.','Practice DNP/LP is not a game designation.','Questionable/Doubtful do not imply a numerical participation probability.','QB-change adjustments are separate observational scenarios.']}
+    from .chemistry import build_context
+    snapshot['qbChemistry']=build_context(pd.concat(stats,ignore_index=True),games,roles,now)
     from .return_reports import collect
     snapshot['returnReports']=collect(bundle,snapshot,now.to_pydatetime())
     from .workload import build_context

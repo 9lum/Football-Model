@@ -1,3 +1,5 @@
+import {applyQBChemistry} from './qb-chemistry.mjs';
+import {uniquePlayers} from './unique-players.mjs';
 import {workloadFresh,returningForecasts,applyWorkload} from './workload.mjs';
 import {marketDefinitions} from './market-core.mjs';
 import {statsSummary} from './view-model.mjs';
@@ -26,6 +28,8 @@ export function applyAvailability(base,health,now=Date.now(),scenarioTeams=new S
  // A QB with no reliable current depth data is a usage-based fallback, not a confirmed starter.
  for(const club of new Set(players.map(p=>p.team))){const qbs=players.filter(p=>p.team===club&&p.position==='QB'&&p.likelyToPlay);if(!qbs.some(p=>p.roster?.fresh)&&qbs.length>1){qbs.sort((a,b)=>(fMap.get(b.playerId)?.features?.attempts_last3||0)-(fMap.get(a.playerId)?.features?.attempts_last3||0));for(const p of qbs.slice(1)){p.likelyToPlay=false;const f=fMap.get(p.playerId);if(f)f.likelyToPlay=false;}}}
  if(workloadFresh(base,health,now)){forecasts=applyWorkload(forecasts,health.workloadContext);for(const p of players){const f=forecasts.find(f=>f.playerId===p.playerId);if(f?.workloadContext)p.workloadContext=f.workloadContext;}}
+ if(fresh&&!options.historical&&health.modelGeneratedAt===base.generatedAt){forecasts=applyQBChemistry(forecasts,{...health.qbChemistry,week:health.week},now);for(const p of players){const f=forecasts.find(f=>f.playerId===p.playerId);if(f?.chemistryContext)p.chemistryContext=f.chemistryContext}}
+ players=uniquePlayers(players);
  return{...base,players,forecasts,healthSnapshot:fresh?health:null,healthState:fresh?(health.officialRecords>0?'current':'partial'):health?'stale':'unavailable'};
 }
 export function rosterOrder(a,b){const tier=p=>p.expectedReplacement||p.roster?.expectedStarter?0:p.roster?.listedStarter?1:p.likelyToPlay?2:3;return tier(a)-tier(b)||(a.roster?.rank??99)-(b.roster?.rank??99)||a.name.localeCompare(b.name)}

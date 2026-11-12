@@ -1,0 +1,4 @@
+
+.matchup-week-picker{display:flex;align-items:center;gap:8px;margin-left:auto;color:var(--muted);white-space:nowrap}
+.matchup-week-picker select{border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--panel);color:var(--text);font:inherit;font-weight:600;max-width:220px}
+@media(max-width:640px){.matchup-lab>.section-title{flex-wrap:wrap;gap:10px}.matchup-week-picker{margin-left:0}.matchup-week-picker select{max-width:190px}}

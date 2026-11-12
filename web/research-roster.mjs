@@ -1,3 +1,4 @@
+import {uniquePlayers} from './unique-players.mjs';
 import {teamNames} from './market-core.mjs';
 const positions=['QB','RB','WR','TE'];
 export const researchPositionLabel=p=>p==='RB'||p==='HB'?'HB':p;
@@ -7,6 +8,7 @@ function usage(p){const key=position(p)==='QB'?'attempts':position(p)==='RB'?'ca
 function depth(p){const r=p.roster;if(p.expectedReplacement||r?.fresh!==false&&r?.expectedStarter)return 0;if(r?.fresh!==false&&Number.isFinite(r?.rank)&&r.rank>0)return r.rank;return p.expectedReplacement||r?.fresh!==false&&(r?.expectedStarter||r?.listedStarter)?1:99}
 function depthOrder(a,b){return depth(a)-depth(b)||usage(b)-usage(a)||a.name.localeCompare(b.name)||String(a.playerId).localeCompare(String(b.playerId))}
 export function groupResearchRoster(players,allPlayers=players){
+ players=uniquePlayers(players);allPlayers=uniquePlayers(allPlayers);
  const pool=new Map();for(const p of [...allPlayers,...players])pool.set(p.playerId,p);
  const depthGroups=new Map();for(const p of pool.values()){const key=p.team+'|'+position(p);if(!depthGroups.has(key))depthGroups.set(key,[]);depthGroups.get(key).push(p)}
  const estimates=new Map();for(const rows of depthGroups.values())rows.sort(depthOrder).forEach((p,i)=>estimates.set(p.playerId,{rank:i+1,source:depth(p)<99?'Depth chart + observed usage':'Observed usage estimate'}));
