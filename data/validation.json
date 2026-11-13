@@ -30515,7 +30515,7 @@
               "coverage80": 0.6774193548387096,
               "meanWidth80": 201.18387096774194,
               "fixedThresholdBrier": 0.16322105161605344,
-              "fixedThresholdLogLoss": 0.48806555694403664,
+              "fixedThresholdLogLoss": 0.4880655569440366,
               "probability70Cohort": {
                 "n": 75,
                 "meanEstimated": 0.849765625,
