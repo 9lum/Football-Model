@@ -1,6 +1,6 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-13T08:13:16.193123+00:00
-Current-season tests: 2514; Brier 0.1493 vs baseline 0.1625.
+Generated 2026-11-13T13:32:37.282320+00:00
+Current-season tests: 2516; Brier 0.1492 vs baseline 0.1624.
 
 ## WAS at NYG
 2026-11-13T01:15:00+00:00
@@ -49,7 +49,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - Quinshon Judkins (CLE RB): 10 RZ carries, 0 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.32, actual TD 2.
 - Denzel Boston (CLE WR): 0 RZ carries, 6 RZ targets, 0 inside-5 carries, 3 inside-5 targets across 4 team games; xTD 2.11, actual TD 0.
 ### 2. Position matchup & leverage
-- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440632; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440705; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - HOU: opponent RZ EPA -0.08730845378426665; pass EPA -0.048441304130173536; rush EPA 0.037159318195270324. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
@@ -165,7 +165,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - LAR: recent RZ pass rate 0.6086956521739131, RZ pass-over-expected 4.134365684456295 percentage points, neutral seconds/play 30.015873015873016. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Kyren Williams — Core research · highest estimated probability**: estimated ATTD 44.3%; fair odds 125; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Tyler Allgeier — Additional research candidate**: estimated ATTD 36.2%; fair odds 176; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Tyler Allgeier — Additional research candidate**: estimated ATTD 36.3%; fair odds 176; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Blake Corum — Additional research candidate**: estimated ATTD 35.4%; fair odds 183; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## SEA at LV
@@ -229,7 +229,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - Zay Flowers (BAL WR): 1 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.79, actual TD 1.
 - Omarion Hampton (LAC RB): 5 RZ carries, 0 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.58, actual TD 0.
 ### 2. Position matchup & leverage
-- BAL: opponent RZ EPA 0.02930725432846432; pass EPA -0.012377849488062555; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- BAL: opponent RZ EPA 0.029307254328464337; pass EPA -0.012377849488062517; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LAC: opponent RZ EPA 0.1267243022809456; pass EPA 0.10603490819654081; rush EPA -0.11257448391336833. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
