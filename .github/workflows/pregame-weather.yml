@@ -1,0 +1,31 @@
+name: Refresh weather before each kickoff
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/pregame_weather.py', 'scripts/refresh_stadium_weather.py', 'tests/test_pregame_weather.py', '.github/workflows/pregame-weather.yml']
+  schedule:
+    - cron: '*/5 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: stadium-weather-outlooks
+  cancel-in-progress: false
+jobs:
+  pregame-weather:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test kickoff timing and forecast freshness
+        run: python -m unittest tests.test_stadium_weather tests.test_pregame_weather -v
+      - name: Check near-kickoff games without weather requests
+        id: window
+        run: python -m scripts.pregame_weather --plan
+      - name: Refresh and publish by the T-15 target
+        if: steps.window.outputs.due == 'true'
+        run: python -m scripts.pregame_weather

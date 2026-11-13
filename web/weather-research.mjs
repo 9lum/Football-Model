@@ -37,3 +37,13 @@ export function playerWeatherContext(game,hour,exposure,forecasts=[]){
   return {team,names,summary,players};
  });
 }
+
+/** Retrieval freshness is separate from the forecast's valid hour. */
+export function pregameWeatherFreshness(game,now=Date.now()){
+ const kickoff=Date.parse(game?.kickoff),retrieved=Date.parse(game?.retrievedAt),age=now-retrieved,near=kickoff>now&&kickoff-now<=15*60000;
+ return {near,stale:near&&(!(age>=0)||retrieved<kickoff-20*60000),label:near&&(!(age>=0)||retrieved<kickoff-20*60000)?'Pregame forecast needs refresh':null};
+}
+export function freshestKickoffWeather(stadium,basic){
+ if(stadium?.status!=='ok'||!stadium.kickoffForecast||!Number.isFinite(Date.parse(stadium.retrievedAt))||Date.parse(basic?.observedAt)>Date.parse(stadium.retrievedAt))return basic;
+ const h=stadium.kickoffForecast;return {...h,status:'ok',gameId:stadium.gameId,kickoff:stadium.kickoff,provider:stadium.provider,observedAt:stadium.retrievedAt,exposure:weatherExposure(stadium),precipitationProbability:h.precipitationProbability};
+}

@@ -68,7 +68,7 @@ def venue_registry(games):
     path.write_text(json.dumps({'stadiums':registry,'attribution':'New stadium coordinates: OpenStreetMap contributors, via Nominatim. Ambiguous or unresolved names remain unavailable.'},separators=(',',':')))
     return registry
 
-def run():
+def run(game_ids=None,resolve_venues=True):
     now=dt.datetime.now(UTC);season=now.year if now.month>=3 else now.year-1
     url='https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv'
     with urlopen(url,timeout=40) as response:games=list(csv.DictReader(io.StringIO(response.read().decode())))
@@ -85,7 +85,8 @@ def run():
     previous={}
     try:previous={g['gameId']:g for g in json.loads((ROOT/'data/stadium-weather.json').read_text()).get('games',[])}
     except (OSError,ValueError):pass
-    registry=venue_registry(games)
+    if game_ids is not None:games=[g for g in games if g['game_id'] in set(game_ids)]
+    registry=venue_registry(games) if resolve_venues else json.loads((ROOT/'data/stadium-venues.json').read_text()).get('stadiums',{})
     def resolved(g):
         r=registry.get(g.get('stadium',''),{});return ((r['latitude'],r['longitude']),r.get('roofType','unknown')) if r else (None,'unknown')
     coords={resolved(g)[0] for g in games if kickoff_of(g) and now<kickoff_of(g)<now+dt.timedelta(days=16) and resolved(g)[0]}
@@ -109,6 +110,7 @@ def run():
                 row.update(status='ok',hours=hours,kickoffForecast=at,retrievedAt=now.isoformat(),forecastLeadHours=round((kickoff-now).total_seconds()/3600,1),provider='Open-Meteo',model='best_match',source='https://open-meteo.com/en/docs')
             else:row['reason']=str(payload.get('error','Outside returned hourly horizon'))
         result.append(row)
+    if game_ids is not None:result=[g for gid,g in previous.items() if g.get('season')==season and gid not in {r['gameId'] for r in result}]+result
     data={'generatedAt':now.isoformat(),'season':season,'currentWeek':current_week,'games':result,'source':url,'provider':'Open-Meteo','methodology':'Best-match hourly outdoor forecasts at stadium coordinates. Retrieval time is not model issuance time. Hourly rain/snow amounts cover the preceding hour. No calibrated yardage adjustment is applied. Retractable roof status requires confirmation.','attribution':'Weather data by Open-Meteo (CC BY 4.0). Public endpoint is subject to noncommercial usage limits and terms.'}
-    (ROOT/'data/stadium-weather.json').write_text(json.dumps(data,separators=(',',':'),allow_nan=False));print(json.dumps({'games':len(result),'forecastGames':sum(r['status']=='ok' for r in result),'stadiumRequests':len(coords)}))
+    target=ROOT/'data/stadium-weather.json';temporary=target.with_suffix('.json.tmp');temporary.write_text(json.dumps(data,separators=(',',':'),allow_nan=False));temporary.replace(target);print(json.dumps({'games':len(result),'forecastGames':sum(r['status']=='ok' for r in result),'stadiumRequests':len(coords)}));return data
 if __name__=='__main__':run()
