@@ -64,3 +64,7 @@ section.touchdown-lab .td-player-card.card.td-player-scored{border:1px solid #3d
 .touchdown-lab .td-week-controls select{font:inherit;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 10px;max-width:220px;cursor:pointer}
 .touchdown-lab .td-week-controls select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media(max-width:640px){.touchdown-lab .td-week-summary{align-items:flex-start;flex-direction:column;gap:12px}.touchdown-lab .td-week-controls{justify-content:flex-start;gap:8px}}
+
+.touchdown-lab .td-feed-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border:1px solid var(--line);border-radius:9px;padding:11px 13px;margin:12px 0;color:var(--muted);font-size:11px;line-height:1.6}
+.touchdown-lab .td-feed-summary button{border:1px solid var(--line);border-radius:7px;padding:6px 9px;font:inherit;font-weight:600;color:var(--text)}
+.touchdown-lab .td-feed-summary p{flex-basis:100%;margin:0;font-size:10px}
