@@ -7,3 +7,8 @@ class GameWeatherTests(unittest.TestCase):
   p,g=self.fixture();r=parse_conditions(p,g,dt.datetime.now(dt.timezone.utc));self.assertAlmostEqual(r['temperatureC'],8.8888889);self.assertAlmostEqual(r['gustKph'],17.702784);self.assertIsNone(r['windKph']);self.assertIsNone(r['precipitationMm']);self.assertIsNone(r['precipitationProbability']);self.assertIsNone(r['observedAt']);self.assertEqual(r['kind'],'reported_game_conditions')
  def test_wrong_fixture_and_missing_weather_are_rejected(self):
   p,g=self.fixture();p['header']['competitions'][0]['id']='wrong';self.assertIsNone(parse_conditions(p,g,dt.datetime.now(dt.timezone.utc)));p,g=self.fixture();p['gameInfo']={};self.assertIsNone(parse_conditions(p,g,dt.datetime.now(dt.timezone.utc)))
+
+ def test_in_progress_games_remain_eligible_after_upcoming_feed_drops_them(self):
+  from scripts.refresh_game_weather import active_games
+  now=dt.datetime(2026,11,13,2,tzinfo=dt.timezone.utc);g={'gameId':'2026_10_WAS_NYG','espnId':'123','kickoff':'2026-11-13T01:15Z'}
+  self.assertEqual(active_games([], [g], [], now),[g]);self.assertEqual(active_games([],[],[g],now),[g]);self.assertEqual(active_games([],[],[g],now+dt.timedelta(days=1)),[])

@@ -17,21 +17,34 @@ def parse_conditions(payload,game,retrieved):
  w=payload.get('gameInfo',{}).get('weather') or {};temp=w.get('temperature');gust=w.get('gust')
  if not w or not (number(temp) or number(gust) or w.get('conditionId')):return None
  return {'gameId':game.get('game_id') or game['gameId'],'kickoff':game['kickoff'],'homeTeam':game.get('home_team') or game.get('homeTeam'),'awayTeam':game.get('away_team') or game.get('awayTeam'),
-  'status':'ok','kind':'reported_game_conditions','provider':'ESPN / AccuWeather','source':f'https://www.espn.com/nfl/game/_/gameId/{event}',
+  'espnId':event,'status':'ok','kind':'reported_game_conditions','provider':'ESPN / AccuWeather','source':f'https://www.espn.com/nfl/game/_/gameId/{event}',
   'observedAt':None,'retrievedAt':retrieved.isoformat(),'conditionText':w.get('conditionId'),'temperatureC':(temp-32)*5/9 if number(temp) else None,
   'gustKph':gust*1.609344 if number(gust) else None,'windKph':None,'precipitationMm':None,'precipitationProbability':None,'snowfallCm':None,
   'sourceUnits':'ESPN U.S. game-weather fields: temperature Fahrenheit; gust mph. Sustained wind and precipitation units are not verified and are not inferred.',
   'completed':competition.get('status',{}).get('type',{}).get('completed') is True}
 
-def run():
- now=dt.datetime.now(UTC);snapshot=json.loads((ROOT/'data/upcoming-games.json').read_text());games=[]
- for g in snapshot.get('games',[]):
+def active_games(upcoming,stadiums,previous,now):
+ fixtures={}
+ for g in [*previous,*stadiums,*upcoming]:
+  gid=g.get('game_id') or g.get('gameId')
+  if gid:fixtures[gid]={**fixtures.get(gid,{}),**g}
+ result=[]
+ for g in fixtures.values():
+  if not (g.get('espn') or g.get('espnId')):
+   tail=str(g.get('source','')).rstrip('/').rsplit('/',1)[-1]
+   if tail.isdigit():g['espnId']=tail
   try:k=dt.datetime.fromisoformat(g['kickoff'].replace('Z','+00:00'))
   except (KeyError,ValueError):continue
-  if k-dt.timedelta(minutes=35)<=now<=k+dt.timedelta(hours=6) and (g.get('espn') or g.get('espnId')):games.append(g)
- path=ROOT/'data/game-weather.json'
+  if k-dt.timedelta(minutes=35)<=now<=k+dt.timedelta(hours=6) and (g.get('espn') or g.get('espnId')):result.append(g)
+ return result
+
+def run():
+ now=dt.datetime.now(UTC);snapshot=json.loads((ROOT/'data/upcoming-games.json').read_text());path=ROOT/'data/game-weather.json'
  try:previous=json.loads(path.read_text());rows={g['gameId']:g for g in previous.get('games',[])}
  except (OSError,ValueError):rows={}
+ try:stadiums=json.loads((ROOT/'data/stadium-weather.json').read_text()).get('games',[])
+ except (OSError,ValueError):stadiums=[]
+ games=active_games(snapshot.get('games',[]),stadiums,list(rows.values()),now)
  def collect(g):
   event=g.get('espn') or g.get('espnId')
   try:return parse_conditions(request_json('https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary',{'event':event}),g,dt.datetime.now(UTC))
