@@ -5,8 +5,9 @@ def kickoff_reserve(now=None):
  now=now or dt.datetime.now(dt.timezone.utc)
  try:return max(0,int(os.environ['ODDS_KICKOFF_RESERVE_CREDITS']))
  except (KeyError,ValueError):pass
- days=calendar.monthrange(now.year,now.month)[1]-now.day+1
- # Six markets/game: ATTD, first TD, last TD, moneyline, spread and total.
- return 6*16*math.ceil(days/7)+16
+ # Protect one full 16-game slate (six markets/game) plus a 16-credit buffer.
+ # Reserving every remaining week can exceed the entire remaining monthly allowance
+ # and silently disable collection even when credits are available.
+ return 6*16+16
 
 def routine_budget(remaining,requested,now=None):return max(0,min(int(requested),int(remaining)-kickoff_reserve(now)))

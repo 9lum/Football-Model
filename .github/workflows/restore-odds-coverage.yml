@@ -1,0 +1,37 @@
+name: Restore current-week sportsbook coverage
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/restore_odds_coverage.py','scripts/test_restore_odds_coverage.py','.github/workflows/restore-odds-coverage.yml']
+permissions:
+  contents: write
+concurrency:
+  group: sportsbook-coverage-recovery
+  cancel-in-progress: false
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify quota protection and market matching
+        run: python -m unittest scripts.test_restore_odds_coverage scripts.test_odds scripts.test_attd_odds scripts.test_game_odds scripts.test_kickoff_refresh -v
+      - name: Recover current-week prices with a 55-credit ceiling
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python -m scripts.restore_odds_coverage
+      - name: Publish original-timestamp sportsbook prices
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/odds.json data/attd-odds.json data/game-odds.json data/game-odds-history.json data/game-market-movement.json data/odds-history.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Restore bounded current-week sportsbook coverage [skip ci]'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
