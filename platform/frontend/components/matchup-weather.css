@@ -1,0 +1,12 @@
+.matchup-weather-panel>header{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.matchup-weather-panel>header h2{margin:0;font-size:14px;line-height:1.4}
+.matchup-weather-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 10px}
+.matchup-weather-metrics>div{padding:9px;border:1px solid var(--line);border-radius:8px;min-width:0}
+.matchup-weather-metrics dt{font-size:10px;color:var(--muted);margin-bottom:4px;font-weight:600}
+.matchup-weather-metrics dd{font-size:13px;line-height:1.45;font-weight:650;margin:0;overflow-wrap:anywhere}
+.matchup-weather-metrics dd small{display:block;color:var(--muted);font-size:10px;font-weight:400}
+.matchup-weather-implications{display:grid;gap:10px;margin-top:12px}
+.matchup-weather-implications>section{border-top:1px solid var(--line);padding-top:10px}
+.matchup-weather-implications p{font-size:11px;line-height:1.6;margin:7px 0}
+.matchup-weather-implications details{font-size:10px;color:var(--muted);margin-top:6px}
+.matchup-weather-implications summary{cursor:pointer;font-weight:600}
