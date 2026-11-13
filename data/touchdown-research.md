@@ -1,24 +1,10 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-12T19:54:38.962255+00:00
+Generated 2026-11-13T01:32:14.988640+00:00
 Current-season tests: 2498; Brier 0.1491 vs baseline 0.1623.
 
 ## WAS at NYG
 2026-11-13T01:15:00+00:00
-### 1. Red zone & opportunity
-- Malik Nabers (NYG WR): 0 RZ carries, 7 RZ targets, 0 inside-5 carries, 3 inside-5 targets across 4 team games; xTD 2.57, actual TD 1.
-- Isaiah Likely (NYG TE): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 3 inside-5 targets across 4 team games; xTD 2.03, actual TD 4.
-- Rachaad White (WAS RB): 2 RZ carries, 2 RZ targets, 2 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.59, actual TD 2.
-### 2. Position matchup & leverage
-- NYG: opponent RZ EPA 0.36834475325328764; pass EPA 0.004989445311008288; rush EPA 0.04561279346950188. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- WAS: opponent RZ EPA -0.07723943856485985; pass EPA -0.12325345437399386; rush EPA 0.015385242593741386. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"book": "DraftKings", "total": 44.5, "homeSpread": -1.5, "homeImpliedPoints": 23.0, "awayImpliedPoints": 21.5, "updatedAt": "2026-11-07T11:38:12Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
-- NYG: recent RZ pass rate 0.6071428571428571, RZ pass-over-expected -3.376911924435542 percentage points, neutral seconds/play 33.98290598290598. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- WAS: recent RZ pass rate 0.64, RZ pass-over-expected 4.2582836326049724 percentage points, neutral seconds/play 31.773809523809526. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Malik Nabers — Core research · highest estimated probability**: estimated ATTD 50.2%; fair odds -101; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Isaiah Likely — Additional research candidate**: estimated ATTD 35.6%; fair odds 181; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Rachaad White — Additional research candidate**: estimated ATTD 28.2%; fair odds 255; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## NE at DET
 2026-11-15T14:30:00+00:00
