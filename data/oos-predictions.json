@@ -40909,7 +40909,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.0038376304953462725,
+    "routeSignal": 0.0038376304953462717,
     "receiving_yards": {
       "actual": 16.0,
       "mean": 48.427734375,
@@ -47711,7 +47711,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.0007675648215599648,
+    "routeSignal": -0.0007675648215599616,
     "receiving_yards": {
       "actual": 21.0,
       "mean": 41.44921875,
@@ -56223,7 +56223,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.006901778359260734,
+    "routeSignal": 0.006901778359260732,
     "receiving_yards": {
       "actual": 7.0,
       "mean": 38.095703125,
@@ -59985,7 +59985,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.016415924970025576,
+    "routeSignal": 0.016415924970025572,
     "receiving_yards": {
       "actual": 0.0,
       "mean": 28.708984375,
@@ -61524,7 +61524,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.012712261167966376,
+    "routeSignal": 0.012712261167966378,
     "receiving_yards": {
       "actual": 47.0,
       "mean": 55.302734375,
@@ -62740,7 +62740,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.009528901217973269,
+    "routeSignal": 0.009528901217973272,
     "receiving_yards": {
       "actual": 18.0,
       "mean": 44.01171875,
@@ -63595,7 +63595,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.003850241259650976,
+    "routeSignal": 0.003850241259650979,
     "receiving_yards": {
       "actual": 0.0,
       "mean": 29.044921875,
@@ -63728,7 +63728,7 @@
       "receptions": 0.95,
       "receiving_yards": 0.95
     },
-    "routeSignal": -0.04863111278545602,
+    "routeSignal": -0.04863111278545601,
     "receiving_yards": {
       "actual": 113.0,
       "mean": 50.232421875,
@@ -63804,7 +63804,7 @@
       "receptions": 0.95,
       "receiving_yards": 0.95
     },
-    "routeSignal": -0.058624204925663885,
+    "routeSignal": -0.05862420492566387,
     "receiving_yards": {
       "actual": 15.0,
       "mean": 32.7265625,
@@ -63880,7 +63880,7 @@
       "receptions": 0.95,
       "receiving_yards": 0.95
     },
-    "routeSignal": -0.053835703382750615,
+    "routeSignal": -0.05383570338275061,
     "receiving_yards": {
       "actual": 24.0,
       "mean": 57.369140625,
@@ -65894,7 +65894,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.004535938231776148,
+    "routeSignal": -0.004535938231776147,
     "receiving_yards": {
       "actual": 118.0,
       "mean": 76.083984375,
@@ -71176,7 +71176,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.004405654551471899,
+    "routeSignal": 0.004405654551471902,
     "receiving_yards": {
       "actual": 11.0,
       "mean": 35.94921875,
@@ -72316,7 +72316,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.0057235373463711894,
+    "routeSignal": 0.005723537346371189,
     "receiving_yards": {
       "actual": 24.0,
       "mean": 34.880859375,
@@ -73342,7 +73342,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.00704684408535684,
+    "routeSignal": -0.007046844085356836,
     "receiving_yards": {
       "actual": 97.0,
       "mean": 45.388671875,
@@ -73627,7 +73627,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.013127800667560533,
+    "routeSignal": 0.013127800667560537,
     "receiving_yards": {
       "actual": 86.0,
       "mean": 56.38671875,
@@ -78871,7 +78871,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.008837041871156843,
+    "routeSignal": 0.008837041871156845,
     "receiving_yards": {
       "actual": 40.0,
       "mean": 39.46484375,
@@ -84913,7 +84913,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.011223316838217498,
+    "routeSignal": -0.0112233168382175,
     "receiving_yards": {
       "actual": 7.0,
       "mean": 52.017578125,
@@ -90575,7 +90575,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.023601150872384444,
+    "routeSignal": -0.023601150872384447,
     "receiving_yards": {
       "actual": 32.0,
       "mean": 38.78125,
@@ -90765,7 +90765,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.01510974762961345,
+    "routeSignal": -0.015109747629613448,
     "receiving_yards": {
       "actual": 27.0,
       "mean": 41.7421875,
@@ -91810,7 +91810,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.026897418925135527,
+    "routeSignal": -0.02689741892513552,
     "receiving_yards": {
       "actual": 21.0,
       "mean": 20.001953125,
@@ -93444,7 +93444,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.007490195590269249,
+    "routeSignal": -0.007490195590269248,
     "receiving_yards": {
       "actual": 11.0,
       "mean": 28.095703125,
@@ -93615,7 +93615,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.006556014734615278,
+    "routeSignal": -0.006556014734615275,
     "receiving_yards": {
       "actual": 19.0,
       "mean": 22.46484375,
@@ -94223,7 +94223,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.027710324840848576,
+    "routeSignal": -0.027710324840848573,
     "receiving_yards": {
       "actual": 58.0,
       "mean": 60.0546875,
@@ -94603,7 +94603,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.001395934094659183,
+    "routeSignal": -0.0013959340946591813,
     "receiving_yards": {
       "actual": 18.0,
       "mean": 33.0703125,
@@ -95914,7 +95914,7 @@
       "receptions": 0.95,
       "receiving_yards": 0.95
     },
-    "routeSignal": -0.04625185936633845,
+    "routeSignal": -0.046251859366338445,
     "receiving_yards": {
       "actual": 24.0,
       "mean": 19.560546875,
@@ -103115,7 +103115,7 @@
       "receptions": 0.95,
       "receiving_yards": 0.95
     },
-    "routeSignal": -0.0519610630961604,
+    "routeSignal": -0.05196106309616039,
     "receiving_yards": {
       "actual": 67.0,
       "mean": 40.7265625,
@@ -104996,7 +104996,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.012396637175097864,
+    "routeSignal": 0.012396637175097869,
     "receiving_yards": {
       "actual": 38.0,
       "mean": 54.884765625,
@@ -110772,7 +110772,7 @@
       "receptions": 1.05,
       "receiving_yards": 1.05
     },
-    "routeSignal": 0.06988302975045327,
+    "routeSignal": 0.06988302975045325,
     "receiving_yards": {
       "actual": 86.0,
       "mean": 76.171875,
@@ -111798,7 +111798,7 @@
       "receptions": 1.05,
       "receiving_yards": 1.05
     },
-    "routeSignal": 0.04721787834576383,
+    "routeSignal": 0.047217878345763846,
     "receiving_yards": {
       "actual": 41.0,
       "mean": 18.525390625,
@@ -112368,7 +112368,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.009656814924316005,
+    "routeSignal": -0.009656814924316007,
     "receiving_yards": {
       "actual": 0.0,
       "mean": 36.896484375,
@@ -112862,7 +112862,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.018142268951749262,
+    "routeSignal": -0.01814226895174926,
     "receiving_yards": {
       "actual": 21.0,
       "mean": 21.115234375,
@@ -113090,7 +113090,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": 0.008300181508228591,
+    "routeSignal": 0.008300181508228593,
     "receiving_yards": {
       "actual": 21.0,
       "mean": 44.310546875,
@@ -113147,7 +113147,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.013587765866527298,
+    "routeSignal": -0.013587765866527294,
     "receiving_yards": {
       "actual": 0.0,
       "mean": 40.958984375,
@@ -113223,7 +113223,7 @@
       "receptions": 1.05,
       "receiving_yards": 1.05
     },
-    "routeSignal": 0.0676531156310957,
+    "routeSignal": 0.06765311563109572,
     "receiving_yards": {
       "actual": 48.0,
       "mean": 40.19140625,
@@ -118714,7 +118714,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.004316631975765518,
+    "routeSignal": -0.004316631975765519,
     "receiving_yards": {
       "actual": 25.0,
       "mean": 27.125,
@@ -119949,7 +119949,7 @@
       "receptions": 1.0,
       "receiving_yards": 1.0
     },
-    "routeSignal": -0.008245938479103997,
+    "routeSignal": -0.008245938479103999,
     "receiving_yards": {
       "actual": 28.0,
       "mean": 40.6015625,
@@ -120285,6 +120285,918 @@
       "baseline": 0.6666666666666666,
       "p10": 0.0,
       "p90": 3.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0031588",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "WR",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        6.29296875,
+        5.96875,
+        5.689453125,
+        5.353515625
+      ],
+      "receptions": [
+        4.2265625,
+        4.005859375,
+        3.80859375,
+        3.595703125
+      ],
+      "receiving_yards": [
+        51.185546875,
+        48.62890625,
+        46.072265625,
+        43.521484375
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.12157736027648643,
+    "receiving_yards": {
+      "actual": 83.0,
+      "mean": 51.185546875,
+      "unadjustedMean": 51.185546875,
+      "baseline": 41.333333333333336,
+      "p10": 11.100000000000001,
+      "p90": 101.0
+    },
+    "receptions": {
+      "actual": 6.0,
+      "mean": 4.2265625,
+      "unadjustedMean": 4.2265625,
+      "baseline": 4.333333333333333,
+      "p10": 1.0,
+      "p90": 7.0
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.3046875,
+      "unadjustedMean": 0.3046875,
+      "baseline": 0.6666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 10.0,
+      "mean": 6.29296875,
+      "unadjustedMean": 6.29296875,
+      "baseline": 6.666666666666667,
+      "p10": 3.0,
+      "p90": 10.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0033699",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "RB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 26.0,
+      "mean": 13.3515625,
+      "unadjustedMean": 13.3515625,
+      "baseline": 9.166666666666666,
+      "p10": 0.0,
+      "p90": 33.900000000000034
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 1.498046875,
+      "unadjustedMean": 1.498046875,
+      "baseline": 1.3333333333333333,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.06640625,
+      "unadjustedMean": 0.06640625,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 4.0,
+      "mean": 1.9296875,
+      "unadjustedMean": 1.9296875,
+      "baseline": 2.0,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0035250",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "RB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 18.60546875,
+      "unadjustedMean": 18.60546875,
+      "baseline": 10.5,
+      "p10": 0.0,
+      "p90": 44.0
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 2.095703125,
+      "unadjustedMean": 2.095703125,
+      "baseline": 1.6666666666666667,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.119140625,
+      "unadjustedMean": 0.119140625,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 0.0,
+      "mean": 2.701171875,
+      "unadjustedMean": 2.701171875,
+      "baseline": 2.0,
+      "p10": 0.0,
+      "p90": 5.900000000000034
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0036309",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "WR",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.006929175782739236,
+    "receiving_yards": {
+      "actual": 8.0,
+      "mean": 19.185546875,
+      "unadjustedMean": 19.185546875,
+      "baseline": 15.333333333333334,
+      "p10": 0.0,
+      "p90": 50.900000000000034
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 1.677734375,
+      "unadjustedMean": 1.677734375,
+      "baseline": 1.3333333333333333,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.09765625,
+      "unadjustedMean": 0.09765625,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 5.0,
+      "mean": 2.734375,
+      "unadjustedMean": 2.734375,
+      "baseline": 3.5,
+      "p10": 0.0,
+      "p90": 6.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0037256",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "RB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 5.0,
+      "mean": 18.59765625,
+      "unadjustedMean": 18.59765625,
+      "baseline": 20.666666666666668,
+      "p10": 0.0,
+      "p90": 45.0
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 2.359375,
+      "unadjustedMean": 2.359375,
+      "baseline": 2.6666666666666665,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.09765625,
+      "unadjustedMean": 0.09765625,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 2.0,
+      "mean": 3.119140625,
+      "unadjustedMean": 3.119140625,
+      "baseline": 3.1666666666666665,
+      "p10": 1.0,
+      "p90": 6.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0037742",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "WR",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        3.943359375,
+        3.759765625,
+        3.560546875,
+        3.353515625
+      ],
+      "receptions": [
+        2.623046875,
+        2.490234375,
+        2.375,
+        2.236328125
+      ],
+      "receiving_yards": [
+        30.88671875,
+        29.34765625,
+        27.80078125,
+        26.283203125
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.0676514920620175,
+    "receiving_yards": {
+      "actual": 27.0,
+      "mean": 30.88671875,
+      "unadjustedMean": 30.88671875,
+      "baseline": 38.833333333333336,
+      "p10": 0.0,
+      "p90": 68.0
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 2.623046875,
+      "unadjustedMean": 2.623046875,
+      "baseline": 2.0,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.205078125,
+      "unadjustedMean": 0.205078125,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 3.0,
+      "mean": 3.943359375,
+      "unadjustedMean": 3.943359375,
+      "baseline": 3.6666666666666665,
+      "p10": 1.0,
+      "p90": 8.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0037809",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "TE",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        5.1796875,
+        4.919921875,
+        4.66015625,
+        4.408203125
+      ],
+      "receptions": [
+        3.572265625,
+        3.412109375,
+        3.21484375,
+        3.064453125
+      ],
+      "receiving_yards": [
+        36.037109375,
+        34.248046875,
+        32.44140625,
+        30.638671875
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.07586849481416451,
+    "receiving_yards": {
+      "actual": 24.0,
+      "mean": 36.037109375,
+      "unadjustedMean": 36.037109375,
+      "baseline": 39.833333333333336,
+      "p10": 4.0,
+      "p90": 70.0
+    },
+    "receptions": {
+      "actual": 4.0,
+      "mean": 3.572265625,
+      "unadjustedMean": 3.572265625,
+      "baseline": 3.8333333333333335,
+      "p10": 1.0,
+      "p90": 6.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.23046875,
+      "unadjustedMean": 0.23046875,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 8.0,
+      "mean": 5.1796875,
+      "unadjustedMean": 5.1796875,
+      "baseline": 5.166666666666667,
+      "p10": 2.0,
+      "p90": 9.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0037838",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "TE",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        6.58203125,
+        6.267578125,
+        5.8984375,
+        5.595703125
+      ],
+      "receptions": [
+        4.341796875,
+        4.13671875,
+        3.8984375,
+        3.666015625
+      ],
+      "receiving_yards": [
+        48.947265625,
+        46.498046875,
+        44.044921875,
+        41.591796875
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.031192081908080555,
+    "receiving_yards": {
+      "actual": 127.0,
+      "mean": 48.947265625,
+      "unadjustedMean": 48.947265625,
+      "baseline": 56.166666666666664,
+      "p10": 11.0,
+      "p90": 92.90000000000003
+    },
+    "receptions": {
+      "actual": 9.0,
+      "mean": 4.341796875,
+      "unadjustedMean": 4.341796875,
+      "baseline": 5.5,
+      "p10": 1.1000000000000014,
+      "p90": 7.0
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.34375,
+      "unadjustedMean": 0.34375,
+      "baseline": 0.6666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 11.0,
+      "mean": 6.58203125,
+      "unadjustedMean": 6.58203125,
+      "baseline": 8.5,
+      "p10": 3.0,
+      "p90": 11.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0038576",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "WR",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 8.16796875,
+      "unadjustedMean": 8.16796875,
+      "baseline": 11.0,
+      "p10": 0.0,
+      "p90": 27.0
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.728515625,
+      "unadjustedMean": 0.728515625,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.04296875,
+      "unadjustedMean": 0.04296875,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 0.0,
+      "mean": 1.26953125,
+      "unadjustedMean": 1.26953125,
+      "baseline": 0.5,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0039337",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "WR",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        8.40234375,
+        7.984375,
+        7.552734375,
+        7.142578125
+      ],
+      "receptions": [
+        5.451171875,
+        5.189453125,
+        4.908203125,
+        4.642578125
+      ],
+      "receiving_yards": [
+        63.583984375,
+        60.421875,
+        57.251953125,
+        54.03515625
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.0410609723856671,
+    "receiving_yards": {
+      "actual": 44.0,
+      "mean": 63.583984375,
+      "unadjustedMean": 63.583984375,
+      "baseline": 96.33333333333333,
+      "p10": 20.1,
+      "p90": 108.90000000000003
+    },
+    "receptions": {
+      "actual": 5.0,
+      "mean": 5.451171875,
+      "unadjustedMean": 5.451171875,
+      "baseline": 7.666666666666667,
+      "p10": 2.0,
+      "p90": 9.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.34765625,
+      "unadjustedMean": 0.34765625,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 7.0,
+      "mean": 8.40234375,
+      "unadjustedMean": 8.40234375,
+      "baseline": 10.833333333333334,
+      "p10": 4.0,
+      "p90": 13.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0039847",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "TE",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 8.0,
+      "mean": 13.779296875,
+      "unadjustedMean": 13.779296875,
+      "baseline": 9.166666666666666,
+      "p10": 0.0,
+      "p90": 38.900000000000034
+    },
+    "receptions": {
+      "actual": 1.0,
+      "mean": 1.3046875,
+      "unadjustedMean": 1.3046875,
+      "baseline": 0.6666666666666666,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.1015625,
+      "unadjustedMean": 0.1015625,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 3.0,
+      "mean": 1.912109375,
+      "unadjustedMean": 1.912109375,
+      "baseline": 1.5,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0040715",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "RB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 44.0,
+      "mean": 15.05078125,
+      "unadjustedMean": 15.05078125,
+      "baseline": 12.666666666666666,
+      "p10": 0.0,
+      "p90": 41.900000000000034
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 1.666015625,
+      "unadjustedMean": 1.666015625,
+      "baseline": 1.8333333333333333,
+      "p10": 0.0,
+      "p90": 4.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.072265625,
+      "unadjustedMean": 0.072265625,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 4.0,
+      "mean": 2.255859375,
+      "unadjustedMean": 2.255859375,
+      "baseline": 2.1666666666666665,
+      "p10": 0.0,
+      "p90": 5.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0041040",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "WR",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": {
+      "targets": [
+        5.1796875,
+        4.943359375,
+        4.671875,
+        4.37890625
+      ],
+      "receptions": [
+        3.291015625,
+        3.146484375,
+        2.974609375,
+        2.8046875
+      ],
+      "receiving_yards": [
+        38.119140625,
+        36.21875,
+        34.31640625,
+        32.384765625
+      ]
+    },
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.07589609177992872,
+    "receiving_yards": {
+      "actual": 42.0,
+      "mean": 38.119140625,
+      "unadjustedMean": 38.119140625,
+      "baseline": 32.666666666666664,
+      "p10": 6.0,
+      "p90": 72.0
+    },
+    "receptions": {
+      "actual": 2.0,
+      "mean": 3.291015625,
+      "unadjustedMean": 3.291015625,
+      "baseline": 3.1666666666666665,
+      "p10": 1.0,
+      "p90": 6.0
+    },
+    "receiving_tds": {
+      "actual": 1.0,
+      "mean": 0.201171875,
+      "unadjustedMean": 0.201171875,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 2.0,
+      "mean": 5.1796875,
+      "unadjustedMean": 5.1796875,
+      "baseline": 5.333333333333333,
+      "p10": 2.0,
+      "p90": 9.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0041042",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "WR",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 208,
+      "games": 67,
+      "trainedThroughWeek": 9,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": -0.016102674742127843,
+    "receiving_yards": {
+      "actual": 62.0,
+      "mean": 36.26953125,
+      "unadjustedMean": 36.26953125,
+      "baseline": 38.833333333333336,
+      "p10": 5.0,
+      "p90": 75.0
+    },
+    "receptions": {
+      "actual": 3.0,
+      "mean": 2.96484375,
+      "unadjustedMean": 2.96484375,
+      "baseline": 2.5,
+      "p10": 1.0,
+      "p90": 6.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.287109375,
+      "unadjustedMean": 0.287109375,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "targets": {
+      "actual": 4.0,
+      "mean": 4.576171875,
+      "unadjustedMean": 4.576171875,
+      "baseline": 4.166666666666667,
+      "p10": 1.0,
+      "p90": 8.0
     },
     "family": "receiving"
   },
@@ -147795,6 +148707,244 @@
     "family": "rushing"
   },
   {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0031503",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "QB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 1.0,
+      "mean": 12.068359375,
+      "unadjustedMean": 12.068359375,
+      "baseline": 10.0,
+      "p10": 0.0,
+      "p90": 30.0
+    },
+    "carries": {
+      "actual": 2.0,
+      "mean": 2.982421875,
+      "unadjustedMean": 2.982421875,
+      "baseline": 2.6666666666666665,
+      "p10": 0.0,
+      "p90": 6.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.107421875,
+      "unadjustedMean": 0.107421875,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0033699",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "RB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 26.0,
+      "mean": 22.638671875,
+      "unadjustedMean": 22.638671875,
+      "baseline": 16.666666666666668,
+      "p10": 0.0,
+      "p90": 51.0
+    },
+    "carries": {
+      "actual": 9.0,
+      "mean": 5.470703125,
+      "unadjustedMean": 5.470703125,
+      "baseline": 5.333333333333333,
+      "p10": 1.0,
+      "p90": 11.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.162109375,
+      "unadjustedMean": 0.162109375,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0035250",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "RB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 3.0,
+      "mean": 40.203125,
+      "unadjustedMean": 40.203125,
+      "baseline": 22.833333333333332,
+      "p10": 4.0,
+      "p90": 88.0
+    },
+    "carries": {
+      "actual": 1.0,
+      "mean": 9.0625,
+      "unadjustedMean": 9.0625,
+      "baseline": 8.0,
+      "p10": 2.1000000000000014,
+      "p90": 17.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.302734375,
+      "unadjustedMean": 0.302734375,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0037256",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "RB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 47.0,
+      "mean": 34.8515625,
+      "unadjustedMean": 34.8515625,
+      "baseline": 34.333333333333336,
+      "p10": 3.0,
+      "p90": 79.90000000000003
+    },
+    "carries": {
+      "actual": 11.0,
+      "mean": 8.046875,
+      "unadjustedMean": 8.046875,
+      "baseline": 7.833333333333333,
+      "p10": 2.0,
+      "p90": 15.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.232421875,
+      "unadjustedMean": 0.232421875,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0039910",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "QB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 28.0,
+      "mean": 27.041015625,
+      "unadjustedMean": 27.041015625,
+      "baseline": 42.0,
+      "p10": 3.0,
+      "p90": 55.80000000000007
+    },
+    "carries": {
+      "actual": 11.0,
+      "mean": 5.6484375,
+      "unadjustedMean": 5.6484375,
+      "baseline": 5.166666666666667,
+      "p10": 2.0,
+      "p90": 10.0
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.197265625,
+      "unadjustedMean": 0.197265625,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0039923",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "QB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 34.0,
+      "mean": 12.986328125,
+      "unadjustedMean": 12.986328125,
+      "baseline": 13.0,
+      "p10": 0.0,
+      "p90": 30.900000000000034
+    },
+    "carries": {
+      "actual": 6.0,
+      "mean": 3.15234375,
+      "unadjustedMean": 3.15234375,
+      "baseline": 2.1666666666666665,
+      "p10": 0.0,
+      "p90": 6.900000000000034
+    },
+    "rushing_tds": {
+      "actual": 0.0,
+      "mean": 0.0859375,
+      "unadjustedMean": 0.0859375,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "family": "rushing"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0040715",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "RB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "rushing_yards": {
+      "actual": 78.0,
+      "mean": 55.724609375,
+      "unadjustedMean": 55.724609375,
+      "baseline": 56.166666666666664,
+      "p10": 16.0,
+      "p90": 107.90000000000003
+    },
+    "carries": {
+      "actual": 18.0,
+      "mean": 12.9765625,
+      "unadjustedMean": 12.9765625,
+      "baseline": 13.333333333333334,
+      "p10": 6.0,
+      "p90": 22.0
+    },
+    "rushing_tds": {
+      "actual": 2.0,
+      "mean": 0.3671875,
+      "unadjustedMean": 0.3671875,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 1.0
+    },
+    "family": "rushing"
+  },
+  {
     "game_id": "2026_01_NE_SEA",
     "player_id": "00-0034869",
     "week": 1,
@@ -162491,6 +163641,156 @@
       "baseline": 0.6666666666666666,
       "p10": 0.0,
       "p90": 1.0
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0031503",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "QB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "passing_yards": {
+      "actual": 0.0,
+      "mean": 158.298828125,
+      "unadjustedMean": 158.298828125,
+      "baseline": 152.83333333333334,
+      "p10": 0.0,
+      "p90": 283.0
+    },
+    "attempts": {
+      "actual": 0.0,
+      "mean": 23.8359375,
+      "unadjustedMean": 23.8359375,
+      "baseline": 23.166666666666668,
+      "p10": 1.0,
+      "p90": 40.0
+    },
+    "completions": {
+      "actual": 0.0,
+      "mean": 14.71875,
+      "unadjustedMean": 14.71875,
+      "baseline": 14.166666666666666,
+      "p10": 0.0,
+      "p90": 26.0
+    },
+    "passing_tds": {
+      "actual": 0.0,
+      "mean": 0.763671875,
+      "unadjustedMean": 0.763671875,
+      "baseline": 1.3333333333333333,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "passing_interceptions": {
+      "actual": 0.0,
+      "mean": 0.673828125,
+      "unadjustedMean": 0.673828125,
+      "baseline": 0.6666666666666666,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0039910",
+    "week": 10,
+    "team": "WAS",
+    "opponent": "NYG",
+    "position": "QB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "passing_yards": {
+      "actual": 249.0,
+      "mean": 200.64453125,
+      "unadjustedMean": 200.64453125,
+      "baseline": 208.33333333333334,
+      "p10": 109.1,
+      "p90": 297.80000000000007
+    },
+    "attempts": {
+      "actual": 33.0,
+      "mean": 29.623046875,
+      "unadjustedMean": 29.623046875,
+      "baseline": 30.0,
+      "p10": 19.0,
+      "p90": 40.0
+    },
+    "completions": {
+      "actual": 23.0,
+      "mean": 18.6796875,
+      "unadjustedMean": 18.6796875,
+      "baseline": 19.166666666666668,
+      "p10": 11.0,
+      "p90": 27.0
+    },
+    "passing_tds": {
+      "actual": 3.0,
+      "mean": 1.16015625,
+      "unadjustedMean": 1.16015625,
+      "baseline": 1.1666666666666667,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "passing_interceptions": {
+      "actual": 2.0,
+      "mean": 0.65625,
+      "unadjustedMean": 0.65625,
+      "baseline": 0.0,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "family": "passing"
+  },
+  {
+    "game_id": "2026_10_WAS_NYG",
+    "player_id": "00-0039923",
+    "week": 10,
+    "team": "NYG",
+    "opponent": "WAS",
+    "position": "QB",
+    "kickoff": "2026-11-13T01:15:00+00:00",
+    "passing_yards": {
+      "actual": 293.0,
+      "mean": 186.568359375,
+      "unadjustedMean": 186.568359375,
+      "baseline": 152.0,
+      "p10": 45.0,
+      "p90": 291.0
+    },
+    "attempts": {
+      "actual": 36.0,
+      "mean": 26.837890625,
+      "unadjustedMean": 26.837890625,
+      "baseline": 17.5,
+      "p10": 8.0,
+      "p90": 41.0
+    },
+    "completions": {
+      "actual": 23.0,
+      "mean": 16.875,
+      "unadjustedMean": 16.875,
+      "baseline": 11.0,
+      "p10": 3.1000000000000014,
+      "p90": 26.0
+    },
+    "passing_tds": {
+      "actual": 1.0,
+      "mean": 1.060546875,
+      "unadjustedMean": 1.060546875,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "passing_interceptions": {
+      "actual": 1.0,
+      "mean": 0.697265625,
+      "unadjustedMean": 0.697265625,
+      "baseline": 0.3333333333333333,
+      "p10": 0.0,
+      "p90": 2.0
     },
     "family": "passing"
   }
