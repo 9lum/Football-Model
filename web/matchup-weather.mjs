@@ -16,7 +16,8 @@ export function matchupWeather(game,stadium,basic,archived,reported,now=Date.now
  return forecasts[0]||report||{status:'unavailable',gameId:id,reason:'No verified game-specific weather is available. Weather-driven adjustments are not supported.'};
 }
 export function matchupWeatherImplications(game,weather,teamProfiles=[],forecasts=[]){
- const teams=[game?.away_team||game?.awayTeam,game?.home_team||game?.homeTeam].filter(Boolean);
+ const code=t=>({LA:'LAR',WSH:'WAS',JAC:'JAX'})[t]||t;
+ const teams=[game?.away_team||game?.awayTeam,game?.home_team||game?.homeTeam].filter(Boolean).map(code);
  return teams.map(team=>{
   const eligible=forecasts.filter(f=>f.gameId===(game.game_id||game.gameId)&&f.team===team&&!f.unavailable&&f.likelyToPlay!==false);
   const players=eligible.filter(f=>f.position==='QB').slice(0,1).concat(eligible.filter(f=>['WR','TE'].includes(f.position)).sort((a,b)=>(b.features?.targets_last3||0)-(a.features?.targets_last3||0)).slice(0,1));
