@@ -18,3 +18,10 @@ class PregameWeatherTests(unittest.TestCase):
  def test_rescheduled_kickoff_is_eligible_again(self):
   old={self.g['gameId']:{'kickoff':(self.kickoff-dt.timedelta(hours=1)).isoformat(),'deadlineMet':True}}
   self.assertEqual(len(due_games([self.g],old,self.kickoff-dt.timedelta(minutes=20))),1)
+
+ def test_xweather_fallback_preserves_missing_fields_and_valid_hour(self):
+  from scripts.refresh_stadium_weather import xweather_hours
+  payload={'success':True,'response':[{'periods':[{'dateTimeISO':self.g['kickoff'],'tempC':8,'windSpeedKPH':30,'precipMM':1,'pop':60}]}]}
+  rows=xweather_hours(payload,self.kickoff);self.assertEqual(rows[0]['windKph'],30);self.assertIsNone(rows[0]['gustKph']);self.assertIsNone(rows[0]['weatherCode'])
+  self.assertEqual(xweather_hours({'success':False},self.kickoff),[])
+  self.assertEqual(xweather_hours(payload,self.kickoff+dt.timedelta(days=1)),[])

@@ -14,6 +14,9 @@ jobs:
   pregame-weather:
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    env:
+      XWEATHER_CLIENT_ID: ${{ secrets.XWEATHER_CLIENT_ID }}
+      XWEATHER_API_KEY: ${{ secrets.XWEATHER_API_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:

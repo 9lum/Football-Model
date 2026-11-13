@@ -41,6 +41,22 @@ def forecast_hours(payload,kickoff):
     if not rows or min(abs((dt.datetime.fromisoformat(r['time'])-kickoff).total_seconds()) for r in rows)>1800:return []
     return rows
 
+def xweather_hours(payload,kickoff):
+    if not payload.get('success'):return []
+    response=payload.get('response') or [];periods=response[0].get('periods',[]) if response else [];rows=[]
+    fields={'tempC':'temperatureC','feelslikeC':'feelsLikeC','humidity':'humidityPct','dewpointC':'dewPointC','precipMM':'precipitationMm','pop':'precipitationProbability','snowCM':'snowfallCm','windSpeedKPH':'windKph','windGustKPH':'gustKph','windDirDEG':'windDirection','sky':'cloudPct','pressureMB':'pressureHpa'}
+    for period in periods:
+        try:stamp=dt.datetime.fromisoformat(period['dateTimeISO'].replace('Z','+00:00')).astimezone(UTC)
+        except (KeyError,ValueError):continue
+        if not kickoff-dt.timedelta(hours=2)<=stamp<=kickoff+dt.timedelta(hours=4):continue
+        row={label:None for label in FIELDS.values()};row.update(time=stamp.isoformat())
+        for source,label in fields.items():row[label]=period.get(source)
+        row['temperatureC']=period.get('tempC',period.get('avgTempC'))
+        row['windKph']=period.get('windSpeedKPH',period.get('windSpeedAvgKPH'))
+        if period.get('visibilityKM') is not None:row['visibilityM']=period['visibilityKM']*1000
+        rows.append(row)
+    return rows if rows and min(abs((dt.datetime.fromisoformat(r['time'])-kickoff).total_seconds()) for r in rows)<=1800 else []
+
 def scheduled_future(game,now):
     kickoff=kickoff_of(game)
     return kickoff>now if kickoff else bool(game.get('gameday') and dt.date.fromisoformat(game['gameday'])>=now.date())
@@ -94,7 +110,7 @@ def run(game_ids=None,resolve_venues=True):
         try:return point,request_json('https://api.open-meteo.com/v1/forecast',{'latitude':point[0],'longitude':point[1],'hourly':','.join(FIELDS),'forecast_days':16,'timezone':'UTC','wind_speed_unit':'kmh','temperature_unit':'celsius','precipitation_unit':'mm'})
         except Exception as error:return point,{'error':getattr(error,'code',type(error).__name__)}
     with ThreadPoolExecutor(max_workers=4) as executor:payloads=dict(executor.map(fetch,coords))
-    result=[]
+    result=[];fallbacks={}
     for g in games:
         kickoff=kickoff_of(g);point,roof=resolved(g)
         row={'gameId':g['game_id'],'espnId':g.get('espn'),'week':int(g['week']),'season':season,'homeTeam':ALIASES.get(g['home_team'],g['home_team']),'awayTeam':ALIASES.get(g['away_team'],g['away_team']),'stadium':g.get('stadium') or 'Stadium not published','kickoff':kickoff.isoformat() if kickoff else None,'venueSource':registry.get(g.get('stadium',''),{}).get('source'),'roofType':roof,'roofConfirmed':roof=='indoor','latitude':point[0] if point else None,'longitude':point[1] if point else None,'status':'unavailable','hours':[],'appliedToModel':False}
@@ -108,7 +124,20 @@ def run(game_ids=None,resolve_venues=True):
             if hours:
                 at=min(hours,key=lambda r:abs((dt.datetime.fromisoformat(r['time'])-kickoff).total_seconds()))
                 row.update(status='ok',hours=hours,kickoffForecast=at,retrievedAt=now.isoformat(),forecastLeadHours=round((kickoff-now).total_seconds()/3600,1),provider='Open-Meteo',model='best_match',source='https://open-meteo.com/en/docs')
-            else:row['reason']=str(payload.get('error','Outside returned hourly horizon'))
+            else:
+                row['reason']=str(payload.get('error','Outside returned hourly horizon'))
+                # Paid backup is restricted to near-kickoff venues, at most one request per venue per run.
+                if now<kickoff<=now+dt.timedelta(minutes=35):
+                    from intelligence.providers import xweather_credentials
+                    client,key=xweather_credentials()
+                    if client and key:
+                        if point not in fallbacks:
+                            try:fallbacks[point]=request_json(f'https://data.api.xweather.com/forecasts/{point[0]},{point[1]}',{'client_id':client,'client_secret':key,'filter':'1hr','from':(kickoff-dt.timedelta(hours=2)).isoformat(),'to':(kickoff+dt.timedelta(hours=4)).isoformat(),'limit':8})
+                            except Exception:fallbacks[point]={}
+                        backup=xweather_hours(fallbacks[point],kickoff)
+                        if backup:
+                            at=min(backup,key=lambda h:abs((dt.datetime.fromisoformat(h['time'])-kickoff).total_seconds()))
+                            row.update(status='ok',hours=backup,kickoffForecast=at,retrievedAt=dt.datetime.now(UTC).isoformat(),provider='Xweather',model='provider hourly forecast',source='https://www.xweather.com/docs/weather-api/endpoints/forecasts',reason=None)
         result.append(row)
     if game_ids is not None:result=[g for gid,g in previous.items() if g.get('season')==season and gid not in {r['gameId'] for r in result}]+result
     data={'generatedAt':now.isoformat(),'season':season,'currentWeek':current_week,'games':result,'source':url,'provider':'Open-Meteo','methodology':'Best-match hourly outdoor forecasts at stadium coordinates. Retrieval time is not model issuance time. Hourly rain/snow amounts cover the preceding hour. No calibrated yardage adjustment is applied. Retractable roof status requires confirmation.','attribution':'Weather data by Open-Meteo (CC BY 4.0). Public endpoint is subject to noncommercial usage limits and terms.'}
