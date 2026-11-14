@@ -1,5 +1,5 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-14T08:03:33.994755+00:00
+Generated 2026-11-14T13:15:44.780808+00:00
 Current-season tests: 2516; Brier 0.1492 vs baseline 0.1624.
 
 ## WAS at NYG
@@ -49,7 +49,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - Xavier Hutchinson (HOU WR): 2 RZ carries, 3 RZ targets, 1 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 1.91, actual TD 2.
 - Quinshon Judkins (CLE RB): 10 RZ carries, 0 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.32, actual TD 2.
 ### 2. Position matchup & leverage
-- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440632; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440705; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - HOU: opponent RZ EPA -0.08730845378426665; pass EPA -0.048441304130173536; rush EPA 0.037159318195270324. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"book": "DraftKings", "total": 40.5, "homeSpread": 4.5, "homeImpliedPoints": 18.0, "awayImpliedPoints": 22.5, "updatedAt": "2026-11-13T18:23:52Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
@@ -229,7 +229,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - KeAndre Lambert-Smith (LAC WR): 0 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.46, actual TD 0.
 - Zay Flowers (BAL WR): 1 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.79, actual TD 1.
 ### 2. Position matchup & leverage
-- BAL: opponent RZ EPA 0.02930725432846432; pass EPA -0.012377849488062555; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- BAL: opponent RZ EPA 0.029307254328464337; pass EPA -0.012377849488062517; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LAC: opponent RZ EPA 0.1267243022809456; pass EPA 0.10603490819654081; rush EPA -0.11257448391336833. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"book": "DraftKings", "total": 38.5, "homeSpread": -4.5, "homeImpliedPoints": 21.5, "awayImpliedPoints": 17.0, "updatedAt": "2026-11-13T18:23:52Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
