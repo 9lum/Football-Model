@@ -1,5 +1,5 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-14T13:53:10.274004+00:00
+Generated 2026-11-14T19:07:52.299611+00:00
 Current-season tests: 2516; Brier 0.1492 vs baseline 0.1624.
 
 ## WAS at NYG
@@ -27,9 +27,9 @@ Archived pregame projections retained during play; these are not live scoring pr
 ## KC at ATL
 2026-11-15T18:00:00+00:00
 ### 1. Red zone & opportunity
-- Kenneth Walker III (KC RB): 15 RZ carries, 4 RZ targets, 7 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 4.32, actual TD 5.
-- Khalil Herbert (ATL RB): 1 RZ carries, 1 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.18, actual TD 0.
 - Bijan Robinson (ATL RB): 9 RZ carries, 1 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.15, actual TD 1.
+- Khalil Herbert (ATL RB): 1 RZ carries, 1 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.18, actual TD 0.
+- Drake London (ATL WR): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.76, actual TD 1.
 ### 2. Position matchup & leverage
 - ATL: opponent RZ EPA -0.39890608905436686; pass EPA 0.031007439964851495; rush EPA -0.15264512476343703. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - KC: opponent RZ EPA 0.3054243447921668; pass EPA 0.061766763019872745; rush EPA -0.025302509207864587. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -38,9 +38,9 @@ Archived pregame projections retained during play; these are not live scoring pr
 - ATL: recent RZ pass rate 0.6923076923076923, RZ pass-over-expected 2.196987315609648 percentage points, neutral seconds/play 32.47692307692308. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - KC: recent RZ pass rate 0.5128205128205128, RZ pass-over-expected 3.414890762322988 percentage points, neutral seconds/play 30.41176470588235. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Kenneth Walker III — Core research · highest estimated probability**: estimated ATTD 65.9%; fair odds -194; opponent allows 1.50 direct TDs/game to the position group. FanDuel -230; estimated return -5.4%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Bijan Robinson — Core research · highest estimated probability**: estimated ATTD 40.8%; fair odds 145; opponent allows 0.50 direct TDs/game to the position group. BetMGM -190; estimated return -37.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 - **Khalil Herbert — High-yield research · positive price estimate**: estimated ATTD 15.2%; fair odds 558; opponent allows 0.50 direct TDs/game to the position group. DraftKings 750; estimated return 29.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Bijan Robinson — Additional research candidate**: estimated ATTD 40.8%; fair odds 145; opponent allows 0.50 direct TDs/game to the position group. BetMGM -190; estimated return -37.8%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Drake London — Additional research candidate**: estimated ATTD 29.6%; fair odds 238; opponent allows 0.33 direct TDs/game to the position group. BetOnline.ag 150; estimated return -26.1%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## HOU at CLE
 2026-11-15T18:00:00+00:00
