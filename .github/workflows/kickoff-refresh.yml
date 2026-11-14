@@ -2,7 +2,7 @@ name: Final pregame stats and touchdown markets
 on:
   workflow_dispatch:
   push:
-    paths: ['scripts/kickoff_refresh.py','scripts/odds_quota.py','scripts/test_kickoff_refresh.py','.github/workflows/kickoff-refresh.yml']
+    paths: ['scripts/kickoff_refresh.py','scripts/odds_quota.py','scripts/test_kickoff_refresh.py','tests/test_kickoff_availability.py','.github/workflows/kickoff-refresh.yml']
   schedule:
     - cron: '*/5 * * * *'
 permissions:
@@ -43,6 +43,9 @@ jobs:
           fi
       - if: steps.window.outputs.due == 'true'
         run: pip install -r requirements.txt
+      - name: Test final lineup identity protection
+        if: steps.window.outputs.due == 'true'
+        run: python -m unittest tests.test_kickoff_availability -v
       - uses: actions/cache@v4
         if: steps.window.outputs.due == 'true'
         with:

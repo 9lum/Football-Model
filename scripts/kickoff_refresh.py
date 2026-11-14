@@ -31,11 +31,17 @@ def source_checks(season):
 def sources_unchanged(before,after):return bool(before) and set(before)==set(after) and all(v.get('status')=='ok' and before.get(k,{}).get('sha256')==v.get('sha256') for k,v in after.items())
 def refresh_availability(batch):
  import pandas as pd
- from edge.availability import parse_espn,parse_official,latest_depth,match_and_resolve,roster_roles,TEAM_SITES
+ from edge.availability import parse_espn,parse_official,latest_depth,verified_depth,match_and_resolve,roster_roles,TEAM_SITES
  clubs={t for g in batch for t in [g['homeTeam'],g['awayTeam']]};bundle=read(DATA/'latest.json',{});previous=read(DATA/'availability.json',{});season=bundle['season'];week=int(batch[0]['gameId'].split('_')[1]);depth=previous.get('roster',[]);sources=[];records=[];now=pd.Timestamp.now(tz='UTC')
  def fetch_public(url):
   with urlopen(Request(url,headers={'User-Agent':'Projections-n-Shit/1.0'}),timeout=8) as r:return r.read()
- try:raw=fetch_public(f'https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_{season}.csv.gz');depth=latest_depth(pd.read_csv(io.BytesIO(gzip.decompress(raw)),low_memory=False),now)
+ try:
+  raw=fetch_public(f'https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_{season}.csv.gz');candidate=latest_depth(pd.read_csv(io.BytesIO(gzip.decompress(raw)),low_memory=False),now)
+  people=fetch_public('https://github.com/nflverse/nflverse-data/releases/download/players/players.csv.gz')
+  checked,rejected=verified_depth(candidate,pd.read_csv(io.BytesIO(gzip.decompress(people)),low_memory=False))
+  if not checked:raise ValueError('No verified depth rows; retain previous verified roster')
+  depth=checked
+  sources.append({'source':'depth identity registry','status':'ok','rejectedRows':len(rejected)})
  except Exception as error:sources.append({'source':'depth charts','status':'unavailable','error':type(error).__name__})
  jobs=[('espn','https://site.api.espn.com/apis/site/v2/sports/football/nfl/injuries')]+[(club,'https://www.'+TEAM_SITES[club]+'/team/injury-report/') for club in clubs if club in TEAM_SITES]
  def one(item):
