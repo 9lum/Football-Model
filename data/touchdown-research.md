@@ -1,5 +1,5 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-15T01:32:16.549195+00:00
+Generated 2026-11-15T07:30:05.206761+00:00
 Current-season tests: 2516; Brier 0.1492 vs baseline 0.1624.
 
 ## WAS at NYG
