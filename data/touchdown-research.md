@@ -1,5 +1,5 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-15T07:30:05.206761+00:00
+Generated 2026-11-15T13:16:59.811745+00:00
 Current-season tests: 2516; Brier 0.1492 vs baseline 0.1624.
 
 ## WAS at NYG
@@ -49,7 +49,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - Xavier Hutchinson (HOU WR): 2 RZ carries, 3 RZ targets, 1 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 1.91, actual TD 2.
 - Quinshon Judkins (CLE RB): 10 RZ carries, 0 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.32, actual TD 2.
 ### 2. Position matchup & leverage
-- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440705; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CLE: opponent RZ EPA 0.10784211922833915; pass EPA 0.0005832170029440632; rush EPA -0.03107698457578136. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - HOU: opponent RZ EPA -0.08730845378426665; pass EPA -0.048441304130173536; rush EPA 0.037159318195270324. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"book": "DraftKings", "total": 40.5, "homeSpread": 4.5, "homeImpliedPoints": 18.0, "awayImpliedPoints": 22.5, "updatedAt": "2026-11-13T18:23:52Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
@@ -100,7 +100,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 2026-11-15T18:00:00+00:00
 ### 1. Red zone & opportunity
 - Chuba Hubbard (CAR RB): 11 RZ carries, 3 RZ targets, 3 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.35, actual TD 2.
-- John Metchie III (CAR WR): 0 RZ carries, 2 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 0.65, actual TD 0.
+- Tommy Tremble (CAR TE): 0 RZ carries, 4 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.16, actual TD 3.
 - Audric Estime (NO RB): 3 RZ carries, 0 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.55, actual TD 1.
 ### 2. Position matchup & leverage
 - NO: opponent RZ EPA 0.24318442195146517; pass EPA 0.12384251781529047; rush EPA -0.04251726425926263. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -111,7 +111,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - CAR: recent RZ pass rate 0.6285714285714286, RZ pass-over-expected 7.74131611441121 percentage points, neutral seconds/play 29.875. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Chuba Hubbard — Core research · highest estimated probability**: estimated ATTD 56.6%; fair odds -130; opponent allows 1.50 direct TDs/game to the position group. FanDuel -155; estimated return -6.9%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **John Metchie III — High-yield research · positive price estimate**: estimated ATTD 12.7%; fair odds 685; opponent allows 0.67 direct TDs/game to the position group. DraftKings 900; estimated return 27.4%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Tommy Tremble — High-yield research · positive price estimate**: estimated ATTD 17.8%; fair odds 462; opponent allows 0.83 direct TDs/game to the position group. DraftKings 500; estimated return 6.7%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 - **Audric Estime — Additional research candidate**: estimated ATTD 39.5%; fair odds 153; opponent allows 1.33 direct TDs/game to the position group. DraftKings 150; estimated return -1.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, availability snapshot stale or missing, sensitivity-adjusted value below 3%.
 
 ## BUF at NYJ
@@ -229,7 +229,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - KeAndre Lambert-Smith (LAC WR): 0 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.46, actual TD 0.
 - Zay Flowers (BAL WR): 1 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.79, actual TD 1.
 ### 2. Position matchup & leverage
-- BAL: opponent RZ EPA 0.029307254328464337; pass EPA -0.012377849488062517; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- BAL: opponent RZ EPA 0.02930725432846432; pass EPA -0.012377849488062555; rush EPA -0.01072884157731417. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LAC: opponent RZ EPA 0.1267243022809456; pass EPA 0.10603490819654081; rush EPA -0.11257448391336833. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"book": "DraftKings", "total": 38.5, "homeSpread": -4.5, "homeImpliedPoints": 21.5, "awayImpliedPoints": 17.0, "updatedAt": "2026-11-13T18:23:52Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
