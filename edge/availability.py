@@ -356,6 +356,12 @@ def run(directory,now=None):
     snapshot['returnReports']=collect(bundle,snapshot,now.to_pydatetime())
     from .workload import build_context
     snapshot['workloadContext']=build_context(bundle,snapshot,now.to_pydatetime())
+    from .lineup_policy import build_lineup_policy,apply_touchdown_lineup
+    snapshot['lineupPolicy']=build_lineup_policy(bundle,snapshot,now.to_pydatetime())
+    td_path=directory/'touchdown-research.json'
+    if td_path.exists():
+        td=apply_touchdown_lineup(json.loads(td_path.read_text()),snapshot['lineupPolicy'],now.to_pydatetime())
+        tmp=td_path.with_suffix('.json.tmp');tmp.write_text(json.dumps(td,separators=(',',':'),allow_nan=False));tmp.replace(td_path)
     old=json.loads((directory/'availability.json').read_text()) if (directory/'availability.json').exists() else {}
     history_path=directory/'availability-history.json';history=json.loads(history_path.read_text()) if history_path.exists() else []
     for pid,health in injuries.items():
