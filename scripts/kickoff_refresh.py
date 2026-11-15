@@ -3,7 +3,7 @@ import argparse,concurrent.futures,datetime as dt,gzip,hashlib,io,json,os,subpro
 from pathlib import Path
 from types import SimpleNamespace
 from urllib.request import Request,urlopen
-from scripts.refresh_odds import fetch,read,number,ProviderError
+from scripts.refresh_odds import fetch,read,number,ProviderError,merge_markets,MARKETS as PROP_MARKETS
 UTC=dt.timezone.utc;ROOT=Path(__file__).resolve().parents[1];DATA=ROOT/'data';MARKETS=['player_anytime_td','player_1st_td','player_last_td','h2h','spreads','totals']
 def stamp():return dt.datetime.now(UTC)
 def parse(value):return dt.datetime.fromisoformat(value.replace('Z','+00:00')).astimezone(UTC)
@@ -61,6 +61,13 @@ def merge_event(previous,event,market_keys):
   by_key[key]={**old,**b,'markets':list(markets.values())}
  result['bookmakers']=[{**b,'markets':[m for m in b.get('markets',[]) if m.get('key') in market_keys]} for b in by_key.values()];return result
 
+def final_market_plan(remaining,pending):
+ # Fair per-game allowance protects the other unplayed games in this week.
+ allowance=number(remaining,0)//max(1,pending)
+ if allowance<len(MARKETS):return []
+ props=PROP_MARKETS if allowance>=len(MARKETS)+len(PROP_MARKETS) else PROP_MARKETS[:max(0,allowance-len(MARKETS))]
+ return MARKETS+props
+
 def collect_final(batch,key=None,now=None):
  from scripts.nfl_teams import FULL_NAMES
  from scripts.game_market_history import append_history
@@ -68,28 +75,34 @@ def collect_final(batch,key=None,now=None):
  if not key:return {k:{**v,'error':'missing_secret'} for k,v in result.items()}
  try:events,quota=fetch('events',key)
  except ProviderError as error:return {k:{**v,'error':error.status} for k,v in result.items()}
- remaining=number(quota.get('remaining'),0);td=read(DATA/'attd-odds.json',{});gm=read(DATA/'game-odds.json',{});td_events={e['id']:e for e in td.get('data',[])};gm_events={e['id']:e for e in gm.get('data',[])}
+ remaining=number(quota.get('remaining'),0);week=batch[0]['gameId'].split('_')[:2] if batch else [];pending=max(len(batch),sum(parse(g['kickoff'])>now and g['gameId'].split('_')[:2]==week for g in games()));requested=final_market_plan(remaining,pending);props=[m for m in requested if m in PROP_MARKETS];prop_feed=read(DATA/'odds.json',{});prop_events={e['id']:e for e in prop_feed.get('data',[])};td=read(DATA/'attd-odds.json',{});gm=read(DATA/'game-odds.json',{});td_events={e['id']:e for e in td.get('data',[])};gm_events={e['id']:e for e in gm.get('data',[])}
  jobs=[]
  for g in sorted(batch,key=lambda g:g['kickoff']):
   event=next((e for e in events if e.get('home_team')==FULL_NAMES.get(g['homeTeam']) and e.get('away_team')==FULL_NAMES.get(g['awayTeam']) and abs((parse(e['commence_time'])-parse(g['kickoff'])).total_seconds())<3600),None)
   if not event:result[g['gameId']]['error']='no_matched_event';continue
   if parse(g['kickoff'])<=stamp():result[g['gameId']]['error']='kickoff_passed';continue
-  if remaining<len(MARKETS):result[g['gameId']]['error']='insufficient_quota';continue
-  remaining-=len(MARKETS);jobs.append((g,event))
+  if not requested or remaining<len(requested):result[g['gameId']]['error']='insufficient_quota';continue
+  remaining-=len(requested);jobs.append((g,event))
  def request_one(job):
   g,event=job
   try:
-   payload,q=fetch('events/'+event['id']+'/odds',key,timeout=8,regions='us',markets=','.join(MARKETS),oddsFormat='american');return g,event,payload,q,None
+   payload,q=fetch('events/'+event['id']+'/odds',key,timeout=8,regions='us',markets=','.join(requested),oddsFormat='american');return g,event,payload,q,None
   except ProviderError as error:return g,event,None,None,error.status
  with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
   for g,event,payload,q,error in pool.map(request_one,jobs):
    if error:result[g['gameId']]['error']=error;continue
-   observed=stamp().isoformat();payload['collectedAt']=observed
+   quota=q;observed=stamp().isoformat();payload['collectedAt']=observed
+   if props:
+    fresh={**payload,'bookmakers':[{**b,'markets':[m for m in b.get('markets',[]) if m.get('key') in props]} for b in payload.get('bookmakers',[])]}
+    prop_events[event['id']]=merge_markets(prop_events.get(event['id'],{}),fresh,props)
    append_history(DATA,[payload],observed)
    td_events[event['id']]=merge_event(td_events.get(event['id'],{}),payload,MARKETS[:3]);gm_events[event['id']]=merge_event(gm_events.get(event['id'],{}),payload,MARKETS[3:]);seen={m['key'] for b in payload.get('bookmakers',[]) for m in b.get('markets',[]) if m.get('outcomes')};times=[m.get('last_update') or b.get('last_update') for b in payload.get('bookmakers',[]) for m in b.get('markets',[]) if m.get('outcomes')];source_current=bool(times) and all(t and 0<=(stamp()-parse(t)).total_seconds()<=180 for t in times)
-   result[g['gameId']]={'status':'collected' if set(MARKETS).issubset(seen) else 'partial','fetchedAt':observed,'sourceQuotesCurrent':source_current,'markets':sorted(seen),'missingMarkets':sorted(set(MARKETS)-seen),'providerTimestamps':sorted({t for t in times if t}),'remainingCredits':number(q.get('remaining'),remaining),'regions':'us'}
+   result[g['gameId']]={'status':'collected' if set(requested).issubset(seen) else 'partial','fetchedAt':observed,'sourceQuotesCurrent':source_current,'markets':sorted(seen),'requestedMarkets':requested,'quotaDeferredMarkets':sorted(set(PROP_MARKETS)-set(props)),'missingMarkets':sorted(set(requested)-seen),'providerTimestamps':sorted({t for t in times if t}),'remainingCredits':number(q.get('remaining'),remaining),'regions':'us'}
  td.update(data=list(td_events.values()),lastKickoffCheckAt=stamp().isoformat(),kickoffQuota=remaining);gm.update(data=list(gm_events.values()),lastKickoffCheckAt=stamp().isoformat());
  if any(v.get('fetchedAt') for v in result.values()):td['lastKickoffCollectionAt']=stamp().isoformat();gm['lastKickoffCollectionAt']=stamp().isoformat()
+ if props and any(v.get('fetchedAt') for v in result.values()):
+  prop_feed.update(data=list(prop_events.values()),generatedAt=stamp().isoformat(),status='partial' if set(props)!=set(PROP_MARKETS) else 'ok',lastKickoffCollectionAt=stamp().isoformat(),requestedMarkets=props,quotaLimited=len(props)<len(PROP_MARKETS),quota=quota)
+  save('odds.json',prop_feed)
  save('attd-odds.json',td);save('game-odds.json',gm);return result
 
 def reprice(batch,checks):
@@ -121,10 +134,12 @@ def reprice(batch,checks):
 def publish(message):
  if os.environ.get('PREGAME_PUBLISH')!='1':return None
  for args in [['git','config','user.name','github-actions[bot]'],['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],['git','add','data/kickoff-refresh.json','data/touchdown-research.json','data/touchdown-research.md','data/availability.json','data/attd-odds.json','data/game-odds.json']]:subprocess.run(args,cwd=ROOT,check=True,capture_output=True)
+ for name in ['touchdown-pregame-archive.json','odds.json']:
+  if (DATA/name).exists():subprocess.run(['git','add','data/'+name],cwd=ROOT,check=True,capture_output=True)
  if (DATA/'public-td-odds.json').exists():subprocess.run(['git','add','data/public-td-odds.json'],cwd=ROOT,check=True,capture_output=True)
  if (DATA/'game-market-movement.json').exists():subprocess.run(['git','add','data/game-market-movement.json'],cwd=ROOT,check=True,capture_output=True)
  if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT).returncode==0:return stamp()
- subprocess.run(['git','commit','-m',message+' [skip ci]'],cwd=ROOT,check=True,capture_output=True);subprocess.run(['git','pull','--rebase','-X','theirs','origin','main'],cwd=ROOT,check=True,capture_output=True);subprocess.run(['git','push','origin','HEAD:main'],cwd=ROOT,check=True,capture_output=True);return stamp()
+ subprocess.run(['git','commit','-m',message+' [skip ci]'],cwd=ROOT,check=True,capture_output=True);subprocess.run(['git','pull','--rebase','--autostash','-X','theirs','origin','main'],cwd=ROOT,check=True,capture_output=True);subprocess.run(['git','push','origin','HEAD:main'],cwd=ROOT,check=True,capture_output=True);return stamp()
 def run():
  payload=plan();due=due_games(payload)
  if not due:print('No upcoming kickoff requires a worker.');return
@@ -137,7 +152,7 @@ def run():
  final_sources=source_checks(season);unchanged=stable and sources_unchanged(baseline,final_sources);wait_until(kickoff-dt.timedelta(minutes=6,seconds=30));quotes=collect_final(batch);checks={'preparedAt':prepared,'availability':health,'statisticsCheckedAt':stamp().isoformat(),'statisticsUnchanged':unchanged,'statisticsSources':final_sources};reprice(batch,checks);payload=plan()
  for row in payload['games']:
   if row['gameId'] in quotes:row.update(status='publication_pending',odds=quotes[row['gameId']],**checks,publicationStartedAt=stamp().isoformat())
- save('kickoff-refresh.json',payload);published=publish('Publish final pregame TD and game-market snapshots')
+ save('kickoff-refresh.json',payload);published=publish('Publish final pregame player, TD and game-market snapshots')
  if published:
   for row in payload['games']:
    if row['gameId'] in quotes:row.update(publishedAt=published.isoformat(),deadlineMet=published<=parse(row['deadlineAt']),status='completed' if quotes[row['gameId']]['status']=='collected' and quotes[row['gameId']].get('sourceQuotesCurrent') and unchanged else 'partial')

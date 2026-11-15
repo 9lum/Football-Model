@@ -60,3 +60,17 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           PREGAME_PUBLISH: '1'
         run: python -m scripts.kickoff_refresh --run
+
+      - name: Preserve collected public snapshots even if publishing fails
+        if: always() && steps.window.outputs.due == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: pregame-public-snapshots-${{ github.run_id }}
+          retention-days: 14
+          path: |
+            data/kickoff-refresh.json
+            data/odds.json
+            data/attd-odds.json
+            data/game-odds.json
+            data/game-market-movement.json
+            data/touchdown-pregame-archive.json
