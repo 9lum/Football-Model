@@ -1,6 +1,6 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-16T01:48:40.780716+00:00
-Current-season tests: 2706; Brier 0.1503 vs baseline 0.1633.
+Generated 2026-11-16T09:09:23.324142+00:00
+Current-season tests: 2720; Brier 0.1509 vs baseline 0.1637.
 
 ## WAS at NYG
 2026-11-13T01:15:00+00:00
@@ -69,8 +69,8 @@ Archived pregame projections retained during play; these are not live scoring pr
 - LAC: recent RZ pass rate 0.6521739130434783, RZ pass-over-expected -11.19969128207727 percentage points, neutral seconds/play 31.8. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Derrick Henry — Core research · highest estimated probability**: estimated ATTD 30.4%; fair odds 229; opponent allows 1.33 direct TDs/game to the position group. DraftKings -135; estimated return -47.1%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **KeAndre Lambert-Smith — High-yield research · positive price estimate**: estimated ATTD 13.8%; fair odds 627; opponent allows 0.83 direct TDs/game to the position group. BetRivers 1050; estimated return 58.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Zay Flowers — Additional research candidate**: estimated ATTD 26.7%; fair odds 274; opponent allows 1.50 direct TDs/game to the position group. DraftKings 165; estimated return -29.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **KeAndre Lambert-Smith — High-yield research · positive price estimate**: estimated ATTD 13.8%; fair odds 627; opponent allows 0.83 direct TDs/game to the position group. BetRivers 1050; estimated return 58.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Zay Flowers — Additional research candidate**: estimated ATTD 26.7%; fair odds 275; opponent allows 1.50 direct TDs/game to the position group. DraftKings 165; estimated return -29.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 
 ## Methodology & limitations
 - ATTD counts rushing and receiving TDs, excluding QB passing TDs, return TDs and fumble-recovery scores; check individual book rules.
