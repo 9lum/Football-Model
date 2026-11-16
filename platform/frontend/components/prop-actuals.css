@@ -1,0 +1,6 @@
+.prop-explorer .prop-stat-heading,.prop-explorer .prop-stat-row{grid-template-columns:minmax(0,1.5fr) minmax(32px,.65fr) minmax(48px,.85fr) minmax(32px,.6fr);gap:6px}
+.prop-explorer .prop-stat-row>span:nth-child(3){text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);overflow-wrap:anywhere}
+.prop-explorer .prop-stat-row .prop-actual-value{font-variant-numeric:tabular-nums;text-align:right;font-size:13px;font-weight:650}
+.prop-explorer .prop-stat-row .prop-actual-value.has-result{color:#67d8bf}
+html[data-appearance=light] .prop-explorer .prop-stat-row .prop-actual-value.has-result{color:#127360}
+.prop-explorer .prop-actual-note{font-size:8px;line-height:1.5;color:var(--muted);margin:0 1px 9px;overflow-wrap:anywhere}
