@@ -16,6 +16,8 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -24,6 +26,7 @@ jobs:
       - name: Seed movement history from genuine existing snapshots
         run: python -m scripts.game_market_history
       - name: Retrieve current game markets when refresh is due
+        continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           GAME_ODDS_REFRESH_MINUTES: ${{ vars.GAME_ODDS_REFRESH_MINUTES }}

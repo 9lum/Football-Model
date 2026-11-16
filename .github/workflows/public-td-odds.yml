@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: public-model-refresh
+  group: public-touchdown-prices
   cancel-in-progress: false
 jobs:
   public-tds:
@@ -16,6 +16,8 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

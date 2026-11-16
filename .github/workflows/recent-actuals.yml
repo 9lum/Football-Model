@@ -4,7 +4,7 @@ on:
   push:
     paths: ['scripts/refresh_recent_actuals.py','scripts/performance_boxscore.py','.github/workflows/recent-actuals.yml']
   schedule:
-    - cron: '10,40 * * * *'
+    - cron: '*/5 * * * *'
 permissions:
   contents: write
 concurrency:
