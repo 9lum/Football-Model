@@ -60,3 +60,22 @@ class ContextTimingTests(unittest.TestCase):
         b,_=attach_defense(frame,features,poisoned,pd.DataFrame(),schedules)
         mask=a.season.eq(2026)&a.week.eq(5)
         self.assertEqual(a.loc[mask,'matchup_pass_epa_allowed'].tolist(),b.loc[mask,'matchup_pass_epa_allowed'].tolist())
+
+class BetweenWeekRefreshTests(unittest.TestCase):
+    def test_no_future_games_skips_without_fetching_or_overwriting_snapshot(self):
+        import json,tempfile
+        from pathlib import Path
+        from unittest.mock import patch
+        from edge.availability import run
+        for forecasts in [[],[{'gameId':'2026_10_LAC_BAL','kickoff':'2026-11-17T01:15Z'}]]:
+            with self.subTest(forecasts=forecasts),tempfile.TemporaryDirectory() as tmp:
+                directory=Path(tmp)
+                (directory/'latest.json').write_text(json.dumps({'season':2026,'forecasts':forecasts}))
+                original='{"generatedAt":"old","injuries":{"p":{"status":"OUT"}}}'
+                (directory/'availability.json').write_text(original)
+                with patch('edge.availability.fetch') as fetch:
+                    result=run(directory,now='2026-11-17T02:00Z')
+                self.assertEqual(result['status'],'skipped')
+                fetch.assert_not_called()
+                self.assertEqual((directory/'availability.json').read_text(),original)
+                self.assertEqual(sorted(p.name for p in directory.iterdir()),['availability.json','latest.json'])

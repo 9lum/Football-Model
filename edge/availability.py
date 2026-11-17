@@ -272,7 +272,8 @@ def qb_scenarios(bundle,roles,injuries,parameters):
 def run(directory,now=None):
     live=now is None;now=pd.Timestamp.now(tz='UTC') if live else pd.Timestamp(now);bundle=json.loads((directory/'latest.json').read_text());season=bundle['season']
     future=sorted([f for f in bundle['forecasts'] if pd.Timestamp(f['kickoff'])>now],key=lambda f:f['kickoff'])
-    if not future:raise ValueError('No future model games; no current injury snapshot can be scoped')
+    if not future:
+        return {'status':'skipped','reason':'No future model games loaded; awaiting the next model week. Existing availability snapshot retained unchanged.','checkedAt':now.isoformat()}
     week=int(future[0]['gameId'].split('_')[1]);clubs={f['team'] for f in future if int(f['gameId'].split('_')[1])==week};cache=Path('work/health-cache')
     errors=[];sources=[];records=[]
     def official_job(url,league=False):
