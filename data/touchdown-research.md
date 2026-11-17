@@ -1,6 +1,6 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-17T07:42:30.818778+00:00
-Current-season tests: 2750; Brier 0.1501 vs baseline 0.1630.
+Generated 2026-11-17T13:36:19.675464+00:00
+Current-season tests: 2752; Brier 0.1500 vs baseline 0.1629.
 
 ## IND at HOU
 2026-11-20T01:15:00+00:00
@@ -88,7 +88,7 @@ Current-season tests: 2750; Brier 0.1501 vs baseline 0.1630.
 - DAL: recent RZ pass rate 0.5263157894736842, RZ pass-over-expected -2.16339281587689 percentage points, neutral seconds/play 29.644444444444446. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - TEN: recent RZ pass rate 0.5833333333333334, RZ pass-over-expected 4.7175840419881485 percentage points, neutral seconds/play 29.653061224489797. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Tony Pollard — Core research · highest estimated probability**: estimated ATTD 62.9%; fair odds -169; opponent allows 1.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Tony Pollard — Core research · highest estimated probability**: estimated ATTD 62.8%; fair odds -169; opponent allows 1.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **CeeDee Lamb — Additional research candidate**: estimated ATTD 61.9%; fair odds -162; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Javonte Williams — Additional research candidate**: estimated ATTD 52.9%; fair odds -112; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
