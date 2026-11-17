@@ -1,5 +1,5 @@
 # Week 10 Anytime Touchdown Research
-Generated 2026-11-16T19:21:56.709163+00:00
+Generated 2026-11-17T01:11:20.703025+00:00
 Current-season tests: 2732; Brier 0.1503 vs baseline 0.1632.
 
 ## WAS at NYG
@@ -70,7 +70,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 ### 4. Value selections · research only unless all gates pass
 - **Derrick Henry — Core research · highest estimated probability**: estimated ATTD 30.4%; fair odds 229; opponent allows 1.33 direct TDs/game to the position group. DraftKings -135; estimated return -47.1%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
 - **KeAndre Lambert-Smith — High-yield research · positive price estimate**: estimated ATTD 13.8%; fair odds 627; opponent allows 0.83 direct TDs/game to the position group. BetRivers 1050; estimated return 58.2%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
-- **Zay Flowers — Additional research candidate**: estimated ATTD 26.7%; fair odds 275; opponent allows 1.50 direct TDs/game to the position group. DraftKings 165; estimated return -29.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, sensitivity-adjusted value below 3%.
+- **Zay Flowers — Additional research candidate**: estimated ATTD 26.7%; fair odds 275; opponent allows 1.50 direct TDs/game to the position group. DraftKings 165; estimated return -29.3%; flags: stale or missing price time, estimated win probability below 70%, availability not confirmed, availability snapshot stale or missing, sensitivity-adjusted value below 3%.
 
 ## Methodology & limitations
 - ATTD counts rushing and receiving TDs, excluding QB passing TDs, return TDs and fumble-recovery scores; check individual book rules.
