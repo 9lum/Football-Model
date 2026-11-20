@@ -1,24 +1,10 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-20T00:55:37.433408+00:00
+Generated 2026-11-20T01:32:43.973258+00:00
 Current-season tests: 2752; Brier 0.1500 vs baseline 0.1629.
 
 ## IND at HOU
 2026-11-20T01:15:00+00:00
-### 1. Red zone & opportunity
-- Jonathan Taylor (IND RB): 9 RZ carries, 0 RZ targets, 3 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.82, actual TD 1.
-- Woody Marks (HOU RB): 11 RZ carries, 1 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.26, actual TD 0.
-- Nico Collins (HOU WR): 1 RZ carries, 4 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.25, actual TD 2.
-### 2. Position matchup & leverage
-- HOU: opponent RZ EPA 0.03573784207482667; pass EPA 0.033162440946317435; rush EPA 0.03035148614644646. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- IND: opponent RZ EPA 0.14382205904201872; pass EPA 0.018025634745450353; rush EPA -0.0063611072363920764. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"book": "DraftKings", "total": 44.5, "homeSpread": -10.0, "homeImpliedPoints": 27.25, "awayImpliedPoints": 17.25, "updatedAt": "2026-11-13T18:23:52Z", "note": "Implied points include field goals and extra points; points / 7 is not an expected-touchdown forecast."}
-- HOU: recent RZ pass rate 0.5853658536585366, RZ pass-over-expected -3.2432700879871845 percentage points, neutral seconds/play 30.18867924528302. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- IND: recent RZ pass rate 0.2727272727272727, RZ pass-over-expected -29.23356599428437 percentage points, neutral seconds/play 31.384615384615383. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Jonathan Taylor — Core research · highest estimated probability**: estimated ATTD 36.8%; fair odds 172; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Woody Marks — Additional research candidate**: estimated ATTD 36.1%; fair odds 177; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Nico Collins — Additional research candidate**: estimated ATTD 32.1%; fair odds 211; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## MIA at BUF
 2026-11-22T18:00:00+00:00
