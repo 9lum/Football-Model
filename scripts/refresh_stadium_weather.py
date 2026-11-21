@@ -9,6 +9,7 @@ from pathlib import Path
 from urllib.request import urlopen
 from zoneinfo import ZoneInfo
 from intelligence.providers import request_json,LOCATIONS,INTERNATIONAL
+from scripts.weather_nws import fetch_nws
 UTC=dt.timezone.utc
 ROOT=Path(__file__).resolve().parents[1]
 FIELDS={'is_day':'isDay','temperature_2m':'temperatureC','apparent_temperature':'feelsLikeC','relative_humidity_2m':'humidityPct','dew_point_2m':'dewPointC','precipitation_probability':'precipitationProbability','precipitation':'precipitationMm','rain':'rainMm','snowfall':'snowfallCm','wind_speed_10m':'windKph','wind_gusts_10m':'gustKph','wind_direction_10m':'windDirection','visibility':'visibilityM','cloud_cover':'cloudPct','surface_pressure':'pressureHpa','weather_code':'weatherCode'}
@@ -107,6 +108,10 @@ def run(game_ids=None,resolve_venues=True):
         r=registry.get(g.get('stadium',''),{});return ((r['latitude'],r['longitude']),r.get('roofType','unknown')) if r else (None,'unknown')
     coords={resolved(g)[0] for g in games if kickoff_of(g) and now<kickoff_of(g)<now+dt.timedelta(days=16) and resolved(g)[0]}
     def fetch(point):
+        try:
+            nws=fetch_nws(point,request_json)
+            if nws:return point,nws
+        except Exception:pass
         try:return point,request_json('https://api.open-meteo.com/v1/forecast',{'latitude':point[0],'longitude':point[1],'hourly':','.join(FIELDS),'forecast_days':16,'timezone':'UTC','wind_speed_unit':'kmh','temperature_unit':'celsius','precipitation_unit':'mm'})
         except Exception as error:return point,{'error':getattr(error,'code',type(error).__name__)}
     with ThreadPoolExecutor(max_workers=4) as executor:payloads=dict(executor.map(fetch,coords))
@@ -123,23 +128,11 @@ def run(game_ids=None,resolve_venues=True):
             payload=payloads.get(point,{});hours=forecast_hours(payload,kickoff)
             if hours:
                 at=min(hours,key=lambda r:abs((dt.datetime.fromisoformat(r['time'])-kickoff).total_seconds()))
-                row.update(status='ok',hours=hours,kickoffForecast=at,retrievedAt=now.isoformat(),forecastLeadHours=round((kickoff-now).total_seconds()/3600,1),provider='Open-Meteo',model='best_match',source='https://open-meteo.com/en/docs')
+                row.update(status='ok',hours=hours,kickoffForecast=at,retrievedAt=now.isoformat(),forecastLeadHours=round((kickoff-now).total_seconds()/3600,1),provider=payload.get('_provider','Open-Meteo'),model=payload.get('_model','best_match'),source=payload.get('_source','https://open-meteo.com/en/docs'),sourceIssuedAt=payload.get('_issuedAt'),providerNote=payload.get('_note'))
             else:
                 row['reason']=str(payload.get('error','Outside returned hourly horizon'))
-                # Authenticated backup covers the next two days when the public source fails; one request per venue per run.
-                if now<kickoff<=now+dt.timedelta(hours=48):
-                    from intelligence.providers import xweather_credentials
-                    client,key=xweather_credentials()
-                    if client and key:
-                        if point not in fallbacks:
-                            try:fallbacks[point]=request_json(f'https://data.api.xweather.com/forecasts/{point[0]},{point[1]}',{'client_id':client,'client_secret':key,'filter':'1hr','from':(kickoff-dt.timedelta(hours=2)).isoformat(),'to':(kickoff+dt.timedelta(hours=4)).isoformat(),'limit':8})
-                            except Exception:fallbacks[point]={}
-                        backup=xweather_hours(fallbacks[point],kickoff)
-                        if backup:
-                            at=min(backup,key=lambda h:abs((dt.datetime.fromisoformat(h['time'])-kickoff).total_seconds()))
-                            row.update(status='ok',hours=backup,kickoffForecast=at,retrievedAt=dt.datetime.now(UTC).isoformat(),provider='Xweather',model='provider hourly forecast',source='https://www.xweather.com/docs/weather-api/endpoints/forecasts',reason=None)
         result.append(row)
     if game_ids is not None:result=[g for gid,g in previous.items() if g.get('season')==season and gid not in {r['gameId'] for r in result}]+result
-    data={'generatedAt':now.isoformat(),'season':season,'currentWeek':current_week,'games':result,'source':url,'provider':'Open-Meteo','methodology':'Best-match hourly outdoor forecasts at stadium coordinates. Retrieval time is not model issuance time. Hourly rain/snow amounts cover the preceding hour. No calibrated yardage adjustment is applied. Retractable roof status requires confirmation.','attribution':'Weather data by Open-Meteo (CC BY 4.0). Public endpoint is subject to noncommercial usage limits and terms.'}
+    data={'generatedAt':now.isoformat(),'season':season,'currentWeek':current_week,'games':result,'source':url,'provider':'NWS / Open-Meteo','freeOnly':True,'methodology':'Free NWS hourly forecasts for US stadiums, with Open-Meteo for other covered locations. Retrieval time is not model issuance time. Hourly rain/snow amounts cover the preceding hour. No calibrated yardage adjustment is applied. Retractable roof status requires confirmation.','attribution':'NOAA/National Weather Service public data; Open-Meteo (CC BY 4.0). Public endpoint is subject to noncommercial usage limits and terms.'}
     target=ROOT/'data/stadium-weather.json';temporary=target.with_suffix('.json.tmp');temporary.write_text(json.dumps(data,separators=(',',':'),allow_nan=False));temporary.replace(target);print(json.dumps({'games':len(result),'forecastGames':sum(r['status']=='ok' for r in result),'stadiumRequests':len(coords)}));return data
 if __name__=='__main__':run()

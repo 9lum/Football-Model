@@ -76,7 +76,7 @@ def xweather_credentials():
     return client,key
 
 def collect_weather(games,now=None):
-    now=now or dt.datetime.now(UTC);client,key=xweather_credentials();rows=[];errors=[];used=set();xweather_rejected=False
+    now=now or dt.datetime.now(UTC);rows=[];errors=[];used=set() # Automatic weather updates are free-only.
     for game in games:
         if game['game_id'] in used:continue
         used.add(game['game_id']);kickoff=dt.datetime.fromisoformat(game['kickoff'].replace('Z','+00:00'))
@@ -84,25 +84,17 @@ def collect_weather(games,now=None):
         coords=venue(game);entry={'gameId':game['game_id'],'kickoff':game['kickoff'],'stadium':game.get('stadium'),'roof':game.get('roof'),'observedAt':now.isoformat(),'status':'unavailable','appliedToModel':False}
         if not coords:entry['reason']='Unresolved neutral venue';rows.append(entry);continue
         entry['latitude'],entry['longitude']=coords
-        if client and key and not xweather_rejected:
-            try:
-                payload=request_json(f'https://data.api.xweather.com/forecasts/{coords[0]},{coords[1]}',{'client_id':client,'client_secret':key,'filter':'1hr','from':kickoff.isoformat(),'to':(kickoff+dt.timedelta(hours=3)).isoformat(),'limit':4})
-                if not payload.get('success'):raise ProviderError('provider_rejected')
-                response=payload.get('response',[]);periods=response[0].get('periods',[]) if response else []
-                if not periods:raise ProviderError('forecast_unavailable')
-                period=min(periods,key=lambda p:abs(dt.datetime.fromisoformat(p['dateTimeISO'].replace('Z','+00:00')).timestamp()-kickoff.timestamp()))
-                entry.update(provider='Xweather',status='ok',forecastTime=period.get('dateTimeISO'),temperatureC=period.get('avgTempC',period.get('tempC',period.get('maxTempC'))),windKph=period.get('windSpeedKPH',period.get('windSpeedAvgKPH',period.get('windSpeedMaxKPH'))),precipitationMm=period.get('precipMM'),precipitationProbability=period.get('pop'))
-            except ProviderError as error:
-                errors.append({'provider':'Xweather','gameId':entry['gameId'],'code':error.code})
-                if error.code in [401,403]:xweather_rejected=True
         if entry['status']!='ok':
             try:
-                payload=request_json('https://api.open-meteo.com/v1/forecast',{'latitude':coords[0],'longitude':coords[1],'hourly':'temperature_2m,precipitation,precipitation_probability,wind_speed_10m','forecast_days':8,'timezone':'UTC'})
+                from scripts.weather_nws import fetch_nws
+                try:payload=fetch_nws(coords,request_json)
+                except Exception:payload=None
+                if not payload:payload=request_json('https://api.open-meteo.com/v1/forecast',{'latitude':coords[0],'longitude':coords[1],'hourly':'temperature_2m,precipitation,precipitation_probability,wind_speed_10m','forecast_days':8,'timezone':'UTC'})
                 hourly=payload['hourly'];times=[dt.datetime.fromisoformat(t).replace(tzinfo=UTC) for t in hourly['time']];index=min(range(len(times)),key=lambda i:abs((times[i]-kickoff).total_seconds()))
                 if abs((times[index]-kickoff).total_seconds())>5400:raise ProviderError('outside_forecast_horizon')
-                entry.update(provider='Open-Meteo',status='ok',forecastTime=times[index].isoformat(),temperatureC=hourly['temperature_2m'][index],windKph=hourly['wind_speed_10m'][index],precipitationMm=hourly['precipitation'][index],precipitationProbability=hourly['precipitation_probability'][index])
+                entry.update(provider=payload.get('_provider','Open-Meteo'),status='ok',forecastTime=times[index].isoformat(),temperatureC=hourly['temperature_2m'][index],windKph=hourly['wind_speed_10m'][index],precipitationMm=hourly['precipitation'][index],precipitationProbability=hourly['precipitation_probability'][index])
             except (ProviderError,KeyError,ValueError) as error:entry['reason']=getattr(error,'code','schema')
         # Weather is context until an out-of-sample weather model is fitted; never fabricate yardage penalties.
         entry['exposure']='indoor' if str(entry.get('roof','')).lower() in ['dome','closed'] else 'roof_pending' if str(entry.get('roof','')).lower() in ['retractable','retractable roof'] else 'outdoor_or_unknown'
         rows.append(entry)
-    return {'generatedAt':now.isoformat(),'xweatherStatus':'authentication_rejected' if xweather_rejected else 'configured' if client and key else 'missing_client_id' if key else 'missing_secret','errors':errors,'games':rows,'scope':'Kickoff forecasts; contextual only, not a validated causal yardage adjustment. Open-Meteo public API fallback is for noncommercial use subject to its terms.'}
+    return {'generatedAt':now.isoformat(),'xweatherStatus':'disabled_free_only','errors':errors,'games':rows,'scope':'Kickoff forecasts; contextual only, not a validated causal yardage adjustment. Open-Meteo public API fallback is for noncommercial use subject to its terms.'}

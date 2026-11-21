@@ -6,7 +6,7 @@ on:
     branches: [main]
   workflow_dispatch:
   push:
-    paths: ['scripts/refresh_stadium_weather.py','scripts/refresh_stadium_media.py','.github/workflows/stadium-weather.yml','tests/test_stadium_weather.py']
+    paths: ['scripts/refresh_stadium_weather.py','scripts/refresh_stadium_media.py','.github/workflows/stadium-weather.yml','tests/test_stadium_weather.py','scripts/weather_nws.py','scripts/test_weather_nws.py']
   schedule:
     - cron: '12,42 * * * *'
 permissions:
@@ -30,7 +30,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test stadium resolution and game-window sampling
-        run: python -m unittest tests.test_stadium_weather scripts.test_weather_fallback -v
+        run: python -m unittest tests.test_stadium_weather scripts.test_weather_nws -v
       - name: Collect public stadium forecasts
         run: |
           python -m scripts.refresh_stadium_weather
