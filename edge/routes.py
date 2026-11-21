@@ -35,19 +35,27 @@ def scenario(player,history,snapshots,season,now,draws=512):
     if abs(recs-route['Receptions'])>.01 or abs(yards-route.get('Rec. Yards',yards))>.01:
         return {'status':'unavailable','reason':'Route and nflverse snapshots cover different results'}
     routes=route['Routes Run']
-    if not routes or targets<=0 or not len(history):
+    inputs=[targets,recs,yards,routes,route.get('Targets/Route Run'),route.get('Receptions'),route.get('ADoT'),route.get('YAC')]
+    if not all(isinstance(v,(int,float,np.number)) and np.isfinite(v) for v in inputs):
+        return {'status':'unavailable','reason':'Missing or nonfinite route/box-score inputs'}
+    if routes<=0 or targets<=0 or not len(history):
         return {'status':'unavailable','reason':'Insufficient observed route usage'}
     tprr=targets/routes
     if not 0<=tprr<=1 or abs(tprr-route['Targets/Route Run'])>.025:
         return {'status':'unavailable','reason':'Route/target definitions or snapshot totals disagree'}
     snaps=pd.to_numeric(history.offense_pct,errors='coerce')
+    snaps=snaps.replace([np.inf,-np.inf],np.nan)
     season_share=float(snaps.mean())
     recent_share=float(snaps.tail(3).mean())
-    role_change=np.clip(recent_share/season_share,.6,1.5) if season_share>0 else 1.
+    if not np.isfinite(season_share) or not np.isfinite(recent_share) or season_share<=0 or recent_share<0:
+        return {'status':'unavailable','reason':'Recent snap-share coverage unavailable; no route usage adjustment inferred'}
+    role_change=np.clip(recent_share/season_share,.6,1.5)
     routes_projected=routes/len(history)*role_change
     mean_targets=routes_projected*tprr
     dispersion=max(float(history.targets.var(ddof=0))-float(history.targets.mean()),.1)
     shape=max(mean_targets**2/dispersion,.5)
+    if not all(np.isfinite(v) and v>0 for v in [mean_targets,dispersion,shape]):
+        return {'status':'unavailable','reason':'Route opportunity distribution unavailable'}
     rng=np.random.default_rng(83)
     tg=rng.poisson(rng.gamma(shape,mean_targets/shape,size=draws))
     cp=(recs+20*.65)/(targets+20)
