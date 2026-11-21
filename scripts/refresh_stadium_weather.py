@@ -126,8 +126,8 @@ def run(game_ids=None,resolve_venues=True):
                 row.update(status='ok',hours=hours,kickoffForecast=at,retrievedAt=now.isoformat(),forecastLeadHours=round((kickoff-now).total_seconds()/3600,1),provider='Open-Meteo',model='best_match',source='https://open-meteo.com/en/docs')
             else:
                 row['reason']=str(payload.get('error','Outside returned hourly horizon'))
-                # Paid backup is restricted to near-kickoff venues, at most one request per venue per run.
-                if now<kickoff<=now+dt.timedelta(minutes=35):
+                # Authenticated backup covers the next two days when the public source fails; one request per venue per run.
+                if now<kickoff<=now+dt.timedelta(hours=48):
                     from intelligence.providers import xweather_credentials
                     client,key=xweather_credentials()
                     if client and key:
