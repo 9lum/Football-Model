@@ -42,8 +42,8 @@ jobs:
       - name: Ingest documented public and authenticated providers
         env:
           BALLDLIE_API_KEY: ${{ secrets.BALLDLIE_API_KEY || secrets.BALLDONTLIE_API_KEY }}
-          XWEATHER_API_KEY: ${{ secrets.XWEATHER_API_KEY }}
-          XWEATHER_CLIENT_ID: ${{ secrets.XWEATHER_CLIENT_ID }}
+          XWEATHER_API_KEY: ''
+          XWEATHER_CLIENT_ID: ''
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           python -m intelligence.ingest

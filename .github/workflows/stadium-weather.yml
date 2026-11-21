@@ -13,15 +13,15 @@ permissions:
   contents: write
 concurrency:
   group: stadium-weather-outlooks
-  cancel-in-progress: false
+  cancel-in-progress: true
 jobs:
   weather:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 12
     env:
-      XWEATHER_CLIENT_ID: ${{ secrets.XWEATHER_CLIENT_ID }}
-      XWEATHER_API_KEY: ${{ secrets.XWEATHER_API_KEY }}
+      XWEATHER_CLIENT_ID: ''
+      XWEATHER_API_KEY: ''
     steps:
       - uses: actions/checkout@v4
         with:
