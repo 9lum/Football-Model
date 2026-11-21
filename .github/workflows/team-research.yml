@@ -1,5 +1,9 @@
 name: Refresh NFL team research statistics
 on:
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   push:
     paths: ['scripts/refresh_team_research.py','scripts/test_team_research.py','.github/workflows/team-research.yml']
@@ -12,10 +16,13 @@ concurrency:
   cancel-in-progress: false
 jobs:
   research:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

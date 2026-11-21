@@ -1,5 +1,9 @@
 name: Refresh sportsbook odds
 on:
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   push:
     paths: ['scripts/refresh_odds.py', 'scripts/refresh_bdl_props.py', 'scripts/test_bdl_props.py', '.github/workflows/odds.yml']
@@ -12,10 +16,13 @@ concurrency:
   cancel-in-progress: false
 jobs:
   odds:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

@@ -1,5 +1,9 @@
 name: Refresh reported game weather
 on:
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   push:
     paths: ['scripts/refresh_game_weather.py','tests/test_game_weather.py','.github/workflows/game-weather.yml']
@@ -12,6 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   weather:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:

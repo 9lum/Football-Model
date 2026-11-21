@@ -1,5 +1,9 @@
 name: Evaluate NFL game score and market projections
 on:
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   push:
     paths: ['edge/game_model.py', 'tests/test_game_model.py', '.github/workflows/game-model.yml']
@@ -12,10 +16,13 @@ concurrency:
   cancel-in-progress: false
 jobs:
   evaluate:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

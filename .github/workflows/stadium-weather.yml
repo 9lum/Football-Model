@@ -1,5 +1,9 @@
 name: Refresh stadium weather outlooks
 on:
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   push:
     paths: ['scripts/refresh_stadium_weather.py','scripts/refresh_stadium_media.py','.github/workflows/stadium-weather.yml','tests/test_stadium_weather.py']
@@ -12,6 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   weather:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 12
     env:
@@ -19,6 +24,8 @@ jobs:
       XWEATHER_API_KEY: ${{ secrets.XWEATHER_API_KEY }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'

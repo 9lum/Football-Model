@@ -1,5 +1,9 @@
 name: NFL data providers and weather
 on:
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   push:
     paths: ['intelligence/**', '.github/workflows/providers.yml']
@@ -12,6 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   ingest:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 35
     env:
@@ -20,6 +25,8 @@ jobs:
       NFLREADPY_TIMEOUT: '45'
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
