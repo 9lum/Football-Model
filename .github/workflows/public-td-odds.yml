@@ -1,5 +1,9 @@
 name: Public touchdown scorer prices
 on:
+  workflow_run:
+    workflows: ['Public-data model and current-season tests']
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
   push:
     paths: ['scripts/refresh_public_td_odds.py', 'scripts/test_public_td_odds.py', '.github/workflows/public-td-odds.yml']
@@ -12,6 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   public-tds:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
