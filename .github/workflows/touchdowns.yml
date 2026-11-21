@@ -12,7 +12,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: weekly-touchdown-research
+  group: offensive-health-and-touchdown-research
   cancel-in-progress: false
 jobs:
   research:
@@ -55,6 +55,7 @@ jobs:
             bash scripts/push_refresh.sh
           fi
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: touchdown-research-${{ github.run_id }}-${{ github.run_attempt }}
           path: |

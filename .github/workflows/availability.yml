@@ -11,7 +11,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: availability-refresh
+  group: offensive-health-and-touchdown-research
   cancel-in-progress: false
 jobs:
   availability:
