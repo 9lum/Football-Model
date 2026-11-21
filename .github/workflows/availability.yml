@@ -49,8 +49,7 @@ jobs:
           git add data/availability.json data/availability-history.json data/touchdown-research.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh public injury and starter context [skip ci]'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            bash scripts/push_refresh.sh
           fi
       - uses: actions/upload-artifact@v4
         with:

@@ -47,6 +47,5 @@ jobs:
           if test -f data/game-odds-history.json; then git add data/game-odds-history.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh NFL moneylines spreads and totals [skip ci]'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            bash scripts/push_refresh.sh
           fi
