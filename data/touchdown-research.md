@@ -1,5 +1,5 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-22T17:15:47.460203+00:00
+Generated 2026-11-22T17:34:06.937216+00:00
 Current-season tests: 2772; Brier 0.1496 vs baseline 0.1625.
 
 ## IND at HOU
@@ -46,8 +46,8 @@ Archived pregame projections retained during play; these are not live scoring pr
 2026-11-22T18:00:00+00:00
 ### 1. Red zone & opportunity
 - D'Andre Swift (CHI RB): 18 RZ carries, 1 RZ targets, 9 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 4.46, actual TD 6.
+- Audric Estime (NO RB): 4 RZ carries, 0 RZ targets, 2 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.98, actual TD 1.
 - Luther Burden III (CHI WR): 1 RZ carries, 3 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.26, actual TD 3.
-- Colston Loveland (CHI TE): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.46, actual TD 2.
 ### 2. Position matchup & leverage
 - CHI: opponent RZ EPA -0.2949832821152885; pass EPA 0.03530175335192212; rush EPA 0.02161981992487698. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - NO: opponent RZ EPA 0.07745255297336641; pass EPA 0.009561853574563173; rush EPA -0.07320451224348203. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -57,8 +57,8 @@ Archived pregame projections retained during play; these are not live scoring pr
 - NO: recent RZ pass rate 0.475, RZ pass-over-expected -4.881526604294777 percentage points, neutral seconds/play 30.139705882352942. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **D'Andre Swift — Core research · highest estimated probability**: estimated ATTD 63.1%; fair odds -171; opponent allows 1.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Audric Estime — Additional research candidate**: estimated ATTD 33.2%; fair odds 201; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Luther Burden III — Additional research candidate**: estimated ATTD 30.4%; fair odds 229; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Colston Loveland — Additional research candidate**: estimated ATTD 30.1%; fair odds 232; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## TEN at DAL
 2026-11-22T18:00:00+00:00
@@ -99,9 +99,9 @@ Archived pregame projections retained during play; these are not live scoring pr
 ## ARI at KC
 2026-11-22T18:00:00+00:00
 ### 1. Red zone & opportunity
+- Kenneth Walker III (KC RB): 7 RZ carries, 3 RZ targets, 4 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.37, actual TD 3.
 - Emmett Johnson (KC RB): 4 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.72, actual TD 4.
 - Tyler Allgeier (ARI RB): 5 RZ carries, 4 RZ targets, 2 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.88, actual TD 2.
-- Trey McBride (ARI TE): 0 RZ carries, 7 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.86, actual TD 2.
 ### 2. Position matchup & leverage
 - KC: opponent RZ EPA 0.16635579504004488; pass EPA 0.21989538733094655; rush EPA 0.035406172853211536. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - ARI: opponent RZ EPA -0.453541545804505; pass EPA -0.041105538602223324; rush EPA -0.10329255169985224. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -110,9 +110,9 @@ Archived pregame projections retained during play; these are not live scoring pr
 - KC: recent RZ pass rate 0.59375, RZ pass-over-expected 11.30283479578793 percentage points, neutral seconds/play 29.62857142857143. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - ARI: recent RZ pass rate 0.6363636363636364, RZ pass-over-expected -0.33944310112433 percentage points, neutral seconds/play 33.154761904761905. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Emmett Johnson — Core research · highest estimated probability**: estimated ATTD 33.6%; fair odds 198; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Kenneth Walker III — Core research · highest estimated probability**: estimated ATTD 66.7%; fair odds -200; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Emmett Johnson — Additional research candidate**: estimated ATTD 33.6%; fair odds 198; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Tyler Allgeier — Additional research candidate**: estimated ATTD 27.1%; fair odds 269; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Trey McBride — Additional research candidate**: estimated ATTD 26.6%; fair odds 275; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## JAX at NYG
 2026-11-22T18:00:00+00:00
