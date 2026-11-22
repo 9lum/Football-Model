@@ -1,5 +1,5 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-22T20:39:05.872651+00:00
+Generated 2026-11-22T21:21:10.280534+00:00
 Current-season tests: 2772; Brier 0.1496 vs baseline 0.1625.
 
 ## IND at HOU
@@ -36,21 +36,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 
 ## NYJ at LAC
 2026-11-22T21:05:00+00:00
-### 1. Red zone & opportunity
-- Braelon Allen (NYJ RB): 10 RZ carries, 1 RZ targets, 3 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.80, actual TD 1.
-- Breece Hall (NYJ RB): 2 RZ carries, 1 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.35, actual TD 0.
-- Garrett Wilson (NYJ WR): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.75, actual TD 0.
-### 2. Position matchup & leverage
-- LAC: opponent RZ EPA 0.26771628427328026; pass EPA 0.2113083123317032; rush EPA 0.03657137879983523. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- NYJ: opponent RZ EPA -0.0029748189029364055; pass EPA 0.01123241588890069; rush EPA -0.024835676729524876. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- LAC: recent RZ pass rate 0.6296296296296297, RZ pass-over-expected -11.173941195011139 percentage points, neutral seconds/play 32.63809523809524. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- NYJ: recent RZ pass rate 0.6590909090909091, RZ pass-over-expected 1.3513986800992213 percentage points, neutral seconds/play 31.81967213114754. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Braelon Allen — Core research · highest estimated probability**: estimated ATTD 32.3%; fair odds 210; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Breece Hall — Additional research candidate**: estimated ATTD 32.2%; fair odds 210; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Garrett Wilson — Additional research candidate**: estimated ATTD 29.6%; fair odds 238; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## JAX at NYG
 2026-11-22T21:25:00+00:00
@@ -74,8 +60,8 @@ Archived pregame projections retained during play; these are not live scoring pr
 2026-11-22T21:25:00+00:00
 ### 1. Red zone & opportunity
 - Jonah Coleman (DEN RB): 9 RZ carries, 1 RZ targets, 5 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.78, actual TD 2.
-- Brock Bowers (LV TE): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.05, actual TD 3.
 - Ashton Jeanty (LV RB): 7 RZ carries, 3 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.03, actual TD 1.
+- J.K. Dobbins (DEN RB): 3 RZ carries, 1 RZ targets, 2 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.07, actual TD 2.
 ### 2. Position matchup & leverage
 - DEN: opponent RZ EPA 0.25789397577848894; pass EPA 0.3460537683744996; rush EPA 0.044707359198114166. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LV: opponent RZ EPA -0.010956808758602402; pass EPA 0.019845428899797467; rush EPA -0.04174586380166425. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -85,8 +71,8 @@ Archived pregame projections retained during play; these are not live scoring pr
 - LV: recent RZ pass rate 0.4782608695652174, RZ pass-over-expected -15.288588201457804 percentage points, neutral seconds/play 33.50769230769231. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Jonah Coleman — Core research · highest estimated probability**: estimated ATTD 40.1%; fair odds 149; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Brock Bowers — Additional research candidate**: estimated ATTD 30.3%; fair odds 230; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Ashton Jeanty — Additional research candidate**: estimated ATTD 29.6%; fair odds 238; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **J.K. Dobbins — Additional research candidate**: estimated ATTD 22.2%; fair odds 351; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## MIN at SF
 2026-11-23T01:20:00+00:00
