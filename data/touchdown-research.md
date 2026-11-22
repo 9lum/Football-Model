@@ -1,5 +1,5 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-22T17:59:31.570577+00:00
+Generated 2026-11-22T18:46:14.522790+00:00
 Current-season tests: 2772; Brier 0.1496 vs baseline 0.1625.
 
 ## IND at HOU
@@ -8,129 +8,31 @@ Archived pregame projections retained during play; these are not live scoring pr
 
 ## MIA at BUF
 2026-11-22T18:00:00+00:00
-### 1. Red zone & opportunity
-- James Cook (BUF RB): 19 RZ carries, 1 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.15, actual TD 4.
-- Ollie Gordon II (MIA RB): 12 RZ carries, 1 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.66, actual TD 1.
-- DJ Moore (BUF WR): 1 RZ carries, 3 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.30, actual TD 2.
-### 2. Position matchup & leverage
-- BUF: opponent RZ EPA 0.14661700223934043; pass EPA 0.05450861068246667; rush EPA 0.006023640661999246. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- MIA: opponent RZ EPA 0.07435026500973486; pass EPA -0.021958914657438617; rush EPA -0.054875144519634406. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- BUF: recent RZ pass rate 0.3673469387755102, RZ pass-over-expected -14.351073078190288 percentage points, neutral seconds/play 31.573248407643312. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- MIA: recent RZ pass rate 0.45161290322580644, RZ pass-over-expected -20.845816464259705 percentage points, neutral seconds/play 30.94214876033058. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **James Cook — Core research · highest estimated probability**: estimated ATTD 60.9%; fair odds -156; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Ollie Gordon II — Additional research candidate**: estimated ATTD 43.1%; fair odds 132; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **DJ Moore — Additional research candidate**: estimated ATTD 26.0%; fair odds 285; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## BAL at CAR
 2026-11-22T18:00:00+00:00
-### 1. Red zone & opportunity
-- Chuba Hubbard (CAR RB): 14 RZ carries, 2 RZ targets, 6 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.43, actual TD 3.
-- Derrick Henry (BAL RB): 12 RZ carries, 0 RZ targets, 4 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.14, actual TD 3.
-- Tetairoa McMillan (CAR WR): 0 RZ carries, 3 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 1.38, actual TD 1.
-### 2. Position matchup & leverage
-- CAR: opponent RZ EPA 0.15217361812184024; pass EPA 0.11121155389768875; rush EPA -0.055735270221993906. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- BAL: opponent RZ EPA 0.2743786257762911; pass EPA 0.07704129077401448; rush EPA -0.0887687475121688. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- CAR: recent RZ pass rate 0.5897435897435898, RZ pass-over-expected 1.15579160812654 percentage points, neutral seconds/play 30.761363636363637. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- BAL: recent RZ pass rate 0.5172413793103449, RZ pass-over-expected -2.4026355866728157 percentage points, neutral seconds/play 33.205128205128204. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Chuba Hubbard — Core research · highest estimated probability**: estimated ATTD 64.2%; fair odds -180; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Derrick Henry — Additional research candidate**: estimated ATTD 36.1%; fair odds 177; opponent allows 1.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Tetairoa McMillan — Additional research candidate**: estimated ATTD 27.0%; fair odds 271; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## NO at CHI
 2026-11-22T18:00:00+00:00
-### 1. Red zone & opportunity
-- D'Andre Swift (CHI RB): 18 RZ carries, 1 RZ targets, 9 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 4.46, actual TD 6.
-- Luther Burden III (CHI WR): 1 RZ carries, 3 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.26, actual TD 3.
-- Colston Loveland (CHI TE): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.46, actual TD 2.
-### 2. Position matchup & leverage
-- CHI: opponent RZ EPA -0.2949832821152885; pass EPA 0.03530175335192212; rush EPA 0.02161981992487698. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- NO: opponent RZ EPA 0.07745255297336641; pass EPA 0.009561853574563173; rush EPA -0.07320451224348203. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- CHI: recent RZ pass rate 0.3877551020408163, RZ pass-over-expected -3.354280445800752 percentage points, neutral seconds/play 32.0940170940171. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- NO: recent RZ pass rate 0.475, RZ pass-over-expected -4.881526604294777 percentage points, neutral seconds/play 30.139705882352942. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **D'Andre Swift — Core research · highest estimated probability**: estimated ATTD 63.1%; fair odds -171; opponent allows 1.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Luther Burden III — Additional research candidate**: estimated ATTD 30.4%; fair odds 229; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Colston Loveland — Additional research candidate**: estimated ATTD 30.1%; fair odds 232; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## TEN at DAL
 2026-11-22T18:00:00+00:00
-### 1. Red zone & opportunity
-- Tony Pollard (TEN RB): 13 RZ carries, 0 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.74, actual TD 6.
-- CeeDee Lamb (DAL WR): 0 RZ carries, 9 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.80, actual TD 4.
-- Javonte Williams (DAL RB): 15 RZ carries, 2 RZ targets, 6 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 3.67, actual TD 2.
-### 2. Position matchup & leverage
-- DAL: opponent RZ EPA 0.21714269629363556; pass EPA 0.22352035000619513; rush EPA -0.040236535044310205. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- TEN: opponent RZ EPA 0.18533664446429365; pass EPA 0.10314356220618327; rush EPA 0.071292641431247. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- DAL: recent RZ pass rate 0.5263157894736842, RZ pass-over-expected 0.3573984597568159 percentage points, neutral seconds/play 29.644444444444446. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- TEN: recent RZ pass rate 0.5833333333333334, RZ pass-over-expected 7.083241904483122 percentage points, neutral seconds/play 29.653061224489797. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Tony Pollard — Core research · highest estimated probability**: estimated ATTD 62.8%; fair odds -169; opponent allows 1.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **CeeDee Lamb — Additional research candidate**: estimated ATTD 61.9%; fair odds -163; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Javonte Williams — Additional research candidate**: estimated ATTD 52.9%; fair odds -112; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## TB at DET
 2026-11-22T18:00:00+00:00
-### 1. Red zone & opportunity
-- Jahmyr Gibbs (DET RB): 18 RZ carries, 3 RZ targets, 4 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.38, actual TD 4.
-- Bucky Irving (TB RB): 21 RZ carries, 2 RZ targets, 6 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.59, actual TD 5.
-- Amon-Ra St. Brown (DET WR): 0 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.23, actual TD 2.
-### 2. Position matchup & leverage
-- DET: opponent RZ EPA -0.1746154356511848; pass EPA -0.177859412214161; rush EPA -0.05159878069326604. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- TB: opponent RZ EPA -0.012805864168244545; pass EPA 0.05508347050794186; rush EPA -0.1393077427293825. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- DET: recent RZ pass rate 0.525, RZ pass-over-expected 0.8258081590517973 percentage points, neutral seconds/play 31.5. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- TB: recent RZ pass rate 0.34782608695652173, RZ pass-over-expected -20.351056589020622 percentage points, neutral seconds/play 36.82258064516129. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Jahmyr Gibbs — Core research · highest estimated probability**: estimated ATTD 73.1%; fair odds -271; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Bucky Irving — Additional research candidate**: estimated ATTD 59.5%; fair odds -147; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Amon-Ra St. Brown — Additional research candidate**: estimated ATTD 34.4%; fair odds 191; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## ARI at KC
 2026-11-22T18:00:00+00:00
-### 1. Red zone & opportunity
-- Emmett Johnson (KC RB): 4 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.72, actual TD 4.
-- Tyler Allgeier (ARI RB): 5 RZ carries, 4 RZ targets, 2 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.88, actual TD 2.
-- Trey McBride (ARI TE): 0 RZ carries, 7 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.86, actual TD 2.
-### 2. Position matchup & leverage
-- KC: opponent RZ EPA 0.16635579504004488; pass EPA 0.21989538733094655; rush EPA 0.035406172853211536. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- ARI: opponent RZ EPA -0.453541545804505; pass EPA -0.041105538602223324; rush EPA -0.10329255169985224. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- KC: recent RZ pass rate 0.59375, RZ pass-over-expected 11.30283479578793 percentage points, neutral seconds/play 29.62857142857143. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- ARI: recent RZ pass rate 0.6363636363636364, RZ pass-over-expected -0.33944310112433 percentage points, neutral seconds/play 33.154761904761905. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Emmett Johnson — Core research · highest estimated probability**: estimated ATTD 33.6%; fair odds 198; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Tyler Allgeier — Additional research candidate**: estimated ATTD 27.1%; fair odds 269; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Trey McBride — Additional research candidate**: estimated ATTD 26.6%; fair odds 275; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## PIT at PHI
 2026-11-22T18:00:00+00:00
-### 1. Red zone & opportunity
-- Jaylen Warren (PIT RB): 8 RZ carries, 0 RZ targets, 3 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.65, actual TD 1.
-- DK Metcalf (PIT WR): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 3 inside-5 targets across 4 team games; xTD 2.16, actual TD 1.
-- Dameon Pierce (PHI RB): 7 RZ carries, 0 RZ targets, 4 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.92, actual TD 2.
-### 2. Position matchup & leverage
-- PHI: opponent RZ EPA -0.12266231460922118; pass EPA 0.06931086059258153; rush EPA -0.10519139858887257. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- PIT: opponent RZ EPA 0.19659056012001802; pass EPA 0.13024193021173225; rush EPA 0.03713126776844488. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- PHI: recent RZ pass rate 0.2608695652173913, RZ pass-over-expected -26.386960392648522 percentage points, neutral seconds/play 31.13533834586466. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- PIT: recent RZ pass rate 0.5813953488372093, RZ pass-over-expected 7.46694179695277 percentage points, neutral seconds/play 30.195121951219512. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Jaylen Warren — Core research · highest estimated probability**: estimated ATTD 39.2%; fair odds 155; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **DK Metcalf — Additional research candidate**: estimated ATTD 31.7%; fair odds 216; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Dameon Pierce — Additional research candidate**: estimated ATTD 30.0%; fair odds 233; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## NYJ at LAC
 2026-11-22T21:05:00+00:00
