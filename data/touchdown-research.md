@@ -1,5 +1,5 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-23T20:23:45.417299+00:00
+Generated 2026-11-23T21:20:58.436294+00:00
 Current-season tests: 2982; Brier 0.1491 vs baseline 0.1628.
 
 ## IND at HOU
@@ -57,8 +57,8 @@ Archived pregame projections retained during play; these are not live scoring pr
 - Chase Brown (CIN RB): 4 RZ carries, 2 RZ targets, 2 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.22, actual TD 2.
 - Tee Higgins (CIN WR): 0 RZ carries, 7 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.18, actual TD 5.
 ### 2. Position matchup & leverage
-- WAS: opponent RZ EPA -0.06522912160217328; pass EPA 0.06526018266822842; rush EPA 0.0823960382723416. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- CIN: opponent RZ EPA 0.28839304212182854; pass EPA 0.00826495753733318; rush EPA 0.09544914532501389. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- WAS: opponent RZ EPA -0.040131260175505154; pass EPA 0.06100984214329975; rush EPA 0.09756432227625066. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CIN: opponent RZ EPA 0.3066247328643784; pass EPA 0.0013534770893019684; rush EPA 0.09765581451457865. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
 - WAS: recent RZ pass rate 0.5652173913043478, RZ pass-over-expected 7.193960935216058 percentage points, neutral seconds/play 30.367816091954023. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
