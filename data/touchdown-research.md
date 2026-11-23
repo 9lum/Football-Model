@@ -1,6 +1,6 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-23T04:46:20.236652+00:00
-Current-season tests: 2951; Brier 0.1499 vs baseline 0.1633.
+Generated 2026-11-23T05:51:42.152143+00:00
+Current-season tests: 2971; Brier 0.1496 vs baseline 0.1632.
 
 ## IND at HOU
 2026-11-20T01:15:00+00:00
@@ -64,9 +64,9 @@ Archived pregame projections retained during play; these are not live scoring pr
 - WAS: recent RZ pass rate 0.5652173913043478, RZ pass-over-expected 7.193960935216058 percentage points, neutral seconds/play 30.367816091954023. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - CIN: recent RZ pass rate 0.6976744186046512, RZ pass-over-expected 26.862958109094983 percentage points, neutral seconds/play 31.908045977011493. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Ja'Marr Chase — Core research · highest estimated probability**: estimated ATTD 59.3%; fair odds -146; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Chase Brown — Additional research candidate**: estimated ATTD 53.3%; fair odds -114; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Tee Higgins — Additional research candidate**: estimated ATTD 44.2%; fair odds 126; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Ja'Marr Chase — Core research · highest estimated probability**: estimated ATTD 59.4%; fair odds -146; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Chase Brown — Additional research candidate**: estimated ATTD 53.2%; fair odds -114; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Tee Higgins — Additional research candidate**: estimated ATTD 44.3%; fair odds 126; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## Methodology & limitations
 - ATTD counts rushing and receiving TDs, excluding QB passing TDs, return TDs and fumble-recovery scores; check individual book rules.
