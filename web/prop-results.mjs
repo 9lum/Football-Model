@@ -1,6 +1,6 @@
 import {archivedMatchup} from './matchup-archive.mjs';
 import {applyAvailability} from './availability.mjs';
-import {marketDefinitions,scanMarkets} from './market-core.mjs';
+import {marketDefinitions,scanMarkets,teamNames} from './market-core.mjs';
 import {availablePlayerMarkets} from './player-game-data.mjs';
 import {propProjectionGroups} from './prop-projections.mjs';
 import {propActualIndex} from './prop-actuals.mjs';
@@ -27,10 +27,10 @@ export function buildPropResults(archives=[],actuals={}){
   if(!group){group={first:player,markets:[]};groups.set(key,group)}
   for(const market of availablePlayerMarkets({position:r.position},null,[r]))if(!group.markets.some(m=>m.key===market))group.markets.push({key:market,first:{...player,market,modelMean:null},books:[]});
  }
- for(const [key,g] of groups){const r=actualIndex.get(key);g.actualRow=r||null;g.first.completed=!!r?.completed;}
+ for(const [key,g] of groups){const r=actualIndex.get(key);g.actualRow=r||null;g.first.completed=!!r?.completed;g.markets=g.markets.map(m=>({...m,first:{modelMean:m.first.modelMean,sourceCommit:m.first.sourceCommit}}));}
  return {schemaVersion:1,groups:[...groups.values()],scope:'Saved pregame projections and collected book quotes, joined by exact player and game to verified actuals. Missing forecasts, prices and actuals are never replaced with zero. Past games are not repriced.'};
 }
 export function currentWeekPropResults(feed,{season,week,games=[],market='',team='',position='',search='',book='',only70=false}={}){
  const finals=new Set(games.filter(g=>g.completed===true).map(g=>g.game_id));
- return (feed?.groups||[]).filter(g=>{const p=g.first,parts=String(p.gameId).split('_');return Number(parts[0])===Number(season)&&Number(parts[1])===Number(week)&&(p.completed||finals.has(p.gameId))&&(!team||p.team===team)&&(!position||p.position===position)&&[p.player,p.team].join(' ').toLowerCase().includes(search.toLowerCase())}).map(g=>({...g,markets:g.markets.filter(m=>!market||m.key===market).map(m=>({...m,books:m.books.map(b=>Object.fromEntries(Object.entries(b).filter(([,q])=>q&&(!book||q.book===book)&&(!only70||q.probability>=.7)))).filter(b=>Object.keys(b).length)})).filter(m=>!(book||only70)||m.books.length)})).filter(g=>g.markets.length);
+ return (feed?.groups||[]).filter(g=>{const p=g.first,parts=String(p.gameId).split('_');return Number(parts[0])===Number(season)&&Number(parts[1])===Number(week)&&(p.completed||finals.has(p.gameId))&&(!team||p.team===team)&&(!position||p.position===position)&&[p.player,p.team,teamNames[p.team]].join(' ').toLowerCase().includes(search.toLowerCase())}).map(g=>({...g,markets:g.markets.filter(m=>!market||m.key===market).map(m=>({...m,books:m.books.map(b=>Object.fromEntries(Object.entries(b).filter(([,q])=>q&&(!book||q.book===book)&&(!only70||q.probability>=.7)))).filter(b=>Object.keys(b).length)})).filter(m=>!(book||only70)||m.books.length)})).filter(g=>g.markets.length);
 }

@@ -4,3 +4,5 @@
 .prop-explorer .prop-stat-row .prop-actual-value.has-result{color:#67d8bf}
 html[data-appearance=light] .prop-explorer .prop-stat-row .prop-actual-value.has-result{color:#127360}
 .prop-explorer .prop-actual-note{font-size:8px;line-height:1.5;color:var(--muted);margin:0 1px 9px;overflow-wrap:anywhere}
+
+.prop-results-heading{padding:18px 0 12px;border-top:1px solid var(--line);margin-top:12px}.prop-results-heading h2{font-size:18px;margin:0 0 6px}.prop-results-heading p{font-size:11px;line-height:1.5;color:var(--muted);margin:0}
