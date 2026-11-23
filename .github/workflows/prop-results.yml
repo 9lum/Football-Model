@@ -1,0 +1,39 @@
+name: Refresh compact weekly prop results
+on:
+  workflow_dispatch:
+  push:
+    paths: ['scripts/build-prop-results.mjs','web/prop-results.mjs','web/prop-results.test.mjs','.github/workflows/prop-results.yml']
+  workflow_run:
+    workflows: ['Refresh verified recent offensive box scores','Preserve matchup research after games finish']
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '3,13,23,33,43,53 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: compact-weekly-prop-results
+  cancel-in-progress: false
+jobs:
+  results:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test web/prop-results.test.mjs
+      - run: node scripts/build-prop-results.mjs
+      - name: Publish compact prop results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/prop-results.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh current-week archived prop projections and actual results [skip ci]'
+            bash scripts/push_refresh.sh
+          fi
