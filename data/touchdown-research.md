@@ -1,6 +1,6 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-23T01:03:46.934038+00:00
-Current-season tests: 2897; Brier 0.1496 vs baseline 0.1633.
+Generated 2026-11-23T01:41:03.245596+00:00
+Current-season tests: 2932; Brier 0.1499 vs baseline 0.1634.
 
 ## IND at HOU
 2026-11-20T01:15:00+00:00
@@ -48,21 +48,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 
 ## MIN at SF
 2026-11-23T01:20:00+00:00
-### 1. Red zone & opportunity
-- Christian McCaffrey (SF RB): 14 RZ carries, 5 RZ targets, 6 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 4.10, actual TD 8.
-- Mike Evans (SF WR): 0 RZ carries, 0 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.10, actual TD 0.
-- George Kittle (SF TE): 0 RZ carries, 6 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.82, actual TD 1.
-### 2. Position matchup & leverage
-- SF: opponent RZ EPA -0.20947650294579911; pass EPA -0.18523084804631082; rush EPA -0.029006761797538305. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- MIN: opponent RZ EPA 0.06853493871341106; pass EPA 0.028380964688662788; rush EPA -0.1377685685900852. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- SF: recent RZ pass rate 0.5, RZ pass-over-expected -1.3418110042083553 percentage points, neutral seconds/play 33.32727272727273. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- MIN: recent RZ pass rate 0.7037037037037037, RZ pass-over-expected 17.48289276774113 percentage points, neutral seconds/play 30.210526315789473. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Christian McCaffrey — Core research · highest estimated probability**: estimated ATTD 70.9%; fair odds -243; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Mike Evans — Additional research candidate**: estimated ATTD 33.6%; fair odds 198; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **George Kittle — Additional research candidate**: estimated ATTD 32.9%; fair odds 204; opponent allows 0.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## CIN at WAS
 2026-11-24T01:15:00+00:00
@@ -79,7 +65,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - CIN: recent RZ pass rate 0.6976744186046512, RZ pass-over-expected 26.862958109094983 percentage points, neutral seconds/play 31.908045977011493. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Ja'Marr Chase — Core research · highest estimated probability**: estimated ATTD 59.3%; fair odds -146; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Chase Brown — Additional research candidate**: estimated ATTD 53.4%; fair odds -114; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Chase Brown — Additional research candidate**: estimated ATTD 53.3%; fair odds -114; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Tee Higgins — Additional research candidate**: estimated ATTD 44.3%; fair odds 126; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## Methodology & limitations
