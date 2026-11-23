@@ -1,5 +1,5 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-23T01:41:03.245596+00:00
+Generated 2026-11-23T02:17:42.750638+00:00
 Current-season tests: 2932; Brier 0.1499 vs baseline 0.1634.
 
 ## IND at HOU
