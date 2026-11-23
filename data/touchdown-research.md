@@ -1,6 +1,6 @@
 # Week 11 Anytime Touchdown Research
-Generated 2026-11-23T02:25:12.323843+00:00
-Current-season tests: 2932; Brier 0.1499 vs baseline 0.1634.
+Generated 2026-11-23T03:29:23.996295+00:00
+Current-season tests: 2951; Brier 0.1499 vs baseline 0.1633.
 
 ## IND at HOU
 2026-11-20T01:15:00+00:00
@@ -66,7 +66,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 ### 4. Value selections · research only unless all gates pass
 - **Ja'Marr Chase — Core research · highest estimated probability**: estimated ATTD 59.3%; fair odds -146; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Chase Brown — Additional research candidate**: estimated ATTD 53.3%; fair odds -114; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Tee Higgins — Additional research candidate**: estimated ATTD 44.3%; fair odds 126; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Tee Higgins — Additional research candidate**: estimated ATTD 44.2%; fair odds 126; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## Methodology & limitations
 - ATTD counts rushing and receiving TDs, excluding QB passing TDs, return TDs and fumble-recovery scores; check individual book rules.
