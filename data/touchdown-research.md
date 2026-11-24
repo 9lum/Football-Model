@@ -1,6 +1,6 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-24T11:54:37.942046+00:00
-Current-season tests: 3001; Brier 0.1488 vs baseline 0.1624.
+Generated 2026-11-24T13:08:08.379888+00:00
+Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 
 ## GB at LAR
 2026-11-26T01:00:00+00:00
@@ -59,9 +59,9 @@ Current-season tests: 3001; Brier 0.1488 vs baseline 0.1624.
 ## KC at BUF
 2026-11-27T01:20:00+00:00
 ### 1. Red zone & opportunity
+- Kenneth Walker III (KC RB): 7 RZ carries, 3 RZ targets, 4 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.28, actual TD 3.
 - James Cook (BUF RB): 18 RZ carries, 1 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.14, actual TD 4.
 - Emmett Johnson (KC RB): 10 RZ carries, 2 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.44, actual TD 5.
-- DJ Moore (BUF WR): 1 RZ carries, 6 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.38, actual TD 3.
 ### 2. Position matchup & leverage
 - BUF: opponent RZ EPA -0.44913572991022055; pass EPA -0.11216502081870089; rush EPA -0.06992465727960201. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - KC: opponent RZ EPA -0.03520370430652643; pass EPA -0.14433582336578582; rush EPA -0.048890581541165386. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -70,9 +70,9 @@ Current-season tests: 3001; Brier 0.1488 vs baseline 0.1624.
 - BUF: recent RZ pass rate 0.38461538461538464, RZ pass-over-expected -10.588364909384765 percentage points, neutral seconds/play 30.93103448275862. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - KC: recent RZ pass rate 0.5777777777777777, RZ pass-over-expected 5.744301113817427 percentage points, neutral seconds/play 29.30327868852459. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **James Cook — Core research · highest estimated probability**: estimated ATTD 58.8%; fair odds -143; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Kenneth Walker III — Core research · highest estimated probability**: estimated ATTD 66.0%; fair odds -194; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **James Cook — Additional research candidate**: estimated ATTD 58.8%; fair odds -143; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Emmett Johnson — Additional research candidate**: estimated ATTD 47.9%; fair odds 109; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **DJ Moore — Additional research candidate**: estimated ATTD 35.0%; fair odds 186; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## DEN at PIT
 2026-11-27T20:00:00+00:00
@@ -114,8 +114,8 @@ Current-season tests: 3001; Brier 0.1488 vs baseline 0.1624.
 2026-11-29T18:00:00+00:00
 ### 1. Red zone & opportunity
 - Derrick Henry (BAL RB): 11 RZ carries, 1 RZ targets, 4 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.11, actual TD 4.
+- Woody Marks (HOU RB): 9 RZ carries, 1 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.05, actual TD 0.
 - Nico Collins (HOU WR): 0 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.66, actual TD 3.
-- David Montgomery (HOU RB): 3 RZ carries, 1 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.50, actual TD 0.
 ### 2. Position matchup & leverage
 - HOU: opponent RZ EPA 0.17303343817209815; pass EPA 0.10580170786051164; rush EPA 0.006105909591741562. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - BAL: opponent RZ EPA 0.07834888712389615; pass EPA -0.0638302977603407; rush EPA -0.019631396907621. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -125,8 +125,8 @@ Current-season tests: 3001; Brier 0.1488 vs baseline 0.1624.
 - BAL: recent RZ pass rate 0.5357142857142857, RZ pass-over-expected -1.6839782042162759 percentage points, neutral seconds/play 30.985294117647058. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Derrick Henry — Core research · highest estimated probability**: estimated ATTD 38.7%; fair odds 158; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Woody Marks — Additional research candidate**: estimated ATTD 36.4%; fair odds 175; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Nico Collins — Additional research candidate**: estimated ATTD 31.0%; fair odds 223; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **David Montgomery — Additional research candidate**: estimated ATTD 28.8%; fair odds 247; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## NYG at IND
 2026-11-29T18:00:00+00:00
@@ -259,7 +259,7 @@ Current-season tests: 3001; Brier 0.1488 vs baseline 0.1624.
 ### 1. Red zone & opportunity
 - Quinshon Judkins (CLE RB): 13 RZ carries, 0 RZ targets, 6 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.88, actual TD 3.
 - Ashton Jeanty (LV RB): 6 RZ carries, 1 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.11, actual TD 1.
-- KC Concepcion (CLE WR): 3 RZ carries, 1 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.09, actual TD 2.
+- Brock Bowers (LV TE): 0 RZ carries, 4 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.51, actual TD 3.
 ### 2. Position matchup & leverage
 - CLE: opponent RZ EPA 0.2219025873467259; pass EPA 0.2153938495163584; rush EPA 0.09292518461978044. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LV: opponent RZ EPA 0.0188203057050818; pass EPA -0.035164239278723065; rush EPA -0.0004197668834968164. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -270,7 +270,7 @@ Current-season tests: 3001; Brier 0.1488 vs baseline 0.1624.
 ### 4. Value selections · research only unless all gates pass
 - **Quinshon Judkins — Core research · highest estimated probability**: estimated ATTD 35.7%; fair odds 180; opponent allows 1.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Ashton Jeanty — Additional research candidate**: estimated ATTD 32.5%; fair odds 208; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **KC Concepcion — Additional research candidate**: estimated ATTD 26.5%; fair odds 277; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Brock Bowers — Additional research candidate**: estimated ATTD 30.2%; fair odds 231; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## CAR at TB
 2026-12-01T01:15:00+00:00
