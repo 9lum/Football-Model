@@ -34,3 +34,11 @@ export function currentWeekPropResults(feed,{season,week,games=[],market='',team
  const finals=new Set(games.filter(g=>g.completed===true).map(g=>g.game_id));
  return (feed?.groups||[]).filter(g=>{const p=g.first,parts=String(p.gameId).split('_');return Number(parts[0])===Number(season)&&Number(parts[1])===Number(week)&&(p.completed||finals.has(p.gameId))&&(!team||p.team===team)&&(!position||p.position===position)&&[p.player,p.team,teamNames[p.team]].join(' ').toLowerCase().includes(search.toLowerCase())}).map(g=>({...g,markets:g.markets.filter(m=>!market||m.key===market).map(m=>({...m,books:m.books.map(b=>Object.fromEntries(Object.entries(b).filter(([,q])=>q&&(!book||q.book===book)&&(!only70||q.probability>=.7)))).filter(b=>Object.keys(b).length)})).filter(m=>!(book||only70)||m.books.length)})).filter(g=>g.markets.length);
 }
+
+export function propResultWeeks(index,season,week){
+ if(!season||!week)return [];
+ const active=Number(season)*100+Number(week),byKey=new Map();
+ for(const row of index?.weeks||[]){const [s,w]=String(row.key).split('_').map(Number);if(!s||!w||s*100+w>active)continue;byKey.set(row.key,{key:row.key,season:s,week:w,current:s*100+w===active})}
+ const key=season+'_'+String(week).padStart(2,'0');byKey.set(key,{key,season:Number(season),week:Number(week),current:true});
+ return [...byKey.values()].sort((a,b)=>b.season-a.season||b.week-a.week);
+}

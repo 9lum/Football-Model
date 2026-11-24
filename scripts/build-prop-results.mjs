@@ -8,7 +8,8 @@ const archives=(index.games||[]).filter(g=>Number(g.gameId.split('_')[0])*100+Nu
 const output={...buildPropResults(archives,actuals),generatedAt:new Date().toISOString(),actualsObservedAt:actuals.generatedAt};
 const directory=path.join(root,'prop-results');fs.mkdirSync(directory,{recursive:true});const weeks=new Map();
 for(const group of output.groups){const [season,week]=group.first.gameId.split('_');const key=season+'_'+week;if(!weeks.has(key))weeks.set(key,[]);weeks.get(key).push(group)}
-const indexRows=[];
+let previousWeeks=[];try{previousWeeks=read('prop-results').weeks||[]}catch{}
+const indexRows=previousWeeks.filter(w=>/^\d{4}_\d{2}$/.test(w.key)&&!weeks.has(w.key)&&fs.existsSync(path.join(directory,w.key+'.json')));
 for(const [key,groups] of weeks){const value={...output,groups};fs.writeFileSync(path.join(directory,key+'.json'),JSON.stringify(value));indexRows.push({key,players:groups.length,completed:groups.filter(g=>g.first.completed).length})}
 fs.writeFileSync(path.join(root,'prop-results.json'),JSON.stringify({generatedAt:output.generatedAt,weeks:indexRows,scope:output.scope}));
 console.log(JSON.stringify({playerGameCards:output.groups.length,weeks:indexRows}));
