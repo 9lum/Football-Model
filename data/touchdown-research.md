@@ -1,5 +1,5 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-24T03:55:48.732147+00:00
+Generated 2026-11-24T05:01:14.038966+00:00
 Current-season tests: 2982; Brier 0.1491 vs baseline 0.1628.
 
 ## GB at LAR
@@ -100,7 +100,7 @@ Current-season tests: 2982; Brier 0.1491 vs baseline 0.1628.
 - Tee Higgins (CIN WR): 0 RZ carries, 7 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.18, actual TD 5.
 ### 2. Position matchup & leverage
 - CIN: opponent RZ EPA -0.3048277011147448; pass EPA 0.0038383921108417034; rush EPA -0.05090148763761249. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- NO: opponent RZ EPA -0.040131260175505154; pass EPA 0.06100984214329975; rush EPA 0.09756432227625066. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- NO: opponent RZ EPA -0.06743364432076061; pass EPA 0.02855540468127075; rush EPA 0.10486049972201343. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
 - CIN: recent RZ pass rate 0.6976744186046512, RZ pass-over-expected 26.862958109094983 percentage points, neutral seconds/play 31.908045977011493. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
@@ -225,14 +225,14 @@ Current-season tests: 2982; Brier 0.1491 vs baseline 0.1628.
 - Rachaad White (WAS RB): 4 RZ carries, 2 RZ targets, 2 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.69, actual TD 2.
 - Stefon Diggs (WAS WR): 0 RZ carries, 3 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 1.56, actual TD 3.
 ### 2. Position matchup & leverage
-- ARI: opponent RZ EPA 0.3066247328643784; pass EPA 0.0013534770893019684; rush EPA 0.09765581451457865. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- ARI: opponent RZ EPA 0.2430081065350571; pass EPA 0.04559391150994073; rush EPA 0.06763724290694474. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - WAS: opponent RZ EPA 0.1340207071258573; pass EPA 0.23129243655246998; rush EPA 0.017852599788581655. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
 - ARI: recent RZ pass rate 0.6785714285714286, RZ pass-over-expected 3.7032797932624817 percentage points, neutral seconds/play 34.26315789473684. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - WAS: recent RZ pass rate 0.5652173913043478, RZ pass-over-expected 7.193960935216058 percentage points, neutral seconds/play 30.367816091954023. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Michael Wilson — Core research · highest estimated probability**: estimated ATTD 34.2%; fair odds 193; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Michael Wilson — Core research · highest estimated probability**: estimated ATTD 34.1%; fair odds 194; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Rachaad White — Additional research candidate**: estimated ATTD 30.7%; fair odds 225; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Stefon Diggs — Additional research candidate**: estimated ATTD 27.2%; fair odds 267; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
