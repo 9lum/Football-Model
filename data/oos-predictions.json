@@ -145712,6 +145712,63 @@
   },
   {
     "game_id": "2026_11_CIN_WAS",
+    "player_id": "00-0039912",
+    "week": 11,
+    "team": "WAS",
+    "opponent": "CIN",
+    "position": "TE",
+    "kickoff": "2026-11-24T01:15:00+00:00",
+    "routeCandidates": null,
+    "routePolicy": {
+      "volume": 0.0,
+      "yards": 0.0,
+      "n": 257,
+      "games": 78,
+      "trainedThroughWeek": 10,
+      "status": "Learned from earlier completed weeks; no guaranteed improvement"
+    },
+    "routeFactors": {
+      "targets": 1.0,
+      "receptions": 1.0,
+      "receiving_yards": 1.0
+    },
+    "routeSignal": 0.0,
+    "receiving_yards": {
+      "actual": 0.0,
+      "mean": 6.205078125,
+      "unadjustedMean": 6.205078125,
+      "baseline": 7.0,
+      "p10": 0.0,
+      "p90": 20.0
+    },
+    "receptions": {
+      "actual": 0.0,
+      "mean": 0.685546875,
+      "unadjustedMean": 0.685546875,
+      "baseline": 0.6666666666666666,
+      "p10": 0.0,
+      "p90": 2.0
+    },
+    "receiving_tds": {
+      "actual": 0.0,
+      "mean": 0.041015625,
+      "unadjustedMean": 0.041015625,
+      "baseline": 0.16666666666666666,
+      "p10": 0.0,
+      "p90": 0.0
+    },
+    "targets": {
+      "actual": 0.0,
+      "mean": 1.0703125,
+      "unadjustedMean": 1.0703125,
+      "baseline": 0.6666666666666666,
+      "p10": 0.0,
+      "p90": 3.0
+    },
+    "family": "receiving"
+  },
+  {
+    "game_id": "2026_11_CIN_WAS",
     "player_id": "00-0040242",
     "week": 11,
     "team": "WAS",
@@ -145735,32 +145792,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 23.0,
-      "mean": 9.91796875,
-      "unadjustedMean": 9.91796875,
+      "mean": 9.919921875,
+      "unadjustedMean": 9.919921875,
       "baseline": 6.666666666666667,
       "p10": 0.0,
-      "p90": 27.0
+      "p90": 29.900000000000034
     },
     "receptions": {
       "actual": 2.0,
-      "mean": 1.130859375,
-      "unadjustedMean": 1.130859375,
+      "mean": 1.17578125,
+      "unadjustedMean": 1.17578125,
       "baseline": 0.8333333333333334,
       "p10": 0.0,
       "p90": 3.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.037109375,
-      "unadjustedMean": 0.037109375,
+      "mean": 0.056640625,
+      "unadjustedMean": 0.056640625,
       "baseline": 0.0,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 3.0,
-      "mean": 1.53125,
-      "unadjustedMean": 1.53125,
+      "mean": 1.61328125,
+      "unadjustedMean": 1.61328125,
       "baseline": 1.1666666666666667,
       "p10": 0.0,
       "p90": 4.0
@@ -145792,32 +145849,32 @@
     "routeSignal": -0.02494572001183599,
     "receiving_yards": {
       "actual": 2.0,
-      "mean": 22.041015625,
-      "unadjustedMean": 22.041015625,
+      "mean": 22.12890625,
+      "unadjustedMean": 22.12890625,
       "baseline": 32.5,
       "p10": 0.0,
-      "p90": 53.0
+      "p90": 54.0
     },
     "receptions": {
       "actual": 1.0,
-      "mean": 2.072265625,
-      "unadjustedMean": 2.072265625,
+      "mean": 2.1015625,
+      "unadjustedMean": 2.1015625,
       "baseline": 2.6666666666666665,
       "p10": 0.0,
       "p90": 4.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.12890625,
-      "unadjustedMean": 0.12890625,
+      "mean": 0.142578125,
+      "unadjustedMean": 0.142578125,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 2.0,
-      "mean": 2.990234375,
-      "unadjustedMean": 2.990234375,
+      "mean": 3.076171875,
+      "unadjustedMean": 3.076171875,
       "baseline": 3.5,
       "p10": 0.0,
       "p90": 6.0
@@ -145849,32 +145906,32 @@
     "routeSignal": 0.007023825480413454,
     "receiving_yards": {
       "actual": 122.0,
-      "mean": 33.1171875,
-      "unadjustedMean": 33.1171875,
+      "mean": 31.486328125,
+      "unadjustedMean": 31.486328125,
       "baseline": 37.166666666666664,
       "p10": 0.0,
-      "p90": 75.0
+      "p90": 67.90000000000003
     },
     "receptions": {
       "actual": 9.0,
-      "mean": 2.736328125,
-      "unadjustedMean": 2.736328125,
+      "mean": 2.771484375,
+      "unadjustedMean": 2.771484375,
       "baseline": 3.1666666666666665,
-      "p10": 0.0,
-      "p90": 6.0
+      "p10": 1.0,
+      "p90": 5.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.212890625,
-      "unadjustedMean": 0.212890625,
+      "mean": 0.18359375,
+      "unadjustedMean": 0.18359375,
       "baseline": 0.16666666666666666,
       "p10": 0.0,
       "p90": 1.0
     },
     "targets": {
       "actual": 11.0,
-      "mean": 4.3125,
-      "unadjustedMean": 4.3125,
+      "mean": 4.388671875,
+      "unadjustedMean": 4.388671875,
       "baseline": 5.0,
       "p10": 1.0,
       "p90": 8.0
@@ -145906,32 +145963,32 @@
     "routeSignal": 0.0,
     "receiving_yards": {
       "actual": 33.0,
-      "mean": 6.55859375,
-      "unadjustedMean": 6.55859375,
+      "mean": 5.693359375,
+      "unadjustedMean": 5.693359375,
       "baseline": 1.8,
       "p10": 0.0,
-      "p90": 22.900000000000034
+      "p90": 22.0
     },
     "receptions": {
       "actual": 4.0,
-      "mean": 0.603515625,
-      "unadjustedMean": 0.603515625,
+      "mean": 0.5546875,
+      "unadjustedMean": 0.5546875,
       "baseline": 0.6,
       "p10": 0.0,
       "p90": 2.0
     },
     "receiving_tds": {
       "actual": 0.0,
-      "mean": 0.0625,
-      "unadjustedMean": 0.0625,
+      "mean": 0.044921875,
+      "unadjustedMean": 0.044921875,
       "baseline": 0.2,
       "p10": 0.0,
       "p90": 0.0
     },
     "targets": {
       "actual": 5.0,
-      "mean": 0.921875,
-      "unadjustedMean": 0.921875,
+      "mean": 0.87890625,
+      "unadjustedMean": 0.87890625,
       "baseline": 0.8,
       "p10": 0.0,
       "p90": 3.0
