@@ -1,6 +1,6 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-25T08:17:05.066084+00:00
-Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
+Generated 2026-11-25T09:39:56.627735+00:00
+Current-season tests: 3003; Brier 0.1487 vs baseline 0.1623.
 
 ## GB at LAR
 2026-11-26T01:00:00+00:00
@@ -34,8 +34,8 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - DET: recent RZ pass rate 0.40540540540540543, RZ pass-over-expected -0.9865981733633412 percentage points, neutral seconds/play 32.540983606557376. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - CHI: recent RZ pass rate 0.45, RZ pass-over-expected -3.262060210108757 percentage points, neutral seconds/play 31.41732283464567. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Jahmyr Gibbs — Core research · highest estimated probability**: estimated ATTD 77.4%; fair odds -343; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **D'Andre Swift — Additional research candidate**: estimated ATTD 55.5%; fair odds -124; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Jahmyr Gibbs — Core research · highest estimated probability**: estimated ATTD 77.5%; fair odds -344; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **D'Andre Swift — Additional research candidate**: estimated ATTD 55.5%; fair odds -125; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Kyle Monangai — Additional research candidate**: estimated ATTD 34.7%; fair odds 188; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## PHI at DAL
@@ -46,14 +46,14 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - George Pickens (DAL WR): 0 RZ carries, 6 RZ targets, 0 inside-5 carries, 3 inside-5 targets across 4 team games; xTD 2.53, actual TD 4.
 ### 2. Position matchup & leverage
 - DAL: opponent RZ EPA 0.10582619971968837; pass EPA 0.0882555807611205; rush EPA 0.026281385857428816. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- PHI: opponent RZ EPA 0.045398427416028134; pass EPA 0.07024358356874223; rush EPA 0.08174047968237627. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- PHI: opponent RZ EPA 0.045398427416028134; pass EPA 0.07024358356874223; rush EPA 0.08174047968237629. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
 - DAL: recent RZ pass rate 0.625, RZ pass-over-expected 8.600571603988701 percentage points, neutral seconds/play 30.333333333333332. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - PHI: recent RZ pass rate 0.2608695652173913, RZ pass-over-expected -28.822744976390492 percentage points, neutral seconds/play 32.039370078740156. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **CeeDee Lamb — Core research · highest estimated probability**: estimated ATTD 61.3%; fair odds -158; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Javonte Williams — Additional research candidate**: estimated ATTD 59.0%; fair odds -144; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **CeeDee Lamb — Core research · highest estimated probability**: estimated ATTD 61.2%; fair odds -158; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Javonte Williams — Additional research candidate**: estimated ATTD 59.1%; fair odds -144; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **George Pickens — Additional research candidate**: estimated ATTD 53.6%; fair odds -115; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## KC at BUF
@@ -81,8 +81,8 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - Jaylen Warren (PIT RB): 7 RZ carries, 1 RZ targets, 2 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.47, actual TD 1.
 - Rico Dowdle (PIT RB): 7 RZ carries, 1 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.11, actual TD 1.
 ### 2. Position matchup & leverage
-- PIT: opponent RZ EPA 0.004224089969794978; pass EPA -0.01930585294557255; rush EPA -0.021209821195537024. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- DEN: opponent RZ EPA -0.2362389688616695; pass EPA 0.005218029096482661; rush EPA -0.08995840869266616. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- PIT: opponent RZ EPA 0.004224089969794978; pass EPA -0.019305852945572542; rush EPA -0.021209821195537038. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- DEN: opponent RZ EPA -0.2362389688616695; pass EPA 0.005218029096482654; rush EPA -0.08995840869266616. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
 - PIT: recent RZ pass rate 0.6097560975609756, RZ pass-over-expected -1.5665654093027115 percentage points, neutral seconds/play 31.24137931034483. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
@@ -99,7 +99,7 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - Chase Brown (CIN RB): 2 RZ carries, 3 RZ targets, 2 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.10, actual TD 2.
 - Tee Higgins (CIN WR): 0 RZ carries, 6 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 1.92, actual TD 5.
 ### 2. Position matchup & leverage
-- CIN: opponent RZ EPA -0.3048277011147448; pass EPA 0.0038383921108417034; rush EPA -0.05090148763761249. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CIN: opponent RZ EPA -0.3048277011147448; pass EPA 0.003838392110841711; rush EPA -0.05090148763761249. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - NO: opponent RZ EPA -0.1087816118279026; pass EPA 0.038119893975834915; rush EPA 0.10638739803761768. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
@@ -117,8 +117,8 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - Woody Marks (HOU RB): 9 RZ carries, 1 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.05, actual TD 0.
 - Nico Collins (HOU WR): 0 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.66, actual TD 3.
 ### 2. Position matchup & leverage
-- HOU: opponent RZ EPA 0.17303343817209815; pass EPA 0.10580170786051164; rush EPA 0.006105909591741562. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- BAL: opponent RZ EPA 0.07834888712389615; pass EPA -0.0638302977603407; rush EPA -0.019631396907620995. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- HOU: opponent RZ EPA 0.17303343817209815; pass EPA 0.10580381175318254; rush EPA 0.006108104463554999. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- BAL: opponent RZ EPA 0.07834888712389615; pass EPA -0.0638302977603407; rush EPA -0.019631396907621. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
 - HOU: recent RZ pass rate 0.5161290322580645, RZ pass-over-expected -9.200530449549357 percentage points, neutral seconds/play 31.617021276595743. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
@@ -136,7 +136,7 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - Jonathan Taylor (IND RB): 8 RZ carries, 0 RZ targets, 3 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.77, actual TD 0.
 ### 2. Position matchup & leverage
 - IND: opponent RZ EPA 0.14599646934078897; pass EPA -0.010629304431517994; rush EPA 0.018158266289672143. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- NYG: opponent RZ EPA 0.006143491271862262; pass EPA 0.05031773153709039; rush EPA -0.007107882882766582. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- NYG: opponent RZ EPA 0.006143491271862262; pass EPA 0.0503177315370904; rush EPA -0.007107882882766582. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
 - IND: recent RZ pass rate 0.3, RZ pass-over-expected -21.91078096628189 percentage points, neutral seconds/play 31.085365853658537. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
@@ -144,7 +144,7 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 ### 4. Value selections · research only unless all gates pass
 - **Cam Skattebo — Core research · highest estimated probability**: estimated ATTD 37.0%; fair odds 170; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Malik Nabers — Additional research candidate**: estimated ATTD 33.5%; fair odds 199; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Jonathan Taylor — Additional research candidate**: estimated ATTD 33.3%; fair odds 200; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Jonathan Taylor — Additional research candidate**: estimated ATTD 33.4%; fair odds 200; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## NYJ at MIA
 2026-11-29T18:00:00+00:00
@@ -189,7 +189,7 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - Bhayshul Tuten (JAX RB): 15 RZ carries, 1 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.00, actual TD 4.
 - Parker Washington (JAX WR): 0 RZ carries, 7 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.11, actual TD 2.
 ### 2. Position matchup & leverage
-- JAX: opponent RZ EPA 0.23558328599221626; pass EPA 0.2551989151943971; rush EPA 0.037203969225453735. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- JAX: opponent RZ EPA 0.23558328599221626; pass EPA 0.2551989151943971; rush EPA 0.03720396922545375. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - TEN: opponent RZ EPA -0.2044531131575854; pass EPA -0.10290710222578149; rush EPA -0.09939834919207437. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
@@ -208,10 +208,10 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - Mack Hollins (NE WR): 0 RZ carries, 2 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 0.73, actual TD 1.
 ### 2. Position matchup & leverage
 - LAC: opponent RZ EPA -0.03384401570888254; pass EPA 0.2198741232907091; rush EPA -0.06646517633911911. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- NE: opponent RZ EPA 0.03908304913890977; pass EPA 0.0801601617489283; rush EPA 0.009231220282245586. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- NE: opponent RZ EPA 0.03908304913890977; pass EPA 0.0801601617489283; rush EPA 0.009231220282245581. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- LAC: recent RZ pass rate 0.5333333333333333, RZ pass-over-expected -21.538953123421503 percentage points, neutral seconds/play 33.57272727272727. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
+- LAC: recent RZ pass rate 0.5333333333333333, RZ pass-over-expected -21.538953123421503 percentage points, neutral seconds/play 33.58181818181818. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - NE: recent RZ pass rate 0.6818181818181818, RZ pass-over-expected 0.3604507162457421 percentage points, neutral seconds/play 35.390625. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Rhamondre Stevenson — Core research · highest estimated probability**: estimated ATTD 33.1%; fair odds 202; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
@@ -232,7 +232,7 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - ARI: recent RZ pass rate 0.6785714285714286, RZ pass-over-expected 3.7032797932624817 percentage points, neutral seconds/play 34.26315789473684. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - WAS: recent RZ pass rate 0.5217391304347826, RZ pass-over-expected 3.323042943057689 percentage points, neutral seconds/play 31.798165137614678. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Jacory Croskey-Merritt — Core research · highest estimated probability**: estimated ATTD 31.6%; fair odds 216; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Jacory Croskey-Merritt — Core research · highest estimated probability**: estimated ATTD 31.6%; fair odds 217; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Stefon Diggs — Additional research candidate**: estimated ATTD 26.4%; fair odds 279; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Tyler Allgeier — Additional research candidate**: estimated ATTD 24.3%; fair odds 311; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
@@ -259,7 +259,7 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - Ashton Jeanty (LV RB): 6 RZ carries, 1 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.11, actual TD 1.
 - Brock Bowers (LV TE): 0 RZ carries, 4 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 1.51, actual TD 3.
 ### 2. Position matchup & leverage
-- CLE: opponent RZ EPA 0.2219025873467259; pass EPA 0.2153938495163584; rush EPA 0.09292518461978043. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CLE: opponent RZ EPA 0.2219025873467259; pass EPA 0.2153938495163584; rush EPA 0.09292518461978044. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - LV: opponent RZ EPA 0.0188203057050818; pass EPA -0.035164239278723065; rush EPA -0.0004197668834968164. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
@@ -267,7 +267,7 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - LV: recent RZ pass rate 0.42105263157894735, RZ pass-over-expected -12.695109216790451 percentage points, neutral seconds/play 33.059701492537314. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Quinshon Judkins — Core research · highest estimated probability**: estimated ATTD 35.7%; fair odds 180; opponent allows 1.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Ashton Jeanty — Additional research candidate**: estimated ATTD 32.5%; fair odds 208; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Ashton Jeanty — Additional research candidate**: estimated ATTD 32.4%; fair odds 208; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Brock Bowers — Additional research candidate**: estimated ATTD 30.2%; fair odds 231; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## CAR at TB
@@ -278,7 +278,7 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 - Tetairoa McMillan (CAR WR): 0 RZ carries, 6 RZ targets, 0 inside-5 carries, 3 inside-5 targets across 4 team games; xTD 2.24, actual TD 2.
 ### 2. Position matchup & leverage
 - TB: opponent RZ EPA 0.3325250905802321; pass EPA 0.03718394068133608; rush EPA -0.04741940288682625. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- CAR: opponent RZ EPA -0.008566604368975009; pass EPA -0.1656931906019047; rush EPA 0.06540163570212905. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- CAR: opponent RZ EPA -0.008566604368975009; pass EPA -0.1656931906019047; rush EPA 0.06540163570212904. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 ### 3. Game script & tendencies
 {"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
 - TB: recent RZ pass rate 0.35294117647058826, RZ pass-over-expected -20.305919528007507 percentage points, neutral seconds/play 37.85507246376812. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
