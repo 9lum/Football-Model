@@ -1,5 +1,5 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-25T15:35:40.936956+00:00
+Generated 2026-11-25T17:47:56.202950+00:00
 Current-season tests: 3003; Brier 0.1487 vs baseline 0.1623.
 
 ## GB at LAR
@@ -146,6 +146,24 @@ Current-season tests: 3003; Brier 0.1487 vs baseline 0.1623.
 - **Malik Nabers — Additional research candidate**: estimated ATTD 33.5%; fair odds 199; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Jonathan Taylor — Additional research candidate**: estimated ATTD 33.4%; fair odds 200; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
+## TEN at JAX
+2026-11-29T18:00:00+00:00
+### 1. Red zone & opportunity
+- Tony Pollard (TEN RB): 13 RZ carries, 0 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.77, actual TD 6.
+- Bhayshul Tuten (JAX RB): 15 RZ carries, 1 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.00, actual TD 4.
+- Parker Washington (JAX WR): 0 RZ carries, 7 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.11, actual TD 2.
+### 2. Position matchup & leverage
+- JAX: opponent RZ EPA 0.23558328599221626; pass EPA 0.2551989151943971; rush EPA 0.03720396922545375. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+- TEN: opponent RZ EPA -0.2044531131575854; pass EPA -0.10290710222578149; rush EPA -0.09939834919207437. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
+### 3. Game script & tendencies
+{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
+- JAX: recent RZ pass rate 0.5208333333333334, RZ pass-over-expected 0.5820995236330844 percentage points, neutral seconds/play 32.411764705882355. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
+- TEN: recent RZ pass rate 0.5714285714285714, RZ pass-over-expected -2.0658817142248154 percentage points, neutral seconds/play 29.161290322580644. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
+### 4. Value selections · research only unless all gates pass
+- **Tony Pollard — Core research · highest estimated probability**: estimated ATTD 62.7%; fair odds -168; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Bhayshul Tuten — Additional research candidate**: estimated ATTD 49.3%; fair odds 103; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Parker Washington — Additional research candidate**: estimated ATTD 40.1%; fair odds 149; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+
 ## NYJ at MIA
 2026-11-29T18:00:00+00:00
 ### 1. Red zone & opportunity
@@ -181,24 +199,6 @@ Current-season tests: 3003; Brier 0.1487 vs baseline 0.1623.
 - **Bijan Robinson — Core research · highest estimated probability**: estimated ATTD 48.3%; fair odds 107; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Justin Jefferson — Additional research candidate**: estimated ATTD 34.7%; fair odds 188; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Drake London — Additional research candidate**: estimated ATTD 26.1%; fair odds 283; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-
-## TEN at JAX
-2026-11-29T18:00:00+00:00
-### 1. Red zone & opportunity
-- Tony Pollard (TEN RB): 13 RZ carries, 0 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.77, actual TD 6.
-- Bhayshul Tuten (JAX RB): 15 RZ carries, 1 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.00, actual TD 4.
-- Parker Washington (JAX WR): 0 RZ carries, 7 RZ targets, 0 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.11, actual TD 2.
-### 2. Position matchup & leverage
-- JAX: opponent RZ EPA 0.23558328599221626; pass EPA 0.2551989151943971; rush EPA 0.03720396922545375. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- TEN: opponent RZ EPA -0.2044531131575854; pass EPA -0.10290710222578149; rush EPA -0.09939834919207437. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- JAX: recent RZ pass rate 0.5208333333333334, RZ pass-over-expected 0.5820995236330844 percentage points, neutral seconds/play 32.411764705882355. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- TEN: recent RZ pass rate 0.5714285714285714, RZ pass-over-expected -2.0658817142248154 percentage points, neutral seconds/play 29.161290322580644. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Tony Pollard — Core research · highest estimated probability**: estimated ATTD 62.7%; fair odds -168; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Bhayshul Tuten — Additional research candidate**: estimated ATTD 49.3%; fair odds 103; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Parker Washington — Additional research candidate**: estimated ATTD 40.1%; fair odds 149; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## NE at LAC
 2026-11-29T21:05:00+00:00
