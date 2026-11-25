@@ -1,5 +1,5 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-25T07:49:07.307336+00:00
+Generated 2026-11-25T08:17:05.066084+00:00
 Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 
 ## GB at LAR
@@ -241,7 +241,6 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 ### 1. Red zone & opportunity
 - Christian McCaffrey (SF RB): 12 RZ carries, 4 RZ targets, 3 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.92, actual TD 7.
 - Jaxon Smith-Njigba (SEA WR): 0 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.44, actual TD 3.
-- Zach Charbonnet (SEA RB): 3 RZ carries, 2 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.86, actual TD 0.
 ### 2. Position matchup & leverage
 - SF: opponent RZ EPA 0.21512097928998278; pass EPA -0.09074517761954357; rush EPA -0.018346998147849763. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - SEA: opponent RZ EPA -0.0983861231017897; pass EPA -0.03397388699471123; rush EPA -0.12170407733983771. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -252,7 +251,6 @@ Current-season tests: 3002; Brier 0.1488 vs baseline 0.1623.
 ### 4. Value selections · research only unless all gates pass
 - **Christian McCaffrey — Core research · highest estimated probability**: estimated ATTD 61.5%; fair odds -160; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Jaxon Smith-Njigba — Additional research candidate**: estimated ATTD 43.3%; fair odds 131; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Zach Charbonnet — Additional research candidate**: estimated ATTD 34.8%; fair odds 187; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## LV at CLE
 2026-11-30T01:20:00+00:00
