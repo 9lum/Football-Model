@@ -3,19 +3,19 @@
   "evaluation": "Reconstructed historical features; final-corrected public outcomes. Not a point-in-time odds backtest.",
   "aggregate": {
     "receiving_yards": {
-      "n": 2461,
-      "mae": 19.11767558284234,
-      "rmse": 26.497879438587905,
-      "rollingBaselineMae": 19.70847893810104,
-      "crps": 13.072351549467097,
-      "coverage80": 0.8516863063795205,
-      "meanWidth80": 57.262169849654626,
-      "fixedThresholdBrier": 0.12621334344088087,
-      "fixedThresholdLogLoss": 0.39370261564087694,
+      "n": 2476,
+      "mae": 19.092031155341274,
+      "rmse": 26.459096760567647,
+      "rollingBaselineMae": 19.697455573505653,
+      "crps": 13.051066469491396,
+      "coverage80": 0.8517770597738288,
+      "meanWidth80": 57.237156704361894,
+      "fixedThresholdBrier": 0.1261057310612791,
+      "fixedThresholdLogLoss": 0.39337294875665757,
       "probability70Cohort": {
-        "n": 7456,
-        "meanEstimated": 0.8930103482094958,
-        "observedWinRate": 0.8884120171673819,
+        "n": 7505,
+        "meanEstimated": 0.8930239215522985,
+        "observedWinRate": 0.8884743504330447,
         "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
       },
       "reliability": [
@@ -29,58 +29,58 @@
         {
           "line": 19.5,
           "bin": 0.1,
-          "n": 352,
-          "predicted": 0.15641091086647727,
-          "observed": 0.14772727272727273
+          "n": 354,
+          "predicted": 0.15652034781073446,
+          "observed": 0.1497175141242938
         },
         {
           "line": 19.5,
           "bin": 0.2,
-          "n": 391,
-          "predicted": 0.24649836157289,
-          "observed": 0.24296675191815856
+          "n": 396,
+          "predicted": 0.2464242029671717,
+          "observed": 0.24242424242424243
         },
         {
           "line": 19.5,
           "bin": 0.3,
-          "n": 394,
-          "predicted": 0.34944083121827413,
-          "observed": 0.3680203045685279
+          "n": 396,
+          "predicted": 0.3495551215277778,
+          "observed": 0.3686868686868687
         },
         {
           "line": 19.5,
           "bin": 0.4,
-          "n": 258,
-          "predicted": 0.4443813590116279,
-          "observed": 0.4573643410852713
+          "n": 259,
+          "predicted": 0.44455085666023164,
+          "observed": 0.4555984555984556
         },
         {
           "line": 19.5,
           "bin": 0.5,
-          "n": 206,
-          "predicted": 0.5522318719660194,
-          "observed": 0.5097087378640777
+          "n": 207,
+          "predicted": 0.552121074879227,
+          "observed": 0.5072463768115942
         },
         {
           "line": 19.5,
           "bin": 0.6,
-          "n": 264,
-          "predicted": 0.6506051728219697,
-          "observed": 0.6553030303030303
+          "n": 265,
+          "predicted": 0.6505675117924529,
+          "observed": 0.6528301886792452
         },
         {
           "line": 19.5,
           "bin": 0.7,
-          "n": 232,
-          "predicted": 0.7475080818965517,
-          "observed": 0.7672413793103449
+          "n": 233,
+          "predicted": 0.747527159334764,
+          "observed": 0.7682403433476395
         },
         {
           "line": 19.5,
           "bin": 0.8,
-          "n": 240,
-          "predicted": 0.8521321614583334,
-          "observed": 0.8458333333333333
+          "n": 242,
+          "predicted": 0.8524260717975206,
+          "observed": 0.8471074380165289
         },
         {
           "line": 19.5,
@@ -92,37 +92,37 @@
         {
           "line": 39.5,
           "bin": 0.0,
-          "n": 686,
-          "predicted": 0.058582361516034985,
-          "observed": 0.05393586005830904
+          "n": 692,
+          "predicted": 0.05863608652456647,
+          "observed": 0.05346820809248555
         },
         {
           "line": 39.5,
           "bin": 0.1,
-          "n": 592,
-          "predicted": 0.14202385979729729,
-          "observed": 0.16216216216216217
+          "n": 595,
+          "predicted": 0.1420299369747899,
+          "observed": 0.16302521008403362
         },
         {
           "line": 39.5,
           "bin": 0.2,
-          "n": 290,
-          "predicted": 0.2474609375,
-          "observed": 0.2482758620689655
+          "n": 292,
+          "predicted": 0.24753852739726026,
+          "observed": 0.2465753424657534
         },
         {
           "line": 39.5,
           "bin": 0.3,
-          "n": 272,
-          "predicted": 0.35156968060661764,
-          "observed": 0.33455882352941174
+          "n": 273,
+          "predicted": 0.3515124198717949,
+          "observed": 0.3333333333333333
         },
         {
           "line": 39.5,
           "bin": 0.4,
-          "n": 216,
-          "predicted": 0.44370298032407407,
-          "observed": 0.48148148148148145
+          "n": 217,
+          "predicted": 0.4437824020737327,
+          "observed": 0.4792626728110599
         },
         {
           "line": 39.5,
@@ -141,9 +141,9 @@
         {
           "line": 39.5,
           "bin": 0.7,
-          "n": 71,
-          "predicted": 0.7428477112676056,
-          "observed": 0.7746478873239436
+          "n": 73,
+          "predicted": 0.7423747859589042,
+          "observed": 0.7671232876712328
         },
         {
           "line": 39.5,
@@ -155,23 +155,23 @@
         {
           "line": 59.5,
           "bin": 0.0,
-          "n": 1388,
-          "predicted": 0.03809297325288184,
-          "observed": 0.048270893371757925
+          "n": 1397,
+          "predicted": 0.03804469398711525,
+          "observed": 0.048675733715103794
         },
         {
           "line": 59.5,
           "bin": 0.1,
-          "n": 423,
-          "predicted": 0.14744939420803782,
-          "observed": 0.15839243498817968
+          "n": 426,
+          "predicted": 0.14721335827464788,
+          "observed": 0.1572769953051643
         },
         {
           "line": 59.5,
           "bin": 0.2,
-          "n": 265,
-          "predicted": 0.2422759433962264,
-          "observed": 0.24528301886792453
+          "n": 266,
+          "predicted": 0.24236372180451127,
+          "observed": 0.24436090225563908
         },
         {
           "line": 59.5,
@@ -183,16 +183,16 @@
         {
           "line": 59.5,
           "bin": 0.4,
-          "n": 142,
-          "predicted": 0.44421214788732394,
-          "observed": 0.4507042253521127
+          "n": 143,
+          "predicted": 0.4444793487762238,
+          "observed": 0.44755244755244755
         },
         {
           "line": 59.5,
           "bin": 0.5,
-          "n": 40,
-          "predicted": 0.548046875,
-          "observed": 0.575
+          "n": 41,
+          "predicted": 0.5472084603658537,
+          "observed": 0.5853658536585366
         },
         {
           "line": 59.5,
@@ -211,16 +211,16 @@
         {
           "line": 79.5,
           "bin": 0.0,
-          "n": 1869,
-          "predicted": 0.02717341325575174,
-          "observed": 0.033707865168539325
+          "n": 1881,
+          "predicted": 0.027127774455077087,
+          "observed": 0.03349282296650718
         },
         {
           "line": 79.5,
           "bin": 0.1,
-          "n": 283,
-          "predicted": 0.14003147084805653,
-          "observed": 0.1166077738515901
+          "n": 284,
+          "predicted": 0.13990977112676056,
+          "observed": 0.11619718309859155
         },
         {
           "line": 79.5,
@@ -232,9 +232,9 @@
         {
           "line": 79.5,
           "bin": 0.3,
-          "n": 54,
-          "predicted": 0.34085648148148145,
-          "observed": 0.37037037037037035
+          "n": 56,
+          "predicted": 0.3405064174107143,
+          "observed": 0.35714285714285715
         },
         {
           "line": 79.5,
@@ -253,19 +253,19 @@
       ]
     },
     "receptions": {
-      "n": 2461,
-      "mae": 1.4411641926554246,
-      "rmse": 1.9068367170307925,
-      "rollingBaselineMae": 1.4749356630096166,
-      "crps": 0.984100535554355,
-      "coverage80": 0.9061357171881349,
-      "meanWidth80": 4.4884599756196675,
-      "fixedThresholdBrier": 0.1114806567009558,
-      "fixedThresholdLogLoss": 0.34908534137339625,
+      "n": 2476,
+      "mae": 1.440122835470517,
+      "rmse": 1.9053732122659792,
+      "rollingBaselineMae": 1.475020193861066,
+      "crps": 0.983361401349932,
+      "coverage80": 0.9058966074313409,
+      "meanWidth80": 4.487479806138936,
+      "fixedThresholdBrier": 0.11154942096531488,
+      "fixedThresholdLogLoss": 0.3492673761182887,
       "probability70Cohort": {
-        "n": 7592,
-        "meanEstimated": 0.907200836406744,
-        "observedWinRate": 0.9089831401475237,
+        "n": 7638,
+        "meanEstimated": 0.9072705448906782,
+        "observedWinRate": 0.9087457449594134,
         "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
       },
       "reliability": [
@@ -286,23 +286,23 @@
         {
           "line": 1.5,
           "bin": 0.2,
-          "n": 258,
-          "predicted": 0.2492656855620155,
-          "observed": 0.23255813953488372
+          "n": 260,
+          "predicted": 0.24926382211538461,
+          "observed": 0.23461538461538461
         },
         {
           "line": 1.5,
           "bin": 0.3,
-          "n": 343,
-          "predicted": 0.34902286807580174,
-          "observed": 0.37026239067055394
+          "n": 346,
+          "predicted": 0.3489432803468208,
+          "observed": 0.3699421965317919
         },
         {
           "line": 1.5,
           "bin": 0.4,
-          "n": 268,
-          "predicted": 0.44771017957089554,
-          "observed": 0.43283582089552236
+          "n": 272,
+          "predicted": 0.4475887522977941,
+          "observed": 0.4338235294117647
         },
         {
           "line": 1.5,
@@ -321,37 +321,37 @@
         {
           "line": 1.5,
           "bin": 0.7,
-          "n": 293,
-          "predicted": 0.7512798634812287,
-          "observed": 0.7508532423208191
+          "n": 296,
+          "predicted": 0.7512602934966216,
+          "observed": 0.75
         },
         {
           "line": 1.5,
           "bin": 0.8,
-          "n": 396,
-          "predicted": 0.8515575678661617,
-          "observed": 0.8459595959595959
+          "n": 397,
+          "predicted": 0.8515575802896725,
+          "observed": 0.8463476070528967
         },
         {
           "line": 1.5,
           "bin": 0.9,
-          "n": 237,
-          "predicted": 0.9351513053797469,
-          "observed": 0.9578059071729957
+          "n": 239,
+          "predicted": 0.9350075183054394,
+          "observed": 0.9539748953974896
         },
         {
           "line": 3.5,
           "bin": 0.0,
-          "n": 707,
-          "predicted": 0.055590854844413014,
-          "observed": 0.06223479490806223
+          "n": 714,
+          "predicted": 0.0557406556372549,
+          "observed": 0.06302521008403361
         },
         {
           "line": 3.5,
           "bin": 0.1,
-          "n": 435,
-          "predicted": 0.14545617816091955,
-          "observed": 0.13793103448275862
+          "n": 437,
+          "predicted": 0.14542959811212813,
+          "observed": 0.13958810068649885
         },
         {
           "line": 3.5,
@@ -363,9 +363,9 @@
         {
           "line": 3.5,
           "bin": 0.3,
-          "n": 239,
-          "predicted": 0.3489637813807531,
-          "observed": 0.34309623430962344
+          "n": 242,
+          "predicted": 0.3490363507231405,
+          "observed": 0.34297520661157027
         },
         {
           "line": 3.5,
@@ -377,23 +377,23 @@
         {
           "line": 3.5,
           "bin": 0.5,
-          "n": 199,
-          "predicted": 0.5470614792713567,
-          "observed": 0.5276381909547738
+          "n": 200,
+          "predicted": 0.546884765625,
+          "observed": 0.525
         },
         {
           "line": 3.5,
           "bin": 0.6,
-          "n": 160,
-          "predicted": 0.64595947265625,
-          "observed": 0.6625
+          "n": 161,
+          "predicted": 0.6461689635093167,
+          "observed": 0.6645962732919255
         },
         {
           "line": 3.5,
           "bin": 0.7,
-          "n": 54,
-          "predicted": 0.7451171875,
-          "observed": 0.7407407407407407
+          "n": 55,
+          "predicted": 0.7446377840909091,
+          "observed": 0.7272727272727273
         },
         {
           "line": 3.5,
@@ -405,37 +405,37 @@
         {
           "line": 5.5,
           "bin": 0.0,
-          "n": 1578,
-          "predicted": 0.03225998098859316,
-          "observed": 0.030418250950570342
+          "n": 1588,
+          "predicted": 0.0321822851070529,
+          "observed": 0.030226700251889168
         },
         {
           "line": 5.5,
           "bin": 0.1,
-          "n": 382,
-          "predicted": 0.1472104057591623,
-          "observed": 0.13350785340314136
+          "n": 384,
+          "predicted": 0.14707438151041666,
+          "observed": 0.1328125
         },
         {
           "line": 5.5,
           "bin": 0.2,
-          "n": 247,
-          "predicted": 0.2500474443319838,
-          "observed": 0.27530364372469635
+          "n": 248,
+          "predicted": 0.24985824092741934,
+          "observed": 0.27419354838709675
         },
         {
           "line": 5.5,
           "bin": 0.3,
-          "n": 150,
-          "predicted": 0.3396354166666667,
-          "observed": 0.35333333333333333
+          "n": 151,
+          "predicted": 0.33975320778145696,
+          "observed": 0.3509933774834437
         },
         {
           "line": 5.5,
           "bin": 0.4,
-          "n": 40,
-          "predicted": 0.44140625,
-          "observed": 0.425
+          "n": 41,
+          "predicted": 0.4405011432926829,
+          "observed": 0.4146341463414634
         },
         {
           "line": 5.5,
@@ -454,16 +454,16 @@
         {
           "line": 7.5,
           "bin": 0.0,
-          "n": 2173,
-          "predicted": 0.01966247699033594,
-          "observed": 0.02024850437183617
+          "n": 2186,
+          "predicted": 0.019625064329826167,
+          "observed": 0.020128087831655993
         },
         {
           "line": 7.5,
           "bin": 0.1,
-          "n": 209,
-          "predicted": 0.13417688397129188,
-          "observed": 0.12440191387559808
+          "n": 211,
+          "predicted": 0.13432131220379148,
+          "observed": 0.12322274881516587
         },
         {
           "line": 7.5,
@@ -489,35 +489,35 @@
       ]
     },
     "receiving_tds": {
-      "n": 2461,
-      "mae": 0.2769263002844372,
-      "rmse": 0.4307206940404718,
-      "rollingBaselineMae": 0.285663009616687,
-      "crps": 0.14851513629713373,
-      "coverage80": 0.9447379114181227,
-      "meanWidth80": 0.574400650142219,
-      "fixedThresholdBrier": 0.07385155477450175,
-      "fixedThresholdLogLoss": 0.2586565060291848,
+      "n": 2476,
+      "mae": 0.2762307211732633,
+      "rmse": 0.42973567823086684,
+      "rollingBaselineMae": 0.28507673667205163,
+      "crps": 0.14790021159922365,
+      "coverage80": 0.9450726978998385,
+      "meanWidth80": 0.5741518578352184,
+      "fixedThresholdBrier": 0.07354651668345216,
+      "fixedThresholdLogLoss": 0.25772839995595764,
       "probability70Cohort": {
-        "n": 4710,
-        "meanEstimated": 0.9279023188694268,
-        "observedWinRate": 0.9218683651804671,
+        "n": 4738,
+        "meanEstimated": 0.9279812981479527,
+        "observedWinRate": 0.9223300970873787,
         "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
       },
       "reliability": [
         {
           "line": 0.5,
           "bin": 0.0,
-          "n": 1070,
-          "predicted": 0.0653767523364486,
-          "observed": 0.08411214953271028
+          "n": 1077,
+          "predicted": 0.06532541202414113,
+          "observed": 0.08356545961002786
         },
         {
           "line": 0.5,
           "bin": 0.1,
-          "n": 662,
-          "predicted": 0.14626900018882175,
-          "observed": 0.16163141993957703
+          "n": 668,
+          "predicted": 0.14632941148952097,
+          "observed": 0.1601796407185629
         },
         {
           "line": 0.5,
@@ -529,9 +529,9 @@
         {
           "line": 0.5,
           "bin": 0.3,
-          "n": 163,
-          "predicted": 0.3328340682515337,
-          "observed": 0.3558282208588957
+          "n": 165,
+          "predicted": 0.33316761363636366,
+          "observed": 0.3575757575757576
         },
         {
           "line": 0.5,
@@ -543,9 +543,9 @@
         {
           "line": 1.5,
           "bin": 0.0,
-          "n": 2436,
-          "predicted": 0.01804716363916256,
-          "observed": 0.02175697865353038
+          "n": 2451,
+          "predicted": 0.018068996073031415,
+          "observed": 0.021623827009383926
         },
         {
           "line": 1.5,
@@ -557,19 +557,19 @@
       ]
     },
     "targets": {
-      "n": 2461,
-      "mae": 1.8867473207029664,
-      "rmse": 2.488621537293639,
-      "rollingBaselineMae": 1.9321414059325477,
-      "crps": 1.3041084472457842,
-      "coverage80": 0.8821617228768793,
-      "meanWidth80": 5.84339699309224,
-      "fixedThresholdBrier": 0.12559712645194726,
-      "fixedThresholdLogLoss": 0.3910989321916935,
+      "n": 2476,
+      "mae": 1.8842513126009692,
+      "rmse": 2.4851806257169198,
+      "rollingBaselineMae": 1.9309369951534734,
+      "crps": 1.3022521516618129,
+      "coverage80": 0.8824717285945073,
+      "meanWidth80": 5.841882067851374,
+      "fixedThresholdBrier": 0.12554850716968347,
+      "fixedThresholdLogLoss": 0.39093506520471627,
       "probability70Cohort": {
-        "n": 7390,
-        "meanEstimated": 0.8923621976488498,
-        "observedWinRate": 0.8917456021650879,
+        "n": 7436,
+        "meanEstimated": 0.8924276219573696,
+        "observedWinRate": 0.891877353415815,
         "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
       },
       "reliability": [
@@ -583,30 +583,30 @@
         {
           "line": 2.5,
           "bin": 0.1,
-          "n": 228,
-          "predicted": 0.15721799616228072,
-          "observed": 0.14035087719298245
+          "n": 230,
+          "predicted": 0.1575577445652174,
+          "observed": 0.14347826086956522
         },
         {
           "line": 2.5,
           "bin": 0.2,
-          "n": 324,
-          "predicted": 0.2487280574845679,
-          "observed": 0.2623456790123457
+          "n": 327,
+          "predicted": 0.24915782683486237,
+          "observed": 0.2599388379204893
         },
         {
           "line": 2.5,
           "bin": 0.3,
-          "n": 277,
-          "predicted": 0.34737421028880866,
-          "observed": 0.35018050541516244
+          "n": 279,
+          "predicted": 0.34711021505376344,
+          "observed": 0.35125448028673834
         },
         {
           "line": 2.5,
           "bin": 0.4,
-          "n": 238,
-          "predicted": 0.45089285714285715,
-          "observed": 0.4831932773109244
+          "n": 240,
+          "predicted": 0.4508056640625,
+          "observed": 0.4875
         },
         {
           "line": 2.5,
@@ -618,65 +618,65 @@
         {
           "line": 2.5,
           "bin": 0.6,
-          "n": 194,
-          "predicted": 0.6476320876288659,
-          "observed": 0.654639175257732
+          "n": 195,
+          "predicted": 0.6476963141025641,
+          "observed": 0.6512820512820513
         },
         {
           "line": 2.5,
           "bin": 0.7,
-          "n": 232,
-          "predicted": 0.7526350350215517,
-          "observed": 0.75
+          "n": 234,
+          "predicted": 0.7526292067307693,
+          "observed": 0.7521367521367521
         },
         {
           "line": 2.5,
           "bin": 0.8,
-          "n": 336,
-          "predicted": 0.8500627790178571,
-          "observed": 0.8630952380952381
+          "n": 337,
+          "predicted": 0.8501135942136498,
+          "observed": 0.8635014836795252
         },
         {
           "line": 2.5,
           "bin": 0.9,
-          "n": 337,
-          "predicted": 0.9450748794510386,
-          "observed": 0.9465875370919882
+          "n": 339,
+          "predicted": 0.9451166113569321,
+          "observed": 0.9469026548672567
         },
         {
           "line": 4.5,
           "bin": 0.0,
-          "n": 584,
-          "predicted": 0.06026260166952055,
-          "observed": 0.06164383561643835
+          "n": 589,
+          "predicted": 0.060424182937181665,
+          "observed": 0.06281833616298811
         },
         {
           "line": 4.5,
           "bin": 0.1,
-          "n": 459,
-          "predicted": 0.14590141612200436,
-          "observed": 0.16122004357298475
+          "n": 462,
+          "predicted": 0.14573609983766234,
+          "observed": 0.16017316017316016
         },
         {
           "line": 4.5,
           "bin": 0.2,
-          "n": 343,
-          "predicted": 0.248439777696793,
-          "observed": 0.2594752186588921
+          "n": 344,
+          "predicted": 0.24830804869186046,
+          "observed": 0.2616279069767442
         },
         {
           "line": 4.5,
           "bin": 0.3,
-          "n": 188,
-          "predicted": 0.34732380319148937,
-          "observed": 0.3351063829787234
+          "n": 189,
+          "predicted": 0.34728422619047616,
+          "observed": 0.3333333333333333
         },
         {
           "line": 4.5,
           "bin": 0.4,
-          "n": 183,
-          "predicted": 0.44920807718579236,
-          "observed": 0.46994535519125685
+          "n": 185,
+          "predicted": 0.4492820945945946,
+          "observed": 0.4702702702702703
         },
         {
           "line": 4.5,
@@ -688,23 +688,23 @@
         {
           "line": 4.5,
           "bin": 0.6,
-          "n": 157,
-          "predicted": 0.6480518511146497,
-          "observed": 0.5987261146496815
+          "n": 158,
+          "predicted": 0.6477823378164557,
+          "observed": 0.6012658227848101
         },
         {
           "line": 4.5,
           "bin": 0.7,
-          "n": 164,
-          "predicted": 0.7479158727134146,
-          "observed": 0.7560975609756098
+          "n": 165,
+          "predicted": 0.7482125946969697,
+          "observed": 0.7515151515151515
         },
         {
           "line": 4.5,
           "bin": 0.8,
-          "n": 99,
-          "predicted": 0.8393110795454546,
-          "observed": 0.8484848484848485
+          "n": 100,
+          "predicted": 0.8395703125,
+          "observed": 0.85
         },
         {
           "line": 4.5,
@@ -716,16 +716,16 @@
         {
           "line": 6.5,
           "bin": 0.0,
-          "n": 1321,
-          "predicted": 0.03849031273656321,
-          "observed": 0.04617713853141559
+          "n": 1330,
+          "predicted": 0.038433975563909775,
+          "observed": 0.04586466165413534
         },
         {
           "line": 6.5,
           "bin": 0.1,
-          "n": 321,
-          "predicted": 0.14362465926791276,
-          "observed": 0.12149532710280374
+          "n": 324,
+          "predicted": 0.14381992669753085,
+          "observed": 0.12037037037037036
         },
         {
           "line": 6.5,
@@ -737,9 +737,9 @@
         {
           "line": 6.5,
           "bin": 0.3,
-          "n": 199,
-          "predicted": 0.3476660646984925,
-          "observed": 0.35175879396984927
+          "n": 200,
+          "predicted": 0.347626953125,
+          "observed": 0.35
         },
         {
           "line": 6.5,
@@ -751,16 +751,16 @@
         {
           "line": 6.5,
           "bin": 0.5,
-          "n": 120,
-          "predicted": 0.5424153645833333,
-          "observed": 0.6166666666666667
+          "n": 121,
+          "predicted": 0.542629777892562,
+          "observed": 0.6115702479338843
         },
         {
           "line": 6.5,
           "bin": 0.6,
-          "n": 50,
-          "predicted": 0.6424609375,
-          "observed": 0.6
+          "n": 51,
+          "predicted": 0.6430759803921569,
+          "observed": 0.5882352941176471
         },
         {
           "line": 6.5,
@@ -779,16 +779,16 @@
         {
           "line": 8.5,
           "bin": 0.0,
-          "n": 1760,
-          "predicted": 0.023283247514204547,
-          "observed": 0.025
+          "n": 1772,
+          "predicted": 0.023266656673250563,
+          "observed": 0.024830699774266364
         },
         {
           "line": 8.5,
           "bin": 0.1,
-          "n": 312,
-          "predicted": 0.14456881009615385,
-          "observed": 0.1346153846153846
+          "n": 313,
+          "predicted": 0.1445749301118211,
+          "observed": 0.134185303514377
         },
         {
           "line": 8.5,
@@ -800,16 +800,16 @@
         {
           "line": 8.5,
           "bin": 0.3,
-          "n": 110,
-          "predicted": 0.34019886363636365,
-          "observed": 0.36363636363636365
+          "n": 111,
+          "predicted": 0.34016047297297297,
+          "observed": 0.36036036036036034
         },
         {
           "line": 8.5,
           "bin": 0.4,
-          "n": 36,
-          "predicted": 0.4450412326388889,
-          "observed": 0.5277777777777778
+          "n": 37,
+          "predicted": 0.4440456081081081,
+          "observed": 0.5135135135135135
         },
         {
           "line": 8.5,
@@ -9812,6 +9812,579 @@
           ]
         }
       }
+    },
+    {
+      "week": 12,
+      "trainRows": 22264,
+      "testRows": 15,
+      "metrics": {
+        "receiving_yards": {
+          "n": 15,
+          "mae": 14.884635416666667,
+          "rmse": 19.055746901391437,
+          "rollingBaselineMae": 17.88888888888889,
+          "crps": 9.55889434814453,
+          "coverage80": 0.8666666666666667,
+          "meanWidth80": 53.13333333333335,
+          "fixedThresholdBrier": 0.10845012664794922,
+          "fixedThresholdLogLoss": 0.3392856019524037,
+          "probability70Cohort": {
+            "n": 49,
+            "meanEstimated": 0.8950892857142857,
+            "observedWinRate": 0.8979591836734694,
+            "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+          },
+          "reliability": [
+            {
+              "line": 19.5,
+              "bin": 0.1,
+              "n": 2,
+              "predicted": 0.17578125,
+              "observed": 0.5
+            },
+            {
+              "line": 19.5,
+              "bin": 0.2,
+              "n": 5,
+              "predicted": 0.240625,
+              "observed": 0.2
+            },
+            {
+              "line": 19.5,
+              "bin": 0.3,
+              "n": 2,
+              "predicted": 0.3720703125,
+              "observed": 0.5
+            },
+            {
+              "line": 19.5,
+              "bin": 0.4,
+              "n": 1,
+              "predicted": 0.48828125,
+              "observed": 0.0
+            },
+            {
+              "line": 19.5,
+              "bin": 0.5,
+              "n": 1,
+              "predicted": 0.529296875,
+              "observed": 0.0
+            },
+            {
+              "line": 19.5,
+              "bin": 0.6,
+              "n": 1,
+              "predicted": 0.640625,
+              "observed": 0.0
+            },
+            {
+              "line": 19.5,
+              "bin": 0.7,
+              "n": 1,
+              "predicted": 0.751953125,
+              "observed": 1.0
+            },
+            {
+              "line": 19.5,
+              "bin": 0.8,
+              "n": 2,
+              "predicted": 0.8876953125,
+              "observed": 1.0
+            },
+            {
+              "line": 39.5,
+              "bin": 0.0,
+              "n": 6,
+              "predicted": 0.06477864583333333,
+              "observed": 0.0
+            },
+            {
+              "line": 39.5,
+              "bin": 0.1,
+              "n": 3,
+              "predicted": 0.14322916666666666,
+              "observed": 0.3333333333333333
+            },
+            {
+              "line": 39.5,
+              "bin": 0.2,
+              "n": 2,
+              "predicted": 0.2587890625,
+              "observed": 0.0
+            },
+            {
+              "line": 39.5,
+              "bin": 0.3,
+              "n": 1,
+              "predicted": 0.3359375,
+              "observed": 0.0
+            },
+            {
+              "line": 39.5,
+              "bin": 0.4,
+              "n": 1,
+              "predicted": 0.4609375,
+              "observed": 0.0
+            },
+            {
+              "line": 39.5,
+              "bin": 0.7,
+              "n": 2,
+              "predicted": 0.7255859375,
+              "observed": 0.5
+            },
+            {
+              "line": 59.5,
+              "bin": 0.0,
+              "n": 9,
+              "predicted": 0.030598958333333332,
+              "observed": 0.1111111111111111
+            },
+            {
+              "line": 59.5,
+              "bin": 0.1,
+              "n": 3,
+              "predicted": 0.11393229166666667,
+              "observed": 0.0
+            },
+            {
+              "line": 59.5,
+              "bin": 0.2,
+              "n": 1,
+              "predicted": 0.265625,
+              "observed": 0.0
+            },
+            {
+              "line": 59.5,
+              "bin": 0.4,
+              "n": 1,
+              "predicted": 0.482421875,
+              "observed": 0.0
+            },
+            {
+              "line": 59.5,
+              "bin": 0.5,
+              "n": 1,
+              "predicted": 0.513671875,
+              "observed": 1.0
+            },
+            {
+              "line": 79.5,
+              "bin": 0.0,
+              "n": 12,
+              "predicted": 0.02001953125,
+              "observed": 0.0
+            },
+            {
+              "line": 79.5,
+              "bin": 0.1,
+              "n": 1,
+              "predicted": 0.10546875,
+              "observed": 0.0
+            },
+            {
+              "line": 79.5,
+              "bin": 0.3,
+              "n": 2,
+              "predicted": 0.3310546875,
+              "observed": 0.0
+            }
+          ]
+        },
+        "receptions": {
+          "n": 15,
+          "mae": 1.2692708333333333,
+          "rmse": 1.647752529735974,
+          "rollingBaselineMae": 1.4888888888888887,
+          "crps": 0.8620941162109375,
+          "coverage80": 0.8666666666666667,
+          "meanWidth80": 4.326666666666669,
+          "fixedThresholdBrier": 0.12283134460449219,
+          "fixedThresholdLogLoss": 0.3791332099302959,
+          "probability70Cohort": {
+            "n": 46,
+            "meanEstimated": 0.9187754755434783,
+            "observedWinRate": 0.8695652173913043,
+            "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+          },
+          "reliability": [
+            {
+              "line": 1.5,
+              "bin": 0.2,
+              "n": 2,
+              "predicted": 0.2490234375,
+              "observed": 0.5
+            },
+            {
+              "line": 1.5,
+              "bin": 0.3,
+              "n": 3,
+              "predicted": 0.33984375,
+              "observed": 0.3333333333333333
+            },
+            {
+              "line": 1.5,
+              "bin": 0.4,
+              "n": 4,
+              "predicted": 0.439453125,
+              "observed": 0.5
+            },
+            {
+              "line": 1.5,
+              "bin": 0.7,
+              "n": 3,
+              "predicted": 0.7493489583333334,
+              "observed": 0.6666666666666666
+            },
+            {
+              "line": 1.5,
+              "bin": 0.8,
+              "n": 1,
+              "predicted": 0.8515625,
+              "observed": 1.0
+            },
+            {
+              "line": 1.5,
+              "bin": 0.9,
+              "n": 2,
+              "predicted": 0.91796875,
+              "observed": 0.5
+            },
+            {
+              "line": 3.5,
+              "bin": 0.0,
+              "n": 7,
+              "predicted": 0.07087053571428571,
+              "observed": 0.14285714285714285
+            },
+            {
+              "line": 3.5,
+              "bin": 0.1,
+              "n": 2,
+              "predicted": 0.1396484375,
+              "observed": 0.5
+            },
+            {
+              "line": 3.5,
+              "bin": 0.3,
+              "n": 3,
+              "predicted": 0.3548177083333333,
+              "observed": 0.3333333333333333
+            },
+            {
+              "line": 3.5,
+              "bin": 0.5,
+              "n": 1,
+              "predicted": 0.51171875,
+              "observed": 0.0
+            },
+            {
+              "line": 3.5,
+              "bin": 0.6,
+              "n": 1,
+              "predicted": 0.6796875,
+              "observed": 1.0
+            },
+            {
+              "line": 3.5,
+              "bin": 0.7,
+              "n": 1,
+              "predicted": 0.71875,
+              "observed": 0.0
+            },
+            {
+              "line": 5.5,
+              "bin": 0.0,
+              "n": 10,
+              "predicted": 0.019921875,
+              "observed": 0.0
+            },
+            {
+              "line": 5.5,
+              "bin": 0.1,
+              "n": 2,
+              "predicted": 0.12109375,
+              "observed": 0.0
+            },
+            {
+              "line": 5.5,
+              "bin": 0.2,
+              "n": 1,
+              "predicted": 0.203125,
+              "observed": 0.0
+            },
+            {
+              "line": 5.5,
+              "bin": 0.3,
+              "n": 1,
+              "predicted": 0.357421875,
+              "observed": 0.0
+            },
+            {
+              "line": 5.5,
+              "bin": 0.4,
+              "n": 1,
+              "predicted": 0.404296875,
+              "observed": 0.0
+            },
+            {
+              "line": 7.5,
+              "bin": 0.0,
+              "n": 13,
+              "predicted": 0.01337139423076923,
+              "observed": 0.0
+            },
+            {
+              "line": 7.5,
+              "bin": 0.1,
+              "n": 2,
+              "predicted": 0.1494140625,
+              "observed": 0.0
+            }
+          ]
+        },
+        "receiving_tds": {
+          "n": 15,
+          "mae": 0.162109375,
+          "rmse": 0.21357878075593723,
+          "rollingBaselineMae": 0.18888888888888886,
+          "crps": 0.04701156616210937,
+          "coverage80": 1.0,
+          "meanWidth80": 0.5333333333333333,
+          "fixedThresholdBrier": 0.02349993387858073,
+          "fixedThresholdLogLoss": 0.10545713020848894,
+          "probability70Cohort": {
+            "n": 28,
+            "meanEstimated": 0.9412667410714286,
+            "observedWinRate": 1.0,
+            "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+          },
+          "reliability": [
+            {
+              "line": 0.5,
+              "bin": 0.0,
+              "n": 7,
+              "predicted": 0.05747767857142857,
+              "observed": 0.0
+            },
+            {
+              "line": 0.5,
+              "bin": 0.1,
+              "n": 6,
+              "predicted": 0.15299479166666666,
+              "observed": 0.0
+            },
+            {
+              "line": 0.5,
+              "bin": 0.3,
+              "n": 2,
+              "predicted": 0.3603515625,
+              "observed": 0.5
+            },
+            {
+              "line": 1.5,
+              "bin": 0.0,
+              "n": 15,
+              "predicted": 0.021614583333333333,
+              "observed": 0.0
+            }
+          ]
+        },
+        "targets": {
+          "n": 15,
+          "mae": 1.4747395833333334,
+          "rmse": 1.8352705459653682,
+          "rollingBaselineMae": 1.7333333333333332,
+          "crps": 0.9976959228515625,
+          "coverage80": 0.9333333333333333,
+          "meanWidth80": 5.5933333333333355,
+          "fixedThresholdBrier": 0.1175717035929362,
+          "fixedThresholdLogLoss": 0.3640499548746548,
+          "probability70Cohort": {
+            "n": 46,
+            "meanEstimated": 0.902938179347826,
+            "observedWinRate": 0.9130434782608695,
+            "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+          },
+          "reliability": [
+            {
+              "line": 2.5,
+              "bin": 0.1,
+              "n": 2,
+              "predicted": 0.1962890625,
+              "observed": 0.5
+            },
+            {
+              "line": 2.5,
+              "bin": 0.2,
+              "n": 3,
+              "predicted": 0.2955729166666667,
+              "observed": 0.0
+            },
+            {
+              "line": 2.5,
+              "bin": 0.3,
+              "n": 2,
+              "predicted": 0.310546875,
+              "observed": 0.5
+            },
+            {
+              "line": 2.5,
+              "bin": 0.4,
+              "n": 2,
+              "predicted": 0.4404296875,
+              "observed": 1.0
+            },
+            {
+              "line": 2.5,
+              "bin": 0.6,
+              "n": 1,
+              "predicted": 0.66015625,
+              "observed": 0.0
+            },
+            {
+              "line": 2.5,
+              "bin": 0.7,
+              "n": 2,
+              "predicted": 0.751953125,
+              "observed": 1.0
+            },
+            {
+              "line": 2.5,
+              "bin": 0.8,
+              "n": 1,
+              "predicted": 0.8671875,
+              "observed": 1.0
+            },
+            {
+              "line": 2.5,
+              "bin": 0.9,
+              "n": 2,
+              "predicted": 0.9521484375,
+              "observed": 1.0
+            },
+            {
+              "line": 4.5,
+              "bin": 0.0,
+              "n": 5,
+              "predicted": 0.079296875,
+              "observed": 0.2
+            },
+            {
+              "line": 4.5,
+              "bin": 0.1,
+              "n": 3,
+              "predicted": 0.12044270833333333,
+              "observed": 0.0
+            },
+            {
+              "line": 4.5,
+              "bin": 0.2,
+              "n": 1,
+              "predicted": 0.203125,
+              "observed": 1.0
+            },
+            {
+              "line": 4.5,
+              "bin": 0.3,
+              "n": 1,
+              "predicted": 0.33984375,
+              "observed": 0.0
+            },
+            {
+              "line": 4.5,
+              "bin": 0.4,
+              "n": 2,
+              "predicted": 0.4560546875,
+              "observed": 0.5
+            },
+            {
+              "line": 4.5,
+              "bin": 0.6,
+              "n": 1,
+              "predicted": 0.60546875,
+              "observed": 1.0
+            },
+            {
+              "line": 4.5,
+              "bin": 0.7,
+              "n": 1,
+              "predicted": 0.796875,
+              "observed": 0.0
+            },
+            {
+              "line": 4.5,
+              "bin": 0.8,
+              "n": 1,
+              "predicted": 0.865234375,
+              "observed": 1.0
+            },
+            {
+              "line": 6.5,
+              "bin": 0.0,
+              "n": 9,
+              "predicted": 0.030164930555555556,
+              "observed": 0.0
+            },
+            {
+              "line": 6.5,
+              "bin": 0.1,
+              "n": 3,
+              "predicted": 0.16471354166666666,
+              "observed": 0.0
+            },
+            {
+              "line": 6.5,
+              "bin": 0.3,
+              "n": 1,
+              "predicted": 0.33984375,
+              "observed": 0.0
+            },
+            {
+              "line": 6.5,
+              "bin": 0.5,
+              "n": 1,
+              "predicted": 0.568359375,
+              "observed": 0.0
+            },
+            {
+              "line": 6.5,
+              "bin": 0.6,
+              "n": 1,
+              "predicted": 0.673828125,
+              "observed": 0.0
+            },
+            {
+              "line": 8.5,
+              "bin": 0.0,
+              "n": 12,
+              "predicted": 0.020833333333333332,
+              "observed": 0.0
+            },
+            {
+              "line": 8.5,
+              "bin": 0.1,
+              "n": 1,
+              "predicted": 0.146484375,
+              "observed": 0.0
+            },
+            {
+              "line": 8.5,
+              "bin": 0.3,
+              "n": 1,
+              "predicted": 0.3359375,
+              "observed": 0.0
+            },
+            {
+              "line": 8.5,
+              "bin": 0.4,
+              "n": 1,
+              "predicted": 0.408203125,
+              "observed": 0.0
+            }
+          ]
+        }
+      }
     }
   ],
   "latestWeekHoldout": {
@@ -10639,8 +11212,10 @@
       }
     }
   },
-  "latestObservedWeek": 11,
-  "partialWeeks": [],
+  "latestObservedWeek": 12,
+  "partialWeeks": [
+    12
+  ],
   "configurationTunedOnLatestWeek": false,
   "roi": null,
   "closingLineValue": null,
@@ -10698,19 +11273,19 @@
       "evaluation": "Reconstructed historical features; final-corrected public outcomes. Not a point-in-time odds backtest.",
       "aggregate": {
         "receiving_yards": {
-          "n": 2461,
-          "mae": 19.11767558284234,
-          "rmse": 26.497879438587905,
-          "rollingBaselineMae": 19.70847893810104,
-          "crps": 13.072351549467097,
-          "coverage80": 0.8516863063795205,
-          "meanWidth80": 57.262169849654626,
-          "fixedThresholdBrier": 0.12621334344088087,
-          "fixedThresholdLogLoss": 0.39370261564087694,
+          "n": 2476,
+          "mae": 19.092031155341274,
+          "rmse": 26.459096760567647,
+          "rollingBaselineMae": 19.697455573505653,
+          "crps": 13.051066469491396,
+          "coverage80": 0.8517770597738288,
+          "meanWidth80": 57.237156704361894,
+          "fixedThresholdBrier": 0.1261057310612791,
+          "fixedThresholdLogLoss": 0.39337294875665757,
           "probability70Cohort": {
-            "n": 7456,
-            "meanEstimated": 0.8930103482094958,
-            "observedWinRate": 0.8884120171673819,
+            "n": 7505,
+            "meanEstimated": 0.8930239215522985,
+            "observedWinRate": 0.8884743504330447,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -10724,58 +11299,58 @@
             {
               "line": 19.5,
               "bin": 0.1,
-              "n": 352,
-              "predicted": 0.15641091086647727,
-              "observed": 0.14772727272727273
+              "n": 354,
+              "predicted": 0.15652034781073446,
+              "observed": 0.1497175141242938
             },
             {
               "line": 19.5,
               "bin": 0.2,
-              "n": 391,
-              "predicted": 0.24649836157289,
-              "observed": 0.24296675191815856
+              "n": 396,
+              "predicted": 0.2464242029671717,
+              "observed": 0.24242424242424243
             },
             {
               "line": 19.5,
               "bin": 0.3,
-              "n": 394,
-              "predicted": 0.34944083121827413,
-              "observed": 0.3680203045685279
+              "n": 396,
+              "predicted": 0.3495551215277778,
+              "observed": 0.3686868686868687
             },
             {
               "line": 19.5,
               "bin": 0.4,
-              "n": 258,
-              "predicted": 0.4443813590116279,
-              "observed": 0.4573643410852713
+              "n": 259,
+              "predicted": 0.44455085666023164,
+              "observed": 0.4555984555984556
             },
             {
               "line": 19.5,
               "bin": 0.5,
-              "n": 206,
-              "predicted": 0.5522318719660194,
-              "observed": 0.5097087378640777
+              "n": 207,
+              "predicted": 0.552121074879227,
+              "observed": 0.5072463768115942
             },
             {
               "line": 19.5,
               "bin": 0.6,
-              "n": 264,
-              "predicted": 0.6506051728219697,
-              "observed": 0.6553030303030303
+              "n": 265,
+              "predicted": 0.6505675117924529,
+              "observed": 0.6528301886792452
             },
             {
               "line": 19.5,
               "bin": 0.7,
-              "n": 232,
-              "predicted": 0.7475080818965517,
-              "observed": 0.7672413793103449
+              "n": 233,
+              "predicted": 0.747527159334764,
+              "observed": 0.7682403433476395
             },
             {
               "line": 19.5,
               "bin": 0.8,
-              "n": 240,
-              "predicted": 0.8521321614583334,
-              "observed": 0.8458333333333333
+              "n": 242,
+              "predicted": 0.8524260717975206,
+              "observed": 0.8471074380165289
             },
             {
               "line": 19.5,
@@ -10787,37 +11362,37 @@
             {
               "line": 39.5,
               "bin": 0.0,
-              "n": 686,
-              "predicted": 0.058582361516034985,
-              "observed": 0.05393586005830904
+              "n": 692,
+              "predicted": 0.05863608652456647,
+              "observed": 0.05346820809248555
             },
             {
               "line": 39.5,
               "bin": 0.1,
-              "n": 592,
-              "predicted": 0.14202385979729729,
-              "observed": 0.16216216216216217
+              "n": 595,
+              "predicted": 0.1420299369747899,
+              "observed": 0.16302521008403362
             },
             {
               "line": 39.5,
               "bin": 0.2,
-              "n": 290,
-              "predicted": 0.2474609375,
-              "observed": 0.2482758620689655
+              "n": 292,
+              "predicted": 0.24753852739726026,
+              "observed": 0.2465753424657534
             },
             {
               "line": 39.5,
               "bin": 0.3,
-              "n": 272,
-              "predicted": 0.35156968060661764,
-              "observed": 0.33455882352941174
+              "n": 273,
+              "predicted": 0.3515124198717949,
+              "observed": 0.3333333333333333
             },
             {
               "line": 39.5,
               "bin": 0.4,
-              "n": 216,
-              "predicted": 0.44370298032407407,
-              "observed": 0.48148148148148145
+              "n": 217,
+              "predicted": 0.4437824020737327,
+              "observed": 0.4792626728110599
             },
             {
               "line": 39.5,
@@ -10836,9 +11411,9 @@
             {
               "line": 39.5,
               "bin": 0.7,
-              "n": 71,
-              "predicted": 0.7428477112676056,
-              "observed": 0.7746478873239436
+              "n": 73,
+              "predicted": 0.7423747859589042,
+              "observed": 0.7671232876712328
             },
             {
               "line": 39.5,
@@ -10850,23 +11425,23 @@
             {
               "line": 59.5,
               "bin": 0.0,
-              "n": 1388,
-              "predicted": 0.03809297325288184,
-              "observed": 0.048270893371757925
+              "n": 1397,
+              "predicted": 0.03804469398711525,
+              "observed": 0.048675733715103794
             },
             {
               "line": 59.5,
               "bin": 0.1,
-              "n": 423,
-              "predicted": 0.14744939420803782,
-              "observed": 0.15839243498817968
+              "n": 426,
+              "predicted": 0.14721335827464788,
+              "observed": 0.1572769953051643
             },
             {
               "line": 59.5,
               "bin": 0.2,
-              "n": 265,
-              "predicted": 0.2422759433962264,
-              "observed": 0.24528301886792453
+              "n": 266,
+              "predicted": 0.24236372180451127,
+              "observed": 0.24436090225563908
             },
             {
               "line": 59.5,
@@ -10878,16 +11453,16 @@
             {
               "line": 59.5,
               "bin": 0.4,
-              "n": 142,
-              "predicted": 0.44421214788732394,
-              "observed": 0.4507042253521127
+              "n": 143,
+              "predicted": 0.4444793487762238,
+              "observed": 0.44755244755244755
             },
             {
               "line": 59.5,
               "bin": 0.5,
-              "n": 40,
-              "predicted": 0.548046875,
-              "observed": 0.575
+              "n": 41,
+              "predicted": 0.5472084603658537,
+              "observed": 0.5853658536585366
             },
             {
               "line": 59.5,
@@ -10906,16 +11481,16 @@
             {
               "line": 79.5,
               "bin": 0.0,
-              "n": 1869,
-              "predicted": 0.02717341325575174,
-              "observed": 0.033707865168539325
+              "n": 1881,
+              "predicted": 0.027127774455077087,
+              "observed": 0.03349282296650718
             },
             {
               "line": 79.5,
               "bin": 0.1,
-              "n": 283,
-              "predicted": 0.14003147084805653,
-              "observed": 0.1166077738515901
+              "n": 284,
+              "predicted": 0.13990977112676056,
+              "observed": 0.11619718309859155
             },
             {
               "line": 79.5,
@@ -10927,9 +11502,9 @@
             {
               "line": 79.5,
               "bin": 0.3,
-              "n": 54,
-              "predicted": 0.34085648148148145,
-              "observed": 0.37037037037037035
+              "n": 56,
+              "predicted": 0.3405064174107143,
+              "observed": 0.35714285714285715
             },
             {
               "line": 79.5,
@@ -10948,19 +11523,19 @@
           ]
         },
         "receptions": {
-          "n": 2461,
-          "mae": 1.4411641926554246,
-          "rmse": 1.9068367170307925,
-          "rollingBaselineMae": 1.4749356630096166,
-          "crps": 0.984100535554355,
-          "coverage80": 0.9061357171881349,
-          "meanWidth80": 4.4884599756196675,
-          "fixedThresholdBrier": 0.1114806567009558,
-          "fixedThresholdLogLoss": 0.34908534137339625,
+          "n": 2476,
+          "mae": 1.440122835470517,
+          "rmse": 1.9053732122659792,
+          "rollingBaselineMae": 1.475020193861066,
+          "crps": 0.983361401349932,
+          "coverage80": 0.9058966074313409,
+          "meanWidth80": 4.487479806138936,
+          "fixedThresholdBrier": 0.11154942096531488,
+          "fixedThresholdLogLoss": 0.3492673761182887,
           "probability70Cohort": {
-            "n": 7592,
-            "meanEstimated": 0.907200836406744,
-            "observedWinRate": 0.9089831401475237,
+            "n": 7638,
+            "meanEstimated": 0.9072705448906782,
+            "observedWinRate": 0.9087457449594134,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -10981,23 +11556,23 @@
             {
               "line": 1.5,
               "bin": 0.2,
-              "n": 258,
-              "predicted": 0.2492656855620155,
-              "observed": 0.23255813953488372
+              "n": 260,
+              "predicted": 0.24926382211538461,
+              "observed": 0.23461538461538461
             },
             {
               "line": 1.5,
               "bin": 0.3,
-              "n": 343,
-              "predicted": 0.34902286807580174,
-              "observed": 0.37026239067055394
+              "n": 346,
+              "predicted": 0.3489432803468208,
+              "observed": 0.3699421965317919
             },
             {
               "line": 1.5,
               "bin": 0.4,
-              "n": 268,
-              "predicted": 0.44771017957089554,
-              "observed": 0.43283582089552236
+              "n": 272,
+              "predicted": 0.4475887522977941,
+              "observed": 0.4338235294117647
             },
             {
               "line": 1.5,
@@ -11016,37 +11591,37 @@
             {
               "line": 1.5,
               "bin": 0.7,
-              "n": 293,
-              "predicted": 0.7512798634812287,
-              "observed": 0.7508532423208191
+              "n": 296,
+              "predicted": 0.7512602934966216,
+              "observed": 0.75
             },
             {
               "line": 1.5,
               "bin": 0.8,
-              "n": 396,
-              "predicted": 0.8515575678661617,
-              "observed": 0.8459595959595959
+              "n": 397,
+              "predicted": 0.8515575802896725,
+              "observed": 0.8463476070528967
             },
             {
               "line": 1.5,
               "bin": 0.9,
-              "n": 237,
-              "predicted": 0.9351513053797469,
-              "observed": 0.9578059071729957
+              "n": 239,
+              "predicted": 0.9350075183054394,
+              "observed": 0.9539748953974896
             },
             {
               "line": 3.5,
               "bin": 0.0,
-              "n": 707,
-              "predicted": 0.055590854844413014,
-              "observed": 0.06223479490806223
+              "n": 714,
+              "predicted": 0.0557406556372549,
+              "observed": 0.06302521008403361
             },
             {
               "line": 3.5,
               "bin": 0.1,
-              "n": 435,
-              "predicted": 0.14545617816091955,
-              "observed": 0.13793103448275862
+              "n": 437,
+              "predicted": 0.14542959811212813,
+              "observed": 0.13958810068649885
             },
             {
               "line": 3.5,
@@ -11058,9 +11633,9 @@
             {
               "line": 3.5,
               "bin": 0.3,
-              "n": 239,
-              "predicted": 0.3489637813807531,
-              "observed": 0.34309623430962344
+              "n": 242,
+              "predicted": 0.3490363507231405,
+              "observed": 0.34297520661157027
             },
             {
               "line": 3.5,
@@ -11072,23 +11647,23 @@
             {
               "line": 3.5,
               "bin": 0.5,
-              "n": 199,
-              "predicted": 0.5470614792713567,
-              "observed": 0.5276381909547738
+              "n": 200,
+              "predicted": 0.546884765625,
+              "observed": 0.525
             },
             {
               "line": 3.5,
               "bin": 0.6,
-              "n": 160,
-              "predicted": 0.64595947265625,
-              "observed": 0.6625
+              "n": 161,
+              "predicted": 0.6461689635093167,
+              "observed": 0.6645962732919255
             },
             {
               "line": 3.5,
               "bin": 0.7,
-              "n": 54,
-              "predicted": 0.7451171875,
-              "observed": 0.7407407407407407
+              "n": 55,
+              "predicted": 0.7446377840909091,
+              "observed": 0.7272727272727273
             },
             {
               "line": 3.5,
@@ -11100,37 +11675,37 @@
             {
               "line": 5.5,
               "bin": 0.0,
-              "n": 1578,
-              "predicted": 0.03225998098859316,
-              "observed": 0.030418250950570342
+              "n": 1588,
+              "predicted": 0.0321822851070529,
+              "observed": 0.030226700251889168
             },
             {
               "line": 5.5,
               "bin": 0.1,
-              "n": 382,
-              "predicted": 0.1472104057591623,
-              "observed": 0.13350785340314136
+              "n": 384,
+              "predicted": 0.14707438151041666,
+              "observed": 0.1328125
             },
             {
               "line": 5.5,
               "bin": 0.2,
-              "n": 247,
-              "predicted": 0.2500474443319838,
-              "observed": 0.27530364372469635
+              "n": 248,
+              "predicted": 0.24985824092741934,
+              "observed": 0.27419354838709675
             },
             {
               "line": 5.5,
               "bin": 0.3,
-              "n": 150,
-              "predicted": 0.3396354166666667,
-              "observed": 0.35333333333333333
+              "n": 151,
+              "predicted": 0.33975320778145696,
+              "observed": 0.3509933774834437
             },
             {
               "line": 5.5,
               "bin": 0.4,
-              "n": 40,
-              "predicted": 0.44140625,
-              "observed": 0.425
+              "n": 41,
+              "predicted": 0.4405011432926829,
+              "observed": 0.4146341463414634
             },
             {
               "line": 5.5,
@@ -11149,16 +11724,16 @@
             {
               "line": 7.5,
               "bin": 0.0,
-              "n": 2173,
-              "predicted": 0.01966247699033594,
-              "observed": 0.02024850437183617
+              "n": 2186,
+              "predicted": 0.019625064329826167,
+              "observed": 0.020128087831655993
             },
             {
               "line": 7.5,
               "bin": 0.1,
-              "n": 209,
-              "predicted": 0.13417688397129188,
-              "observed": 0.12440191387559808
+              "n": 211,
+              "predicted": 0.13432131220379148,
+              "observed": 0.12322274881516587
             },
             {
               "line": 7.5,
@@ -11184,35 +11759,35 @@
           ]
         },
         "receiving_tds": {
-          "n": 2461,
-          "mae": 0.2769263002844372,
-          "rmse": 0.4307206940404718,
-          "rollingBaselineMae": 0.285663009616687,
-          "crps": 0.14851513629713373,
-          "coverage80": 0.9447379114181227,
-          "meanWidth80": 0.574400650142219,
-          "fixedThresholdBrier": 0.07385155477450175,
-          "fixedThresholdLogLoss": 0.2586565060291848,
+          "n": 2476,
+          "mae": 0.2762307211732633,
+          "rmse": 0.42973567823086684,
+          "rollingBaselineMae": 0.28507673667205163,
+          "crps": 0.14790021159922365,
+          "coverage80": 0.9450726978998385,
+          "meanWidth80": 0.5741518578352184,
+          "fixedThresholdBrier": 0.07354651668345216,
+          "fixedThresholdLogLoss": 0.25772839995595764,
           "probability70Cohort": {
-            "n": 4710,
-            "meanEstimated": 0.9279023188694268,
-            "observedWinRate": 0.9218683651804671,
+            "n": 4738,
+            "meanEstimated": 0.9279812981479527,
+            "observedWinRate": 0.9223300970873787,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
             {
               "line": 0.5,
               "bin": 0.0,
-              "n": 1070,
-              "predicted": 0.0653767523364486,
-              "observed": 0.08411214953271028
+              "n": 1077,
+              "predicted": 0.06532541202414113,
+              "observed": 0.08356545961002786
             },
             {
               "line": 0.5,
               "bin": 0.1,
-              "n": 662,
-              "predicted": 0.14626900018882175,
-              "observed": 0.16163141993957703
+              "n": 668,
+              "predicted": 0.14632941148952097,
+              "observed": 0.1601796407185629
             },
             {
               "line": 0.5,
@@ -11224,9 +11799,9 @@
             {
               "line": 0.5,
               "bin": 0.3,
-              "n": 163,
-              "predicted": 0.3328340682515337,
-              "observed": 0.3558282208588957
+              "n": 165,
+              "predicted": 0.33316761363636366,
+              "observed": 0.3575757575757576
             },
             {
               "line": 0.5,
@@ -11238,9 +11813,9 @@
             {
               "line": 1.5,
               "bin": 0.0,
-              "n": 2436,
-              "predicted": 0.01804716363916256,
-              "observed": 0.02175697865353038
+              "n": 2451,
+              "predicted": 0.018068996073031415,
+              "observed": 0.021623827009383926
             },
             {
               "line": 1.5,
@@ -11252,19 +11827,19 @@
           ]
         },
         "targets": {
-          "n": 2461,
-          "mae": 1.8867473207029664,
-          "rmse": 2.488621537293639,
-          "rollingBaselineMae": 1.9321414059325477,
-          "crps": 1.3041084472457842,
-          "coverage80": 0.8821617228768793,
-          "meanWidth80": 5.84339699309224,
-          "fixedThresholdBrier": 0.12559712645194726,
-          "fixedThresholdLogLoss": 0.3910989321916935,
+          "n": 2476,
+          "mae": 1.8842513126009692,
+          "rmse": 2.4851806257169198,
+          "rollingBaselineMae": 1.9309369951534734,
+          "crps": 1.3022521516618129,
+          "coverage80": 0.8824717285945073,
+          "meanWidth80": 5.841882067851374,
+          "fixedThresholdBrier": 0.12554850716968347,
+          "fixedThresholdLogLoss": 0.39093506520471627,
           "probability70Cohort": {
-            "n": 7390,
-            "meanEstimated": 0.8923621976488498,
-            "observedWinRate": 0.8917456021650879,
+            "n": 7436,
+            "meanEstimated": 0.8924276219573696,
+            "observedWinRate": 0.891877353415815,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -11278,30 +11853,30 @@
             {
               "line": 2.5,
               "bin": 0.1,
-              "n": 228,
-              "predicted": 0.15721799616228072,
-              "observed": 0.14035087719298245
+              "n": 230,
+              "predicted": 0.1575577445652174,
+              "observed": 0.14347826086956522
             },
             {
               "line": 2.5,
               "bin": 0.2,
-              "n": 324,
-              "predicted": 0.2487280574845679,
-              "observed": 0.2623456790123457
+              "n": 327,
+              "predicted": 0.24915782683486237,
+              "observed": 0.2599388379204893
             },
             {
               "line": 2.5,
               "bin": 0.3,
-              "n": 277,
-              "predicted": 0.34737421028880866,
-              "observed": 0.35018050541516244
+              "n": 279,
+              "predicted": 0.34711021505376344,
+              "observed": 0.35125448028673834
             },
             {
               "line": 2.5,
               "bin": 0.4,
-              "n": 238,
-              "predicted": 0.45089285714285715,
-              "observed": 0.4831932773109244
+              "n": 240,
+              "predicted": 0.4508056640625,
+              "observed": 0.4875
             },
             {
               "line": 2.5,
@@ -11313,65 +11888,65 @@
             {
               "line": 2.5,
               "bin": 0.6,
-              "n": 194,
-              "predicted": 0.6476320876288659,
-              "observed": 0.654639175257732
+              "n": 195,
+              "predicted": 0.6476963141025641,
+              "observed": 0.6512820512820513
             },
             {
               "line": 2.5,
               "bin": 0.7,
-              "n": 232,
-              "predicted": 0.7526350350215517,
-              "observed": 0.75
+              "n": 234,
+              "predicted": 0.7526292067307693,
+              "observed": 0.7521367521367521
             },
             {
               "line": 2.5,
               "bin": 0.8,
-              "n": 336,
-              "predicted": 0.8500627790178571,
-              "observed": 0.8630952380952381
+              "n": 337,
+              "predicted": 0.8501135942136498,
+              "observed": 0.8635014836795252
             },
             {
               "line": 2.5,
               "bin": 0.9,
-              "n": 337,
-              "predicted": 0.9450748794510386,
-              "observed": 0.9465875370919882
+              "n": 339,
+              "predicted": 0.9451166113569321,
+              "observed": 0.9469026548672567
             },
             {
               "line": 4.5,
               "bin": 0.0,
-              "n": 584,
-              "predicted": 0.06026260166952055,
-              "observed": 0.06164383561643835
+              "n": 589,
+              "predicted": 0.060424182937181665,
+              "observed": 0.06281833616298811
             },
             {
               "line": 4.5,
               "bin": 0.1,
-              "n": 459,
-              "predicted": 0.14590141612200436,
-              "observed": 0.16122004357298475
+              "n": 462,
+              "predicted": 0.14573609983766234,
+              "observed": 0.16017316017316016
             },
             {
               "line": 4.5,
               "bin": 0.2,
-              "n": 343,
-              "predicted": 0.248439777696793,
-              "observed": 0.2594752186588921
+              "n": 344,
+              "predicted": 0.24830804869186046,
+              "observed": 0.2616279069767442
             },
             {
               "line": 4.5,
               "bin": 0.3,
-              "n": 188,
-              "predicted": 0.34732380319148937,
-              "observed": 0.3351063829787234
+              "n": 189,
+              "predicted": 0.34728422619047616,
+              "observed": 0.3333333333333333
             },
             {
               "line": 4.5,
               "bin": 0.4,
-              "n": 183,
-              "predicted": 0.44920807718579236,
-              "observed": 0.46994535519125685
+              "n": 185,
+              "predicted": 0.4492820945945946,
+              "observed": 0.4702702702702703
             },
             {
               "line": 4.5,
@@ -11383,23 +11958,23 @@
             {
               "line": 4.5,
               "bin": 0.6,
-              "n": 157,
-              "predicted": 0.6480518511146497,
-              "observed": 0.5987261146496815
+              "n": 158,
+              "predicted": 0.6477823378164557,
+              "observed": 0.6012658227848101
             },
             {
               "line": 4.5,
               "bin": 0.7,
-              "n": 164,
-              "predicted": 0.7479158727134146,
-              "observed": 0.7560975609756098
+              "n": 165,
+              "predicted": 0.7482125946969697,
+              "observed": 0.7515151515151515
             },
             {
               "line": 4.5,
               "bin": 0.8,
-              "n": 99,
-              "predicted": 0.8393110795454546,
-              "observed": 0.8484848484848485
+              "n": 100,
+              "predicted": 0.8395703125,
+              "observed": 0.85
             },
             {
               "line": 4.5,
@@ -11411,16 +11986,16 @@
             {
               "line": 6.5,
               "bin": 0.0,
-              "n": 1321,
-              "predicted": 0.03849031273656321,
-              "observed": 0.04617713853141559
+              "n": 1330,
+              "predicted": 0.038433975563909775,
+              "observed": 0.04586466165413534
             },
             {
               "line": 6.5,
               "bin": 0.1,
-              "n": 321,
-              "predicted": 0.14362465926791276,
-              "observed": 0.12149532710280374
+              "n": 324,
+              "predicted": 0.14381992669753085,
+              "observed": 0.12037037037037036
             },
             {
               "line": 6.5,
@@ -11432,9 +12007,9 @@
             {
               "line": 6.5,
               "bin": 0.3,
-              "n": 199,
-              "predicted": 0.3476660646984925,
-              "observed": 0.35175879396984927
+              "n": 200,
+              "predicted": 0.347626953125,
+              "observed": 0.35
             },
             {
               "line": 6.5,
@@ -11446,16 +12021,16 @@
             {
               "line": 6.5,
               "bin": 0.5,
-              "n": 120,
-              "predicted": 0.5424153645833333,
-              "observed": 0.6166666666666667
+              "n": 121,
+              "predicted": 0.542629777892562,
+              "observed": 0.6115702479338843
             },
             {
               "line": 6.5,
               "bin": 0.6,
-              "n": 50,
-              "predicted": 0.6424609375,
-              "observed": 0.6
+              "n": 51,
+              "predicted": 0.6430759803921569,
+              "observed": 0.5882352941176471
             },
             {
               "line": 6.5,
@@ -11474,16 +12049,16 @@
             {
               "line": 8.5,
               "bin": 0.0,
-              "n": 1760,
-              "predicted": 0.023283247514204547,
-              "observed": 0.025
+              "n": 1772,
+              "predicted": 0.023266656673250563,
+              "observed": 0.024830699774266364
             },
             {
               "line": 8.5,
               "bin": 0.1,
-              "n": 312,
-              "predicted": 0.14456881009615385,
-              "observed": 0.1346153846153846
+              "n": 313,
+              "predicted": 0.1445749301118211,
+              "observed": 0.134185303514377
             },
             {
               "line": 8.5,
@@ -11495,16 +12070,16 @@
             {
               "line": 8.5,
               "bin": 0.3,
-              "n": 110,
-              "predicted": 0.34019886363636365,
-              "observed": 0.36363636363636365
+              "n": 111,
+              "predicted": 0.34016047297297297,
+              "observed": 0.36036036036036034
             },
             {
               "line": 8.5,
               "bin": 0.4,
-              "n": 36,
-              "predicted": 0.4450412326388889,
-              "observed": 0.5277777777777778
+              "n": 37,
+              "predicted": 0.4440456081081081,
+              "observed": 0.5135135135135135
             },
             {
               "line": 8.5,
@@ -20507,6 +21082,579 @@
               ]
             }
           }
+        },
+        {
+          "week": 12,
+          "trainRows": 22264,
+          "testRows": 15,
+          "metrics": {
+            "receiving_yards": {
+              "n": 15,
+              "mae": 14.884635416666667,
+              "rmse": 19.055746901391437,
+              "rollingBaselineMae": 17.88888888888889,
+              "crps": 9.55889434814453,
+              "coverage80": 0.8666666666666667,
+              "meanWidth80": 53.13333333333335,
+              "fixedThresholdBrier": 0.10845012664794922,
+              "fixedThresholdLogLoss": 0.3392856019524037,
+              "probability70Cohort": {
+                "n": 49,
+                "meanEstimated": 0.8950892857142857,
+                "observedWinRate": 0.8979591836734694,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 19.5,
+                  "bin": 0.1,
+                  "n": 2,
+                  "predicted": 0.17578125,
+                  "observed": 0.5
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.2,
+                  "n": 5,
+                  "predicted": 0.240625,
+                  "observed": 0.2
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.3,
+                  "n": 2,
+                  "predicted": 0.3720703125,
+                  "observed": 0.5
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.4,
+                  "n": 1,
+                  "predicted": 0.48828125,
+                  "observed": 0.0
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.5,
+                  "n": 1,
+                  "predicted": 0.529296875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.640625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.7,
+                  "n": 1,
+                  "predicted": 0.751953125,
+                  "observed": 1.0
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.8,
+                  "n": 2,
+                  "predicted": 0.8876953125,
+                  "observed": 1.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.0,
+                  "n": 6,
+                  "predicted": 0.06477864583333333,
+                  "observed": 0.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.1,
+                  "n": 3,
+                  "predicted": 0.14322916666666666,
+                  "observed": 0.3333333333333333
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.2,
+                  "n": 2,
+                  "predicted": 0.2587890625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.3,
+                  "n": 1,
+                  "predicted": 0.3359375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.4,
+                  "n": 1,
+                  "predicted": 0.4609375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.7,
+                  "n": 2,
+                  "predicted": 0.7255859375,
+                  "observed": 0.5
+                },
+                {
+                  "line": 59.5,
+                  "bin": 0.0,
+                  "n": 9,
+                  "predicted": 0.030598958333333332,
+                  "observed": 0.1111111111111111
+                },
+                {
+                  "line": 59.5,
+                  "bin": 0.1,
+                  "n": 3,
+                  "predicted": 0.11393229166666667,
+                  "observed": 0.0
+                },
+                {
+                  "line": 59.5,
+                  "bin": 0.2,
+                  "n": 1,
+                  "predicted": 0.265625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 59.5,
+                  "bin": 0.4,
+                  "n": 1,
+                  "predicted": 0.482421875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 59.5,
+                  "bin": 0.5,
+                  "n": 1,
+                  "predicted": 0.513671875,
+                  "observed": 1.0
+                },
+                {
+                  "line": 79.5,
+                  "bin": 0.0,
+                  "n": 12,
+                  "predicted": 0.02001953125,
+                  "observed": 0.0
+                },
+                {
+                  "line": 79.5,
+                  "bin": 0.1,
+                  "n": 1,
+                  "predicted": 0.10546875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 79.5,
+                  "bin": 0.3,
+                  "n": 2,
+                  "predicted": 0.3310546875,
+                  "observed": 0.0
+                }
+              ]
+            },
+            "receptions": {
+              "n": 15,
+              "mae": 1.2692708333333333,
+              "rmse": 1.647752529735974,
+              "rollingBaselineMae": 1.4888888888888887,
+              "crps": 0.8620941162109375,
+              "coverage80": 0.8666666666666667,
+              "meanWidth80": 4.326666666666669,
+              "fixedThresholdBrier": 0.12283134460449219,
+              "fixedThresholdLogLoss": 0.3791332099302959,
+              "probability70Cohort": {
+                "n": 46,
+                "meanEstimated": 0.9187754755434783,
+                "observedWinRate": 0.8695652173913043,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 1.5,
+                  "bin": 0.2,
+                  "n": 2,
+                  "predicted": 0.2490234375,
+                  "observed": 0.5
+                },
+                {
+                  "line": 1.5,
+                  "bin": 0.3,
+                  "n": 3,
+                  "predicted": 0.33984375,
+                  "observed": 0.3333333333333333
+                },
+                {
+                  "line": 1.5,
+                  "bin": 0.4,
+                  "n": 4,
+                  "predicted": 0.439453125,
+                  "observed": 0.5
+                },
+                {
+                  "line": 1.5,
+                  "bin": 0.7,
+                  "n": 3,
+                  "predicted": 0.7493489583333334,
+                  "observed": 0.6666666666666666
+                },
+                {
+                  "line": 1.5,
+                  "bin": 0.8,
+                  "n": 1,
+                  "predicted": 0.8515625,
+                  "observed": 1.0
+                },
+                {
+                  "line": 1.5,
+                  "bin": 0.9,
+                  "n": 2,
+                  "predicted": 0.91796875,
+                  "observed": 0.5
+                },
+                {
+                  "line": 3.5,
+                  "bin": 0.0,
+                  "n": 7,
+                  "predicted": 0.07087053571428571,
+                  "observed": 0.14285714285714285
+                },
+                {
+                  "line": 3.5,
+                  "bin": 0.1,
+                  "n": 2,
+                  "predicted": 0.1396484375,
+                  "observed": 0.5
+                },
+                {
+                  "line": 3.5,
+                  "bin": 0.3,
+                  "n": 3,
+                  "predicted": 0.3548177083333333,
+                  "observed": 0.3333333333333333
+                },
+                {
+                  "line": 3.5,
+                  "bin": 0.5,
+                  "n": 1,
+                  "predicted": 0.51171875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 3.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.6796875,
+                  "observed": 1.0
+                },
+                {
+                  "line": 3.5,
+                  "bin": 0.7,
+                  "n": 1,
+                  "predicted": 0.71875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 5.5,
+                  "bin": 0.0,
+                  "n": 10,
+                  "predicted": 0.019921875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 5.5,
+                  "bin": 0.1,
+                  "n": 2,
+                  "predicted": 0.12109375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 5.5,
+                  "bin": 0.2,
+                  "n": 1,
+                  "predicted": 0.203125,
+                  "observed": 0.0
+                },
+                {
+                  "line": 5.5,
+                  "bin": 0.3,
+                  "n": 1,
+                  "predicted": 0.357421875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 5.5,
+                  "bin": 0.4,
+                  "n": 1,
+                  "predicted": 0.404296875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 7.5,
+                  "bin": 0.0,
+                  "n": 13,
+                  "predicted": 0.01337139423076923,
+                  "observed": 0.0
+                },
+                {
+                  "line": 7.5,
+                  "bin": 0.1,
+                  "n": 2,
+                  "predicted": 0.1494140625,
+                  "observed": 0.0
+                }
+              ]
+            },
+            "receiving_tds": {
+              "n": 15,
+              "mae": 0.162109375,
+              "rmse": 0.21357878075593723,
+              "rollingBaselineMae": 0.18888888888888886,
+              "crps": 0.04701156616210937,
+              "coverage80": 1.0,
+              "meanWidth80": 0.5333333333333333,
+              "fixedThresholdBrier": 0.02349993387858073,
+              "fixedThresholdLogLoss": 0.10545713020848894,
+              "probability70Cohort": {
+                "n": 28,
+                "meanEstimated": 0.9412667410714286,
+                "observedWinRate": 1.0,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 0.5,
+                  "bin": 0.0,
+                  "n": 7,
+                  "predicted": 0.05747767857142857,
+                  "observed": 0.0
+                },
+                {
+                  "line": 0.5,
+                  "bin": 0.1,
+                  "n": 6,
+                  "predicted": 0.15299479166666666,
+                  "observed": 0.0
+                },
+                {
+                  "line": 0.5,
+                  "bin": 0.3,
+                  "n": 2,
+                  "predicted": 0.3603515625,
+                  "observed": 0.5
+                },
+                {
+                  "line": 1.5,
+                  "bin": 0.0,
+                  "n": 15,
+                  "predicted": 0.021614583333333333,
+                  "observed": 0.0
+                }
+              ]
+            },
+            "targets": {
+              "n": 15,
+              "mae": 1.4747395833333334,
+              "rmse": 1.8352705459653682,
+              "rollingBaselineMae": 1.7333333333333332,
+              "crps": 0.9976959228515625,
+              "coverage80": 0.9333333333333333,
+              "meanWidth80": 5.5933333333333355,
+              "fixedThresholdBrier": 0.1175717035929362,
+              "fixedThresholdLogLoss": 0.3640499548746548,
+              "probability70Cohort": {
+                "n": 46,
+                "meanEstimated": 0.902938179347826,
+                "observedWinRate": 0.9130434782608695,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 2.5,
+                  "bin": 0.1,
+                  "n": 2,
+                  "predicted": 0.1962890625,
+                  "observed": 0.5
+                },
+                {
+                  "line": 2.5,
+                  "bin": 0.2,
+                  "n": 3,
+                  "predicted": 0.2955729166666667,
+                  "observed": 0.0
+                },
+                {
+                  "line": 2.5,
+                  "bin": 0.3,
+                  "n": 2,
+                  "predicted": 0.310546875,
+                  "observed": 0.5
+                },
+                {
+                  "line": 2.5,
+                  "bin": 0.4,
+                  "n": 2,
+                  "predicted": 0.4404296875,
+                  "observed": 1.0
+                },
+                {
+                  "line": 2.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.66015625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 2.5,
+                  "bin": 0.7,
+                  "n": 2,
+                  "predicted": 0.751953125,
+                  "observed": 1.0
+                },
+                {
+                  "line": 2.5,
+                  "bin": 0.8,
+                  "n": 1,
+                  "predicted": 0.8671875,
+                  "observed": 1.0
+                },
+                {
+                  "line": 2.5,
+                  "bin": 0.9,
+                  "n": 2,
+                  "predicted": 0.9521484375,
+                  "observed": 1.0
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.0,
+                  "n": 5,
+                  "predicted": 0.079296875,
+                  "observed": 0.2
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.1,
+                  "n": 3,
+                  "predicted": 0.12044270833333333,
+                  "observed": 0.0
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.2,
+                  "n": 1,
+                  "predicted": 0.203125,
+                  "observed": 1.0
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.3,
+                  "n": 1,
+                  "predicted": 0.33984375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.4,
+                  "n": 2,
+                  "predicted": 0.4560546875,
+                  "observed": 0.5
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.60546875,
+                  "observed": 1.0
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.7,
+                  "n": 1,
+                  "predicted": 0.796875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.8,
+                  "n": 1,
+                  "predicted": 0.865234375,
+                  "observed": 1.0
+                },
+                {
+                  "line": 6.5,
+                  "bin": 0.0,
+                  "n": 9,
+                  "predicted": 0.030164930555555556,
+                  "observed": 0.0
+                },
+                {
+                  "line": 6.5,
+                  "bin": 0.1,
+                  "n": 3,
+                  "predicted": 0.16471354166666666,
+                  "observed": 0.0
+                },
+                {
+                  "line": 6.5,
+                  "bin": 0.3,
+                  "n": 1,
+                  "predicted": 0.33984375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 6.5,
+                  "bin": 0.5,
+                  "n": 1,
+                  "predicted": 0.568359375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 6.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.673828125,
+                  "observed": 0.0
+                },
+                {
+                  "line": 8.5,
+                  "bin": 0.0,
+                  "n": 12,
+                  "predicted": 0.020833333333333332,
+                  "observed": 0.0
+                },
+                {
+                  "line": 8.5,
+                  "bin": 0.1,
+                  "n": 1,
+                  "predicted": 0.146484375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 8.5,
+                  "bin": 0.3,
+                  "n": 1,
+                  "predicted": 0.3359375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 8.5,
+                  "bin": 0.4,
+                  "n": 1,
+                  "predicted": 0.408203125,
+                  "observed": 0.0
+                }
+              ]
+            }
+          }
         }
       ],
       "latestWeekHoldout": {
@@ -21334,8 +22482,10 @@
           }
         }
       },
-      "latestObservedWeek": 11,
-      "partialWeeks": [],
+      "latestObservedWeek": 12,
+      "partialWeeks": [
+        12
+      ],
       "configurationTunedOnLatestWeek": false,
       "roi": null,
       "closingLineValue": null,
@@ -21393,19 +22543,19 @@
       "evaluation": "Reconstructed historical features; final-corrected public outcomes. Not a point-in-time odds backtest.",
       "aggregate": {
         "rushing_yards": {
-          "n": 977,
-          "mae": 20.18413150908393,
-          "rmse": 26.941360248458338,
-          "rollingBaselineMae": 20.552882975093823,
-          "crps": 13.594574884358057,
-          "coverage80": 0.8464687819856704,
-          "meanWidth80": 63.15793244626409,
-          "fixedThresholdBrier": 0.12829912648352287,
-          "fixedThresholdLogLoss": 0.3980661972300751,
+          "n": 983,
+          "mae": 20.259010602110884,
+          "rmse": 27.19347948592807,
+          "rollingBaselineMae": 20.616649711766698,
+          "crps": 13.656049295699002,
+          "coverage80": 0.8463886063072228,
+          "meanWidth80": 63.159511698881,
+          "fixedThresholdBrier": 0.12811333529219138,
+          "fixedThresholdLogLoss": 0.3976166155078474,
           "probability70Cohort": {
-            "n": 2788,
-            "meanEstimated": 0.8857449896879483,
-            "observedWinRate": 0.8981348637015782,
+            "n": 2804,
+            "meanEstimated": 0.8857749253298859,
+            "observedWinRate": 0.8983594864479315,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -21433,9 +22583,9 @@
             {
               "line": 19.5,
               "bin": 0.3,
-              "n": 97,
-              "predicted": 0.34952883376288657,
-              "observed": 0.27835051546391754
+              "n": 100,
+              "predicted": 0.34966796875,
+              "observed": 0.27
             },
             {
               "line": 19.5,
@@ -21447,9 +22597,9 @@
             {
               "line": 19.5,
               "bin": 0.5,
-              "n": 118,
-              "predicted": 0.5491922669491526,
-              "observed": 0.4661016949152542
+              "n": 119,
+              "predicted": 0.5488117121848739,
+              "observed": 0.46218487394957986
             },
             {
               "line": 19.5,
@@ -21468,9 +22618,9 @@
             {
               "line": 19.5,
               "bin": 0.8,
-              "n": 126,
-              "predicted": 0.8590494791666666,
-              "observed": 0.8571428571428571
+              "n": 128,
+              "predicted": 0.8591461181640625,
+              "observed": 0.859375
             },
             {
               "line": 19.5,
@@ -21489,16 +22639,16 @@
             {
               "line": 39.5,
               "bin": 0.1,
-              "n": 189,
-              "predicted": 0.1496052414021164,
-              "observed": 0.14285714285714285
+              "n": 192,
+              "predicted": 0.14939371744791666,
+              "observed": 0.140625
             },
             {
               "line": 39.5,
               "bin": 0.2,
-              "n": 150,
-              "predicted": 0.24002604166666666,
-              "observed": 0.2
+              "n": 151,
+              "predicted": 0.240247309602649,
+              "observed": 0.1986754966887417
             },
             {
               "line": 39.5,
@@ -21524,9 +22674,9 @@
             {
               "line": 39.5,
               "bin": 0.6,
-              "n": 92,
-              "predicted": 0.6546577785326086,
-              "observed": 0.6956521739130435
+              "n": 94,
+              "predicted": 0.6540059840425532,
+              "observed": 0.7021276595744681
             },
             {
               "line": 39.5,
@@ -21552,16 +22702,16 @@
             {
               "line": 59.5,
               "bin": 0.0,
-              "n": 477,
-              "predicted": 0.04308749344863732,
-              "observed": 0.03773584905660377
+              "n": 480,
+              "predicted": 0.04312337239583333,
+              "observed": 0.0375
             },
             {
               "line": 59.5,
               "bin": 0.1,
-              "n": 149,
-              "predicted": 0.14318110318791946,
-              "observed": 0.12080536912751678
+              "n": 150,
+              "predicted": 0.14305989583333334,
+              "observed": 0.12
             },
             {
               "line": 59.5,
@@ -21573,9 +22723,9 @@
             {
               "line": 59.5,
               "bin": 0.3,
-              "n": 69,
-              "predicted": 0.35705389492753625,
-              "observed": 0.2753623188405797
+              "n": 71,
+              "predicted": 0.3576144366197183,
+              "observed": 0.28169014084507044
             },
             {
               "line": 59.5,
@@ -21608,23 +22758,23 @@
             {
               "line": 79.5,
               "bin": 0.0,
-              "n": 635,
-              "predicted": 0.02825418307086614,
-              "observed": 0.023622047244094488
+              "n": 639,
+              "predicted": 0.028251540492957746,
+              "observed": 0.023474178403755867
             },
             {
               "line": 79.5,
               "bin": 0.1,
-              "n": 113,
-              "predicted": 0.14669178650442477,
-              "observed": 0.1415929203539823
+              "n": 114,
+              "predicted": 0.14699835526315788,
+              "observed": 0.14912280701754385
             },
             {
               "line": 79.5,
               "bin": 0.2,
-              "n": 106,
-              "predicted": 0.24824955778301888,
-              "observed": 0.18867924528301888
+              "n": 107,
+              "predicted": 0.2480651285046729,
+              "observed": 0.18691588785046728
             },
             {
               "line": 79.5,
@@ -21657,19 +22807,19 @@
           ]
         },
         "carries": {
-          "n": 977,
-          "mae": 3.454342454580348,
-          "rmse": 4.605205473226831,
-          "rollingBaselineMae": 3.554042988741044,
-          "crps": 2.399813082957585,
-          "coverage80": 0.8751279426816786,
-          "meanWidth80": 11.157318321392019,
-          "fixedThresholdBrier": 0.10684300933181934,
-          "fixedThresholdLogLoss": 0.33417150402229984,
+          "n": 983,
+          "mae": 3.4674426182604274,
+          "rmse": 4.638667940095108,
+          "rollingBaselineMae": 3.568972533062055,
+          "crps": 2.4103344735876107,
+          "coverage80": 0.8748728382502543,
+          "meanWidth80": 11.16449643947101,
+          "fixedThresholdBrier": 0.10678549870348414,
+          "fixedThresholdLogLoss": 0.3340687905547984,
           "probability70Cohort": {
-            "n": 3053,
-            "meanEstimated": 0.9102656454716672,
-            "observedWinRate": 0.9181133311496888,
+            "n": 3070,
+            "meanEstimated": 0.9102656758957655,
+            "observedWinRate": 0.9182410423452769,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -21697,16 +22847,16 @@
             {
               "line": 4.5,
               "bin": 0.3,
-              "n": 108,
-              "predicted": 0.34326171875,
-              "observed": 0.3611111111111111
+              "n": 110,
+              "predicted": 0.3435546875,
+              "observed": 0.35454545454545455
             },
             {
               "line": 4.5,
               "bin": 0.4,
-              "n": 88,
-              "predicted": 0.4545010653409091,
-              "observed": 0.4318181818181818
+              "n": 89,
+              "predicted": 0.45452949438202245,
+              "observed": 0.42696629213483145
             },
             {
               "line": 4.5,
@@ -21718,9 +22868,9 @@
             {
               "line": 4.5,
               "bin": 0.6,
-              "n": 84,
-              "predicted": 0.6534830729166666,
-              "observed": 0.5238095238095238
+              "n": 85,
+              "predicted": 0.6529871323529411,
+              "observed": 0.5294117647058824
             },
             {
               "line": 4.5,
@@ -21739,9 +22889,9 @@
             {
               "line": 4.5,
               "bin": 0.9,
-              "n": 256,
-              "predicted": 0.9589309692382812,
-              "observed": 0.96875
+              "n": 258,
+              "predicted": 0.9588178294573644,
+              "observed": 0.9689922480620154
             },
             {
               "line": 9.5,
@@ -21753,16 +22903,16 @@
             {
               "line": 9.5,
               "bin": 0.1,
-              "n": 147,
-              "predicted": 0.1483843537414966,
-              "observed": 0.09523809523809523
+              "n": 150,
+              "predicted": 0.1478515625,
+              "observed": 0.09333333333333334
             },
             {
               "line": 9.5,
               "bin": 0.2,
-              "n": 86,
-              "predicted": 0.2428234011627907,
-              "observed": 0.23255813953488372
+              "n": 87,
+              "predicted": 0.24317528735632185,
+              "observed": 0.22988505747126436
             },
             {
               "line": 9.5,
@@ -21788,16 +22938,16 @@
             {
               "line": 9.5,
               "bin": 0.6,
-              "n": 53,
-              "predicted": 0.6544811320754716,
-              "observed": 0.5471698113207547
+              "n": 54,
+              "predicted": 0.6546947337962963,
+              "observed": 0.5555555555555556
             },
             {
               "line": 9.5,
               "bin": 0.7,
-              "n": 91,
-              "predicted": 0.754142342032967,
-              "observed": 0.7912087912087912
+              "n": 92,
+              "predicted": 0.7537576426630435,
+              "observed": 0.7934782608695652
             },
             {
               "line": 9.5,
@@ -21816,9 +22966,9 @@
             {
               "line": 14.5,
               "bin": 0.0,
-              "n": 573,
-              "predicted": 0.026614310645724257,
-              "observed": 0.020942408376963352
+              "n": 577,
+              "predicted": 0.026710761481802427,
+              "observed": 0.02079722703639515
             },
             {
               "line": 14.5,
@@ -21837,9 +22987,9 @@
             {
               "line": 14.5,
               "bin": 0.3,
-              "n": 65,
-              "predicted": 0.34918870192307694,
-              "observed": 0.4
+              "n": 67,
+              "predicted": 0.349667677238806,
+              "observed": 0.40298507462686567
             },
             {
               "line": 14.5,
@@ -21879,16 +23029,16 @@
             {
               "line": 19.5,
               "bin": 0.0,
-              "n": 722,
-              "predicted": 0.01755918888504155,
-              "observed": 0.0221606648199446
+              "n": 726,
+              "predicted": 0.01753777117768595,
+              "observed": 0.02203856749311295
             },
             {
               "line": 19.5,
               "bin": 0.1,
-              "n": 130,
-              "predicted": 0.1476111778846154,
-              "observed": 0.13846153846153847
+              "n": 132,
+              "predicted": 0.14747573390151514,
+              "observed": 0.14393939393939395
             },
             {
               "line": 19.5,
@@ -21921,49 +23071,49 @@
           ]
         },
         "rushing_tds": {
-          "n": 977,
-          "mae": 0.3786883476202661,
-          "rmse": 0.5335778583468384,
-          "rollingBaselineMae": 0.374906175366769,
-          "crps": 0.20794507107690754,
-          "coverage80": 0.9539406345957011,
-          "meanWidth80": 0.9279426816786085,
-          "fixedThresholdBrier": 0.10041189242531846,
-          "fixedThresholdLogLoss": 0.3244864318969157,
+          "n": 983,
+          "mae": 0.378169109231943,
+          "rmse": 0.5327293111984139,
+          "rollingBaselineMae": 0.3738046795523906,
+          "crps": 0.20772177229577624,
+          "coverage80": 0.9542217700915565,
+          "meanWidth80": 0.9263479145473047,
+          "fixedThresholdBrier": 0.10032187158190707,
+          "fixedThresholdLogLoss": 0.3240687690215034,
           "probability70Cohort": {
-            "n": 1692,
-            "meanEstimated": 0.909418633643617,
-            "observedWinRate": 0.9036643026004728,
+            "n": 1703,
+            "meanEstimated": 0.9094233980475631,
+            "observedWinRate": 0.9036993540810335,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
             {
               "line": 0.5,
               "bin": 0.0,
-              "n": 183,
-              "predicted": 0.06788977117486339,
-              "observed": 0.08196721311475409
+              "n": 185,
+              "predicted": 0.06810599662162162,
+              "observed": 0.08108108108108109
             },
             {
               "line": 0.5,
               "bin": 0.1,
-              "n": 334,
-              "predicted": 0.1481860497754491,
-              "observed": 0.1407185628742515
+              "n": 336,
+              "predicted": 0.14825148809523808,
+              "observed": 0.13988095238095238
             },
             {
               "line": 0.5,
               "bin": 0.2,
-              "n": 198,
-              "predicted": 0.24724786931818182,
-              "observed": 0.2828282828282828
+              "n": 199,
+              "predicted": 0.24748743718592964,
+              "observed": 0.2864321608040201
             },
             {
               "line": 0.5,
               "bin": 0.3,
-              "n": 151,
-              "predicted": 0.3482771109271523,
-              "observed": 0.33112582781456956
+              "n": 152,
+              "predicted": 0.34814453125,
+              "observed": 0.3355263157894737
             },
             {
               "line": 0.5,
@@ -21989,9 +23139,9 @@
             {
               "line": 1.5,
               "bin": 0.0,
-              "n": 864,
-              "predicted": 0.03081371166087963,
-              "observed": 0.032407407407407406
+              "n": 870,
+              "predicted": 0.03083019037356322,
+              "observed": 0.03218390804597701
             },
             {
               "line": 1.5,
@@ -28447,6 +29597,273 @@
               ]
             }
           }
+        },
+        {
+          "week": 12,
+          "trainRows": 8626,
+          "testRows": 6,
+          "metrics": {
+            "rushing_yards": {
+              "n": 6,
+              "mae": 32.451822916666664,
+              "rmse": 54.423390314365136,
+              "rollingBaselineMae": 31.0,
+              "crps": 23.66613260904948,
+              "coverage80": 0.8333333333333334,
+              "meanWidth80": 63.416666666666686,
+              "fixedThresholdBrier": 0.09786033630371094,
+              "fixedThresholdLogLoss": 0.32440972507176546,
+              "probability70Cohort": {
+                "n": 16,
+                "meanEstimated": 0.8909912109375,
+                "observedWinRate": 0.9375,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 19.5,
+                  "bin": 0.3,
+                  "n": 3,
+                  "predicted": 0.3541666666666667,
+                  "observed": 0.0
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.5,
+                  "n": 1,
+                  "predicted": 0.50390625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.8,
+                  "n": 2,
+                  "predicted": 0.865234375,
+                  "observed": 1.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.1,
+                  "n": 3,
+                  "predicted": 0.13606770833333334,
+                  "observed": 0.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.2,
+                  "n": 1,
+                  "predicted": 0.2734375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.6,
+                  "n": 2,
+                  "predicted": 0.6240234375,
+                  "observed": 1.0
+                },
+                {
+                  "line": 59.5,
+                  "bin": 0.0,
+                  "n": 3,
+                  "predicted": 0.048828125,
+                  "observed": 0.0
+                },
+                {
+                  "line": 59.5,
+                  "bin": 0.1,
+                  "n": 1,
+                  "predicted": 0.125,
+                  "observed": 0.0
+                },
+                {
+                  "line": 59.5,
+                  "bin": 0.3,
+                  "n": 2,
+                  "predicted": 0.376953125,
+                  "observed": 0.5
+                },
+                {
+                  "line": 79.5,
+                  "bin": 0.0,
+                  "n": 4,
+                  "predicted": 0.02783203125,
+                  "observed": 0.0
+                },
+                {
+                  "line": 79.5,
+                  "bin": 0.1,
+                  "n": 1,
+                  "predicted": 0.181640625,
+                  "observed": 1.0
+                },
+                {
+                  "line": 79.5,
+                  "bin": 0.2,
+                  "n": 1,
+                  "predicted": 0.228515625,
+                  "observed": 0.0
+                }
+              ]
+            },
+            "carries": {
+              "n": 6,
+              "mae": 5.6005859375,
+              "rmse": 8.478520161743871,
+              "rollingBaselineMae": 6.0,
+              "crps": 4.123567581176758,
+              "coverage80": 0.8333333333333334,
+              "meanWidth80": 12.333333333333334,
+              "fixedThresholdBrier": 0.09742085138956706,
+              "fixedThresholdLogLoss": 0.3173436142633188,
+              "probability70Cohort": {
+                "n": 17,
+                "meanEstimated": 0.9102711397058824,
+                "observedWinRate": 0.9411764705882353,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 4.5,
+                  "bin": 0.3,
+                  "n": 2,
+                  "predicted": 0.359375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.4,
+                  "n": 1,
+                  "predicted": 0.45703125,
+                  "observed": 0.0
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.611328125,
+                  "observed": 1.0
+                },
+                {
+                  "line": 4.5,
+                  "bin": 0.9,
+                  "n": 2,
+                  "predicted": 0.9443359375,
+                  "observed": 1.0
+                },
+                {
+                  "line": 9.5,
+                  "bin": 0.1,
+                  "n": 3,
+                  "predicted": 0.12174479166666667,
+                  "observed": 0.0
+                },
+                {
+                  "line": 9.5,
+                  "bin": 0.2,
+                  "n": 1,
+                  "predicted": 0.2734375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 9.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.666015625,
+                  "observed": 1.0
+                },
+                {
+                  "line": 9.5,
+                  "bin": 0.7,
+                  "n": 1,
+                  "predicted": 0.71875,
+                  "observed": 1.0
+                },
+                {
+                  "line": 14.5,
+                  "bin": 0.0,
+                  "n": 4,
+                  "predicted": 0.04052734375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 14.5,
+                  "bin": 0.3,
+                  "n": 2,
+                  "predicted": 0.365234375,
+                  "observed": 0.5
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.0,
+                  "n": 4,
+                  "predicted": 0.013671875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.1,
+                  "n": 2,
+                  "predicted": 0.138671875,
+                  "observed": 0.5
+                }
+              ]
+            },
+            "rushing_tds": {
+              "n": 6,
+              "mae": 0.2936197916666667,
+              "rmse": 0.3694143743555044,
+              "rollingBaselineMae": 0.19444444444444445,
+              "crps": 0.17136128743489584,
+              "coverage80": 1.0,
+              "meanWidth80": 0.6666666666666666,
+              "fixedThresholdBrier": 0.08566347757975261,
+              "fixedThresholdLogLoss": 0.25605933080852555,
+              "probability70Cohort": {
+                "n": 11,
+                "meanEstimated": 0.91015625,
+                "observedWinRate": 0.9090909090909091,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 0.5,
+                  "bin": 0.0,
+                  "n": 2,
+                  "predicted": 0.087890625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 0.5,
+                  "bin": 0.1,
+                  "n": 2,
+                  "predicted": 0.1591796875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 0.5,
+                  "bin": 0.2,
+                  "n": 1,
+                  "predicted": 0.294921875,
+                  "observed": 1.0
+                },
+                {
+                  "line": 0.5,
+                  "bin": 0.3,
+                  "n": 1,
+                  "predicted": 0.328125,
+                  "observed": 1.0
+                },
+                {
+                  "line": 1.5,
+                  "bin": 0.0,
+                  "n": 6,
+                  "predicted": 0.033203125,
+                  "observed": 0.0
+                }
+              ]
+            }
+          }
         }
       ],
       "latestWeekHoldout": {
@@ -29045,8 +30462,10 @@
           }
         }
       },
-      "latestObservedWeek": 11,
-      "partialWeeks": [],
+      "latestObservedWeek": 12,
+      "partialWeeks": [
+        12
+      ],
       "configurationTunedOnLatestWeek": false,
       "roi": null,
       "closingLineValue": null,
@@ -29073,19 +30492,19 @@
       "evaluation": "Reconstructed historical features; final-corrected public outcomes. Not a point-in-time odds backtest.",
       "aggregate": {
         "passing_yards": {
-          "n": 345,
-          "mae": 65.07379981884058,
-          "rmse": 81.5924103623352,
-          "rollingBaselineMae": 68.71589371980676,
-          "crps": 45.09702577452729,
-          "coverage80": 0.8202898550724638,
-          "meanWidth80": 208.31043478260872,
-          "fixedThresholdBrier": 0.16172633793043054,
-          "fixedThresholdLogLoss": 0.49149468371288374,
+          "n": 347,
+          "mae": 65.14366444524495,
+          "rmse": 81.61788127037136,
+          "rollingBaselineMae": 68.897646493756,
+          "crps": 45.12716118540475,
+          "coverage80": 0.8184438040345822,
+          "meanWidth80": 208.17550432276664,
+          "fixedThresholdBrier": 0.16209404750241327,
+          "fixedThresholdLogLoss": 0.49241701589208103,
           "probability70Cohort": {
-            "n": 862,
-            "meanEstimated": 0.8521334831786543,
-            "observedWinRate": 0.8584686774941995,
+            "n": 866,
+            "meanEstimated": 0.8520699516454965,
+            "observedWinRate": 0.8579676674364896,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -29141,9 +30560,9 @@
             {
               "line": 174.5,
               "bin": 0.8,
-              "n": 86,
-              "predicted": 0.8439543968023255,
-              "observed": 0.8604651162790697
+              "n": 88,
+              "predicted": 0.8436390269886364,
+              "observed": 0.8522727272727273
             },
             {
               "line": 174.5,
@@ -29190,16 +30609,16 @@
             {
               "line": 224.5,
               "bin": 0.5,
-              "n": 72,
-              "predicted": 0.5482584635416666,
-              "observed": 0.5555555555555556
+              "n": 73,
+              "predicted": 0.5483465325342466,
+              "observed": 0.547945205479452
             },
             {
               "line": 224.5,
               "bin": 0.6,
-              "n": 70,
-              "predicted": 0.6446149553571429,
-              "observed": 0.6857142857142857
+              "n": 71,
+              "predicted": 0.6444487235915493,
+              "observed": 0.676056338028169
             },
             {
               "line": 224.5,
@@ -29232,16 +30651,16 @@
             {
               "line": 274.5,
               "bin": 0.3,
-              "n": 79,
-              "predicted": 0.35094442246835444,
-              "observed": 0.45569620253164556
+              "n": 80,
+              "predicted": 0.350732421875,
+              "observed": 0.45
             },
             {
               "line": 274.5,
               "bin": 0.4,
-              "n": 20,
-              "predicted": 0.42900390625,
-              "observed": 0.6
+              "n": 21,
+              "predicted": 0.4284784226190476,
+              "observed": 0.5714285714285714
             },
             {
               "line": 324.5,
@@ -29253,9 +30672,9 @@
             {
               "line": 324.5,
               "bin": 0.1,
-              "n": 112,
-              "predicted": 0.14093889508928573,
-              "observed": 0.16071428571428573
+              "n": 114,
+              "predicted": 0.14115611293859648,
+              "observed": 0.15789473684210525
             },
             {
               "line": 324.5,
@@ -29267,19 +30686,19 @@
           ]
         },
         "attempts": {
-          "n": 345,
-          "mae": 7.8197067481884055,
-          "rmse": 10.260313200127607,
-          "rollingBaselineMae": 8.617922705314008,
-          "crps": 5.52640362062316,
-          "coverage80": 0.8260869565217391,
-          "meanWidth80": 25.005217391304345,
-          "fixedThresholdBrier": 0.17519186268682066,
-          "fixedThresholdLogLoss": 0.5270099683436583,
+          "n": 347,
+          "mae": 7.82013801332853,
+          "rmse": 10.254094474630165,
+          "rollingBaselineMae": 8.622046109510086,
+          "crps": 5.524439248296644,
+          "coverage80": 0.8242074927953891,
+          "meanWidth80": 24.984726224783863,
+          "fixedThresholdBrier": 0.17589065595731268,
+          "fixedThresholdLogLoss": 0.528818409929044,
           "probability70Cohort": {
-            "n": 826,
-            "meanEstimated": 0.8188701195520581,
-            "observedWinRate": 0.8292978208232445,
+            "n": 830,
+            "meanEstimated": 0.818910015060241,
+            "observedWinRate": 0.827710843373494,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -29335,16 +30754,16 @@
             {
               "line": 24.5,
               "bin": 0.8,
-              "n": 99,
-              "predicted": 0.8476167929292929,
-              "observed": 0.8888888888888888
+              "n": 100,
+              "predicted": 0.8476953125,
+              "observed": 0.89
             },
             {
               "line": 24.5,
               "bin": 0.9,
-              "n": 38,
-              "predicted": 0.9212068256578947,
-              "observed": 1.0
+              "n": 39,
+              "predicted": 0.9207732371794872,
+              "observed": 0.9743589743589743
             },
             {
               "line": 29.5,
@@ -29391,16 +30810,16 @@
             {
               "line": 29.5,
               "bin": 0.6,
-              "n": 87,
-              "predicted": 0.6456986350574713,
-              "observed": 0.6551724137931034
+              "n": 88,
+              "predicted": 0.6455300071022727,
+              "observed": 0.6477272727272727
             },
             {
               "line": 29.5,
               "bin": 0.7,
-              "n": 47,
-              "predicted": 0.7422290558510638,
-              "observed": 0.723404255319149
+              "n": 48,
+              "predicted": 0.7422281901041666,
+              "observed": 0.7083333333333334
             },
             {
               "line": 29.5,
@@ -29433,9 +30852,9 @@
             {
               "line": 34.5,
               "bin": 0.3,
-              "n": 99,
-              "predicted": 0.3445194128787879,
-              "observed": 0.31313131313131315
+              "n": 100,
+              "predicted": 0.34494140625,
+              "observed": 0.31
             },
             {
               "line": 34.5,
@@ -29447,9 +30866,9 @@
             {
               "line": 34.5,
               "bin": 0.5,
-              "n": 27,
-              "predicted": 0.5339988425925926,
-              "observed": 0.48148148148148145
+              "n": 28,
+              "predicted": 0.5343889508928571,
+              "observed": 0.4642857142857143
             },
             {
               "line": 39.5,
@@ -29461,9 +30880,9 @@
             {
               "line": 39.5,
               "bin": 0.1,
-              "n": 182,
-              "predicted": 0.14215959821428573,
-              "observed": 0.12637362637362637
+              "n": 183,
+              "predicted": 0.14243937841530055,
+              "observed": 0.12568306010928962
             },
             {
               "line": 39.5,
@@ -29475,26 +30894,26 @@
             {
               "line": 39.5,
               "bin": 0.3,
-              "n": 15,
-              "predicted": 0.32265625,
-              "observed": 0.3333333333333333
+              "n": 16,
+              "predicted": 0.322265625,
+              "observed": 0.3125
             }
           ]
         },
         "completions": {
-          "n": 345,
-          "mae": 5.337930253623188,
-          "rmse": 6.784815249171391,
-          "rollingBaselineMae": 5.699275362318841,
-          "crps": 3.7175225520479507,
-          "coverage80": 0.8724637681159421,
-          "meanWidth80": 17.510144927536235,
-          "fixedThresholdBrier": 0.14371147985043733,
-          "fixedThresholdLogLoss": 0.4447420958860924,
+          "n": 347,
+          "mae": 5.3413691012247835,
+          "rmse": 6.781325008978695,
+          "rollingBaselineMae": 5.712536023054755,
+          "crps": 3.7168708273588065,
+          "coverage80": 0.8731988472622478,
+          "meanWidth80": 17.495677233429397,
+          "fixedThresholdBrier": 0.1437725155085583,
+          "fixedThresholdLogLoss": 0.4448165322490454,
           "probability70Cohort": {
-            "n": 963,
-            "meanEstimated": 0.8624192789460021,
-            "observedWinRate": 0.8826583592938733,
+            "n": 969,
+            "meanEstimated": 0.8622311177760578,
+            "observedWinRate": 0.8823529411764706,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -29550,15 +30969,15 @@
             {
               "line": 14.5,
               "bin": 0.8,
-              "n": 128,
-              "predicted": 0.8475189208984375,
-              "observed": 0.8671875
+              "n": 129,
+              "predicted": 0.847641109496124,
+              "observed": 0.8682170542635659
             },
             {
               "line": 14.5,
               "bin": 0.9,
-              "n": 59,
-              "predicted": 0.9226363877118644,
+              "n": 60,
+              "predicted": 0.9227864583333333,
               "observed": 1.0
             },
             {
@@ -29606,16 +31025,16 @@
             {
               "line": 19.5,
               "bin": 0.6,
-              "n": 71,
-              "predicted": 0.6458791813380281,
-              "observed": 0.6197183098591549
+              "n": 72,
+              "predicted": 0.6452907986111112,
+              "observed": 0.6111111111111112
             },
             {
               "line": 19.5,
               "bin": 0.7,
-              "n": 40,
-              "predicted": 0.74189453125,
-              "observed": 0.85
+              "n": 41,
+              "predicted": 0.7419493140243902,
+              "observed": 0.8292682926829268
             },
             {
               "line": 19.5,
@@ -29641,9 +31060,9 @@
             {
               "line": 24.5,
               "bin": 0.2,
-              "n": 95,
-              "predicted": 0.2427220394736842,
-              "observed": 0.17894736842105263
+              "n": 96,
+              "predicted": 0.24326578776041666,
+              "observed": 0.17708333333333334
             },
             {
               "line": 24.5,
@@ -29655,23 +31074,23 @@
             {
               "line": 24.5,
               "bin": 0.4,
-              "n": 27,
-              "predicted": 0.4291087962962963,
-              "observed": 0.5185185185185185
+              "n": 28,
+              "predicted": 0.42857142857142855,
+              "observed": 0.5
             },
             {
               "line": 29.5,
               "bin": 0.0,
-              "n": 271,
-              "predicted": 0.04864794741697417,
-              "observed": 0.04428044280442804
+              "n": 272,
+              "predicted": 0.04879222196691176,
+              "observed": 0.04411764705882353
             },
             {
               "line": 29.5,
               "bin": 0.1,
-              "n": 72,
-              "predicted": 0.13462999131944445,
-              "observed": 0.19444444444444445
+              "n": 73,
+              "predicted": 0.135033176369863,
+              "observed": 0.1917808219178082
             },
             {
               "line": 29.5,
@@ -29683,19 +31102,19 @@
           ]
         },
         "passing_tds": {
-          "n": 345,
-          "mae": 0.8884341032608696,
-          "rmse": 1.105629578299791,
-          "rollingBaselineMae": 0.903671497584541,
-          "crps": 0.5918940557949784,
-          "coverage80": 0.9246376811594202,
-          "meanWidth80": 2.659420289855073,
-          "fixedThresholdBrier": 0.1787201001448332,
-          "fixedThresholdLogLoss": 0.5360553347434341,
+          "n": 347,
+          "mae": 0.8899326819164265,
+          "rmse": 1.1066380505025233,
+          "rollingBaselineMae": 0.9075888568683957,
+          "crps": 0.5924972292325682,
+          "coverage80": 0.9250720461095101,
+          "meanWidth80": 2.6613832853025943,
+          "fixedThresholdBrier": 0.17901683151435668,
+          "fixedThresholdLogLoss": 0.5368411499254774,
           "probability70Cohort": {
-            "n": 663,
-            "meanEstimated": 0.8246606334841629,
-            "observedWinRate": 0.803921568627451,
+            "n": 667,
+            "meanEstimated": 0.8245174287856072,
+            "observedWinRate": 0.8035982008995503,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -29744,9 +31163,9 @@
             {
               "line": 0.5,
               "bin": 0.8,
-              "n": 106,
-              "predicted": 0.8444686025943396,
-              "observed": 0.8867924528301887
+              "n": 108,
+              "predicted": 0.8441116898148148,
+              "observed": 0.8796296296296297
             },
             {
               "line": 0.5,
@@ -29793,9 +31212,9 @@
             {
               "line": 1.5,
               "bin": 0.5,
-              "n": 75,
-              "predicted": 0.5464583333333334,
-              "observed": 0.6533333333333333
+              "n": 77,
+              "predicted": 0.545606737012987,
+              "observed": 0.6363636363636364
             },
             {
               "line": 1.5,
@@ -29821,9 +31240,9 @@
             {
               "line": 2.5,
               "bin": 0.2,
-              "n": 108,
-              "predicted": 0.2415183738425926,
-              "observed": 0.3055555555555556
+              "n": 110,
+              "predicted": 0.2411931818181818,
+              "observed": 0.3
             },
             {
               "line": 2.5,
@@ -29835,19 +31254,19 @@
           ]
         },
         "passing_interceptions": {
-          "n": 345,
-          "mae": 0.6322633605072464,
-          "rmse": 0.759664647526728,
-          "rollingBaselineMae": 0.6331400966183575,
-          "crps": 0.3759685018788213,
-          "coverage80": 0.9710144927536232,
-          "meanWidth80": 1.9046376811594214,
-          "fixedThresholdBrier": 0.1750916798909505,
-          "fixedThresholdLogLoss": 0.5238176303243909,
+          "n": 347,
+          "mae": 0.6328519002161384,
+          "rmse": 0.7603066752765444,
+          "rollingBaselineMae": 0.6342939481268012,
+          "crps": 0.37701076320681176,
+          "coverage80": 0.9711815561959655,
+          "meanWidth80": 1.9051873198847273,
+          "fixedThresholdBrier": 0.1756825570757863,
+          "fixedThresholdLogLoss": 0.5252623513219797,
           "probability70Cohort": {
-            "n": 367,
-            "meanEstimated": 0.849204913147139,
-            "observedWinRate": 0.8746594005449592,
+            "n": 369,
+            "meanEstimated": 0.8490853658536586,
+            "observedWinRate": 0.8726287262872628,
             "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
           },
           "reliability": [
@@ -29882,9 +31301,9 @@
             {
               "line": 0.5,
               "bin": 0.5,
-              "n": 106,
-              "predicted": 0.5197339327830188,
-              "observed": 0.5471698113207547
+              "n": 108,
+              "predicted": 0.5202184606481481,
+              "observed": 0.5555555555555556
             },
             {
               "line": 1.5,
@@ -29896,9 +31315,9 @@
             {
               "line": 1.5,
               "bin": 0.1,
-              "n": 296,
-              "predicted": 0.14899836359797297,
-              "observed": 0.12162162162162163
+              "n": 298,
+              "predicted": 0.14915845218120805,
+              "observed": 0.12416107382550336
             },
             {
               "line": 1.5,
@@ -34399,7 +35818,7 @@
               "coverage80": 0.8333333333333334,
               "meanWidth80": 24.370000000000008,
               "fixedThresholdBrier": 0.15762831370035807,
-              "fixedThresholdLogLoss": 0.4817475988395476,
+              "fixedThresholdLogLoss": 0.48174759883954754,
               "probability70Cohort": {
                 "n": 68,
                 "meanEstimated": 0.8104319852941176,
@@ -34874,7 +36293,7 @@
               "coverage80": 0.7096774193548387,
               "meanWidth80": 201.9258064516129,
               "fixedThresholdBrier": 0.15982790916196762,
-              "fixedThresholdLogLoss": 0.4778404547404412,
+              "fixedThresholdLogLoss": 0.4778404547404411,
               "probability70Cohort": {
                 "n": 80,
                 "meanEstimated": 0.8417236328125,
@@ -37626,6 +39045,297 @@
               ]
             }
           }
+        },
+        {
+          "week": 12,
+          "trainRows": 3046,
+          "testRows": 2,
+          "metrics": {
+            "passing_yards": {
+              "n": 2,
+              "mae": 77.1953125,
+              "rmse": 85.898665675146,
+              "rollingBaselineMae": 100.25,
+              "crps": 50.32551956176758,
+              "coverage80": 0.5,
+              "meanWidth80": 184.90000000000003,
+              "fixedThresholdBrier": 0.2255239486694336,
+              "fixedThresholdLogLoss": 0.6515193168036066,
+              "probability70Cohort": {
+                "n": 4,
+                "meanEstimated": 0.83837890625,
+                "observedWinRate": 0.75,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 174.5,
+                  "bin": 0.8,
+                  "n": 2,
+                  "predicted": 0.830078125,
+                  "observed": 0.5
+                },
+                {
+                  "line": 224.5,
+                  "bin": 0.5,
+                  "n": 1,
+                  "predicted": 0.5546875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 224.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.6328125,
+                  "observed": 0.0
+                },
+                {
+                  "line": 274.5,
+                  "bin": 0.3,
+                  "n": 1,
+                  "predicted": 0.333984375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 274.5,
+                  "bin": 0.4,
+                  "n": 1,
+                  "predicted": 0.41796875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 324.5,
+                  "bin": 0.1,
+                  "n": 2,
+                  "predicted": 0.1533203125,
+                  "observed": 0.0
+                }
+              ]
+            },
+            "attempts": {
+              "n": 2,
+              "mae": 7.89453125,
+              "rmse": 9.1181154800335,
+              "rollingBaselineMae": 9.333333333333332,
+              "crps": 5.185585021972656,
+              "coverage80": 0.5,
+              "meanWidth80": 21.450000000000017,
+              "fixedThresholdBrier": 0.2964324951171875,
+              "fixedThresholdLogLoss": 0.8407745834080663,
+              "probability70Cohort": {
+                "n": 4,
+                "meanEstimated": 0.8271484375,
+                "observedWinRate": 0.5,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 24.5,
+                  "bin": 0.8,
+                  "n": 1,
+                  "predicted": 0.85546875,
+                  "observed": 1.0
+                },
+                {
+                  "line": 24.5,
+                  "bin": 0.9,
+                  "n": 1,
+                  "predicted": 0.904296875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 29.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.630859375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 29.5,
+                  "bin": 0.7,
+                  "n": 1,
+                  "predicted": 0.7421875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 34.5,
+                  "bin": 0.3,
+                  "n": 1,
+                  "predicted": 0.38671875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 34.5,
+                  "bin": 0.5,
+                  "n": 1,
+                  "predicted": 0.544921875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.1,
+                  "n": 1,
+                  "predicted": 0.193359375,
+                  "observed": 0.0
+                },
+                {
+                  "line": 39.5,
+                  "bin": 0.3,
+                  "n": 1,
+                  "predicted": 0.31640625,
+                  "observed": 0.0
+                }
+              ]
+            },
+            "completions": {
+              "n": 2,
+              "mae": 5.9345703125,
+              "rmse": 6.149687081416486,
+              "rollingBaselineMae": 8.0,
+              "crps": 3.6044483184814453,
+              "coverage80": 1.0,
+              "meanWidth80": 15.0,
+              "fixedThresholdBrier": 0.15430116653442383,
+              "fixedThresholdLogLoss": 0.45765680485841354,
+              "probability70Cohort": {
+                "n": 6,
+                "meanEstimated": 0.83203125,
+                "observedWinRate": 0.8333333333333334,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 14.5,
+                  "bin": 0.8,
+                  "n": 1,
+                  "predicted": 0.86328125,
+                  "observed": 1.0
+                },
+                {
+                  "line": 14.5,
+                  "bin": 0.9,
+                  "n": 1,
+                  "predicted": 0.931640625,
+                  "observed": 1.0
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.6,
+                  "n": 1,
+                  "predicted": 0.603515625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 19.5,
+                  "bin": 0.7,
+                  "n": 1,
+                  "predicted": 0.744140625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 24.5,
+                  "bin": 0.2,
+                  "n": 1,
+                  "predicted": 0.294921875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 24.5,
+                  "bin": 0.4,
+                  "n": 1,
+                  "predicted": 0.4140625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 29.5,
+                  "bin": 0.0,
+                  "n": 1,
+                  "predicted": 0.087890625,
+                  "observed": 0.0
+                },
+                {
+                  "line": 29.5,
+                  "bin": 0.1,
+                  "n": 1,
+                  "predicted": 0.1640625,
+                  "observed": 0.0
+                }
+              ]
+            },
+            "passing_tds": {
+              "n": 2,
+              "mae": 1.1484375,
+              "rmse": 1.2686595565054086,
+              "rollingBaselineMae": 1.5833333333333333,
+              "crps": 0.6965446472167969,
+              "coverage80": 1.0,
+              "meanWidth80": 3.0,
+              "fixedThresholdBrier": 0.23020299275716147,
+              "fixedThresholdLogLoss": 0.6723942688279347,
+              "probability70Cohort": {
+                "n": 4,
+                "meanEstimated": 0.80078125,
+                "observedWinRate": 0.75,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 0.5,
+                  "bin": 0.8,
+                  "n": 2,
+                  "predicted": 0.8251953125,
+                  "observed": 0.5
+                },
+                {
+                  "line": 1.5,
+                  "bin": 0.5,
+                  "n": 2,
+                  "predicted": 0.513671875,
+                  "observed": 0.0
+                },
+                {
+                  "line": 2.5,
+                  "bin": 0.2,
+                  "n": 2,
+                  "predicted": 0.2236328125,
+                  "observed": 0.0
+                }
+              ]
+            },
+            "passing_interceptions": {
+              "n": 2,
+              "mae": 0.734375,
+              "rmse": 0.8639460286838037,
+              "rollingBaselineMae": 0.8333333333333335,
+              "crps": 0.5568008422851562,
+              "coverage80": 1.0,
+              "meanWidth80": 2.0,
+              "fixedThresholdBrier": 0.27760887145996094,
+              "fixedThresholdLogLoss": 0.774476723406053,
+              "probability70Cohort": {
+                "n": 2,
+                "meanEstimated": 0.8271484375,
+                "observedWinRate": 0.5,
+                "scope": "Pooled fixed thresholds, both sides; not actual historical sportsbook wagers."
+              },
+              "reliability": [
+                {
+                  "line": 0.5,
+                  "bin": 0.5,
+                  "n": 2,
+                  "predicted": 0.5458984375,
+                  "observed": 1.0
+                },
+                {
+                  "line": 1.5,
+                  "bin": 0.1,
+                  "n": 2,
+                  "predicted": 0.1728515625,
+                  "observed": 0.5
+                }
+              ]
+            }
+          }
         }
       ],
       "latestWeekHoldout": {
@@ -38360,8 +40070,10 @@
           }
         }
       },
-      "latestObservedWeek": 11,
-      "partialWeeks": [],
+      "latestObservedWeek": 12,
+      "partialWeeks": [
+        12
+      ],
       "configurationTunedOnLatestWeek": false,
       "roi": null,
       "closingLineValue": null,
