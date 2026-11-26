@@ -1,5 +1,5 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-26T21:17:37.321875+00:00
+Generated 2026-11-26T21:51:15.759575+00:00
 Current-season tests: 3020; Brier 0.1485 vs baseline 0.1621.
 
 ## GB at LAR
@@ -12,21 +12,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 
 ## PHI at DAL
 2026-11-26T21:30:00+00:00
-### 1. Red zone & opportunity
-- CeeDee Lamb (DAL WR): 0 RZ carries, 9 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.98, actual TD 3.
-- Javonte Williams (DAL RB): 14 RZ carries, 3 RZ targets, 7 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 4.11, actual TD 3.
-- George Pickens (DAL WR): 0 RZ carries, 6 RZ targets, 0 inside-5 carries, 3 inside-5 targets across 4 team games; xTD 2.53, actual TD 4.
-### 2. Position matchup & leverage
-- DAL: opponent RZ EPA 0.10582619971968837; pass EPA 0.0882555807611205; rush EPA 0.026281385857428816. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- PHI: opponent RZ EPA 0.045398427416028134; pass EPA 0.07024358356874223; rush EPA 0.08174047968237627. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- DAL: recent RZ pass rate 0.625, RZ pass-over-expected 8.600571603988701 percentage points, neutral seconds/play 30.333333333333332. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- PHI: recent RZ pass rate 0.2608695652173913, RZ pass-over-expected -28.822744976390492 percentage points, neutral seconds/play 32.039370078740156. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **CeeDee Lamb — Core research · highest estimated probability**: estimated ATTD 61.3%; fair odds -158; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Javonte Williams — Additional research candidate**: estimated ATTD 59.1%; fair odds -144; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **George Pickens — Additional research candidate**: estimated ATTD 53.6%; fair odds -116; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## KC at BUF
 2026-11-27T01:20:00+00:00
