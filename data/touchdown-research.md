@@ -1,5 +1,5 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-26T15:32:05.664448+00:00
+Generated 2026-11-26T16:40:44.932477+00:00
 Current-season tests: 3020; Brier 0.1485 vs baseline 0.1621.
 
 ## GB at LAR
