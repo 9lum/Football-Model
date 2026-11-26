@@ -1,24 +1,10 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-26T00:39:15.538357+00:00
+Generated 2026-11-26T01:45:32.076312+00:00
 Current-season tests: 3003; Brier 0.1487 vs baseline 0.1623.
 
 ## GB at LAR
 2026-11-26T01:00:00+00:00
-### 1. Red zone & opportunity
-- Kyren Williams (LAR RB): 8 RZ carries, 2 RZ targets, 2 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 2.09, actual TD 2.
-- Matthew Golden (GB WR): 0 RZ carries, 5 RZ targets, 0 inside-5 carries, 2 inside-5 targets across 4 team games; xTD 2.26, actual TD 2.
-- Blake Corum (LAR RB): 14 RZ carries, 1 RZ targets, 4 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.40, actual TD 4.
-### 2. Position matchup & leverage
-- LAR: opponent RZ EPA -0.22782221926433557; pass EPA -0.09459995479761243; rush EPA -0.0705230355840029. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- GB: opponent RZ EPA -0.26550097647639304; pass EPA -0.08775608239146618; rush EPA -0.08361030922168272. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- LAR: recent RZ pass rate 0.5208333333333334, RZ pass-over-expected 2.608822596569856 percentage points, neutral seconds/play 30.03968253968254. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- GB: recent RZ pass rate 0.48717948717948717, RZ pass-over-expected -8.200871473864504 percentage points, neutral seconds/play 31.65432098765432. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Kyren Williams — Core research · highest estimated probability**: estimated ATTD 44.7%; fair odds 124; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Matthew Golden — Additional research candidate**: estimated ATTD 44.4%; fair odds 125; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Blake Corum — Additional research candidate**: estimated ATTD 42.7%; fair odds 134; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## CHI at DET
 2026-11-26T18:00:00+00:00
