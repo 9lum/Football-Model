@@ -1,5 +1,5 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-27T00:54:05.714898+00:00
+Generated 2026-11-27T01:45:29.111649+00:00
 Current-season tests: 3037; Brier 0.1484 vs baseline 0.1624.
 
 ## GB at LAR
@@ -16,21 +16,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 
 ## KC at BUF
 2026-11-27T01:20:00+00:00
-### 1. Red zone & opportunity
-- Kenneth Walker III (KC RB): 7 RZ carries, 3 RZ targets, 4 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.28, actual TD 3.
-- James Cook (BUF RB): 18 RZ carries, 1 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.14, actual TD 4.
-- Emmett Johnson (KC RB): 10 RZ carries, 2 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.44, actual TD 5.
-### 2. Position matchup & leverage
-- BUF: opponent RZ EPA -0.44913572991022055; pass EPA -0.11216502081870089; rush EPA -0.06992465727960201. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- KC: opponent RZ EPA -0.03520370430652643; pass EPA -0.14433582336578582; rush EPA -0.048890581541165386. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- BUF: recent RZ pass rate 0.38461538461538464, RZ pass-over-expected -10.588364909384765 percentage points, neutral seconds/play 30.93103448275862. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- KC: recent RZ pass rate 0.5777777777777777, RZ pass-over-expected 5.744301113817427 percentage points, neutral seconds/play 29.30327868852459. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Kenneth Walker III — Core research · highest estimated probability**: estimated ATTD 66.1%; fair odds -195; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **James Cook — Additional research candidate**: estimated ATTD 59.0%; fair odds -144; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Emmett Johnson — Additional research candidate**: estimated ATTD 47.9%; fair odds 109; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## DEN at PIT
 2026-11-27T20:00:00+00:00
