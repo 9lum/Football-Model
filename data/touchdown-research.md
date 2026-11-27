@@ -1,5 +1,5 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-27T19:57:13.905161+00:00
+Generated 2026-11-27T20:41:14.977215+00:00
 Current-season tests: 3080; Brier 0.1481 vs baseline 0.1622.
 
 ## GB at LAR
@@ -20,21 +20,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 
 ## DEN at PIT
 2026-11-27T20:00:00+00:00
-### 1. Red zone & opportunity
-- Jonah Coleman (DEN RB): 14 RZ carries, 1 RZ targets, 7 inside-5 carries, 1 inside-5 targets across 4 team games; xTD 3.91, actual TD 5.
-- Jaylen Warren (PIT RB): 7 RZ carries, 1 RZ targets, 2 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.47, actual TD 1.
-- Rico Dowdle (PIT RB): 7 RZ carries, 1 RZ targets, 1 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.11, actual TD 1.
-### 2. Position matchup & leverage
-- PIT: opponent RZ EPA 0.004224089969794978; pass EPA -0.019305852945572542; rush EPA -0.021209821195537038. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-- DEN: opponent RZ EPA -0.2362389688616695; pass EPA 0.005218029096482654; rush EPA -0.08995840869266616. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
-### 3. Game script & tendencies
-{"note": "No matched same-book spread/total snapshot; implied team totals are unavailable."}
-- PIT: recent RZ pass rate 0.6097560975609756, RZ pass-over-expected -1.5665654093027115 percentage points, neutral seconds/play 31.24137931034483. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-- DEN: recent RZ pass rate 0.5, RZ pass-over-expected 1.2819590419530869 percentage points, neutral seconds/play 31.322834645669293. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
-### 4. Value selections · research only unless all gates pass
-- **Jonah Coleman — Core research · highest estimated probability**: estimated ATTD 55.8%; fair odds -126; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Jaylen Warren — Additional research candidate**: estimated ATTD 34.2%; fair odds 193; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Rico Dowdle — Additional research candidate**: estimated ATTD 26.8%; fair odds 274; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+Archived pregame projections retained during play; these are not live scoring probabilities.
 
 ## NO at CIN
 2026-11-29T18:00:00+00:00
