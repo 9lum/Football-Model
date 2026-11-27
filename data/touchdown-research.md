@@ -1,6 +1,6 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-27T11:54:01.364981+00:00
-Current-season tests: 3075; Brier 0.1483 vs baseline 0.1624.
+Generated 2026-11-27T13:06:04.228001+00:00
+Current-season tests: 3080; Brier 0.1481 vs baseline 0.1622.
 
 ## GB at LAR
 2026-11-26T01:00:00+00:00
@@ -106,7 +106,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 ### 4. Value selections · research only unless all gates pass
 - **Tony Pollard — Core research · highest estimated probability**: estimated ATTD 62.8%; fair odds -169; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Bhayshul Tuten — Additional research candidate**: estimated ATTD 49.4%; fair odds 102; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Parker Washington — Additional research candidate**: estimated ATTD 40.1%; fair odds 150; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Parker Washington — Additional research candidate**: estimated ATTD 40.0%; fair odds 150; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## NYJ at MIA
 2026-11-29T18:00:00+00:00
@@ -159,7 +159,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - NE: recent RZ pass rate 0.6818181818181818, RZ pass-over-expected 0.3604507162457421 percentage points, neutral seconds/play 35.390625. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Rhamondre Stevenson — Core research · highest estimated probability**: estimated ATTD 33.0%; fair odds 203; opponent allows 1.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Omarion Hampton — Additional research candidate**: estimated ATTD 28.2%; fair odds 254; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Omarion Hampton — Additional research candidate**: estimated ATTD 28.2%; fair odds 255; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Mack Hollins — Additional research candidate**: estimated ATTD 25.8%; fair odds 288; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## WAS at ARI
