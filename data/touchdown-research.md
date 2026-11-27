@@ -1,5 +1,5 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-27T20:41:14.977215+00:00
+Generated 2026-11-27T21:41:23.083197+00:00
 Current-season tests: 3080; Brier 0.1481 vs baseline 0.1622.
 
 ## GB at LAR
@@ -80,8 +80,8 @@ Archived pregame projections retained during play; these are not live scoring pr
 2026-11-29T18:00:00+00:00
 ### 1. Red zone & opportunity
 - Tony Pollard (TEN RB): 13 RZ carries, 0 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 2.77, actual TD 6.
-- Bhayshul Tuten (JAX RB): 15 RZ carries, 1 RZ targets, 5 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 3.00, actual TD 4.
 - Jakobi Meyers (JAX WR): 0 RZ carries, 7 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 1.90, actual TD 0.
+- Carnell Tate (TEN WR): 0 RZ carries, 3 RZ targets, 0 inside-5 carries, 0 inside-5 targets across 4 team games; xTD 0.53, actual TD 1.
 ### 2. Position matchup & leverage
 - JAX: opponent RZ EPA 0.23558328599221626; pass EPA 0.2551989151943971; rush EPA 0.03720396922545375. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
 - TEN: opponent RZ EPA -0.2044531131575854; pass EPA -0.10290710222578149; rush EPA -0.09939834919207437. Current ESPN block-win rates, licensed PFF grades, adjusted line yards and slot/perimeter alignment splits are unavailable; no invented grading or coverage adjustment is applied.
@@ -91,8 +91,8 @@ Archived pregame projections retained during play; these are not live scoring pr
 - TEN: recent RZ pass rate 0.5714285714285714, RZ pass-over-expected -2.0658817142248154 percentage points, neutral seconds/play 29.161290322580644. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
 - **Tony Pollard — Core research · highest estimated probability**: estimated ATTD 62.8%; fair odds -169; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Bhayshul Tuten — Additional research candidate**: estimated ATTD 49.4%; fair odds 102; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Jakobi Meyers — Additional research candidate**: estimated ATTD 28.5%; fair odds 251; opponent allows 1.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Carnell Tate — Additional research candidate**: estimated ATTD 22.8%; fair odds 338; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## NYJ at MIA
 2026-11-29T18:00:00+00:00
