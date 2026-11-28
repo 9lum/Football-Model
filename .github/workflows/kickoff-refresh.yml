@@ -2,7 +2,7 @@ name: Final pregame stats and touchdown markets
 on:
   workflow_dispatch:
   push:
-    paths: ['scripts/kickoff_refresh.py','scripts/odds_quota.py','scripts/test_kickoff_refresh.py','tests/test_kickoff_availability.py','.github/workflows/kickoff-refresh.yml']
+    paths: ['scripts/odds_quota.py','scripts/test_odds_quota.py','scripts/kickoff_refresh.py','scripts/odds_quota.py','scripts/test_kickoff_refresh.py','tests/test_kickoff_availability.py','.github/workflows/kickoff-refresh.yml']
   schedule:
     - cron: '*/5 * * * *'
 permissions:
@@ -29,7 +29,7 @@ jobs:
         id: window
         run: python -m scripts.kickoff_refresh --plan
       - name: Validate deadline and quota policy
-        run: python -m unittest scripts.test_kickoff_refresh -v
+        run: python -m unittest scripts.test_kickoff_refresh scripts.test_odds_quota -v
       - name: Publish initial kickoff targets
         if: steps.window.outputs.due != 'true' && github.event_name != 'schedule'
         run: |
@@ -58,6 +58,7 @@ jobs:
         if: steps.window.outputs.due == 'true'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_RESET_AT: ${{ vars.ODDS_API_RESET_AT }}
           PREGAME_PUBLISH: '1'
         run: python -m scripts.kickoff_refresh --run
 
@@ -69,6 +70,7 @@ jobs:
           retention-days: 14
           path: |
             data/kickoff-refresh.json
+            data/odds-quota-kickoff.json
             data/odds.json
             data/attd-odds.json
             data/game-odds.json

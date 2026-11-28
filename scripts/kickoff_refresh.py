@@ -61,21 +61,21 @@ def merge_event(previous,event,market_keys):
   by_key[key]={**old,**b,'markets':list(markets.values())}
  result['bookmakers']=[{**b,'markets':[m for m in b.get('markets',[]) if m.get('key') in market_keys]} for b in by_key.values()];return result
 
-def final_market_plan(remaining,pending):
- # Fair per-game allowance protects the other unplayed games in this week.
- allowance=number(remaining,0)//max(1,pending)
- if allowance<len(MARKETS):return []
- props=PROP_MARKETS if allowance>=len(MARKETS)+len(PROP_MARKETS) else PROP_MARKETS[:max(0,allowance-len(MARKETS))]
- return MARKETS+props
+FINAL_PRIORITY=PROP_MARKETS[:3]+MARKETS[:3]+PROP_MARKETS[3:]+MARKETS[3:]
+def final_market_plan(remaining,pending,policy=None,now=None):
+ from scripts.odds_quota import remaining_games
+ allowance=number(remaining,0)//max(1,pending,remaining_games(now,policy))
+ return FINAL_PRIORITY[:allowance] if allowance>=4 else []
 
 def collect_final(batch,key=None,now=None):
  from scripts.nfl_teams import FULL_NAMES
+ from scripts.odds_quota import observe_quota
  from scripts.game_market_history import append_history
  now=now or stamp();key=key or os.environ.get('ODDS_API_KEY');result={g['gameId']:{'status':'unavailable','markets':MARKETS} for g in batch}
  if not key:return {k:{**v,'error':'missing_secret'} for k,v in result.items()}
  try:events,quota=fetch('events',key)
  except ProviderError as error:return {k:{**v,'error':error.status} for k,v in result.items()}
- remaining=number(quota.get('remaining'),0);week=batch[0]['gameId'].split('_')[:2] if batch else [];pending=max(len(batch),sum(parse(g['kickoff'])>now and g['gameId'].split('_')[:2]==week for g in games()));requested=final_market_plan(remaining,pending);props=[m for m in requested if m in PROP_MARKETS];prop_feed=read(DATA/'odds.json',{});prop_events={e['id']:e for e in prop_feed.get('data',[])};td=read(DATA/'attd-odds.json',{});gm=read(DATA/'game-odds.json',{});td_events={e['id']:e for e in td.get('data',[])};gm_events={e['id']:e for e in gm.get('data',[])}
+ remaining=number(quota.get('remaining'),0);policy=observe_quota(DATA,quota,now,kind='kickoff');week=batch[0]['gameId'].split('_')[:2] if batch else [];pending=max(len(batch),sum(parse(g['kickoff'])>now and g['gameId'].split('_')[:2]==week for g in games()));requested=final_market_plan(remaining,pending,policy,now);props=[m for m in requested if m in PROP_MARKETS];game_requested=any(m in requested for m in MARKETS[3:]);prop_feed=read(DATA/'odds.json',{});prop_events={e['id']:e for e in prop_feed.get('data',[])};td=read(DATA/'attd-odds.json',{});gm=read(DATA/'game-odds.json',{});td_events={e['id']:e for e in td.get('data',[])};gm_events={e['id']:e for e in gm.get('data',[])}
  jobs=[]
  for g in sorted(batch,key=lambda g:g['kickoff']):
   event=next((e for e in events if e.get('home_team')==FULL_NAMES.get(g['homeTeam']) and e.get('away_team')==FULL_NAMES.get(g['awayTeam']) and abs((parse(e['commence_time'])-parse(g['kickoff'])).total_seconds())<3600),None)
@@ -91,15 +91,19 @@ def collect_final(batch,key=None,now=None):
  with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
   for g,event,payload,q,error in pool.map(request_one,jobs):
    if error:result[g['gameId']]['error']=error;continue
-   quota=q;observed=stamp().isoformat();payload['collectedAt']=observed
+   quota=q;observe_quota(DATA,q,now,kind='kickoff');observed=stamp().isoformat();payload['collectedAt']=observed
    if props:
     fresh={**payload,'bookmakers':[{**b,'markets':[m for m in b.get('markets',[]) if m.get('key') in props]} for b in payload.get('bookmakers',[])]}
     prop_events[event['id']]=merge_markets(prop_events.get(event['id'],{}),fresh,props)
    append_history(DATA,[payload],observed)
-   td_events[event['id']]=merge_event(td_events.get(event['id'],{}),payload,MARKETS[:3]);gm_events[event['id']]=merge_event(gm_events.get(event['id'],{}),payload,MARKETS[3:]);seen={m['key'] for b in payload.get('bookmakers',[]) for m in b.get('markets',[]) if m.get('outcomes')};times=[m.get('last_update') or b.get('last_update') for b in payload.get('bookmakers',[]) for m in b.get('markets',[]) if m.get('outcomes')];source_current=bool(times) and all(t and 0<=(stamp()-parse(t)).total_seconds()<=180 for t in times)
-   result[g['gameId']]={'status':'collected' if set(requested).issubset(seen) else 'partial','fetchedAt':observed,'sourceQuotesCurrent':source_current,'markets':sorted(seen),'requestedMarkets':requested,'quotaDeferredMarkets':sorted(set(PROP_MARKETS)-set(props)),'missingMarkets':sorted(set(requested)-seen),'providerTimestamps':sorted({t for t in times if t}),'remainingCredits':number(q.get('remaining'),remaining),'regions':'us'}
+   td_events[event['id']]=merge_event(td_events.get(event['id'],{}),payload,MARKETS[:3])
+   if game_requested:gm_events[event['id']]=merge_event(gm_events.get(event['id'],{}),payload,MARKETS[3:])
+   seen={m['key'] for b in payload.get('bookmakers',[]) for m in b.get('markets',[]) if m.get('outcomes')};times=[m.get('last_update') or b.get('last_update') for b in payload.get('bookmakers',[]) for m in b.get('markets',[]) if m.get('outcomes')];source_current=bool(times) and all(t and 0<=(stamp()-parse(t)).total_seconds()<=180 for t in times)
+   result[g['gameId']]={'status':'collected' if set(requested).issubset(seen) else 'partial','fetchedAt':observed,'sourceQuotesCurrent':source_current,'markets':sorted(seen),'requestedMarkets':requested,'monthlyQuotaPolicy':policy,'quotaDeferredMarkets':sorted(set(FINAL_PRIORITY)-set(requested)),'missingMarkets':sorted(set(requested)-seen),'providerTimestamps':sorted({t for t in times if t}),'remainingCredits':number(q.get('remaining'),remaining),'regions':'us'}
  td.update(data=list(td_events.values()),lastKickoffCheckAt=stamp().isoformat(),kickoffQuota=remaining);gm.update(data=list(gm_events.values()),lastKickoffCheckAt=stamp().isoformat());
- if any(v.get('fetchedAt') for v in result.values()):td['lastKickoffCollectionAt']=stamp().isoformat();gm['lastKickoffCollectionAt']=stamp().isoformat()
+ if any(v.get('fetchedAt') for v in result.values()):
+  td['lastKickoffCollectionAt']=stamp().isoformat()
+  if game_requested:gm['lastKickoffCollectionAt']=stamp().isoformat()
  if props and any(v.get('fetchedAt') for v in result.values()):
   prop_feed.update(data=list(prop_events.values()),generatedAt=stamp().isoformat(),status='partial' if set(props)!=set(PROP_MARKETS) else 'ok',lastKickoffCollectionAt=stamp().isoformat(),requestedMarkets=props,quotaLimited=len(props)<len(PROP_MARKETS),quota=quota)
   save('odds.json',prop_feed)
@@ -134,7 +138,7 @@ def reprice(batch,checks):
 def publish(message):
  if os.environ.get('PREGAME_PUBLISH')!='1':return None
  for args in [['git','config','user.name','github-actions[bot]'],['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],['git','add','data/kickoff-refresh.json','data/touchdown-research.json','data/touchdown-research.md','data/availability.json','data/attd-odds.json','data/game-odds.json']]:subprocess.run(args,cwd=ROOT,check=True,capture_output=True)
- for name in ['touchdown-pregame-archive.json','odds.json']:
+ for name in ['touchdown-pregame-archive.json','odds.json','odds-quota-kickoff.json']:
   if (DATA/name).exists():subprocess.run(['git','add','data/'+name],cwd=ROOT,check=True,capture_output=True)
  if (DATA/'public-td-odds.json').exists():subprocess.run(['git','add','data/public-td-odds.json'],cwd=ROOT,check=True,capture_output=True)
  if (DATA/'game-market-movement.json').exists():subprocess.run(['git','add','data/game-market-movement.json'],cwd=ROOT,check=True,capture_output=True)

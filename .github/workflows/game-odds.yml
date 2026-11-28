@@ -6,7 +6,7 @@ on:
     branches: [main]
   workflow_dispatch:
   push:
-    paths: ['scripts/refresh_game_odds.py', 'scripts/test_game_odds.py', 'scripts/refresh_public_game_odds.py', 'scripts/test_public_game_odds.py', 'scripts/game_market_history.py', 'scripts/test_game_market_history.py', 'scripts/model_record.py', 'scripts/test_model_record.py', 'scripts/model_performance.py', 'data/performance-td-seed.json', 'scripts/performance_boxscore.py', 'scripts/test_model_performance.py', '.github/workflows/game-odds.yml']
+    paths: ['scripts/odds_quota.py','scripts/test_odds_quota.py','scripts/refresh_game_odds.py', 'scripts/test_game_odds.py', 'scripts/refresh_public_game_odds.py', 'scripts/test_public_game_odds.py', 'scripts/game_market_history.py', 'scripts/test_game_market_history.py', 'scripts/model_record.py', 'scripts/test_model_record.py', 'scripts/model_performance.py', 'data/performance-td-seed.json', 'scripts/performance_boxscore.py', 'scripts/test_model_performance.py', '.github/workflows/game-odds.yml']
   schedule:
     - cron: '7,22,37,52 * * * *'
 permissions:
@@ -27,13 +27,14 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s scripts -p 'test_*game*.py' -v
-      - run: python -m unittest scripts.test_model_record scripts.test_model_performance -v
+      - run: python -m unittest scripts.test_model_record scripts.test_model_performance scripts.test_odds_quota -v
       - name: Seed movement history from genuine existing snapshots
         run: python -m scripts.game_market_history
       - name: Retrieve current game markets when refresh is due
         continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_RESET_AT: ${{ vars.ODDS_API_RESET_AT }}
           GAME_ODDS_REFRESH_MINUTES: ${{ vars.GAME_ODDS_REFRESH_MINUTES }}
           FORCE_GAME_ODDS_REFRESH: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
         run: python -m scripts.refresh_game_odds
@@ -44,6 +45,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/game-odds.json data/public-game-odds.json data/game-market-movement.json data/model-record.json data/model-performance.json data/performance
+          if test -f data/odds-quota-games.json; then git add data/odds-quota-games.json; fi
           if test -f data/game-odds-history.json; then git add data/game-odds-history.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh NFL moneylines spreads and totals [skip ci]'

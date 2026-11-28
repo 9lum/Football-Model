@@ -2,7 +2,7 @@ name: Weekly Anytime Touchdown research
 on:
   workflow_dispatch:
   push:
-    paths: ['edge/touchdowns.py','edge/td_order.py','scripts/refresh_attd_odds.py','tests/test_touchdowns.py','.github/workflows/touchdowns.yml']
+    paths: ['scripts/odds_quota.py','scripts/test_odds_quota.py','edge/touchdowns.py','edge/td_order.py','scripts/refresh_attd_odds.py','tests/test_touchdowns.py','.github/workflows/touchdowns.yml']
   schedule:
     - cron: '21 */6 * * *'
   workflow_run:
@@ -37,10 +37,11 @@ jobs:
           key: attd-pbp-${{ runner.os }}-${{ github.run_id }}
           restore-keys: attd-pbp-${{ runner.os }}-
       - name: Test scoring, chronology and pricing semantics
-        run: python -m unittest tests.test_touchdowns tests.test_td_order scripts.test_attd_odds -v
+        run: python -m unittest tests.test_touchdowns tests.test_td_order scripts.test_attd_odds scripts.test_odds_quota -v
       - name: Retrieve actual ATTD sportsbook prices within quota
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_RESET_AT: ${{ vars.ODDS_API_RESET_AT }}
           ATTD_REFRESH_CREDIT_BUDGET: ${{ vars.ATTD_REFRESH_CREDIT_BUDGET }}
         run: python -m scripts.refresh_attd_odds
       - name: Analyze every current-week game and test current-season probabilities
@@ -50,6 +51,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/touchdown-pregame-archive.json data/attd-odds.json data/touchdown-research.json data/touchdown-research.md
+          if test -f data/odds-quota-td.json; then git add data/odds-quota-td.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh weekly ATTD opportunities matchups and actual sportsbook comparisons [skip ci]'
             bash scripts/push_refresh.sh

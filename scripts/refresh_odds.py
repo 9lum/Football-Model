@@ -9,9 +9,9 @@ from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 
 try:
-    from scripts.odds_quota import routine_budget,kickoff_reserve
+    from scripts.odds_quota import routine_budget,kickoff_reserve,observe_quota
 except ModuleNotFoundError:
-    from odds_quota import routine_budget,kickoff_reserve
+    from odds_quota import routine_budget,kickoff_reserve,observe_quota
 
 BASE='https://api.the-odds-api.com/v4/sports/americanfootball_nfl/'
 MARKETS=['player_pass_yds','player_rush_yds','player_reception_yds','player_receptions','player_rush_attempts','player_pass_attempts','player_pass_completions','player_pass_tds','player_pass_interceptions','player_rush_tds','player_reception_tds']
@@ -73,10 +73,11 @@ def collect(output=Path('data'),key=None,now=None):
     try:
         if not key:raise ProviderError('missing_secret')
         events,quota=fetch('events',key)
-        remaining=number(quota.get('remaining'),0)
+        remaining=number(quota.get('remaining'),0);policy=observe_quota(output,quota,now)
+        status['monthlyQuotaPolicy']=policy
         budget,markets,regions,cost=request_plan(remaining,os.environ.get('ODDS_REFRESH_CREDIT_BUDGET'),int(now.timestamp()//21600))
-        budget=routine_budget(remaining,budget,now)
-        status.update(quota=quota,creditBudget=budget,kickoffReservedCredits=kickoff_reserve(now),requestedMarkets=markets,requestedRegions=regions)
+        budget=routine_budget(remaining,budget,now,policy)
+        status.update(quota=quota,creditBudget=budget,kickoffReservedCredits=kickoff_reserve(now,policy),requestedMarkets=markets,requestedRegions=regions)
         model=read(output/'latest.json',{});names={'ARI':'Arizona Cardinals','ATL':'Atlanta Falcons','BAL':'Baltimore Ravens','BUF':'Buffalo Bills','CAR':'Carolina Panthers','CHI':'Chicago Bears','CIN':'Cincinnati Bengals','CLE':'Cleveland Browns','DAL':'Dallas Cowboys','DEN':'Denver Broncos','DET':'Detroit Lions','GB':'Green Bay Packers','HOU':'Houston Texans','IND':'Indianapolis Colts','JAX':'Jacksonville Jaguars','KC':'Kansas City Chiefs','LAC':'Los Angeles Chargers','LAR':'Los Angeles Rams','LV':'Las Vegas Raiders','MIA':'Miami Dolphins','MIN':'Minnesota Vikings','NE':'New England Patriots','NO':'New Orleans Saints','NYG':'New York Giants','NYJ':'New York Jets','PHI':'Philadelphia Eagles','PIT':'Pittsburgh Steelers','SEA':'Seattle Seahawks','SF':'San Francisco 49ers','TB':'Tampa Bay Buccaneers','TEN':'Tennessee Titans','WAS':'Washington Commanders'}
         modeled={(names.get(f.get('homeTeam')),names.get(f.get('awayTeam'))) for f in model.get('forecasts',[])}
         prior={e['id']:e for e in previous.get('data',[]) if isinstance(e,dict) and e.get('id')}
@@ -86,13 +87,15 @@ def collect(output=Path('data'),key=None,now=None):
             if now<start<=now+dt.timedelta(days=8) and (not modeled or (e['home_team'],e['away_team']) in modeled):eligible.append(e)
         eligible.sort(key=lambda e:(prior.get(e['id'],{}).get('collectedAt',''),e['commence_time']))
         # A bounded coverage pass prioritizes all prop markets once per game/week.
-        # Keep 112 credits for one full NFL slate of six final-kickoff markets + buffer.
+        # Preserve core coverage for all remaining games in the estimated billing window.
         coverage=any(needs_coverage(prior.get(e['id'],{}),now) for e in eligible)
         if coverage:
-            reserve=min(kickoff_reserve(now),112)
-            budget=min(176,max(0,remaining-reserve));markets=MARKETS;regions='us';cost=len(markets)
-            status.update(creditBudget=budget,kickoffReservedCredits=reserve,requestedMarkets=markets,requestedRegions=regions,collectionMode='market_coverage',quotaPolicy='Bounded full-market coverage pass; retain 112 credits for final pregame pulls. Seven-day per-event retry cooldown.')
+            reserve=kickoff_reserve(now,policy)
+            budget=routine_budget(remaining,176,now,policy);markets=MARKETS;regions='us';cost=len(markets)
+            status.update(creditBudget=budget,kickoffReservedCredits=reserve,requestedMarkets=markets,requestedRegions=regions,collectionMode='market_coverage',quotaPolicy='Monthly-capped full-market coverage only from surplus after protecting remaining-cycle kickoff coverage. Seven-day per-event retry cooldown.')
             eligible.sort(key=lambda e:(not needs_coverage(prior.get(e['id'],{}),now),e['commence_time']))
+        if budget<cost and ',' in regions:regions='us';cost=len(markets)
+        status.update(requestedMarkets=markets,requestedRegions=regions)
         if budget<cost:raise ProviderError('quota_budget')
         fresh=[];spent=0;requests=0
         for e in eligible:
@@ -101,7 +104,7 @@ def collect(output=Path('data'),key=None,now=None):
             requests+=1
             try:
                 odds,q=fetch('events/'+quote(e['id'],safe='')+'/odds',key,regions=regions,markets=','.join(markets),oddsFormat='american')
-                spent+=number(q.get('last'),cost);status['quota']=q
+                spent+=number(q.get('last'),cost);status['quota']=q;observe_quota(output,q,now)
                 if not isinstance(odds.get('bookmakers'),list):raise ProviderError('schema')
                 odds['collectedAt']=stamp
                 if coverage:odds['coverageAttemptedAt']=stamp

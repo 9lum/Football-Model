@@ -4,7 +4,7 @@ import json,math,os
 from pathlib import Path
 from urllib.parse import quote
 from scripts.refresh_odds import fetch,read,number,ProviderError
-from scripts.odds_quota import routine_budget,kickoff_reserve
+from scripts.odds_quota import routine_budget,kickoff_reserve,observe_quota
 MARKETS=['player_anytime_td','player_1st_td','player_last_td']
 
 def collect(output=Path('data'),key=None,now=None):
@@ -12,14 +12,14 @@ def collect(output=Path('data'),key=None,now=None):
  try:
   key=key or os.environ.get('ODDS_API_KEY')
   if not key:raise ProviderError('missing_secret')
-  events,quota=fetch('events',key);remaining=number(quota.get('remaining'),0);eligible=[e for e in events if now<dt.datetime.fromisoformat(e['commence_time'].replace('Z','+00:00'))<=now+dt.timedelta(days=8)];eligible.sort(key=lambda e:(prior.get(e['id'],{}).get('collectedAt',''),e['commence_time']))
+  events,quota=fetch('events',key);remaining=number(quota.get('remaining'),0);policy=observe_quota(output,quota,now,kind='td');report['monthlyQuotaPolicy']=policy;report['quota']=quota;eligible=[e for e in events if now<dt.datetime.fromisoformat(e['commence_time'].replace('Z','+00:00'))<=now+dt.timedelta(days=8)];eligible.sort(key=lambda e:(prior.get(e['id'],{}).get('collectedAt',''),e['commence_time']))
   # Initial all-game coverage costs two credits/event, then ~25% of remaining monthly credits.
   days=max(1,32-now.day);needs_derivatives=not any(m.get('key') in MARKETS[1:] for e in prior.values() for b in e.get('bookmakers',[]) for m in b.get('markets',[]));budget=48 if not prior or needs_derivatives else min(8,max(0,math.floor(remaining*.25/(days*4))))
-  override=os.environ.get('ATTD_REFRESH_CREDIT_BUDGET');budget=min(remaining,number(override,budget)) if override else budget;budget=routine_budget(remaining,budget,now);report['kickoffReservedCredits']=kickoff_reserve(now);spent=0;fresh=0
+  override=os.environ.get('ATTD_REFRESH_CREDIT_BUDGET');budget=min(remaining,number(override,budget)) if override else budget;budget=routine_budget(remaining,budget,now,policy,kind='td');report['kickoffReservedCredits']=kickoff_reserve(now,policy);spent=0;fresh=0
   for event in eligible:
    if spent+3>budget:break
    try:
-    value,q=fetch('events/'+quote(event['id'],safe='')+'/odds',key,regions='us',markets=','.join(MARKETS),oddsFormat='american');spent+=number(q.get('last'),3);report['quota']=q
+    value,q=fetch('events/'+quote(event['id'],safe='')+'/odds',key,regions='us',markets=','.join(MARKETS),oddsFormat='american');spent+=number(q.get('last'),3);report['quota']=q;observe_quota(output,q,now,kind='td')
     if not isinstance(value.get('bookmakers'),list):raise ProviderError('schema')
     value['collectedAt']=now.isoformat();prior[event['id']]=value;fresh+=1
    except ProviderError as error:
