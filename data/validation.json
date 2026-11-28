@@ -36413,7 +36413,7 @@
               "coverage80": 0.8333333333333334,
               "meanWidth80": 24.370000000000008,
               "fixedThresholdBrier": 0.15762831370035807,
-              "fixedThresholdLogLoss": 0.4817475988395476,
+              "fixedThresholdLogLoss": 0.48174759883954754,
               "probability70Cohort": {
                 "n": 68,
                 "meanEstimated": 0.8104319852941176,
@@ -36888,7 +36888,7 @@
               "coverage80": 0.7096774193548387,
               "meanWidth80": 201.9258064516129,
               "fixedThresholdBrier": 0.15982790916196762,
-              "fixedThresholdLogLoss": 0.4778404547404412,
+              "fixedThresholdLogLoss": 0.4778404547404411,
               "probability70Cohort": {
                 "n": 80,
                 "meanEstimated": 0.8417236328125,
