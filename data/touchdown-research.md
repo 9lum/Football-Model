@@ -1,6 +1,6 @@
 # Week 12 Anytime Touchdown Research
-Generated 2026-11-28T09:49:12.592635+00:00
-Current-season tests: 3080; Brier 0.1481 vs baseline 0.1622.
+Generated 2026-11-28T10:48:25.849311+00:00
+Current-season tests: 3099; Brier 0.1476 vs baseline 0.1617.
 
 ## GB at LAR
 2026-11-26T01:00:00+00:00
@@ -36,9 +36,9 @@ Archived pregame projections retained during play; these are not live scoring pr
 - CIN: recent RZ pass rate 0.7567567567567568, RZ pass-over-expected 29.78628095653322 percentage points, neutral seconds/play 33.46491228070175. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - NO: recent RZ pass rate 0.5897435897435898, RZ pass-over-expected 3.573123117287954 percentage points, neutral seconds/play 30.383928571428573. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Ja'Marr Chase — Core research · highest estimated probability**: estimated ATTD 57.8%; fair odds -137; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Ja'Marr Chase — Core research · highest estimated probability**: estimated ATTD 57.7%; fair odds -137; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Chase Brown — Additional research candidate**: estimated ATTD 51.9%; fair odds -108; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Tee Higgins — Additional research candidate**: estimated ATTD 38.5%; fair odds 160; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Tee Higgins — Additional research candidate**: estimated ATTD 38.4%; fair odds 160; opponent allows 0.33 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## BAL at HOU
 2026-11-29T18:00:00+00:00
@@ -126,9 +126,9 @@ Archived pregame projections retained during play; these are not live scoring pr
 - MIN: recent RZ pass rate 0.7333333333333333, RZ pass-over-expected 14.396767729315265 percentage points, neutral seconds/play 30.13095238095238. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - ATL: recent RZ pass rate 0.6666666666666666, RZ pass-over-expected 2.8469688037321683 percentage points, neutral seconds/play 32.89873417721519. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Bijan Robinson — Core research · highest estimated probability**: estimated ATTD 48.4%; fair odds 107; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Justin Jefferson — Additional research candidate**: estimated ATTD 34.7%; fair odds 188; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Drake London — Additional research candidate**: estimated ATTD 26.1%; fair odds 284; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Bijan Robinson — Core research · highest estimated probability**: estimated ATTD 48.3%; fair odds 107; opponent allows 0.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Justin Jefferson — Additional research candidate**: estimated ATTD 34.8%; fair odds 188; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Drake London — Additional research candidate**: estimated ATTD 26.0%; fair odds 284; opponent allows 0.50 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## NE at LAC
 2026-11-29T21:05:00+00:00
@@ -196,7 +196,7 @@ Archived pregame projections retained during play; these are not live scoring pr
 - CLE: recent RZ pass rate 0.47368421052631576, RZ pass-over-expected -11.760954196388656 percentage points, neutral seconds/play 30.215686274509803. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - LV: recent RZ pass rate 0.42105263157894735, RZ pass-over-expected -12.695109216790451 percentage points, neutral seconds/play 33.059701492537314. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Quinshon Judkins — Core research · highest estimated probability**: estimated ATTD 35.9%; fair odds 178; opponent allows 1.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Quinshon Judkins — Core research · highest estimated probability**: estimated ATTD 35.9%; fair odds 179; opponent allows 1.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Ashton Jeanty — Additional research candidate**: estimated ATTD 32.4%; fair odds 209; opponent allows 1.17 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Brock Bowers — Additional research candidate**: estimated ATTD 30.1%; fair odds 232; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
@@ -214,8 +214,8 @@ Archived pregame projections retained during play; these are not live scoring pr
 - TB: recent RZ pass rate 0.35294117647058826, RZ pass-over-expected -20.305919528007507 percentage points, neutral seconds/play 37.85507246376812. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 - CAR: recent RZ pass rate 0.5, RZ pass-over-expected -2.151456135122672 percentage points, neutral seconds/play 30.847457627118644. Trailing teams can shift toward targets; leading teams toward carries. These are conditional scenarios, not asserted second-half outcomes.
 ### 4. Value selections · research only unless all gates pass
-- **Chuba Hubbard — Core research · highest estimated probability**: estimated ATTD 73.4%; fair odds -276; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
-- **Bucky Irving — Additional research candidate**: estimated ATTD 65.9%; fair odds -193; opponent allows 1.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Chuba Hubbard — Core research · highest estimated probability**: estimated ATTD 73.3%; fair odds -275; opponent allows 0.67 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
+- **Bucky Irving — Additional research candidate**: estimated ATTD 65.8%; fair odds -193; opponent allows 1.83 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 - **Tetairoa McMillan — Additional research candidate**: estimated ATTD 33.5%; fair odds 198; opponent allows 1.00 direct TDs/game to the position group. No matched ATTD sportsbook price; no price-based value claim.
 
 ## Methodology & limitations
